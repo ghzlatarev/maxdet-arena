@@ -303,9 +303,11 @@ Arguments parse_arguments(int argc, char** argv) {
   }
   if (arguments.mode != "hill" && arguments.mode != "anneal" &&
       arguments.mode != "hybrid" && arguments.mode != "coordinate" &&
-      arguments.mode != "block") {
+      arguments.mode != "block" && arguments.mode != "audit2" &&
+      arguments.mode != "audit3") {
     throw std::runtime_error(
-        "--mode must be hill, anneal, hybrid, coordinate, or block");
+        "--mode must be hill, anneal, hybrid, coordinate, block, audit2, or "
+        "audit3");
   }
   return arguments;
 }
@@ -356,6 +358,116 @@ int main(int argc, char** argv) {
     std::uint64_t epoch = 0;
     std::uint64_t accepted = 0;
     log_record(log, arguments, 0, best_score, "start", 0.0, accepted);
+
+    if (arguments.mode == "audit2" || arguments.mode == "audit3") {
+      const Matrix baseline = state.matrix;
+      bool complete = true;
+      auto audit_heartbeat = [&]() {
+        const auto now = std::chrono::steady_clock::now();
+        if (arguments.heartbeat_seconds > 0 && now >= next_heartbeat) {
+          const double elapsed =
+              std::chrono::duration<double>(now - started).count();
+          log_record(
+              log, arguments, epoch, best_score, "heartbeat", elapsed, accepted);
+          next_heartbeat =
+              now + std::chrono::duration<double>(arguments.heartbeat_seconds);
+        }
+      };
+      for (int first = 0; first < kOrder * kOrder && complete; ++first) {
+        const int first_row = first / kOrder;
+        const int first_column = first % kOrder;
+        state.matrix = baseline;
+        state.matrix[first_row][first_column] *= -1;
+        ++accepted;
+        Wide candidate_score = absolute(exact_determinant(state.matrix));
+        if (candidate_score > best_score) {
+          best_score = candidate_score;
+          best_matrix = state.matrix;
+          write_matrix(arguments.output, best_matrix);
+          const double elapsed = std::chrono::duration<double>(
+              std::chrono::steady_clock::now() - started).count();
+          log_record(
+              log, arguments, epoch, best_score, "new_best", elapsed, accepted);
+        }
+        for (int second = first + 1; second < kOrder * kOrder; ++second) {
+          if (std::chrono::steady_clock::now() >= deadline) {
+            complete = false;
+            break;
+          }
+          const int second_row = second / kOrder;
+          const int second_column = second % kOrder;
+          state.matrix[second_row][second_column] *= -1;
+          ++accepted;
+          ++epoch;
+          candidate_score = absolute(exact_determinant(state.matrix));
+          if (candidate_score > best_score) {
+            best_score = candidate_score;
+            best_matrix = state.matrix;
+            write_matrix(arguments.output, best_matrix);
+            const double elapsed = std::chrono::duration<double>(
+                std::chrono::steady_clock::now() - started).count();
+            log_record(
+                log, arguments, epoch, best_score, "new_best", elapsed, accepted);
+            std::cout << "new best |det|=" << wide_to_string(best_score)
+                      << " pair=" << first << ',' << second << '\n'
+                      << std::flush;
+          }
+          if (arguments.mode == "audit3") {
+            for (int third = second + 1; third < kOrder * kOrder; ++third) {
+              if (std::chrono::steady_clock::now() >= deadline) {
+                complete = false;
+                break;
+              }
+              const int third_row = third / kOrder;
+              const int third_column = third % kOrder;
+              state.matrix[third_row][third_column] *= -1;
+              ++accepted;
+              ++epoch;
+              candidate_score = absolute(exact_determinant(state.matrix));
+              if (candidate_score > best_score) {
+                best_score = candidate_score;
+                best_matrix = state.matrix;
+                write_matrix(arguments.output, best_matrix);
+                const double elapsed = std::chrono::duration<double>(
+                    std::chrono::steady_clock::now() - started).count();
+                log_record(
+                    log,
+                    arguments,
+                    epoch,
+                    best_score,
+                    "new_best",
+                    elapsed,
+                    accepted);
+                std::cout << "new best |det|=" << wide_to_string(best_score)
+                          << " triple=" << first << ',' << second << ','
+                          << third << '\n'
+                          << std::flush;
+              }
+              state.matrix[third_row][third_column] *= -1;
+              if ((accepted & 4095U) == 0U) audit_heartbeat();
+            }
+          }
+          state.matrix[second_row][second_column] *= -1;
+          if (arguments.mode == "audit2" && (accepted & 4095U) == 0U) {
+            audit_heartbeat();
+          }
+        }
+      }
+      const double elapsed = std::chrono::duration<double>(
+          std::chrono::steady_clock::now() - started).count();
+      log_record(
+          log,
+          arguments,
+          epoch,
+          best_score,
+          complete ? "audit_finished" : "audit_timeout",
+          elapsed,
+          accepted);
+      std::cout << (complete ? "audit finished" : "audit timed out")
+                << " |det|=" << wide_to_string(best_score)
+                << " candidates=" << accepted << '\n';
+      return complete ? 0 : 3;
+    }
 
     while (std::chrono::steady_clock::now() < deadline) {
       ++epoch;

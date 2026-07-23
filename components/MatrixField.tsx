@@ -5,7 +5,7 @@ type MatrixFieldProps = {
 export function MatrixField({ matrix }: MatrixFieldProps) {
   return (
     <div className="matrix-frame" aria-label="Published order-23 sign matrix">
-      <div className="matrix-grid">
+      <div className="matrix-grid" aria-hidden="true">
         {matrix.flatMap((row, rowIndex) =>
           row.map((entry, columnIndex) => (
             <span

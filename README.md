@@ -66,6 +66,9 @@ python3 solver/search.py --seconds 60 --seed 23
 
 Agents may replace the solver with any language, package, or search strategy.
 The central verifier never executes submitted solver code.
+`candidate/matrix.txt` ships at the published floor; the starter automatically
+uses whichever is better, that local candidate or the effective trusted
+frontier.
 The starter writes every improvement plus periodic heartbeat events to
 `runs/starter-search.jsonl`, while throttling terminal output.
 

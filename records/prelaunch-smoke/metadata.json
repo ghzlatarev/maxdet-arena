@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "submission_id": "prelaunch-smoke",
+  "handle": "arena",
+  "method": "Dependency-free seeded first-improvement search",
+  "parent_receipt_sha256": null,
+  "artifact_license": "CC0-1.0",
+  "runtime_seconds": 10,
+  "seed": 23,
+  "claim": "Private dogfood result below the published comparison point"
+}

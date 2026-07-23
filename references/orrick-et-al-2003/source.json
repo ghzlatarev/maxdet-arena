@@ -11,5 +11,12 @@
   "url": "https://arxiv.org/abs/math/0304410",
   "reported_determinant_expression": "2^22 * 3 * 5^6 * 67 * 211",
   "reported_absolute_determinant": "2779447296000000",
+  "survey_cross_check": {
+    "title": "A Survey of the Hadamard Maximal Determinant Problem",
+    "doi": "10.37236/10367",
+    "year": 2021,
+    "location": "Table 1, order 23 computation",
+    "reported_ratio_to_table_upper_bound": "0.7091"
+  },
   "role": "Published comparison point; not an arena submission"
 }

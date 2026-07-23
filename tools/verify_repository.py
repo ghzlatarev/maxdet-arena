@@ -11,7 +11,11 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from maxdet.contract import load_contract  # noqa: E402
-from maxdet.frontier import effective_frontier, load_frontier_data  # noqa: E402
+from maxdet.frontier import (  # noqa: E402
+    effective_frontier,
+    load_frontier_data,
+    trusted_artifacts,
+)
 from maxdet.receipt import canonical_json_bytes, verify_matrix  # noqa: E402
 from maxdet.submission import (  # noqa: E402
     discover_submission_directories,
@@ -50,20 +54,35 @@ def main() -> int:
         raise RuntimeError("frontier target source is not the published reference")
 
     arena_best = frontier["arena_best"]
-    candidate = verify_matrix(ROOT / "candidate/matrix.txt", contract).receipt
-    if arena_best["absolute_determinant"] != candidate["score"]["absolute_determinant"]:
-        raise RuntimeError("arena_best score does not match candidate matrix")
-    if arena_best["receipt_sha256"] != candidate["receipt_sha256"]:
+    arena_source = ROOT / arena_best["source"]
+    arena_receipt = check_receipt(
+        arena_source / "matrix.txt",
+        arena_source / "receipt.json",
+    )
+    if (
+        arena_best["absolute_determinant"]
+        != arena_receipt["score"]["absolute_determinant"]
+    ):
+        raise RuntimeError("arena_best score does not match its source matrix")
+    if arena_best["receipt_sha256"] != arena_receipt["receipt_sha256"]:
         raise RuntimeError("arena_best receipt hash is stale")
+    verify_matrix(ROOT / "candidate/matrix.txt", contract)
 
-    trusted_receipts = {
-        genesis["receipt_sha256"],
-        reference["receipt_sha256"],
-    }
-    normalized_hashes = {
-        genesis["matrix"]["sign_normalized_sha256"],
-        reference["matrix"]["sign_normalized_sha256"],
-    }
+    trusted_receipts: set[str] = set()
+    normalized_hashes: set[str] = set()
+    for artifact in trusted_artifacts(ROOT, contract):
+        if artifact.source.startswith("submissions/"):
+            continue
+        if artifact.receipt_sha256 in trusted_receipts:
+            raise RuntimeError(
+                f"duplicate receipt in trusted artifacts: {artifact.source}"
+            )
+        if artifact.sign_normalized_sha256 in normalized_hashes:
+            raise RuntimeError(
+                f"sign-normalized duplicate in trusted artifacts: {artifact.source}"
+            )
+        trusted_receipts.add(artifact.receipt_sha256)
+        normalized_hashes.add(artifact.sign_normalized_sha256)
     submission_results: list[dict] = []
     for directory in discover_submission_directories(ROOT / "submissions"):
         result = verify_submission(directory, contract)

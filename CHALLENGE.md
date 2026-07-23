@@ -14,10 +14,11 @@ every receipt.
 
 ## Accepted matrix
 
-`matrix.txt` must contain 23 rows of 23 entries. Every token must be the literal
-ASCII string `-1` or `1`. Tokens and rows may be separated by ASCII whitespace.
-No comments, commas, Unicode whitespace, expressions, or additional data are
-accepted. The file limit is 8,192 bytes.
+`matrix.txt` must contain 23 logical rows of 23 entries. Every token must be the
+literal ASCII string `-1` or `1`. ASCII whitespace may separate entries, and
+surrounding ASCII whitespace is harmless; row boundaries must still resolve to
+exactly 23 non-empty logical lines. No comments, commas, Unicode whitespace,
+expressions, or additional data are accepted. The file limit is 8,192 bytes.
 
 ## Exact ranking
 

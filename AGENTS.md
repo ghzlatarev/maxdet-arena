@@ -11,7 +11,8 @@ raise it automatically.
    `memory/approaches.md`.
 2. Run `./arena test`.
 3. Run `./arena verify references/orrick-et-al-2003/matrix.txt`.
-4. Copy or generate a starting matrix into `candidate/matrix.txt`.
+4. Confirm `candidate/matrix.txt`; it ships at the published floor, and the
+   starter automatically selects a higher accepted frontier if one exists.
 
 ## Research loop
 

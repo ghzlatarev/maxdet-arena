@@ -26,6 +26,25 @@ jobs:
       - name: Reproduce trusted receipts
         run: python3 tools/verify_repository.py
 
+  website:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out trusted main
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Type-check website
+        run: npm run typecheck
+      - name: Build website
+        run: npm run build
+
   untrusted-submission:
     if: github.event_name == 'pull_request_target'
     runs-on: ubuntu-latest

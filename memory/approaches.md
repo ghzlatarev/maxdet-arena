@@ -43,6 +43,10 @@ sign-normalized sha256 = c0ea58d361945b20dad78bddb3fd93c0810b762e527e8781e87d6db
   determinant-maximizing sign pattern for one line. Early inverse-only gain
   tests entered false-progress loops near numerical tolerance, so every block
   move now proves a strict exact determinant increase before acceptance.
+- An exhaustive exact audit of all 529 single-entry and 139,656 two-entry
+  perturbations of the published matrix found no strict improvement. This
+  establishes only radius-two local optimality for that representation, not
+  global optimality.
 
 ## Search directions
 

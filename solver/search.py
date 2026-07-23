@@ -23,6 +23,7 @@ if str(REPOSITORY_ROOT) not in sys.path:
 
 from maxdet.contract import load_contract, load_matrix
 from maxdet.exact import bareiss_determinant, matrix_text
+from maxdet.frontier import effective_frontier
 
 ORDER = 23
 
@@ -82,7 +83,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--start",
         type=Path,
-        default=Path("candidate/matrix.txt"),
+        default=None,
+        help="start matrix; defaults to the better of candidate and trusted frontier",
     )
     parser.add_argument(
         "--log",
@@ -123,10 +125,26 @@ def main() -> int:
     run_started_unix_ns = time.time_ns()
     args.log.parent.mkdir(parents=True, exist_ok=True)
 
-    incumbent = read_matrix(args.start)
+    start_path = args.start
+    if start_path is None:
+        candidate_path = REPOSITORY_ROOT / "candidate" / "matrix.txt"
+        candidate_matrix = read_matrix(candidate_path)
+        candidate_score = score(candidate_matrix)
+        contract = load_contract(REPOSITORY_ROOT / "challenge.json")
+        frontier = effective_frontier(REPOSITORY_ROOT, contract)
+        if candidate_score >= frontier.absolute_determinant:
+            start_path = candidate_path
+        else:
+            start_path = REPOSITORY_ROOT / frontier.source / "matrix.txt"
+
+    incumbent = read_matrix(start_path)
     incumbent_score = score(incumbent)
     best = [row[:] for row in incumbent]
     best_score = incumbent_score
+    try:
+        start_label = start_path.resolve().relative_to(REPOSITORY_ROOT).as_posix()
+    except ValueError:
+        start_label = start_path.name
     restart = 0
     total_improvements = 0
     last_report = -math.inf
@@ -143,6 +161,7 @@ def main() -> int:
                 "event": "start",
                 "seed": args.seed,
                 "run_started_unix_ns": run_started_unix_ns,
+                "start_matrix": start_label,
                 "absolute_determinant": str(best_score),
             },
         )

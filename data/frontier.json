@@ -12,7 +12,7 @@
     "absolute_determinant": "2088024410161152",
     "label": "Prelaunch dependency-free smoke search",
     "receipt_sha256": "ac05283e4a5b013f524393759e7a4191b5b419364dd52826016dbf5192c7496f",
-    "source": "private-dogfooding"
+    "source": "records/prelaunch-smoke"
   },
   "claim_boundary": "Verified scores are not world-record or optimality claims.",
   "updated": "2026-07-23"
