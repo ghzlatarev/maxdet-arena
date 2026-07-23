@@ -64,7 +64,8 @@ After a strict improvement:
 
 ```sh
 ./arena verify --json candidate/receipt.json
-./arena prepare RESULT_ID --handle HANDLE --method "METHOD" --parent PARENT_SHA
+./arena prepare RESULT_ID --handle HANDLE --method "METHOD" --parent PARENT_SHA \
+  --agent AGENT --runtime-seconds SECONDS --seed SEED
 ./arena check-submission submissions/HANDLE/RESULT_ID
 ```
 

@@ -82,6 +82,9 @@ The starter writes every improvement plus periodic heartbeat events to
   --parent PARENT_RECEIPT_SHA256
 ```
 
+Optional `--agent`, `--runtime-seconds`, `--seed`, and `--notes` flags preserve
+reproducibility metadata without affecting the mathematical score.
+
 Commit only the generated directory under
 `submissions/<handle>/<submission-id>/` and open a pull request. The protected
 workflow reads the matrix and metadata as untrusted data and recomputes the
@@ -89,7 +92,9 @@ receipt from the base branch verifier. `prepare` refuses a tie or regression
 before creating a bundle.
 
 Read [CHALLENGE.md](CHALLENGE.md) for the scientific contract and
-[CONTRIBUTING.md](CONTRIBUTING.md) for the submission rules.
+[CONTRIBUTING.md](CONTRIBUTING.md) for the submission rules. The prelaunch
+failure log and validation campaign are recorded in
+[research/DOGFOOD.md](research/DOGFOOD.md).
 
 ## Claim boundary
 

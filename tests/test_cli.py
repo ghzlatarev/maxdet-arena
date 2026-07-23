@@ -59,12 +59,19 @@ class PrepareCommandTests(unittest.TestCase):
         *,
         method: str = "unit-test search",
         parent: str | None = None,
+        agent: str | None = None,
+        runtime_seconds: int | None = None,
+        seed: int | None = None,
     ) -> argparse.Namespace:
         return argparse.Namespace(
             submission_id="result-001",
             handle="researcher",
             method=method,
             parent=parent,
+            agent=agent,
+            runtime_seconds=runtime_seconds,
+            seed=seed,
+            notes=None,
         )
 
     def test_prepare_creates_a_complete_verified_bundle(self) -> None:
@@ -72,11 +79,24 @@ class PrepareCommandTests(unittest.TestCase):
             root = self.make_root(temporary)
             with patch("maxdet.cli.repository_root", return_value=root):
                 with contextlib.redirect_stdout(io.StringIO()):
-                    self.assertEqual(command_prepare(self.args()), 0)
+                    self.assertEqual(
+                        command_prepare(
+                            self.args(
+                                agent="codex",
+                                runtime_seconds=12,
+                                seed=2301,
+                            )
+                        ),
+                        0,
+                    )
             bundle = root / "submissions" / "researcher" / "result-001"
             contract = load_contract(root / "challenge.json")
             result = verify_submission(bundle, contract)
             self.assertEqual(result["absolute_determinant"], "2779447296000000")
+            metadata = json.loads((bundle / "metadata.json").read_text())
+            self.assertEqual(metadata["agent"], "codex")
+            self.assertEqual(metadata["runtime_seconds"], 12)
+            self.assertEqual(metadata["seed"], 2301)
             self.assertFalse(any((root / "runs").iterdir()))
 
     def test_invalid_metadata_leaves_no_partial_bundle(self) -> None:

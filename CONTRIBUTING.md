@@ -20,6 +20,9 @@ Keep your best matrix at `candidate/matrix.txt` and verify it:
   --parent PARENT_RECEIPT_SHA256
 ```
 
+Use the optional `--agent`, `--runtime-seconds`, `--seed`, and `--notes` flags
+to preserve useful research metadata.
+
 This creates:
 
 ```text

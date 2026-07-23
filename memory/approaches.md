@@ -60,5 +60,10 @@ sign-normalized sha256 = c0ea58d361945b20dad78bddb3fd93c0810b762e527e8781e87d6db
   The best sign row is the sign pattern of its cofactor vector; the same holds
   for columns. Alternating exact-accepted line replacements is a useful search
   primitive and a stronger local-optimality test than single-entry flips.
+- The published matrix has 208 row pairs with inner-product magnitude `1` and
+  45 with magnitude `3`; no larger off-diagonal Gram magnitude occurs. The
+  graph on the 45 magnitude-3 pairs has degree distribution
+  `3^14, 5^6, 6^3`. Structured moves that preserve or deliberately rewire this
+  sparse Gram-defect graph may be more promising than blind entry flips.
 - Sign flips and row/column permutations create large duplicate families. Do
   not count them as progress.

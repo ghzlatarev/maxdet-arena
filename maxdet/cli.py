@@ -74,6 +74,10 @@ def build_parser() -> argparse.ArgumentParser:
     prepare.add_argument("--handle", required=True)
     prepare.add_argument("--method", required=True)
     prepare.add_argument("--parent", default=None)
+    prepare.add_argument("--agent", default=None)
+    prepare.add_argument("--runtime-seconds", type=int, default=None)
+    prepare.add_argument("--seed", type=int, default=None)
+    prepare.add_argument("--notes", default=None)
 
     return parser
 
@@ -237,6 +241,10 @@ def command_prepare(args: argparse.Namespace) -> int:
         "parent_receipt_sha256": args.parent,
         "artifact_license": "CC0-1.0",
     }
+    for key in ("agent", "runtime_seconds", "seed", "notes"):
+        value = getattr(args, key, None)
+        if value is not None:
+            metadata[key] = value
     metadata_bytes = (
         json.dumps(metadata, indent=2, sort_keys=True).encode("utf-8") + b"\n"
     )
