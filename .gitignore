@@ -1,0 +1,14 @@
+.DS_Store
+.next/
+node_modules/
+out/
+build/
+coverage/
+*.pyc
+*.tsbuildinfo
+__pycache__/
+.pytest_cache/
+runs/
+candidate/receipt.json
+candidate/*.tmp
+npm-debug.log*

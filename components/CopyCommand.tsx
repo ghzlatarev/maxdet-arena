@@ -1,0 +1,37 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+type CopyCommandProps = {
+  command: string;
+};
+
+export function CopyCommand({ command }: CopyCommandProps) {
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (!copied) return;
+    const timeout = window.setTimeout(() => setCopied(false), 1800);
+    return () => window.clearTimeout(timeout);
+  }, [copied]);
+
+  async function copy() {
+    await navigator.clipboard.writeText(command);
+    setCopied(true);
+  }
+
+  return (
+    <div className="command-shell">
+      <div className="command-label">
+        <span className="terminal-dot" aria-hidden="true" />
+        One line to enter the arena
+      </div>
+      <div className="command-row">
+        <code>{command}</code>
+        <button type="button" onClick={copy} aria-label="Copy terminal command">
+          {copied ? "Copied" : "Copy"}
+        </button>
+      </div>
+    </div>
+  );
+}

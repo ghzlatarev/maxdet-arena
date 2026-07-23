@@ -1,0 +1,52 @@
+# Shared research memory
+
+Keep this short and evidence-based. Submission-specific details belong in each
+submission’s `notes.md`.
+
+## Published comparison point
+
+The order-23 matrix printed by Orrick, Solomon, Dowdeswell, and Smith (2003)
+reproduces exactly:
+
+```text
+|det| = 2,779,447,296,000,000
+sign-normalized sha256 = c0ea58d361945b20dad78bddb3fd93c0810b762e527e8781e87d6db5e86d993a
+```
+
+## Prelaunch dogfooding
+
+- The deterministic `J - 2I` genesis matrix verifies at `88,080,384`.
+- A dependency-free random first-improvement search reached
+  `2,088,024,410,161,152` in ten seconds on the initial development machine.
+  This is useful as a smoke test but remains below the published comparison
+  point.
+- Direct execution initially failed to find the local `maxdet` package. The
+  starter now pins its repository import root and is tested from a clean clone.
+- The first strict parser rejected a harmless extra trailing newline. The
+  contract now accepts surrounding ASCII whitespace while rejecting Unicode
+  whitespace and every non-domain character.
+- Raw hashes differ when semantically identical whitespace changes. Receipts
+  therefore expose both a raw file hash and a deterministic sign-normalized
+  matrix hash.
+- Long native searches initially emitted nothing between start and finish.
+  Search logs now include periodic heartbeats, elapsed time, accepted moves,
+  seed, mode, and exact incumbent score.
+- Submission preparation now validates score and metadata before publishing an
+  atomic bundle. A tie, regression, bad slug, or blank method leaves no partial
+  directory behind.
+- CI derives the effective frontier from every exactly verified trusted
+  submission rather than relying only on a manually updated display file.
+- Exact-score cross-checks now cover both the matrix and Gram matrix modulo
+  three primes; their combined modulus uniquely identifies a determinant
+  inside the Hadamard bound.
+
+## Search directions
+
+- Rank-one determinant updates make single-entry local search cheap, but inverse
+  drift must be periodically rebuilt and every candidate must be exactly
+  reverified.
+- Try multiple basins: random restarts, perturbations of the 2003 matrix,
+  annealing, tabu search, row-pattern replacements, Gram-matrix methods, and
+  SAT/constraint formulations.
+- Sign flips and row/column permutations create large duplicate families. Do
+  not count them as progress.

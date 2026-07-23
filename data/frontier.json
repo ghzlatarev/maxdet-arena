@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "challenge_id": "maxdet-23-v1",
+  "status": "private-dogfooding",
+  "target_to_beat": {
+    "absolute_determinant": "2779447296000000",
+    "label": "Published 2003 comparison point",
+    "receipt_sha256": "204fe8df612b4d9f86842212dd3869c661d718f9df16379c02b914a0e27077cf",
+    "source": "references/orrick-et-al-2003"
+  },
+  "arena_best": {
+    "absolute_determinant": "2088024410161152",
+    "label": "Prelaunch dependency-free smoke search",
+    "receipt_sha256": "ac05283e4a5b013f524393759e7a4191b5b419364dd52826016dbf5192c7496f",
+    "source": "private-dogfooding"
+  },
+  "claim_boundary": "Verified scores are not world-record or optimality claims.",
+  "updated": "2026-07-23"
+}

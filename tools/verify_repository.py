@@ -1,0 +1,110 @@
+#!/usr/bin/env python3
+"""Reproduce every trusted score and cross-check frontier metadata."""
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from maxdet.contract import load_contract  # noqa: E402
+from maxdet.frontier import effective_frontier, load_frontier_data  # noqa: E402
+from maxdet.receipt import canonical_json_bytes, verify_matrix  # noqa: E402
+from maxdet.submission import (  # noqa: E402
+    discover_submission_directories,
+    verify_submission,
+)
+
+
+def check_receipt(matrix_path: Path, receipt_path: Path) -> dict:
+    contract = load_contract(ROOT / "challenge.json")
+    verified = verify_matrix(matrix_path, contract)
+    expected = canonical_json_bytes(verified.receipt)
+    observed = receipt_path.read_bytes()
+    if observed != expected:
+        raise RuntimeError(f"stale trusted receipt: {receipt_path.relative_to(ROOT)}")
+    return verified.receipt
+
+
+def main() -> int:
+    genesis = check_receipt(
+        ROOT / "records/genesis/matrix.txt",
+        ROOT / "records/genesis/receipt.json",
+    )
+    reference = check_receipt(
+        ROOT / "references/orrick-et-al-2003/matrix.txt",
+        ROOT / "references/orrick-et-al-2003/receipt.json",
+    )
+
+    contract = load_contract(ROOT / "challenge.json")
+    frontier, floor = load_frontier_data(ROOT, contract)
+    target = frontier["target_to_beat"]
+    if target["absolute_determinant"] != reference["score"]["absolute_determinant"]:
+        raise RuntimeError("frontier target does not match published reference receipt")
+    if target["receipt_sha256"] != reference["receipt_sha256"]:
+        raise RuntimeError("frontier target receipt hash is stale")
+    if target["source"] != "references/orrick-et-al-2003":
+        raise RuntimeError("frontier target source is not the published reference")
+
+    arena_best = frontier["arena_best"]
+    candidate = verify_matrix(ROOT / "candidate/matrix.txt", contract).receipt
+    if arena_best["absolute_determinant"] != candidate["score"]["absolute_determinant"]:
+        raise RuntimeError("arena_best score does not match candidate matrix")
+    if arena_best["receipt_sha256"] != candidate["receipt_sha256"]:
+        raise RuntimeError("arena_best receipt hash is stale")
+
+    trusted_receipts = {
+        genesis["receipt_sha256"],
+        reference["receipt_sha256"],
+    }
+    normalized_hashes = {
+        genesis["matrix"]["sign_normalized_sha256"],
+        reference["matrix"]["sign_normalized_sha256"],
+    }
+    submission_results: list[dict] = []
+    for directory in discover_submission_directories(ROOT / "submissions"):
+        result = verify_submission(directory, contract)
+        relative = directory.relative_to(ROOT)
+        if relative.parts[1] != result["handle"]:
+            raise RuntimeError(f"submission handle path mismatch: {relative}")
+        if relative.parts[2] != result["submission_id"]:
+            raise RuntimeError(f"submission id path mismatch: {relative}")
+        if int(result["absolute_determinant"]) <= floor.absolute_determinant:
+            raise RuntimeError(f"accepted submission does not beat floor: {relative}")
+        if result["receipt_sha256"] in trusted_receipts:
+            raise RuntimeError(f"duplicate receipt in trusted repository: {relative}")
+        if result["sign_normalized_sha256"] in normalized_hashes:
+            raise RuntimeError(f"sign-normalized duplicate in repository: {relative}")
+        trusted_receipts.add(result["receipt_sha256"])
+        normalized_hashes.add(result["sign_normalized_sha256"])
+        submission_results.append(result)
+
+    for result in submission_results:
+        parent = result["parent_receipt_sha256"]
+        if parent is not None and parent not in trusted_receipts:
+            raise RuntimeError(
+                f"submission {result['handle']}/{result['submission_id']} "
+                "references an unknown parent"
+            )
+        if parent == result["receipt_sha256"]:
+            raise RuntimeError(
+                f"submission {result['handle']}/{result['submission_id']} "
+                "references itself as parent"
+            )
+
+    effective = effective_frontier(ROOT, contract)
+
+    print("TRUSTED REPOSITORY VERIFIED")
+    print(f"contract sha256: {contract.sha256}")
+    print(f"genesis |det|: {genesis['score']['absolute_determinant']}")
+    print(f"published floor |det|: {target['absolute_determinant']}")
+    print(f"effective frontier |det|: {effective.absolute_determinant}")
+    print(f"accepted submissions: {len(submission_results)}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

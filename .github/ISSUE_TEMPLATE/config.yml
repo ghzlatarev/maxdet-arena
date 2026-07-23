@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Research discussion
+    url: https://github.com/ghzlatarev/maxdet-arena/discussions
+    about: Share approaches, tied constructions, verifier questions, and negative results.

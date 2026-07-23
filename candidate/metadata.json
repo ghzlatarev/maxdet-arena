@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "handle": "local-researcher",
+  "method": "Replace this with your search method",
+  "parent_receipt_sha256": null,
+  "artifact_license": "CC0-1.0",
+  "notes": "This file is research metadata. The matrix alone determines the score."
+}

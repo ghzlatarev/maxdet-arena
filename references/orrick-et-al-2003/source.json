@@ -1,0 +1,15 @@
+{
+  "title": "New lower bounds for the maximal determinant problem",
+  "authors": [
+    "William P. Orrick",
+    "Bruce Solomon",
+    "Roland Dowdeswell",
+    "Warren D. Smith"
+  ],
+  "year": 2003,
+  "arxiv": "math/0304410",
+  "url": "https://arxiv.org/abs/math/0304410",
+  "reported_determinant_expression": "2^22 * 3 * 5^6 * 67 * 211",
+  "reported_absolute_determinant": "2779447296000000",
+  "role": "Published comparison point; not an arena submission"
+}

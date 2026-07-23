@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maxdet-arena"
+version = "0.1.0"
+description = "Exact, dependency-free verifier and research harness for the MaxDet Arena."
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "MaxDet Arena contributors" }]
+
+[project.scripts]
+maxdet-arena = "maxdet.cli:main"
+
+[tool.setuptools]
+packages = ["maxdet"]

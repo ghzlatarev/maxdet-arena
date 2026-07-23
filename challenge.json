@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "challenge_id": "maxdet-23-v1",
+  "title": "MaxDet Arena — Order 23",
+  "order": 23,
+  "allowed_entries": [-1, 1],
+  "objective": {
+    "direction": "maximize",
+    "quantity": "absolute_determinant",
+    "ranking_type": "exact_integer"
+  },
+  "matrix_format": {
+    "encoding": "utf-8",
+    "rows": 23,
+    "columns": 23,
+    "tokens": ["-1", "1"],
+    "separator": "ascii_whitespace",
+    "max_bytes": 8192
+  },
+  "verification": {
+    "algorithm": "fraction-free-bareiss-v1",
+    "independent_checks": [
+      "gram-determinant-identity",
+      "modular-determinants",
+      "hadamard-bound",
+      "power-of-two-divisibility"
+    ],
+    "modular_primes": [998244353, 1000000007, 1000000009],
+    "sign_normalization": "first-row-and-column-positive-v1"
+  },
+  "claims": {
+    "verified_means": "The submitted matrix is valid and has the reported exact determinant.",
+    "verified_does_not_mean": "The matrix is globally optimal or a world record.",
+    "world_record_policy": "Any world-record claim requires a separate literature review and independent expert confirmation."
+  }
+}

@@ -1,0 +1,1 @@
+"""MaxDet Arena verifier tests."""
