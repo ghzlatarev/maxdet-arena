@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "submission_id": "prelaunch-pair-kick",
+  "handle": "arena",
+  "method": "24-entry kicks followed by exact joint two-line ascent; deterministic retained replay",
+  "parent_receipt_sha256": "45578d90f1d0e660ee50aa86d3aecd60c859627fdb1bec264024770ae32a32e5",
+  "artifact_license": "CC0-1.0",
+  "runtime_seconds": 900,
+  "seed": 2402,
+  "claim": "Private reproducible checkpoint below the published comparison point"
+}

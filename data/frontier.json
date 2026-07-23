@@ -9,11 +9,11 @@
     "source": "references/orrick-et-al-2003"
   },
   "arena_best": {
-    "absolute_determinant": "2088024410161152",
-    "label": "Prelaunch dependency-free smoke search",
-    "receipt_sha256": "b7a87a898d310362860299b341e007b4f7344e491232319506f103ab68bcb12d",
-    "source": "records/prelaunch-smoke"
+    "absolute_determinant": "2726756352000000",
+    "label": "Prelaunch exact pair-kick checkpoint",
+    "receipt_sha256": "0922f7257b85eab69e3670c0d8da24284d3baf95f9e97ece08e5a2da0e8f7996",
+    "source": "records/prelaunch-pair-kick"
   },
   "claim_boundary": "Verified scores are not world-record or optimality claims.",
-  "updated": "2026-07-23"
+  "updated": "2026-07-24"
 }

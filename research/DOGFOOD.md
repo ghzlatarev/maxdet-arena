@@ -21,21 +21,21 @@ search state is never treated as a score.
 | Starter smoke | first improvement | 23 | 10 s | 2,088,024,410,161,152 | complete |
 | Reference audit | every radius ≤ 3 perturbation | — | 555.77 s | 2,779,447,296,000,000 | complete; no strict improvement |
 | Exact two-line audit | every unordered row/column pair | 2301 | 61.74 s | 2,779,447,296,000,000 | complete; no strict improvement |
-| `anneal-303` | annealing | 303 | 10,800 s | pending | running |
-| `hybrid-101` | greedy + kicks | 101 | 10,800 s | pending | running |
-| `hill-202` | random-restart hill climb | 202 | 10,800 s | pending | running |
+| `anneal-303` | annealing | 303 | 10,800 s | 2,779,447,296,000,000 | complete; no strict improvement |
+| `hybrid-101` | greedy + kicks | 101 | 10,800 s | 2,779,447,296,000,000 | complete; no strict improvement |
+| `hill-202` | random-restart hill climb | 202 | 10,800 s | 2,779,447,296,000,000 | complete; no strict improvement |
 | `block-909` | exact-accepted row/column blocks | 909 | 10,800 s | pending | running |
 | `coordinate-808` | random-restart row/column blocks | 808 | 10,800 s | pending | running |
-| `coordinate-811` | random-restart row/column blocks | 811 | 7,200 s | pending | running |
-| `coordinate-812` | random-restart row/column blocks | 812 | 7,200 s | pending | running |
-| `coordinate-813` | random-restart row/column blocks | 813 | 7,200 s | pending | running |
-| `block-910` | exact-accepted row/column blocks | 910 | 7,200 s | pending | running |
-| `block-911` | exact-accepted row/column blocks | 911 | 7,200 s | pending | running |
+| `coordinate-811` | random-restart row/column blocks | 811 | 7,200 s | 2,332,773,637,423,104 | complete |
+| `coordinate-812` | random-restart row/column blocks | 812 | 7,200 s | 2,391,226,070,335,488 | complete |
+| `coordinate-813` | random-restart row/column blocks | 813 | 7,200 s | 2,389,494,737,141,760 | complete |
+| `block-910` | exact-accepted row/column blocks | 910 | 7,200 s | 2,779,447,296,000,000 | complete; no strict improvement |
+| `block-911` | exact-accepted row/column blocks | 911 | 7,200 s | 2,779,447,296,000,000 | complete; no strict improvement |
 | `pair-kick-2401` | 12-entry kicks + exact two-line ascent | 2401 | 7,200 s | pending | running |
 | `pair-kick-2402` | 24-entry kicks + exact two-line ascent | 2402 | 7,200 s | pending | running |
 | `pair-kick-2403` | retained 12-entry kicks + exact two-line ascent | 2403 | 7,200 s | pending | running |
 | `pair-replay-2402` | retained replay of the 24-entry basin | 2402 | 900 s | 2,726,756,352,000,000 | complete; receipt `0922f725…` |
-| `block-from-replay-2424` | exact line kicks from the retained basin | 2424 | 3,600 s | pending | running |
+| `block-from-replay-2424` | exact line kicks from the retained basin | 2424 | 3,600 s | 2,779,447,296,000,000 | complete; reached reference in 0.151 s |
 
 The exhaustive reference audit evaluated all 24,673,089 matrices obtained by
 flipping one, two, or three entries. It proves only local optimality within that
