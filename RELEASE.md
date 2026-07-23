@@ -27,7 +27,6 @@ Do not call the arena open until every item below is complete.
 ## Site gate
 
 - [ ] Change `data/frontier.json` status from `private-dogfooding` to `open`.
-- [ ] Change the visible private-dogfood status label.
 - [ ] Push the same reviewed commit to the connected Sites source repository.
 - [ ] Save and inspect a private version before changing access.
 - [ ] Make any public deployment only with explicit release approval.

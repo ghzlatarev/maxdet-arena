@@ -112,9 +112,12 @@ def effective_frontier(
     *,
     exclude_directory: Path | None = None,
 ) -> Frontier:
-    """Return max(declared floor, every exactly verified accepted submission)."""
+    """Return max(floor, declared arena checkpoint, accepted submissions)."""
 
-    _, best = load_frontier_data(root, contract)
+    data, best = load_frontier_data(root, contract)
+    arena_best = _validate_artifact(data["arena_best"], "arena_best")
+    if arena_best.absolute_determinant > best.absolute_determinant:
+        best = arena_best
     for directory in discover_submission_directories(root / "submissions"):
         if (
             exclude_directory is not None

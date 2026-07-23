@@ -92,6 +92,10 @@ optimality under that specified two-line replacement neighborhood.
     working state remains below the global checkpoint. The exact pair engine
     now tracks working and global scores separately, accepts strict ascent
     within the perturbed basin, and writes only a new global best.
+17. The first effective-frontier calculation ignored `arena_best`, which would
+    matter if a private checkpoint ever exceeded the literature floor. The
+    verifier and site now take the maximum of the floor, reproduced arena
+    checkpoint, and exactly verified accepted submissions.
 
 ## Verification snapshot
 

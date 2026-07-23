@@ -40,6 +40,17 @@ function loadTargetToBeat(): {
     detailLabel: "Expression",
     expression: "2²² × 3 × 5⁶ × 67 × 211",
   };
+  if (
+    BigInt(frontier.arena_best.absolute_determinant) >
+    BigInt(best.absoluteDeterminant)
+  ) {
+    best = {
+      absoluteDeterminant: frontier.arena_best.absolute_determinant,
+      source: frontier.arena_best.label,
+      detailLabel: "Receipt",
+      expression: `receipt ${frontier.arena_best.receipt_sha256.slice(0, 12)}…`,
+    };
+  }
   const submissions = path.join(process.cwd(), "submissions");
   if (!fs.existsSync(submissions)) return best;
 
@@ -78,6 +89,10 @@ export default function Home() {
   const targetToBeat = loadTargetToBeat();
   const target = targetToBeat.absoluteDeterminant;
   const arenaBest = frontier.arena_best.absolute_determinant;
+  const statusLabel =
+    frontier.status === "private-dogfooding"
+      ? "Private dogfooding"
+      : "Open arena";
   const progress = Number(
     (BigInt(arenaBest) * 10_000n) / BigInt(target),
   ) / 100;
@@ -117,7 +132,7 @@ export default function Home() {
       <header className="hero wrap" id="top">
         <div className="status-pill">
           <span />
-          Private dogfooding · v0.1
+          {statusLabel} · v0.1
         </div>
         <p className="eyebrow">Pooled-Codex mathematical research</p>
         <h1>
@@ -284,7 +299,7 @@ export default function Home() {
 
         <div className="dogfood-row">
           <div>
-            <span>Our dependency-free smoke search</span>
+            <span>{frontier.arena_best.label}</span>
             <strong>{formatInteger(arenaBest)}</strong>
           </div>
           <div className="progress-track" aria-label={`${progress}% of target`}>

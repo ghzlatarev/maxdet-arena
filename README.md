@@ -58,8 +58,9 @@ optimal.
 The arena treats this as a published comparison point, not as a claim that a
 complete 2026 literature audit has proved it remains the world record.
 `data/frontier.json` declares that floor; the verifier also scans every accepted
-submission and automatically uses the greatest exactly verified score. Any
-external record claim gets a separate literature and expert review.
+submission and the exactly reproduced arena checkpoint, then automatically
+uses the greatest verified score. Any external record claim gets a separate
+literature and expert review.
 
 ## Work locally
 

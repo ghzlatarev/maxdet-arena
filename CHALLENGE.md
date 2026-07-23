@@ -56,7 +56,8 @@ column are positive. That hash catches sign-only variants. It deliberately does
 not claim full canonicalization under row/column permutations.
 
 Scores are accepted only when strictly above the greatest of the declared
-base-branch floor and all exactly verified base-branch submissions.
+base-branch floor, the exactly reproduced arena checkpoint, and all exactly
+verified base-branch submissions.
 Potentially interesting tied or inequivalent constructions belong in a research
 discussion until a full equivalence checker is introduced.
 

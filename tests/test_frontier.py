@@ -94,6 +94,34 @@ class FrontierTests(unittest.TestCase):
             )
             self.assertEqual(frontier.absolute_determinant, 21 * 2**22)
 
+    def test_effective_frontier_includes_declared_arena_checkpoint(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root, bundle = self.make_root(temporary)
+            for path in bundle.iterdir():
+                path.unlink()
+            bundle.rmdir()
+            bundle.parent.rmdir()
+            (root / "submissions").rmdir()
+
+            contract = load_contract(root / "challenge.json")
+            reference = verify_matrix(
+                ROOT / "references/orrick-et-al-2003/matrix.txt",
+                contract,
+            )
+            frontier_path = root / "data" / "frontier.json"
+            data = json.loads(frontier_path.read_text(encoding="utf-8"))
+            data["arena_best"] = {
+                "absolute_determinant": str(reference.abs_determinant),
+                "label": "private arena checkpoint",
+                "receipt_sha256": reference.receipt["receipt_sha256"],
+                "source": "records/private-checkpoint",
+            }
+            frontier_path.write_text(json.dumps(data), encoding="utf-8")
+
+            frontier = effective_frontier(root, contract)
+            self.assertEqual(frontier.absolute_determinant, reference.abs_determinant)
+            self.assertEqual(frontier.source, "records/private-checkpoint")
+
 
 if __name__ == "__main__":
     unittest.main()
