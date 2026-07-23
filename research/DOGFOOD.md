@@ -8,7 +8,7 @@ Status: in progress; not approved for publication.
 - Machine: Apple M4 Pro, 14 logical CPUs, 24 GiB RAM
 - Python: 3.9.6
 - Node.js: 22.17.1
-- Trusted verifier: `maxdet-verifier-0.3.0`
+- Trusted verifier: `maxdet-verifier-0.4.0`
 - Challenge: `maxdet-23-v1`
 
 All retained scores below were recomputed by `./arena verify`; floating-point
@@ -20,6 +20,7 @@ search state is never treated as a score.
 | --- | --- | ---: | ---: | ---: | --- |
 | Starter smoke | first improvement | 23 | 10 s | 2,088,024,410,161,152 | complete |
 | Reference audit | every radius ≤ 3 perturbation | — | 555.77 s | 2,779,447,296,000,000 | complete; no strict improvement |
+| Exact two-line audit | every unordered row/column pair | 2301 | 61.74 s | 2,779,447,296,000,000 | complete; no strict improvement |
 | `anneal-303` | annealing | 303 | 10,800 s | pending | running |
 | `hybrid-101` | greedy + kicks | 101 | 10,800 s | pending | running |
 | `hill-202` | random-restart hill climb | 202 | 10,800 s | pending | running |
@@ -33,7 +34,10 @@ search state is never treated as a score.
 
 The exhaustive reference audit evaluated all 24,673,089 matrices obtained by
 flipping one, two, or three entries. It proves only local optimality within that
-specific Hamming ball.
+specific Hamming ball. The exact two-line audit jointly optimized every pair of
+complete rows and every pair of complete columns: 506 pairs and 2,122,317,824
+assignments after fixing one redundant whole-line sign. It proves only local
+optimality under that specified two-line replacement neighborhood.
 
 ## Harness quirks found and fixed
 
@@ -72,6 +76,16 @@ specific Hamming ball.
 12. The first site dependency graph carried known transitive advisories.
     Locked overrides were updated; `npm audit` currently reports zero known
     vulnerabilities.
+13. A wall-clock pair audit stopped after 471 of 506 pairs and therefore could
+    not support a complete-neighborhood claim. The audit now has
+    completion-counted `--passes`; the retained run processed all 506 pairs.
+14. The first receipt reported only the generic Barba upper-bound ratio.
+    Primary-source review recovered the tighter order-23 Ehlich expression;
+    its exact square is now pinned in the contract, verifier, tests, and
+    receipts.
+15. The CLI labeled a determinant-squared Hadamard efficiency as a linear
+    ratio. The schema now names all squared ratios explicitly, and the CLI
+    takes the square root before displaying a percentage.
 
 ## Verification snapshot
 
@@ -89,6 +103,8 @@ specific Hamming ball.
   divisibility invariant are enforced.
 - The responsive production build and TypeScript check pass.
 - `npm audit` reports zero known vulnerabilities.
+- Both native research starters compile with warnings treated as errors and
+  their smoke outputs cross-check in the trusted Python verifier.
 
 ## Remaining release gates
 

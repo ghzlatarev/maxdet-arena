@@ -11,12 +11,29 @@
   "url": "https://arxiv.org/abs/math/0304410",
   "reported_determinant_expression": "2^22 * 3 * 5^6 * 67 * 211",
   "reported_absolute_determinant": "2779447296000000",
+  "source_archive": {
+    "url": "https://export.arxiv.org/e-print/math/0304410",
+    "retrieved": "2026-07-23",
+    "file": "matData.tex",
+    "conversion": "Each + was mapped to 1 and each - to -1, with ASCII spaces between entries.",
+    "matrix_raw_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+    "byte_match_after_conversion": true
+  },
+  "reported_order_23_upper_bound": {
+    "attribution": "Ehlich",
+    "determinant_expression": "2^22 * 3 * 5^6 * 675 * sqrt(505)",
+    "determinant_squared": "8894085385420800000000000000000",
+    "reported_reference_fraction": "0.931983"
+  },
   "survey_cross_check": {
     "title": "A Survey of the Hadamard Maximal Determinant Problem",
     "doi": "10.37236/10367",
+    "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v28i4p41",
     "year": 2021,
     "location": "Table 1, order 23 computation",
-    "reported_ratio_to_table_upper_bound": "0.7091"
+    "reported_ratio_to_table_upper_bound": "0.7091",
+    "table_upper_bound": "generic Barba bound",
+    "note": "The survey explicitly notes that this table does not use the best known bound for orders at most 59."
   },
   "role": "Published comparison point; not an arena submission"
 }

@@ -22,12 +22,19 @@
     "independent_checks": [
       "gram-determinant-identity",
       "modular-determinants",
+      "order-23-ehlich-bound",
       "odd-order-barba-bound",
       "hadamard-bound",
       "power-of-two-divisibility"
     ],
     "modular_primes": [998244353, 1000000007, 1000000009],
-    "sign_normalization": "first-row-and-column-positive-v1"
+    "sign_normalization": "first-row-and-column-positive-v1",
+    "order_specific_bound": {
+      "name": "ehlich-order-23",
+      "determinant_expression": "2^22 * 3 * 5^6 * 675 * sqrt(505)",
+      "determinant_squared": "8894085385420800000000000000000",
+      "citation": "Orrick-Solomon-Dowdeswell-Smith-2003"
+    }
   },
   "claims": {
     "verified_means": "The submitted matrix is valid and has the reported exact determinant.",

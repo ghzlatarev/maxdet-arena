@@ -25,6 +25,28 @@ jobs:
         run: ./arena test --verbose
       - name: Reproduce trusted receipts
         run: python3 tools/verify_repository.py
+      - name: Compile and cross-check research starters
+        run: |
+          mkdir -p build/research runs/ci
+          c++ -std=c++20 -O2 -Wall -Wextra -Werror \
+            research/fast_search.cpp -o build/research/fast_search
+          build/research/fast_search \
+            --start references/orrick-et-al-2003/matrix.txt \
+            --output runs/ci/fast.matrix.txt \
+            --log runs/ci/fast.jsonl \
+            --mode block \
+            --seed 23 \
+            --seconds 0.1
+          ./arena verify runs/ci/fast.matrix.txt --quiet
+          c++ -std=c++20 -O2 -Wall -Wextra -Werror \
+            research/pair_search.cpp -o build/research/pair_search
+          build/research/pair_search \
+            --start references/orrick-et-al-2003/matrix.txt \
+            --output runs/ci/pair.matrix.txt \
+            --log runs/ci/pair.jsonl \
+            --seed 23 \
+            --seconds 0.01
+          ./arena verify runs/ci/pair.matrix.txt --quiet
 
   website:
     if: github.event_name == 'push'

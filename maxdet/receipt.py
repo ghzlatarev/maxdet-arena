@@ -18,7 +18,7 @@ from .exact import (
     normalize_signs,
 )
 
-VERIFIER_VERSION = "maxdet-verifier-0.3.0"
+VERIFIER_VERSION = "maxdet-verifier-0.4.0"
 
 
 @dataclass(frozen=True)
@@ -93,6 +93,10 @@ def _verify_parsed_matrix(
     if determinant_squared > bound_squared:
         raise VerificationError("Hadamard bound violated")
 
+    ehlich_bound_squared = contract.order_specific_bound_squared
+    if determinant_squared > ehlich_bound_squared:
+        raise VerificationError("order-23 Ehlich bound violated")
+
     barba_bound_squared = (
         (2 * contract.order - 1)
         * (contract.order - 1) ** (contract.order - 1)
@@ -116,13 +120,18 @@ def _verify_parsed_matrix(
 
     normalized = normalize_signs(matrix)
     normalized_bytes = matrix_text(normalized).encode("ascii")
-    ratio_ppb = determinant_squared * 1_000_000_000 // bound_squared
+    hadamard_ratio_squared_ppb = (
+        determinant_squared * 1_000_000_000 // bound_squared
+    )
     barba_ratio_squared_ppb = (
         determinant_squared * 1_000_000_000 // barba_bound_squared
     )
+    ehlich_ratio_squared_ppb = (
+        determinant_squared * 1_000_000_000 // ehlich_bound_squared
+    )
 
     receipt: dict[str, Any] = {
-        "receipt_schema_version": 1,
+        "receipt_schema_version": 2,
         "challenge_id": contract.challenge_id,
         "contract_sha256": contract.sha256,
         "verifier_version": VERIFIER_VERSION,
@@ -138,7 +147,11 @@ def _verify_parsed_matrix(
             "absolute_determinant": str(absolute),
             "determinant_squared": str(determinant_squared),
             "hadamard_bound_squared": str(bound_squared),
-            "hadamard_ratio_parts_per_billion": ratio_ppb,
+            "hadamard_ratio_squared_parts_per_billion": (
+                hadamard_ratio_squared_ppb
+            ),
+            "ehlich_bound_squared": str(ehlich_bound_squared),
+            "ehlich_ratio_squared_parts_per_billion": ehlich_ratio_squared_ppb,
             "barba_bound_squared": str(barba_bound_squared),
             "barba_ratio_squared_parts_per_billion": barba_ratio_squared_ppb,
         },
@@ -150,6 +163,7 @@ def _verify_parsed_matrix(
             "modular_determinants": modular_checks,
             "modular_modulus_product": str(modulus_product),
             "crt_unique_reconstruction": "passed",
+            "order_23_ehlich_bound": "passed",
             "barba_bound": "passed",
             "hadamard_bound": "passed",
             "power_of_two_divisibility": "passed",

@@ -43,3 +43,28 @@ the authority and adds Gram, modular, bounds, divisibility, and hash checks.
 
 Compiled binaries and `runs/` logs are intentionally ignored. Preserve durable
 results as a small record or submission artifact, not as an executable.
+
+## Exact two-line audit
+
+`pair_search.cpp` jointly optimizes two complete rows, then two complete
+columns. For each pair it fixes one redundant sign and exhaustively evaluates
+all `2^22` assignments; the other line is then chosen exactly from the
+second-cofactor signs.
+
+```sh
+c++ -std=c++20 -O3 -Wall -Wextra -pedantic \
+  research/pair_search.cpp -o build/research/pair_search
+
+build/research/pair_search \
+  --start references/orrick-et-al-2003/matrix.txt \
+  --output runs/pair-audit.matrix.txt \
+  --log runs/pair-audit.jsonl \
+  --seed 2301 \
+  --passes 1
+
+./arena verify runs/pair-audit.matrix.txt
+```
+
+Use `--passes 1` for a completion-counted audit of all 506 unordered row and
+column pairs. `--seconds N` is useful for exploratory repeated passes, but a
+time-limited partial pass does not establish full neighborhood coverage.

@@ -684,7 +684,7 @@ footer a:hover {
 
 .frontier-meta {
   display: grid;
-  grid-template-columns: 1.2fr 1.3fr 0.5fr;
+  grid-template-columns: 1.15fr 1.25fr 0.45fr 0.55fr;
   border-top: 1px solid var(--white-line);
 }
 

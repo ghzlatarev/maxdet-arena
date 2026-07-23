@@ -32,6 +32,10 @@ class ContractTests(unittest.TestCase):
             self.contract.modular_primes,
             (998244353, 1000000007, 1000000009),
         )
+        self.assertEqual(
+            self.contract.order_specific_bound_squared,
+            (2**22 * 3 * 5**6 * 675) ** 2 * 505,
+        )
 
     def test_accepts_ascii_whitespace_and_extra_trailing_newline(self) -> None:
         raw = b"\n\t" + self.valid_matrix_bytes().replace(b" ", b"\t") + b"\n "

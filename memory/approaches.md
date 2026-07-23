@@ -13,6 +13,13 @@ reproduces exactly:
 sign-normalized sha256 = c0ea58d361945b20dad78bddb3fd93c0810b762e527e8781e87d6db5e86d993a
 ```
 
+The repository matrix is a byte-for-byte match after mechanically translating
+the `+`/`-` rows in the authors’ archived `matData.tex`. That source reports
+the tighter order-23 Ehlich upper bound
+`2^22 * 3 * 5^6 * 675 * sqrt(505)` and a reference ratio of `0.931983`.
+The 2021 survey’s `0.7091` uses the generic Barba bound and explicitly notes
+that its table does not use the best known bound for orders at most 59.
+
 ## Prelaunch dogfooding
 
 - The deterministic `J - 2I` genesis matrix verifies at `88,080,384`.
@@ -47,6 +54,13 @@ sign-normalized sha256 = c0ea58d361945b20dad78bddb3fd93c0810b762e527e8781e87d6db
   one, two, or three from the published matrix found no strict improvement
   (555.77 seconds in the prelaunch run). This establishes only radius-three
   local optimality for that representation, not global optimality.
+- A completion-counted exact two-line audit jointly optimized all 253 row
+  pairs and all 253 column pairs. It evaluated 2,122,317,824 sign assignments
+  in 61.735 seconds and found no strict improvement. This establishes only
+  local optimality under replacement of two complete parallel lines.
+- Time-bounded finite searches must not be called exhaustive without a
+  completion count. An early pair audit reached only 471 of 506 pairs, so the
+  research tool gained a pass-counted mode before the retained audit.
 
 ## Search directions
 

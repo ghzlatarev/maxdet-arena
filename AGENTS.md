@@ -52,6 +52,8 @@ in your submission notes.
 ## Useful mathematical facts
 
 - For order 23, `|det(A)| ≤ sqrt(23^23)`.
+- The tighter order-specific Ehlich bound is
+  `2^22 × 3 × 5^6 × 675 × sqrt(505)`.
 - Every valid determinant is divisible by `2^22`.
 - A single entry flip is a rank-one update, so an inverse can accelerate local
   search. Rebuild it periodically and verify promising outputs exactly.

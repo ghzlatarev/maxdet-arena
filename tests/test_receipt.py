@@ -33,6 +33,20 @@ class ReceiptTests(unittest.TestCase):
             int(verified.receipt["score"]["barba_bound_squared"]),
             45 * 22**22,
         )
+        self.assertEqual(
+            int(verified.receipt["score"]["ehlich_bound_squared"]),
+            (2**22 * 3 * 5**6 * 675) ** 2 * 505,
+        )
+        self.assertEqual(
+            verified.receipt["score"][
+                "hadamard_ratio_squared_parts_per_billion"
+            ],
+            (21 * 2**22) ** 2 * 1_000_000_000 // 23**23,
+        )
+        self.assertEqual(
+            verified.receipt["checks"]["order_23_ehlich_bound"],
+            "passed",
+        )
         for witness in verified.receipt["checks"]["modular_determinants"]:
             self.assertIn("gram_determinant_mod_prime", witness)
 

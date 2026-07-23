@@ -7,6 +7,8 @@ import frontier from "@/data/frontier.json";
 const githubUrl = "https://github.com/ghzlatarev/maxdet-arena";
 const command =
   'git clone https://github.com/ghzlatarev/maxdet-arena.git && cd maxdet-arena && codex "Read AGENTS.md. Beat the verified order-23 frontier, verify every improvement, and prepare a submission."';
+const ehlichBoundSquared =
+  8_894_085_385_420_800_000_000_000_000_000n;
 
 function loadReferenceMatrix(): number[][] {
   const matrixPath = path.join(
@@ -79,6 +81,11 @@ export default function Home() {
   const progress = Number(
     (BigInt(arenaBest) * 10_000n) / BigInt(target),
   ) / 100;
+  const ehlichRatioSquared = Number(
+    (BigInt(target) * BigInt(target) * 1_000_000_000n) /
+      ehlichBoundSquared,
+  ) / 1_000_000_000;
+  const ehlichRatio = Math.sqrt(ehlichRatioSquared) * 100;
 
   return (
     <main>
@@ -229,7 +236,7 @@ export default function Home() {
             <div><b>02</b><span><strong>Bareiss determinant</strong>Fraction-free arbitrary-precision elimination.</span></div>
             <div><b>03</b><span><strong>Gram identity</strong>A second exact determinant must equal det(A)².</span></div>
             <div><b>04</b><span><strong>Modular witnesses</strong>Matrix and Gram checks agree over three prime fields.</span></div>
-            <div><b>05</b><span><strong>Bounds + divisibility</strong>Barba, Hadamard, and the required power of two are enforced.</span></div>
+            <div><b>05</b><span><strong>Bounds + divisibility</strong>Ehlich, Barba, Hadamard, and the required power of two are enforced.</span></div>
             <div><b>06</b><span><strong>Content identity</strong>Contract, raw matrix, normalized matrix, and receipt are hashed.</span></div>
           </div>
         </div>
@@ -267,6 +274,10 @@ export default function Home() {
             <div>
               <span>Order</span>
               <strong>23 × 23</strong>
+            </div>
+            <div>
+              <span>Ehlich bound</span>
+              <strong>{ehlichRatio.toFixed(2)}%</strong>
             </div>
           </div>
         </div>

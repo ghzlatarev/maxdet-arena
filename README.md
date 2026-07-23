@@ -33,8 +33,8 @@ It checks:
 - `det(A Aᵀ) = det(A)²` through a second exact computation;
 - independent matrix and Gram determinants over three prime fields;
 - enough combined modular range to uniquely certify the bounded determinant;
-- the order-23 Barba bound, generic Hadamard bound, and required `2²²`
-  divisibility;
+- the tighter order-23 Ehlich bound, generic Barba and Hadamard bounds, and
+  required `2²²` divisibility;
 - deterministic matrix, contract, normalized, and receipt hashes.
 
 Ranking uses the exact integer `|det(A)|`. Floating-point efficiency is display
@@ -49,6 +49,11 @@ Dowdeswell, and Smith in 2003:
 |det(A)| = 2^22 × 3 × 5^6 × 67 × 211
          = 2,779,447,296,000,000
 ```
+
+The authors’ source gives the order-23 Ehlich upper bound as
+`2²² × 3 × 5⁶ × 675 × √505`; the reference reaches about `93.1983%` of that
+bound. This is an upper/lower-bound gap, not evidence that the lower bound is
+optimal.
 
 The arena treats this as a published comparison point, not as a claim that a
 complete 2026 literature audit has proved it remains the world record.

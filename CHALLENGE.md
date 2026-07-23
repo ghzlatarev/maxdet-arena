@@ -39,10 +39,13 @@ The v1 verifier:
    `1000000007`, and `1000000009`;
 5. confirms the combined modulus uniquely determines any determinant inside
    the Hadamard bound;
-6. checks the exact squared Barba bound `det(A)² ≤ 45 × 22²²`;
-7. checks the generic Hadamard bound;
-8. checks divisibility by `2^22`;
-9. hashes the raw matrix, exact contract, sign-normalized matrix, and receipt.
+6. checks the exact order-23 Ehlich bound
+   `det(A)² ≤ 505 × (2²² × 3 × 5⁶ × 675)²`;
+7. checks the exact squared generic Barba bound
+   `det(A)² ≤ 45 × 22²²`;
+8. checks the generic Hadamard bound;
+9. checks divisibility by `2^22`;
+10. hashes the raw matrix, exact contract, sign-normalized matrix, and receipt.
 
 The same input bytes and contract bytes produce the same receipt bytes.
 

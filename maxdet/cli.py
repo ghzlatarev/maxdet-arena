@@ -104,17 +104,28 @@ def command_verify(args: argparse.Namespace) -> int:
     print(f"order: {matrix['order']}")
     print(f"determinant: {score['determinant']}")
     print(f"score |det|: {score['absolute_determinant']}")
-    print(
-        "Hadamard ratio: "
-        f"{score['hadamard_ratio_parts_per_billion'] / 10_000_000:.7f}%"
+    hadamard_ratio_percent = (
+        math.sqrt(
+            score["hadamard_ratio_squared_parts_per_billion"]
+            / 1_000_000_000
+        )
+        * 100
     )
+    print(f"Hadamard ratio: {hadamard_ratio_percent:.7f}%")
     barba_ratio_percent = (
         math.sqrt(
             score["barba_ratio_squared_parts_per_billion"] / 1_000_000_000
         )
         * 100
     )
-    print(f"Barba ratio: {barba_ratio_percent:.7f}%")
+    ehlich_ratio_percent = (
+        math.sqrt(
+            score["ehlich_ratio_squared_parts_per_billion"] / 1_000_000_000
+        )
+        * 100
+    )
+    print(f"order-23 Ehlich ratio: {ehlich_ratio_percent:.7f}%")
+    print(f"generic Barba ratio: {barba_ratio_percent:.7f}%")
     print(f"matrix sha256: {matrix['raw_sha256']}")
     print(f"normalized sha256: {matrix['sign_normalized_sha256']}")
     print(f"receipt sha256: {verified.receipt['receipt_sha256']}")

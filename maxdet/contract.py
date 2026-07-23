@@ -34,12 +34,19 @@ EXPECTED_CONTRACT_DATA = {
         "independent_checks": [
             "gram-determinant-identity",
             "modular-determinants",
+            "order-23-ehlich-bound",
             "odd-order-barba-bound",
             "hadamard-bound",
             "power-of-two-divisibility",
         ],
         "modular_primes": [998244353, 1000000007, 1000000009],
         "sign_normalization": "first-row-and-column-positive-v1",
+        "order_specific_bound": {
+            "name": "ehlich-order-23",
+            "determinant_expression": "2^22 * 3 * 5^6 * 675 * sqrt(505)",
+            "determinant_squared": "8894085385420800000000000000000",
+            "citation": "Orrick-Solomon-Dowdeswell-Smith-2003",
+        },
     },
     "claims": {
         "verified_means": (
@@ -81,6 +88,14 @@ class Contract:
     @property
     def modular_primes(self) -> tuple[int, ...]:
         return tuple(int(value) for value in self.data["verification"]["modular_primes"])
+
+    @property
+    def order_specific_bound_squared(self) -> int:
+        return int(
+            self.data["verification"]["order_specific_bound"][
+                "determinant_squared"
+            ]
+        )
 
 
 def load_contract(path: Path) -> Contract:
