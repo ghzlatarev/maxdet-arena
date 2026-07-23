@@ -10,6 +10,7 @@ import unittest
 from pathlib import Path
 
 from maxdet.contract import load_contract
+from maxdet.exact import matrix_text
 from maxdet.receipt import canonical_json_bytes, verify_matrix
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -112,9 +113,18 @@ class PullRequestVerifierTests(unittest.TestCase):
             )
             self.commit_all(trusted, "Lower floor for integration test")
             self.clone(trusted, untrusted)
+            novel_matrix = [
+                [int(token) for token in line.split()]
+                for line in (
+                    untrusted / "records" / "prelaunch-smoke" / "matrix.txt"
+                ).read_text(encoding="ascii").splitlines()
+            ]
+            novel_matrix[0][0] *= -1
+            novel_path = temporary_root / "novel-matrix.txt"
+            novel_path.write_text(matrix_text(novel_matrix), encoding="ascii")
             self.add_bundle(
                 untrusted,
-                matrix_source=untrusted / "candidate" / "matrix.txt",
+                matrix_source=novel_path,
                 parent=genesis.receipt["receipt_sha256"],
             )
             self.commit_all(untrusted, "Add improving matrix")
@@ -122,7 +132,10 @@ class PullRequestVerifierTests(unittest.TestCase):
             result = self.run_verifier(trusted, untrusted)
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertIn("PULL REQUEST SUBMISSION VERIFIED", result.stdout)
-            self.assertIn("2088024410161152", result.stdout)
+            self.assertGreater(
+                verify_matrix(novel_path, contract).abs_determinant,
+                genesis.abs_determinant,
+            )
 
     def test_rejects_a_tie_with_the_current_frontier(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
