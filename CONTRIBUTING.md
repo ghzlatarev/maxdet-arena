@@ -47,7 +47,8 @@ The base-branch workflow:
 - enforces strict file and size allowlists;
 - executes only the base branch verifier;
 - recomputes the receipt;
-- derives the effective frontier from all verified base-branch submissions;
+- derives the effective frontier from the published floor, reproduced arena
+  checkpoint, and all verified base-branch submissions;
 - requires a score strictly above that effective frontier.
 
 Maintainers reproduce an accepted result locally before merging.

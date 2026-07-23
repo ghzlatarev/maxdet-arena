@@ -78,8 +78,14 @@ best output checkpoint separate from the lower-scoring working state:
 build/research/pair_search \
   --start references/orrick-et-al-2003/matrix.txt \
   --output runs/pair-kick.matrix.txt \
+  --research-output runs/pair-kick-best-below-frontier.matrix.txt \
   --log runs/pair-kick.jsonl \
   --seed 2401 \
   --kick-size 12 \
   --seconds 3600
 ```
+
+`--output` is never replaced by a lower score. The optional, distinct
+`--research-output` preserves the strongest working state still below the
+global incumbent, which is useful for studying alternate basins. The tool
+rejects aliases among its start, global output, research output, and log paths.

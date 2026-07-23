@@ -41,8 +41,9 @@ that its table does not use the best known bound for orders at most 59.
 - Submission preparation now validates score and metadata before publishing an
   atomic bundle. A tie, regression, bad slug, or blank method leaves no partial
   directory behind.
-- CI derives the effective frontier from every exactly verified trusted
-  submission rather than relying only on a manually updated display file.
+- CI derives the effective frontier from the published floor, exactly
+  reproduced arena checkpoint, and every verified trusted submission rather
+  than relying only on a manually updated display number.
 - Exact-score cross-checks now cover both the matrix and Gram matrix modulo
   three primes; their combined modulus uniquely identifies a determinant
   inside the Hadamard bound.
@@ -84,5 +85,10 @@ that its table does not use the best known bound for orders at most 59.
   graph on the 45 magnitude-3 pairs has degree distribution
   `3^14, 5^6, 6^3`. Structured moves that preserve or deliberately rewire this
   sparse Gram-defect graph may be more promising than blind entry flips.
+- A retained 12-entry-kick/two-line basin reached exact determinant
+  `2,709,848,064,000,000 = 2^22 * 3 * 5^6 * 7 * 11 * 179`, or `90.8645%` of
+  the order-23 Ehlich bound. Its row Gram matrix has 206 off-diagonal pairs of
+  magnitude `1` and 47 of magnitude `3`. It is below the published comparison
+  point but is a useful distinct, reproducible private checkpoint.
 - Sign flips and row/column permutations create large duplicate families. Do
   not count them as progress.

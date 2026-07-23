@@ -205,6 +205,7 @@ PairResult optimize_row_pair(const Matrix& matrix, int first, int second) {
 struct Arguments {
   std::filesystem::path start;
   std::filesystem::path output;
+  std::filesystem::path research_output;
   std::filesystem::path log;
   std::uint64_t seed = 23;
   double seconds = 3600.0;
@@ -222,6 +223,7 @@ Arguments parse_arguments(int argc, char** argv) {
     };
     if (option == "--start") arguments.start = value();
     else if (option == "--output") arguments.output = value();
+    else if (option == "--research-output") arguments.research_output = value();
     else if (option == "--log") arguments.log = value();
     else if (option == "--seed") arguments.seed = std::stoull(value());
     else if (option == "--seconds") arguments.seconds = std::stod(value());
@@ -232,6 +234,22 @@ Arguments parse_arguments(int argc, char** argv) {
   if (arguments.start.empty()) throw std::runtime_error("--start is required");
   if (arguments.output.empty()) throw std::runtime_error("--output is required");
   if (arguments.log.empty()) throw std::runtime_error("--log is required");
+  auto normalized_path = [](const std::filesystem::path& path) {
+    return std::filesystem::absolute(path).lexically_normal();
+  };
+  const auto start = normalized_path(arguments.start);
+  const auto output = normalized_path(arguments.output);
+  const auto log = normalized_path(arguments.log);
+  if (output == log || output == start || log == start) {
+    throw std::runtime_error("--start, --output, and --log must be distinct");
+  }
+  if (!arguments.research_output.empty()) {
+    const auto research = normalized_path(arguments.research_output);
+    if (research == output || research == log || research == start) {
+      throw std::runtime_error(
+          "--research-output must not alias start, output, or log");
+    }
+  }
   if (!std::isfinite(arguments.seconds) ||
       (arguments.passes == 0 && arguments.seconds <= 0)) {
     throw std::runtime_error("--seconds must be finite and positive");
@@ -279,6 +297,15 @@ int main(int argc, char** argv) {
     write_matrix(arguments.output, best_matrix);
     Matrix state_matrix = best_matrix;
     Wide state_score = best_score;
+    Wide research_score = 0;
+    auto checkpoint_research_state = [&]() {
+      if (!arguments.research_output.empty() &&
+          state_score < best_score &&
+          state_score > research_score) {
+        research_score = state_score;
+        write_matrix(arguments.research_output, state_matrix);
+      }
+    };
 
     std::array<std::pair<int, int>, kOrder * (kOrder - 1)> pairs{};
     int pair_count = 0;
@@ -315,7 +342,10 @@ int main(int argc, char** argv) {
           state_matrix[encoded / kOrder][encoded % kOrder] *= -1;
         }
         state_score = absolute(exact_determinant(state_matrix));
-        if (state_score != 0) return;
+        if (state_score != 0) {
+          checkpoint_research_state();
+          return;
+        }
       }
       throw std::runtime_error("could not produce a nonsingular kicked state");
     };
@@ -364,6 +394,7 @@ int main(int argc, char** argv) {
           best_matrix = state_matrix;
           write_matrix(arguments.output, best_matrix);
         }
+        checkpoint_research_state();
       }
       const double elapsed = std::chrono::duration<double>(
           std::chrono::steady_clock::now() - started).count();
@@ -387,6 +418,7 @@ int main(int argc, char** argv) {
         log, best_score, state_score, best_score, elapsed, total_assignments,
         -1, -1, false, "finished", arguments.seed);
     std::cout << "finished |det|=" << wide_to_string(best_score)
+              << " research |det|=" << wide_to_string(research_score)
               << " assignments=" << total_assignments << '\n';
     return 0;
   } catch (const std::exception& error) {

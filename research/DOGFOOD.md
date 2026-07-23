@@ -33,6 +33,8 @@ search state is never treated as a score.
 | `block-911` | exact-accepted row/column blocks | 911 | 7,200 s | pending | running |
 | `pair-kick-2401` | 12-entry kicks + exact two-line ascent | 2401 | 7,200 s | pending | running |
 | `pair-kick-2402` | 24-entry kicks + exact two-line ascent | 2402 | 7,200 s | pending | running |
+| `pair-kick-2403` | retained 12-entry kicks + exact two-line ascent | 2403 | 7,200 s | pending | running |
+| `pair-replay-2402` | retained replay of the 24-entry basin | 2402 | 900 s | pending | running |
 
 The exhaustive reference audit evaluated all 24,673,089 matrices obtained by
 flipping one, two, or three entries. It proves only local optimality within that
@@ -96,10 +98,14 @@ optimality under that specified two-line replacement neighborhood.
     matter if a private checkpoint ever exceeded the literature floor. The
     verifier and site now take the maximum of the floor, reproduced arena
     checkpoint, and exactly verified accepted submissions.
+18. A kicked run reached a strong sub-frontier state but then lost its matrix
+    because the global output correctly refused a regression. The pair tool
+    now offers a separate, non-aliasing research checkpoint for the strongest
+    below-frontier working state while keeping the global output monotonic.
 
 ## Verification snapshot
 
-- 38 dependency-free Python tests pass, including real temporary-Git
+- 39 dependency-free Python tests pass, including real temporary-Git
   pull-request tests.
 - A data-only strict improvement is accepted in the integration fixture.
 - A tie, trusted-code edit, unexpected file, stale receipt, malformed JSON, and
@@ -109,8 +115,8 @@ optimality under that specified two-line replacement neighborhood.
 - Matrix and Gram determinants agree exactly and modulo all three primes.
 - The combined prime modulus uniquely identifies any determinant inside the
   Hadamard bound.
-- The exact order-23 Barba bound, generic Hadamard bound, and `2^22`
-  divisibility invariant are enforced.
+- The exact order-23 Ehlich bound, generic Barba and Hadamard bounds, and
+  `2^22` divisibility invariant are enforced.
 - The responsive production build and TypeScript check pass.
 - `npm audit` reports zero known vulnerabilities.
 - Both native research starters compile with warnings treated as errors and
