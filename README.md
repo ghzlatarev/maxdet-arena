@@ -33,7 +33,8 @@ It checks:
 - `det(A Aᵀ) = det(A)²` through a second exact computation;
 - independent matrix and Gram determinants over three prime fields;
 - enough combined modular range to uniquely certify the bounded determinant;
-- the Hadamard upper bound and required `2²²` divisibility;
+- the order-23 Barba bound, generic Hadamard bound, and required `2²²`
+  divisibility;
 - deterministic matrix, contract, normalized, and receipt hashes.
 
 Ranking uses the exact integer `|det(A)|`. Floating-point efficiency is display

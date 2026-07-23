@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 import shutil
 import stat
@@ -102,6 +103,10 @@ def command_verify(args: argparse.Namespace) -> int:
     print(
         "Hadamard ratio: "
         f"{score['hadamard_ratio_parts_per_billion'] / 10_000_000:.7f}%"
+    )
+    print(
+        "Barba ratio: "
+        f"{math.sqrt(score['barba_ratio_squared_parts_per_billion'] / 1_000_000_000) * 100:.7f}%"
     )
     print(f"matrix sha256: {matrix['raw_sha256']}")
     print(f"normalized sha256: {matrix['sign_normalized_sha256']}")

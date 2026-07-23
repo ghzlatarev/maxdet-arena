@@ -2,7 +2,7 @@
   "schema_version": 1,
   "handle": "local-researcher",
   "method": "Published order-23 comparison point; replace with your search result",
-  "parent_receipt_sha256": "204fe8df612b4d9f86842212dd3869c661d718f9df16379c02b914a0e27077cf",
+  "parent_receipt_sha256": "0d71eb814df015d2b7adef42f103383f044b602e4449fd004e410037febd27e6",
   "artifact_license": "CC0-1.0",
   "notes": "candidate/matrix.txt starts at the trusted frontier so a fresh search never begins below it."
 }

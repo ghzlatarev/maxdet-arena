@@ -225,7 +225,7 @@ export default function Home() {
             <div><b>02</b><span><strong>Bareiss determinant</strong>Fraction-free arbitrary-precision elimination.</span></div>
             <div><b>03</b><span><strong>Gram identity</strong>A second exact determinant must equal det(A)².</span></div>
             <div><b>04</b><span><strong>Modular witnesses</strong>Matrix and Gram checks agree over three prime fields.</span></div>
-            <div><b>05</b><span><strong>Bound + divisibility</strong>Independent mathematical invariants are enforced.</span></div>
+            <div><b>05</b><span><strong>Bounds + divisibility</strong>Barba, Hadamard, and the required power of two are enforced.</span></div>
             <div><b>06</b><span><strong>Content identity</strong>Contract, raw matrix, normalized matrix, and receipt are hashed.</span></div>
           </div>
         </div>

@@ -18,7 +18,7 @@ from .exact import (
     normalize_signs,
 )
 
-VERIFIER_VERSION = "maxdet-verifier-0.2.0"
+VERIFIER_VERSION = "maxdet-verifier-0.3.0"
 
 
 @dataclass(frozen=True)
@@ -93,6 +93,13 @@ def _verify_parsed_matrix(
     if determinant_squared > bound_squared:
         raise VerificationError("Hadamard bound violated")
 
+    barba_bound_squared = (
+        (2 * contract.order - 1)
+        * (contract.order - 1) ** (contract.order - 1)
+    )
+    if determinant_squared > barba_bound_squared:
+        raise VerificationError("Barba bound for odd order violated")
+
     required_factor = 1 << (contract.order - 1)
     if absolute % required_factor:
         raise VerificationError(
@@ -110,6 +117,9 @@ def _verify_parsed_matrix(
     normalized = normalize_signs(matrix)
     normalized_bytes = matrix_text(normalized).encode("ascii")
     ratio_ppb = determinant_squared * 1_000_000_000 // bound_squared
+    barba_ratio_squared_ppb = (
+        determinant_squared * 1_000_000_000 // barba_bound_squared
+    )
 
     receipt: dict[str, Any] = {
         "receipt_schema_version": 1,
@@ -129,6 +139,8 @@ def _verify_parsed_matrix(
             "determinant_squared": str(determinant_squared),
             "hadamard_bound_squared": str(bound_squared),
             "hadamard_ratio_parts_per_billion": ratio_ppb,
+            "barba_bound_squared": str(barba_bound_squared),
+            "barba_ratio_squared_parts_per_billion": barba_ratio_squared_ppb,
         },
         "checks": {
             "entry_domain": "passed",
@@ -138,6 +150,7 @@ def _verify_parsed_matrix(
             "modular_determinants": modular_checks,
             "modular_modulus_product": str(modulus_product),
             "crt_unique_reconstruction": "passed",
+            "barba_bound": "passed",
             "hadamard_bound": "passed",
             "power_of_two_divisibility": "passed",
         },

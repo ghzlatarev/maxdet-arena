@@ -36,6 +36,7 @@ EXPECTED_CONTRACT_DATA = {
         "independent_checks": [
             "gram-determinant-identity",
             "modular-determinants",
+            "odd-order-barba-bound",
             "hadamard-bound",
             "power-of-two-divisibility",
         ],

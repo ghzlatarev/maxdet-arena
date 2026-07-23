@@ -5,13 +5,13 @@
   "target_to_beat": {
     "absolute_determinant": "2779447296000000",
     "label": "Published 2003 comparison point",
-    "receipt_sha256": "204fe8df612b4d9f86842212dd3869c661d718f9df16379c02b914a0e27077cf",
+    "receipt_sha256": "0d71eb814df015d2b7adef42f103383f044b602e4449fd004e410037febd27e6",
     "source": "references/orrick-et-al-2003"
   },
   "arena_best": {
     "absolute_determinant": "2088024410161152",
     "label": "Prelaunch dependency-free smoke search",
-    "receipt_sha256": "ac05283e4a5b013f524393759e7a4191b5b419364dd52826016dbf5192c7496f",
+    "receipt_sha256": "17b03a848a7405c6ce144626b86e87ebdbf82ac1d240ecaa8e31166694356f2d",
     "source": "records/prelaunch-smoke"
   },
   "claim_boundary": "Verified scores are not world-record or optimality claims.",

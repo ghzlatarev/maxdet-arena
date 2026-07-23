@@ -28,6 +28,11 @@ class ReceiptTests(unittest.TestCase):
             verified.receipt["checks"]["crt_unique_reconstruction"],
             "passed",
         )
+        self.assertEqual(verified.receipt["checks"]["barba_bound"], "passed")
+        self.assertEqual(
+            int(verified.receipt["score"]["barba_bound_squared"]),
+            45 * 22**22,
+        )
         for witness in verified.receipt["checks"]["modular_determinants"]:
             self.assertIn("gram_determinant_mod_prime", witness)
 
