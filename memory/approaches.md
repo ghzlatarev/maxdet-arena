@@ -90,5 +90,14 @@ that its table does not use the best known bound for orders at most 59.
   the order-23 Ehlich bound. Its row Gram matrix has 206 off-diagonal pairs of
   magnitude `1` and 47 of magnitude `3`. It is below the published comparison
   point but is a useful distinct, reproducible private checkpoint.
+- Replaying the retained 24-entry basin improved the private checkpoint to
+  `2,726,756,352,000,000 = 2^22 * 3^3 * 5^6 * 23 * 67`, or `91.4315%` of the
+  Ehlich bound. Its row Gram matrix has 202 off-diagonal pairs of magnitude
+  `1` and 51 of magnitude `3`; its exact receipt begins `0922f725`.
+- Seed 2403 independently reached the same score with a different
+  sign-normalized hash. Enumerating pivot normalizations and checking the
+  resulting 22+22 vertex bipartite graphs found a row/column
+  sign-and-permutation equivalence (pivot row 2, column 1 in one-based
+  indexing). Do not count these as separate constructions.
 - Sign flips and row/column permutations create large duplicate families. Do
   not count them as progress.

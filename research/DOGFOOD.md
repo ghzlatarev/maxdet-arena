@@ -34,7 +34,8 @@ search state is never treated as a score.
 | `pair-kick-2401` | 12-entry kicks + exact two-line ascent | 2401 | 7,200 s | pending | running |
 | `pair-kick-2402` | 24-entry kicks + exact two-line ascent | 2402 | 7,200 s | pending | running |
 | `pair-kick-2403` | retained 12-entry kicks + exact two-line ascent | 2403 | 7,200 s | pending | running |
-| `pair-replay-2402` | retained replay of the 24-entry basin | 2402 | 900 s | pending | running |
+| `pair-replay-2402` | retained replay of the 24-entry basin | 2402 | 900 s | 2,726,756,352,000,000 | complete; receipt `0922f725…` |
+| `block-from-replay-2424` | exact line kicks from the retained basin | 2424 | 3,600 s | pending | running |
 
 The exhaustive reference audit evaluated all 24,673,089 matrices obtained by
 flipping one, two, or three entries. It proves only local optimality within that
@@ -42,6 +43,10 @@ specific Hamming ball. The exact two-line audit jointly optimized every pair of
 complete rows and every pair of complete columns: 506 pairs and 2,122,317,824
 assignments after fixing one redundant whole-line sign. It proves only local
 optimality under that specified two-line replacement neighborhood.
+
+The strongest retained private state so far is below the published comparison
+point. It is kept because it gives future agents a distinct high-quality basin,
+not because it moves the public target.
 
 ## Harness quirks found and fixed
 
@@ -102,6 +107,11 @@ optimality under that specified two-line replacement neighborhood.
     because the global output correctly refused a regression. The pair tool
     now offers a separate, non-aliasing research checkpoint for the strongest
     below-frontier working state while keeping the global output monotonic.
+19. Seeds 2402 and 2403 reached equal scores with different sign-normalized
+    hashes. A pivot-enumerated bipartite graph isomorphism check showed they
+    are nevertheless row/column sign-and-permutation equivalent. This confirms
+    that the receipt identity is intentionally not a full Hadamard canonical
+    form; only one representative will be retained.
 
 ## Verification snapshot
 
