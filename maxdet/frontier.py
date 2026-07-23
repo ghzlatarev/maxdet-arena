@@ -116,9 +116,17 @@ def effective_frontier(
 
     _, best = load_frontier_data(root, contract)
     for directory in discover_submission_directories(root / "submissions"):
-        if exclude_directory is not None and directory.absolute() == exclude_directory.absolute():
+        if (
+            exclude_directory is not None
+            and directory.absolute() == exclude_directory.absolute()
+        ):
             continue
         result = verify_submission(directory, contract)
+        relative = directory.relative_to(root)
+        if relative.parts[1] != result["handle"]:
+            raise SubmissionError(f"submission handle path mismatch: {relative}")
+        if relative.parts[2] != result["submission_id"]:
+            raise SubmissionError(f"submission id path mismatch: {relative}")
         score = int(result["absolute_determinant"])
         if score > best.absolute_determinant:
             best = Frontier(
@@ -138,7 +146,10 @@ def trusted_artifacts(root: Path, contract: Contract) -> list[TrustedArtifact]:
         collection_root = root / collection
         if not collection_root.exists():
             continue
-        for directory in sorted(collection_root.iterdir(), key=lambda path: path.name):
+        for directory in sorted(
+            collection_root.iterdir(),
+            key=lambda path: path.name,
+        ):
             if not directory.is_dir() or directory.is_symlink():
                 raise SubmissionError(
                     f"trusted artifact path must be a real directory: {directory}"

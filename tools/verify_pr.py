@@ -33,7 +33,10 @@ def tracked_entries(root: Path) -> dict[str, tuple[str, str]]:
         mode, object_id, stage = header.decode("ascii").split()
         if stage != "0":
             raise SubmissionError("unmerged index entry in pull request")
-        path = raw_path.decode("utf-8")
+        try:
+            path = raw_path.decode("utf-8")
+        except UnicodeDecodeError as exc:
+            raise SubmissionError("pull-request paths must be valid UTF-8") from exc
         entries[path] = (mode, object_id)
     return entries
 

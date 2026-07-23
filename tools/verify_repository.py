@@ -114,6 +114,27 @@ def main() -> int:
                 "references itself as parent"
             )
 
+    parent_by_receipt = {
+        result["receipt_sha256"]: result["parent_receipt_sha256"]
+        for result in submission_results
+    }
+    visit_state: dict[str, int] = {}
+
+    def visit(receipt_sha256: str) -> None:
+        state = visit_state.get(receipt_sha256, 0)
+        if state == 1:
+            raise RuntimeError("submission parent graph contains a cycle")
+        if state == 2:
+            return
+        visit_state[receipt_sha256] = 1
+        parent = parent_by_receipt[receipt_sha256]
+        if parent in parent_by_receipt:
+            visit(parent)
+        visit_state[receipt_sha256] = 2
+
+    for receipt_sha256 in parent_by_receipt:
+        visit(receipt_sha256)
+
     effective = effective_frontier(ROOT, contract)
 
     print("TRUSTED REPOSITORY VERIFIED")
