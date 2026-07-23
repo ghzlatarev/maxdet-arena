@@ -7,7 +7,8 @@
   --acid: #d8ff48;
   --acid-dark: #a9cf1a;
   --coral: #ff6840;
-  --muted: #747365;
+  --coral-text: #aa351d;
+  --muted: #64645a;
   --line: rgba(23, 24, 17, 0.17);
   --white-line: rgba(243, 240, 230, 0.18);
   --radius: 22px;
@@ -117,7 +118,7 @@ footer a {
 .nav-links a:hover,
 .cta-links a:hover,
 footer a:hover {
-  color: var(--coral);
+  color: var(--coral-text);
 }
 
 .nav-cta {
@@ -574,7 +575,7 @@ footer a:hover {
 }
 
 .steps article > span {
-  color: var(--coral);
+  color: var(--coral-text);
   font-family: var(--mono);
   font-size: 10px;
 }
@@ -630,7 +631,7 @@ footer a:hover {
 }
 
 .check-list b {
-  color: var(--coral);
+  color: var(--coral-text);
   font-family: var(--mono);
   font-size: 10px;
 }

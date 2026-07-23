@@ -28,6 +28,8 @@ search state is never treated as a score.
 | `coordinate-811` | random-restart row/column blocks | 811 | 7,200 s | pending | running |
 | `coordinate-812` | random-restart row/column blocks | 812 | 7,200 s | pending | running |
 | `coordinate-813` | random-restart row/column blocks | 813 | 7,200 s | pending | running |
+| `block-910` | exact-accepted row/column blocks | 910 | 7,200 s | pending | running |
+| `block-911` | exact-accepted row/column blocks | 911 | 7,200 s | pending | running |
 
 The exhaustive reference audit evaluated all 24,673,089 matrices obtained by
 flipping one, two, or three entries. It proves only local optimality within that
@@ -73,7 +75,7 @@ specific Hamming ball.
 
 ## Verification snapshot
 
-- 37 dependency-free Python tests pass, including real temporary-Git
+- 38 dependency-free Python tests pass, including real temporary-Git
   pull-request tests.
 - A data-only strict improvement is accepted in the integration fixture.
 - A tie, trusted-code edit, unexpected file, stale receipt, malformed JSON, and

@@ -51,6 +51,9 @@ The base-branch workflow:
 - requires a score strictly above that effective frontier.
 
 Maintainers reproduce an accepted result locally before merging.
+A green check is relative to its recorded base commit. If another result lands
+first, update/rebase the submission and rerun verification against the new
+frontier.
 
 ## Attribution and reuse
 

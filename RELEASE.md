@@ -19,6 +19,8 @@ Do not call the arena open until every item below is complete.
 - [ ] Keep Actions permissions read-only by default.
 - [ ] Protect `main`; block force pushes and require the exact-verification
       checks for public submissions.
+- [ ] Require submission branches to be current with `main` before merge so
+      two simultaneously green results cannot race an older frontier.
 - [ ] Enable Discussions or remove the Discussions link.
 - [ ] Verify the one-line clone/Codex command against the real URL.
 

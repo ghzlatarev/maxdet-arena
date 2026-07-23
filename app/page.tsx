@@ -97,7 +97,11 @@ export default function Home() {
           <a href="#protocol">Protocol</a>
           <a href="#frontier">Frontier</a>
         </div>
-        <a className="nav-cta" href={githubUrl}>
+        <a
+          className="nav-cta"
+          href={githubUrl}
+          aria-label="View source on GitHub"
+        >
           <span className="nav-cta-label">View source</span>
           <span aria-hidden="true">↗</span>
         </a>

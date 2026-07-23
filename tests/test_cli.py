@@ -4,6 +4,7 @@ import argparse
 import contextlib
 import io
 import json
+import os
 import tempfile
 import unittest
 from pathlib import Path
@@ -141,6 +142,21 @@ class PrepareCommandTests(unittest.TestCase):
             ):
                 command_prepare(self.args(parent="a" * 64))
             self.assertFalse((root / "submissions").exists())
+
+    @unittest.skipUnless(hasattr(os, "symlink"), "symlinks unavailable")
+    def test_prepare_rejects_a_symlinked_submissions_root(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = self.make_root(temporary)
+            elsewhere = root / "elsewhere"
+            elsewhere.mkdir()
+            os.symlink(elsewhere, root / "submissions")
+            with (
+                patch("maxdet.cli.repository_root", return_value=root),
+                self.assertRaisesRegex(SubmissionError, "real directory"),
+            ):
+                command_prepare(self.args())
+            self.assertEqual(list(elsewhere.iterdir()), [])
+            self.assertFalse((root / "runs").exists())
 
 
 if __name__ == "__main__":

@@ -10,8 +10,6 @@ from typing import Any
 from .errors import ContractError, MatrixFormatError
 from .json_tools import StrictJsonError, loads_strict_json
 
-SUPPORTED_SCHEMA_VERSION = 1
-SUPPORTED_ALGORITHM = "fraction-free-bareiss-v1"
 EXPECTED_CONTRACT_DATA = {
     "schema_version": 1,
     "challenge_id": "maxdet-23-v1",
