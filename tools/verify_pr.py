@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-import json
 import subprocess
 import sys
 from pathlib import Path, PurePosixPath
@@ -15,7 +14,7 @@ if str(TRUSTED_ROOT) not in sys.path:
 
 from maxdet.contract import load_contract  # noqa: E402
 from maxdet.errors import SubmissionError  # noqa: E402
-from maxdet.frontier import effective_frontier  # noqa: E402
+from maxdet.frontier import effective_frontier, trusted_artifacts  # noqa: E402
 from maxdet.submission import ALLOWED_FILES, verify_submission  # noqa: E402
 
 
@@ -37,36 +36,6 @@ def tracked_entries(root: Path) -> dict[str, tuple[str, str]]:
         path = raw_path.decode("utf-8")
         entries[path] = (mode, object_id)
     return entries
-
-
-def trusted_receipt_hashes() -> set[str]:
-    hashes: set[str] = set()
-    for path in TRUSTED_ROOT.glob("**/receipt.json"):
-        if any(part in {".git", "node_modules", ".next"} for part in path.parts):
-            continue
-        try:
-            receipt = json.loads(path.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            continue
-        value = receipt.get("receipt_sha256")
-        if isinstance(value, str):
-            hashes.add(value)
-    return hashes
-
-
-def trusted_normalized_hashes() -> set[str]:
-    hashes: set[str] = set()
-    for path in TRUSTED_ROOT.glob("**/receipt.json"):
-        if any(part in {".git", "node_modules", ".next"} for part in path.parts):
-            continue
-        try:
-            receipt = json.loads(path.read_text(encoding="utf-8"))
-            value = receipt["matrix"]["sign_normalized_sha256"]
-        except (OSError, KeyError, TypeError, json.JSONDecodeError):
-            continue
-        if isinstance(value, str):
-            hashes.add(value)
-    return hashes
 
 
 def parse_args() -> argparse.Namespace:
@@ -124,10 +93,15 @@ def main() -> int:
         raise SubmissionError(
             f"score {score} does not beat current frontier {target}"
         )
-    if result["sign_normalized_sha256"] in trusted_normalized_hashes():
+    artifacts = trusted_artifacts(TRUSTED_ROOT, contract)
+    normalized_hashes = {
+        artifact.sign_normalized_sha256 for artifact in artifacts
+    }
+    if result["sign_normalized_sha256"] in normalized_hashes:
         raise SubmissionError("sign-normalized matrix duplicates a trusted artifact")
     parent = result["parent_receipt_sha256"]
-    if parent is not None and parent not in trusted_receipt_hashes():
+    receipt_hashes = {artifact.receipt_sha256 for artifact in artifacts}
+    if parent is not None and parent not in receipt_hashes:
         raise SubmissionError("parent receipt is not present on the trusted base branch")
 
     print("PULL REQUEST SUBMISSION VERIFIED")

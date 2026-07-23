@@ -10,6 +10,7 @@ from typing import Any
 from .contract import Contract
 from .errors import SubmissionError
 from .json_tools import StrictJsonError, loads_strict_json
+from .receipt import canonical_json_bytes, verify_matrix
 from .submission import discover_submission_directories, verify_submission
 
 SHA256_PATTERN = re.compile(r"^[0-9a-f]{64}$")
@@ -23,6 +24,14 @@ class Frontier:
     receipt_sha256: str
     source: str
     label: str
+
+
+@dataclass(frozen=True)
+class TrustedArtifact:
+    receipt_sha256: str
+    sign_normalized_sha256: str
+    absolute_determinant: int
+    source: str
 
 
 def _validate_artifact(data: Any, label: str) -> Frontier:
@@ -119,3 +128,51 @@ def effective_frontier(
                 label=f"{result['handle']}/{result['submission_id']}",
             )
     return best
+
+
+def trusted_artifacts(root: Path, contract: Contract) -> list[TrustedArtifact]:
+    """Exactly reproduce every artifact that may be referenced as a parent."""
+
+    artifacts: list[TrustedArtifact] = []
+    for collection in ("records", "references"):
+        collection_root = root / collection
+        if not collection_root.exists():
+            continue
+        for directory in sorted(collection_root.iterdir(), key=lambda path: path.name):
+            if not directory.is_dir() or directory.is_symlink():
+                raise SubmissionError(
+                    f"trusted artifact path must be a real directory: {directory}"
+                )
+            matrix_path = directory / "matrix.txt"
+            receipt_path = directory / "receipt.json"
+            try:
+                verified = verify_matrix(matrix_path, contract)
+                observed_receipt = receipt_path.read_bytes()
+            except OSError as exc:
+                raise SubmissionError(
+                    f"cannot read trusted artifact {directory}: {exc}"
+                ) from exc
+            if observed_receipt != canonical_json_bytes(verified.receipt):
+                raise SubmissionError(f"stale trusted receipt: {receipt_path}")
+            artifacts.append(
+                TrustedArtifact(
+                    receipt_sha256=verified.receipt["receipt_sha256"],
+                    sign_normalized_sha256=verified.receipt["matrix"][
+                        "sign_normalized_sha256"
+                    ],
+                    absolute_determinant=verified.abs_determinant,
+                    source=directory.relative_to(root).as_posix(),
+                )
+            )
+
+    for directory in discover_submission_directories(root / "submissions"):
+        result = verify_submission(directory, contract)
+        artifacts.append(
+            TrustedArtifact(
+                receipt_sha256=result["receipt_sha256"],
+                sign_normalized_sha256=result["sign_normalized_sha256"],
+                absolute_determinant=int(result["absolute_determinant"]),
+                source=directory.relative_to(root).as_posix(),
+            )
+        )
+    return artifacts

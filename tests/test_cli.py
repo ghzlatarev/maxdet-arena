@@ -54,12 +54,17 @@ class PrepareCommandTests(unittest.TestCase):
         )
         return root
 
-    def args(self, *, method: str = "unit-test search") -> argparse.Namespace:
+    def args(
+        self,
+        *,
+        method: str = "unit-test search",
+        parent: str | None = None,
+    ) -> argparse.Namespace:
         return argparse.Namespace(
             submission_id="result-001",
             handle="researcher",
             method=method,
-            parent=None,
+            parent=parent,
         )
 
     def test_prepare_creates_a_complete_verified_bundle(self) -> None:
@@ -105,6 +110,16 @@ class PrepareCommandTests(unittest.TestCase):
                 self.assertRaisesRegex(ValueError, "does not beat"),
             ):
                 command_prepare(self.args())
+            self.assertFalse((root / "submissions").exists())
+
+    def test_unknown_parent_is_rejected_before_creating_bundle(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = self.make_root(temporary)
+            with (
+                patch("maxdet.cli.repository_root", return_value=root),
+                self.assertRaisesRegex(ValueError, "trusted artifacts"),
+            ):
+                command_prepare(self.args(parent="a" * 64))
             self.assertFalse((root / "submissions").exists())
 
 

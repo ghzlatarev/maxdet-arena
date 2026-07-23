@@ -14,7 +14,7 @@ from pathlib import Path
 
 from .contract import load_contract
 from .errors import ArenaError
-from .frontier import effective_frontier
+from .frontier import effective_frontier, trusted_artifacts
 from .receipt import canonical_json_bytes, verify_matrix, verify_matrix_bytes
 from .submission import (
     HANDLE_PATTERN,
@@ -157,6 +157,14 @@ def command_check_submission(args: argparse.Namespace) -> int:
             f"score {score} does not beat current frontier "
             f"{frontier.absolute_determinant}"
         )
+    parent = result["parent_receipt_sha256"]
+    trusted_receipts = {
+        artifact.receipt_sha256 for artifact in trusted_artifacts(root, contract)
+    }
+    if parent == result["receipt_sha256"]:
+        raise ValueError("submission cannot reference itself as parent")
+    if parent is not None and parent not in trusted_receipts:
+        raise ValueError("parent receipt is not present in trusted artifacts")
     print("SUBMISSION VERIFIED")
     print(f"id: {result['submission_id']}")
     print(f"handle: {result['handle']}")
@@ -205,6 +213,13 @@ def command_prepare(args: argparse.Namespace) -> int:
             f"candidate score {verified.abs_determinant} does not beat current "
             f"frontier {frontier.absolute_determinant}"
         )
+    if args.parent is not None:
+        trusted_receipts = {
+            artifact.receipt_sha256
+            for artifact in trusted_artifacts(root, contract)
+        }
+        if args.parent not in trusted_receipts:
+            raise ValueError("--parent is not present in trusted artifacts")
 
     metadata = {
         "schema_version": 1,
