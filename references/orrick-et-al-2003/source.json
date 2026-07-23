@@ -15,6 +15,7 @@
     "url": "https://export.arxiv.org/e-print/math/0304410",
     "retrieved": "2026-07-23",
     "file": "matData.tex",
+    "archive_sha256": "df9674ad22b6e4f74e47189aaf7ce7c74225033b8cf8b8fff6a693fba3c3b1cb",
     "conversion": "Each + was mapped to 1 and each - to -1, with ASCII spaces between entries.",
     "matrix_raw_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
     "byte_match_after_conversion": true

@@ -107,6 +107,12 @@ class PullRequestVerifierTests(unittest.TestCase):
                 "receipt_sha256": genesis.receipt["receipt_sha256"],
                 "source": "records/genesis",
             }
+            frontier["arena_best"] = {
+                "absolute_determinant": str(genesis.abs_determinant),
+                "label": "integration-test checkpoint",
+                "receipt_sha256": genesis.receipt["receipt_sha256"],
+                "source": "records/genesis",
+            }
             frontier_path.write_text(
                 json.dumps(frontier, indent=2) + "\n",
                 encoding="utf-8",

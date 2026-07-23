@@ -16,6 +16,7 @@ from maxdet.frontier import (  # noqa: E402
     load_frontier_data,
     trusted_artifacts,
 )
+from maxdet.json_tools import loads_strict_json  # noqa: E402
 from maxdet.receipt import canonical_json_bytes, verify_matrix  # noqa: E402
 from maxdet.submission import (  # noqa: E402
     discover_submission_directories,
@@ -33,6 +34,46 @@ def check_receipt(matrix_path: Path, receipt_path: Path) -> dict:
     return verified.receipt
 
 
+def check_reference_source(reference: dict) -> None:
+    source_path = ROOT / "references/orrick-et-al-2003/source.json"
+    source = loads_strict_json(source_path.read_bytes())
+    if not isinstance(source, dict):
+        raise RuntimeError("reference source metadata must be an object")
+    if (
+        source.get("reported_absolute_determinant")
+        != reference["score"]["absolute_determinant"]
+    ):
+        raise RuntimeError("reference source determinant does not match receipt")
+
+    archive = source.get("source_archive")
+    if not isinstance(archive, dict):
+        raise RuntimeError("reference source archive metadata is missing")
+    if archive.get("byte_match_after_conversion") is not True:
+        raise RuntimeError("reference source does not record an exact matrix match")
+    if archive.get("matrix_raw_sha256") != reference["matrix"]["raw_sha256"]:
+        raise RuntimeError("reference source matrix hash does not match receipt")
+    archive_hash = archive.get("archive_sha256")
+    if (
+        not isinstance(archive_hash, str)
+        or len(archive_hash) != 64
+        or any(character not in "0123456789abcdef" for character in archive_hash)
+    ):
+        raise RuntimeError("reference source archive hash is not lowercase SHA-256")
+
+    upper_bound = source.get("reported_order_23_upper_bound")
+    if not isinstance(upper_bound, dict):
+        raise RuntimeError("reference source upper-bound metadata is missing")
+    if (
+        upper_bound.get("determinant_squared")
+        != reference["score"]["ehlich_bound_squared"]
+    ):
+        raise RuntimeError("reference source upper bound does not match contract")
+
+    survey = source.get("survey_cross_check")
+    if not isinstance(survey, dict) or survey.get("doi") != "10.37236/10367":
+        raise RuntimeError("reference survey cross-check is missing or altered")
+
+
 def main() -> int:
     genesis = check_receipt(
         ROOT / "records/genesis/matrix.txt",
@@ -42,6 +83,7 @@ def main() -> int:
         ROOT / "references/orrick-et-al-2003/matrix.txt",
         ROOT / "references/orrick-et-al-2003/receipt.json",
     )
+    check_reference_source(reference)
 
     contract = load_contract(ROOT / "challenge.json")
     frontier, floor = load_frontier_data(ROOT, contract)
