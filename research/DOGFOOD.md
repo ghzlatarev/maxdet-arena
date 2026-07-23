@@ -31,6 +31,8 @@ search state is never treated as a score.
 | `coordinate-813` | random-restart row/column blocks | 813 | 7,200 s | pending | running |
 | `block-910` | exact-accepted row/column blocks | 910 | 7,200 s | pending | running |
 | `block-911` | exact-accepted row/column blocks | 911 | 7,200 s | pending | running |
+| `pair-kick-2401` | 12-entry kicks + exact two-line ascent | 2401 | 7,200 s | pending | running |
+| `pair-kick-2402` | 24-entry kicks + exact two-line ascent | 2402 | 7,200 s | pending | running |
 
 The exhaustive reference audit evaluated all 24,673,089 matrices obtained by
 flipping one, two, or three entries. It proves only local optimality within that
@@ -86,6 +88,10 @@ optimality under that specified two-line replacement neighborhood.
 15. The CLI labeled a determinant-squared Hadamard efficiency as a linear
     ratio. The schema now names all squared ratios explicitly, and the CLI
     takes the square root before displaying a percentage.
+16. A kicked search cannot discard every improving move merely because the
+    working state remains below the global checkpoint. The exact pair engine
+    now tracks working and global scores separately, accepts strict ascent
+    within the perturbed basin, and writes only a new global best.
 
 ## Verification snapshot
 

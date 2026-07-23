@@ -68,3 +68,18 @@ build/research/pair_search \
 Use `--passes 1` for a completion-counted audit of all 506 unordered row and
 column pairs. `--seconds N` is useful for exploratory repeated passes, but a
 time-limited partial pass does not establish full neighborhood coverage.
+
+For exploration beyond a line-local optimum, add `--kick-size K` with a time
+budget. Each pass flips exactly `K` distinct entries of the global incumbent,
+then accepts exact improvements in the two-line neighborhood while keeping the
+best output checkpoint separate from the lower-scoring working state:
+
+```sh
+build/research/pair_search \
+  --start references/orrick-et-al-2003/matrix.txt \
+  --output runs/pair-kick.matrix.txt \
+  --log runs/pair-kick.jsonl \
+  --seed 2401 \
+  --kick-size 12 \
+  --seconds 3600
+```

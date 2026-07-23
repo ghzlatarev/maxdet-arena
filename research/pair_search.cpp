@@ -9,6 +9,7 @@
 #include <iomanip>
 #include <iostream>
 #include <limits>
+#include <numeric>
 #include <random>
 #include <stdexcept>
 #include <string>
@@ -208,6 +209,7 @@ struct Arguments {
   std::uint64_t seed = 23;
   double seconds = 3600.0;
   std::uint64_t passes = 0;
+  int kick_size = 0;
 };
 
 Arguments parse_arguments(int argc, char** argv) {
@@ -224,6 +226,7 @@ Arguments parse_arguments(int argc, char** argv) {
     else if (option == "--seed") arguments.seed = std::stoull(value());
     else if (option == "--seconds") arguments.seconds = std::stod(value());
     else if (option == "--passes") arguments.passes = std::stoull(value());
+    else if (option == "--kick-size") arguments.kick_size = std::stoi(value());
     else throw std::runtime_error("unknown option: " + option);
   }
   if (arguments.start.empty()) throw std::runtime_error("--start is required");
@@ -233,12 +236,16 @@ Arguments parse_arguments(int argc, char** argv) {
       (arguments.passes == 0 && arguments.seconds <= 0)) {
     throw std::runtime_error("--seconds must be finite and positive");
   }
+  if (arguments.kick_size < 0 ||
+      arguments.kick_size > kOrder * kOrder) {
+    throw std::runtime_error("--kick-size must be between 0 and 529");
+  }
   return arguments;
 }
 
-void log_record(std::ofstream& log, Wide best_score, Wide pair_score,
-                double elapsed, std::uint64_t assignments, int first,
-                int second, bool columns, const char* event,
+void log_record(std::ofstream& log, Wide best_score, Wide state_score,
+                Wide pair_score, double elapsed, std::uint64_t assignments,
+                int first, int second, bool columns, const char* event,
                 std::uint64_t seed) {
   log << "{\"absolute_determinant\":\"" << wide_to_string(best_score)
       << "\",\"assignments\":" << assignments
@@ -249,7 +256,9 @@ void log_record(std::ofstream& log, Wide best_score, Wide pair_score,
       << ",\"orientation\":\"" << (columns ? "columns" : "rows")
       << "\",\"pair_determinant\":\"" << wide_to_string(pair_score)
       << "\",\"second\":" << second
-      << ",\"seed\":" << seed << "}\n";
+      << ",\"seed\":" << seed
+      << ",\"state_determinant\":\"" << wide_to_string(state_score)
+      << "\"}\n";
   log.flush();
 }
 
@@ -268,6 +277,8 @@ int main(int argc, char** argv) {
     Matrix best_matrix = read_matrix(arguments.start);
     Wide best_score = absolute(exact_determinant(best_matrix));
     write_matrix(arguments.output, best_matrix);
+    Matrix state_matrix = best_matrix;
+    Wide state_score = best_score;
 
     std::array<std::pair<int, int>, kOrder * (kOrder - 1)> pairs{};
     int pair_count = 0;
@@ -290,8 +301,24 @@ int main(int argc, char** argv) {
     std::uint64_t completed_passes = 0;
     int examined = 0;
     log_record(
-        log, best_score, best_score, 0.0, 0, -1, -1, false, "start",
-        arguments.seed);
+        log, best_score, state_score, state_score, 0.0, 0, -1, -1, false,
+        "start", arguments.seed);
+
+    std::array<int, kOrder * kOrder> coordinates{};
+    std::iota(coordinates.begin(), coordinates.end(), 0);
+    auto kick_from_best = [&]() {
+      for (int attempt = 0; attempt < 32; ++attempt) {
+        state_matrix = best_matrix;
+        std::shuffle(coordinates.begin(), coordinates.end(), randomizer);
+        for (int index = 0; index < arguments.kick_size; ++index) {
+          const int encoded = coordinates[index];
+          state_matrix[encoded / kOrder][encoded % kOrder] *= -1;
+        }
+        state_score = absolute(exact_determinant(state_matrix));
+        if (state_score != 0) return;
+      }
+      throw std::runtime_error("could not produce a nonsingular kicked state");
+    };
 
     while (arguments.passes != 0
                ? completed_passes < arguments.passes
@@ -305,11 +332,19 @@ int main(int argc, char** argv) {
         std::shuffle(pairs.begin(), pairs.begin() + pair_count, randomizer);
         examined = 0;
       }
+      if (examined == 0 && arguments.kick_size != 0) {
+        kick_from_best();
+        const double elapsed = std::chrono::duration<double>(
+            std::chrono::steady_clock::now() - started).count();
+        log_record(
+            log, best_score, state_score, state_score, elapsed,
+            total_assignments, -1, -1, false, "kick", arguments.seed);
+      }
       const auto encoded = pairs[examined++];
       const bool columns = encoded.first >= kOrder;
       const int first = encoded.first % kOrder;
       const int second = encoded.second % kOrder;
-      const Matrix oriented = columns ? transpose(best_matrix) : best_matrix;
+      const Matrix oriented = columns ? transpose(state_matrix) : state_matrix;
       PairResult result = optimize_row_pair(oriented, first, second);
       total_assignments += result.assignments;
       Matrix candidate = columns ? transpose(result.matrix) : result.matrix;
@@ -318,21 +353,29 @@ int main(int argc, char** argv) {
         throw std::runtime_error(
             "orientation score disagrees with exact determinant");
       }
-      const bool improved = candidate_score > best_score;
-      if (improved) {
-        best_score = candidate_score;
-        best_matrix = candidate;
-        write_matrix(arguments.output, best_matrix);
+      const bool moved = candidate_score > state_score;
+      bool improved = false;
+      if (moved) {
+        state_score = candidate_score;
+        state_matrix = candidate;
+        if (state_score > best_score) {
+          improved = true;
+          best_score = state_score;
+          best_matrix = state_matrix;
+          write_matrix(arguments.output, best_matrix);
+        }
       }
       const double elapsed = std::chrono::duration<double>(
           std::chrono::steady_clock::now() - started).count();
       log_record(
-          log, best_score, candidate_score, elapsed, total_assignments, first,
-          second, columns, improved ? "new_best" : "pair_finished",
+          log, best_score, state_score, candidate_score, elapsed,
+          total_assignments, first, second, columns,
+          improved ? "new_best" : moved ? "move" : "pair_finished",
           arguments.seed);
       std::cout << (columns ? "columns " : "rows ")
                 << first << ',' << second
                 << " pair |det|=" << wide_to_string(candidate_score)
+                << " state=" << wide_to_string(state_score)
                 << " best=" << wide_to_string(best_score)
                 << " elapsed=" << std::fixed << std::setprecision(1)
                 << elapsed << "s\n" << std::flush;
@@ -341,8 +384,8 @@ int main(int argc, char** argv) {
     const double elapsed = std::chrono::duration<double>(
         std::chrono::steady_clock::now() - started).count();
     log_record(
-        log, best_score, best_score, elapsed, total_assignments, -1, -1, false,
-        "finished", arguments.seed);
+        log, best_score, state_score, best_score, elapsed, total_assignments,
+        -1, -1, false, "finished", arguments.seed);
     std::cout << "finished |det|=" << wide_to_string(best_score)
               << " assignments=" << total_assignments << '\n';
     return 0;

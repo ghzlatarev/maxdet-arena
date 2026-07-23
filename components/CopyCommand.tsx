@@ -44,10 +44,12 @@ export function CopyCommand({ command }: CopyCommandProps) {
           type="button"
           onClick={copy}
           aria-label="Copy terminal command"
-          aria-live="polite"
         >
           {copied ? "Copied" : "Copy"}
         </button>
+        <span className="sr-only" role="status" aria-live="polite">
+          {copied ? "Terminal command copied." : ""}
+        </span>
       </div>
     </div>
   );

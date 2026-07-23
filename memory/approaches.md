@@ -74,6 +74,11 @@ that its table does not use the best known bound for orders at most 59.
   The best sign row is the sign pattern of its cofactor vector; the same holds
   for columns. Alternating exact-accepted line replacements is a useful search
   primitive and a stronger local-optimality test than single-entry flips.
+- For two fixed row positions, second cofactors reduce joint replacement to
+  `max_x sum_j |sum_i x_i C_ij|`. Fixing one redundant sign leaves `2^22`
+  assignments, which can be traversed cheaply in Gray-code order. Kicked
+  exploration must keep its lower-scoring working state separate from the
+  atomically checkpointed global incumbent.
 - The published matrix has 208 row pairs with inner-product magnitude `1` and
   45 with magnitude `3`; no larger off-diagonal Gram magnitude occurs. The
   graph on the 45 magnitude-3 pairs has degree distribution
