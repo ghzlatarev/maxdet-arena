@@ -217,6 +217,43 @@ bool apply_flip(State& state, int row, int column) {
   return true;
 }
 
+bool apply_best_line_replacement(State& state) {
+  if (!state.nonsingular) return false;
+
+  const Wide current_score = absolute(exact_determinant(state.matrix));
+  Wide best_score = current_score;
+  Matrix best_matrix = state.matrix;
+  for (int row = 0; row < kOrder; ++row) {
+    Matrix candidate = state.matrix;
+    for (int column = 0; column < kOrder; ++column) {
+      const long double cofactor_ratio = state.inverse[column][row];
+      if (cofactor_ratio > 0.0L) candidate[row][column] = 1;
+      else if (cofactor_ratio < 0.0L) candidate[row][column] = -1;
+    }
+    const Wide candidate_score = absolute(exact_determinant(candidate));
+    if (candidate_score > best_score) {
+      best_score = candidate_score;
+      best_matrix = candidate;
+    }
+  }
+  for (int column = 0; column < kOrder; ++column) {
+    Matrix candidate = state.matrix;
+    for (int row = 0; row < kOrder; ++row) {
+      const long double cofactor_ratio = state.inverse[column][row];
+      if (cofactor_ratio > 0.0L) candidate[row][column] = 1;
+      else if (cofactor_ratio < 0.0L) candidate[row][column] = -1;
+    }
+    const Wide candidate_score = absolute(exact_determinant(candidate));
+    if (candidate_score > best_score) {
+      best_score = candidate_score;
+      best_matrix = candidate;
+    }
+  }
+  if (best_score <= current_score) return false;
+  state.matrix = best_matrix;
+  return rebuild(state);
+}
+
 Matrix random_matrix(std::mt19937_64& randomizer) {
   Matrix matrix{};
   for (auto& row : matrix) {
@@ -265,8 +302,10 @@ Arguments parse_arguments(int argc, char** argv) {
         "--heartbeat-seconds must be finite and non-negative");
   }
   if (arguments.mode != "hill" && arguments.mode != "anneal" &&
-      arguments.mode != "hybrid") {
-    throw std::runtime_error("--mode must be hill, anneal, or hybrid");
+      arguments.mode != "hybrid" && arguments.mode != "coordinate" &&
+      arguments.mode != "block") {
+    throw std::runtime_error(
+        "--mode must be hill, anneal, hybrid, coordinate, or block");
   }
   return arguments;
 }
@@ -337,6 +376,35 @@ int main(int argc, char** argv) {
         if (change > 0.0L || std::log(unit(randomizer)) < change / temperature) {
           apply_flip(state, row, column);
           ++accepted;
+        }
+      } else if (arguments.mode == "coordinate" ||
+                 arguments.mode == "block") {
+        if (apply_best_line_replacement(state)) {
+          ++accepted;
+        } else {
+          const Wide local_score = absolute(exact_determinant(state.matrix));
+          if (local_score > best_score) {
+            best_score = local_score;
+            best_matrix = state.matrix;
+            write_matrix(arguments.output, best_matrix);
+            const double elapsed = std::chrono::duration<double>(
+                std::chrono::steady_clock::now() - started).count();
+            log_record(
+                log, arguments, epoch, best_score, "new_best", elapsed, accepted);
+            std::cout << "new best |det|=" << wide_to_string(best_score)
+                      << " epoch=" << epoch << '\n' << std::flush;
+          }
+
+          if (arguments.mode == "coordinate") {
+            state.matrix = random_matrix(randomizer);
+          } else {
+            state.matrix = best_matrix;
+            const int kick_size = 3 + static_cast<int>(randomizer() % 18);
+            for (int kick = 0; kick < kick_size; ++kick) {
+              state.matrix[coordinate(randomizer)][coordinate(randomizer)] *= -1;
+            }
+          }
+          rebuild(state);
         }
       } else {
         long double best_change = 1e-16L;

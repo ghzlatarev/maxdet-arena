@@ -39,6 +39,10 @@ sign-normalized sha256 = c0ea58d361945b20dad78bddb3fd93c0810b762e527e8781e87d6db
 - Exact-score cross-checks now cover both the matrix and Gram matrix modulo
   three primes; their combined modulus uniquely identifies a determinant
   inside the Hadamard bound.
+- Whole-row/column coordinate moves use inverse cofactors to propose the
+  determinant-maximizing sign pattern for one line. Early inverse-only gain
+  tests entered false-progress loops near numerical tolerance, so every block
+  move now proves a strict exact determinant increase before acceptance.
 
 ## Search directions
 
@@ -48,5 +52,9 @@ sign-normalized sha256 = c0ea58d361945b20dad78bddb3fd93c0810b762e527e8781e87d6db
 - Try multiple basins: random restarts, perturbations of the 2003 matrix,
   annealing, tabu search, row-pattern replacements, Gram-matrix methods, and
   SAT/constraint formulations.
+- For a fixed set of 22 rows, the determinant is linear in the remaining row.
+  The best sign row is the sign pattern of its cofactor vector; the same holds
+  for columns. Alternating exact-accepted line replacements is a useful search
+  primitive and a stronger local-optimality test than single-entry flips.
 - Sign flips and row/column permutations create large duplicate families. Do
   not count them as progress.
