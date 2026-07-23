@@ -99,5 +99,16 @@ that its table does not use the best known bound for orders at most 59.
   resulting 22+22 vertex bipartite graphs found a row/column
   sign-and-permutation equivalence (pivot row 2, column 1 in one-based
   indexing). Do not count these as separate constructions.
+- All three 7,200-second pair-kick seeds reached the same exact
+  `2,726,756,352,000,000` score in a perturbed basin. A deterministic
+  900-second seed-2402 replay retained it. Exact line ascent from that replay
+  reached the published reference score in 0.151 seconds, so treat this state
+  as a useful high waypoint in the reference basin rather than a separate
+  line-local optimum.
+- The completed private campaign used 32.42 single-core hours across
+  first-improvement, hill, annealing, hybrid, coordinate, exact block,
+  radius-three audit, and exact two-line search. None beat the published
+  comparison point. The strongest purely random-coordinate run reached
+  `2,391,226,070,335,488`, far below the kicked exact-pair basin.
 - Sign flips and row/column permutations create large duplicate families. Do
   not count them as progress.

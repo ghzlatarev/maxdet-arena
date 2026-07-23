@@ -1,10 +1,10 @@
 # Private dogfood report
 
-Status: in progress; not approved for publication.
+Status: complete; not approved for public publication or deployment.
 
 ## Environment
 
-- Date: 2026-07-23
+- Date: 2026-07-23 through 2026-07-24
 - Machine: Apple M4 Pro, 14 logical CPUs, 24 GiB RAM
 - Python: 3.9.6
 - Node.js: 22.17.1
@@ -24,16 +24,16 @@ search state is never treated as a score.
 | `anneal-303` | annealing | 303 | 10,800 s | 2,779,447,296,000,000 | complete; no strict improvement |
 | `hybrid-101` | greedy + kicks | 101 | 10,800 s | 2,779,447,296,000,000 | complete; no strict improvement |
 | `hill-202` | random-restart hill climb | 202 | 10,800 s | 2,779,447,296,000,000 | complete; no strict improvement |
-| `block-909` | exact-accepted row/column blocks | 909 | 10,800 s | pending | running |
-| `coordinate-808` | random-restart row/column blocks | 808 | 10,800 s | pending | running |
+| `block-909` | exact-accepted row/column blocks | 909 | 10,800 s | 2,779,447,296,000,000 | complete; no strict improvement |
+| `coordinate-808` | random-restart row/column blocks | 808 | 10,800 s | 2,376,089,234,046,976 | complete |
 | `coordinate-811` | random-restart row/column blocks | 811 | 7,200 s | 2,332,773,637,423,104 | complete |
 | `coordinate-812` | random-restart row/column blocks | 812 | 7,200 s | 2,391,226,070,335,488 | complete |
 | `coordinate-813` | random-restart row/column blocks | 813 | 7,200 s | 2,389,494,737,141,760 | complete |
 | `block-910` | exact-accepted row/column blocks | 910 | 7,200 s | 2,779,447,296,000,000 | complete; no strict improvement |
 | `block-911` | exact-accepted row/column blocks | 911 | 7,200 s | 2,779,447,296,000,000 | complete; no strict improvement |
-| `pair-kick-2401` | 12-entry kicks + exact two-line ascent | 2401 | 7,200 s | pending | running |
-| `pair-kick-2402` | 24-entry kicks + exact two-line ascent | 2402 | 7,200 s | pending | running |
-| `pair-kick-2403` | retained 12-entry kicks + exact two-line ascent | 2403 | 7,200 s | pending | running |
+| `pair-kick-2401` | 12-entry kicks + exact two-line ascent | 2401 | 7,200 s | 2,779,447,296,000,000; basin 2,726,756,352,000,000 | complete; no strict improvement |
+| `pair-kick-2402` | 24-entry kicks + exact two-line ascent | 2402 | 7,200 s | 2,779,447,296,000,000; basin 2,726,756,352,000,000 | complete; no strict improvement |
+| `pair-kick-2403` | retained 12-entry kicks + exact two-line ascent | 2403 | 7,200 s | 2,779,447,296,000,000; basin 2,726,756,352,000,000 | complete; no strict improvement |
 | `pair-replay-2402` | retained replay of the 24-entry basin | 2402 | 900 s | 2,726,756,352,000,000 | complete; receipt `0922f725…` |
 | `block-from-replay-2424` | exact line kicks from the retained basin | 2424 | 3,600 s | 2,779,447,296,000,000 | complete; reached reference in 0.151 s |
 
@@ -47,6 +47,20 @@ optimality under that specified two-line replacement neighborhood.
 The strongest retained private state so far is below the published comparison
 point. It is kept because it gives future agents a distinct high-quality basin,
 not because it moves the public target.
+
+The table accounts for 116,727.5 CPU-seconds, or 32.42 single-core hours,
+across 18 retained runs. Several jobs ran concurrently, so this is compute
+time rather than wall-clock duration. No run produced a strict improvement
+over the published comparison point.
+
+Every table output was independently recomputed by the trusted verifier. Runs
+that reproduced the reference bytes have receipt `45578d90…`. The four
+random-coordinate receipts are `f1d39b49…` (seed 808), `c7e62f04…` (811),
+`23c604e0…` (812), and `b6348973…` (813). The retained pair-kick checkpoint is
+`0922f725…`; the different-byte block ascent that reached the reference score
+is `9fa708b6…`. Seed 2403's equal-score below-frontier representative is
+`61ebecc2…` and was not retained as a second record after the equivalence
+check.
 
 ## Harness quirks found and fixed
 
@@ -112,6 +126,10 @@ not because it moves the public target.
     are nevertheless row/column sign-and-permutation equivalent. This confirms
     that the receipt identity is intentionally not a full Hadamard canonical
     form; only one representative will be retained.
+20. An inherited, unwritable npm cache caused a false `npm ci` release failure
+    before any project check ran. The final locked install was repeated with a
+    fresh task-specific cache and passed without changing the lockfile; hosted
+    CI starts from the corresponding clean-cache condition.
 
 ## Verification snapshot
 
@@ -132,11 +150,23 @@ not because it moves the public target.
 - Both native research starters compile with warnings treated as errors and
   their smoke outputs cross-check in the trusted Python verifier.
 
-## Remaining release gates
+## Known limits
 
-- Let every planned long run complete and independently verify its output.
-- Replace pending rows above with exact results and receipt hashes.
-- Re-run the full clean-clone, CI, responsive, and private-site checks on the
-  final commit.
-- Do not create a public repository or public deployment without explicit
-  release approval.
+- The radius-three and two-line audits prove local statements only.
+- A receipt verifies a matrix and determinant, not novelty, global optimality,
+  or current world-record status.
+- Sign normalization does not canonicalize row/column permutations; the
+  separate graph-isomorphism check used in dogfooding is not yet part of the
+  trusted submission boundary.
+- Trusted-repository verification intentionally reproduces every accepted
+  artifact, so its cost grows linearly with the number of merged submissions.
+
+## Private handoff state
+
+- All planned long runs completed and every output exact-verified.
+- The strongest reproducible private checkpoint is stored under
+  `records/prelaunch-pair-kick/` and drives the site's 98.10% progress display.
+- The final clean-clone, responsive production, and private saved-version
+  checks are release gates, not evidence of mathematical optimality.
+- Do not make the repository, site access, or a deployment public without
+  explicit release approval.
