@@ -134,6 +134,10 @@ check.
     targeted deprecated Node.js 20 and was being translated by the runner.
     Checkout and Node setup are now pinned by full official release SHAs to
     Node.js 24 action runtimes, removing that implicit compatibility layer.
+22. A compact-site rewrite briefly copied the squared Ehlich bound with one
+    missing three-zero group, corrupting only the displayed percentage. The
+    site now reads the exact squared bound directly from `challenge.json`
+    instead of maintaining a second numeric constant.
 
 ## Verification snapshot
 
