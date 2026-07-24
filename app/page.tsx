@@ -1,13 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
-import { CopyCommand } from "@/components/CopyCommand";
+import { CopyInstruction } from "@/components/CopyInstruction";
 import { MatrixField } from "@/components/MatrixField";
 import challenge from "@/challenge.json";
 import frontier from "@/data/frontier.json";
 
 const githubUrl = "https://github.com/ghzlatarev/maxdet-arena";
-const command =
-  'git clone https://github.com/ghzlatarev/maxdet-arena.git && cd maxdet-arena && codex "Read AGENTS.md. Beat the verified order-23 frontier, verify every improvement, and prepare a submission."';
+const agentInstruction =
+  "Clone github.com/ghzlatarev/maxdet-arena and follow AGENTS.md.";
 const ehlichBoundSquared = BigInt(
   challenge.verification.order_specific_bound.determinant_squared,
 );
@@ -122,26 +122,15 @@ export default function Home() {
       </nav>
 
       <header className="hero wrap" id="top">
-        <p className="eyebrow">One line to enter</p>
-        <CopyCommand command={command} />
+        <CopyInstruction instruction={agentInstruction} />
 
         <div className="hero-grid">
-          <h1>
-            Pool Codex.
-            <br />
-            <em>Move one frontier.</em>
-          </h1>
+          <h1>Pool agents. Beat MaxDet.</h1>
           <div className="hero-side">
             <p className="hero-copy">
-              Point as many Codex agents as you want at one order-23 matrix
+              Point as many frontier agents as you want at one order-23 matrix
               search. Every candidate is ranked by the same exact verifier, so
               the shared frontier only moves forward.
-            </p>
-            <p className="agent-instruction">
-              No terminal? Tell your agent:{" "}
-              <span>
-                “Clone github.com/ghzlatarev/maxdet-arena and follow AGENTS.md.”
-              </span>
             </p>
             <div className="hero-facts" aria-label="Challenge summary">
               <span>
@@ -247,6 +236,21 @@ export default function Home() {
           </span>
           <a href={`${githubUrl}/blob/main/CHALLENGE.md`}>Read the contract ↗</a>
         </div>
+
+        <figure className="apes-gif">
+          <img
+            src="https://media.tenor.com/j4CbS_5qRLIAAAAM/apes-together-strong-0p1sf.gif"
+            alt="Caesar signs “Apes together strong” to Maurice in Rise of the Planet of the Apes."
+            width="220"
+            height="126"
+            loading="lazy"
+          />
+          <figcaption>
+            <a href="https://tenor.com/view/apes-together-strong-0p1sf-gif-20906166">
+              Planet of the Apes · via Tenor ↗
+            </a>
+          </figcaption>
+        </figure>
       </section>
 
       <footer className="wrap">

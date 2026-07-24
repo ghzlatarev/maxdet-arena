@@ -164,10 +164,8 @@ a:focus-visible {
   font-size: 7px;
 }
 
-.command-shell {
+.agent-ask {
   width: min(100%, 1040px);
-  max-width: 100%;
-  min-width: 0;
   overflow: hidden;
   border: 1px solid rgba(243, 240, 230, 0.12);
   border-radius: 14px;
@@ -176,56 +174,32 @@ a:focus-visible {
   box-shadow: 0 18px 45px rgba(23, 24, 17, 0.14);
 }
 
-.command-label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 15px;
+.agent-ask-label {
+  padding: 10px 16px;
   border-bottom: 1px solid rgba(243, 240, 230, 0.1);
   color: #aaa99e;
   font-family: var(--mono);
   font-size: 9px;
+  font-weight: 700;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
-.terminal-dot {
-  width: 7px;
-  height: 7px;
-  margin-right: 25px;
-  border-radius: 50%;
-  background: var(--acid);
-  box-shadow:
-    12px 0 var(--coral),
-    24px 0 #706f64;
-}
-
-.command-row {
+.agent-ask-row {
   display: grid;
-  min-width: 0;
   grid-template-columns: 1fr auto;
-  align-items: stretch;
 }
 
-.command-row code {
-  display: block;
-  min-width: 0;
-  overflow: hidden;
+.agent-ask-row p {
+  margin: 0;
   padding: 17px 18px;
-  color: #f3f0e6;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: 650;
   line-height: 1.55;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
-.command-row code::before {
-  content: "$ ";
-  color: var(--acid);
-}
-
-.command-row button {
+.agent-ask-row button {
   min-width: 84px;
   border: 0;
   border-left: 1px solid rgba(243, 240, 230, 0.13);
@@ -236,33 +210,35 @@ a:focus-visible {
   font-weight: 850;
 }
 
-.command-row button:hover {
+.agent-ask-row button:hover {
   background: #e4ff79;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.22fr 0.78fr;
-  gap: 8vw;
-  align-items: end;
+  grid-template-columns: 1fr;
+  gap: 34px;
   margin-top: 58px;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(64px, 7.8vw, 112px);
+  font-size: clamp(40px, 6.2vw, 86px);
   font-weight: 740;
-  line-height: 0.89;
-  letter-spacing: -0.072em;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  white-space: nowrap;
 }
 
-.hero h1 em {
-  color: transparent;
-  font-style: normal;
-  -webkit-text-stroke: 2px var(--ink);
+.hero-side {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+  gap: 7vw;
+  align-items: end;
 }
 
 .hero-copy {
+  max-width: 680px;
   margin: 0;
   color: #4e4e43;
   font-size: 18px;
@@ -270,23 +246,9 @@ a:focus-visible {
   letter-spacing: -0.02em;
 }
 
-.agent-instruction {
-  margin: 17px 0 0;
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1.6;
-}
-
-.agent-instruction span {
-  color: var(--ink);
-  font-family: var(--mono);
-  overflow-wrap: anywhere;
-}
-
 .hero-facts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 28px;
   border-top: 1px solid var(--line);
 }
 
@@ -621,6 +583,37 @@ a:focus-visible {
   text-underline-offset: 4px;
 }
 
+.apes-gif {
+  width: min(100%, 360px);
+  margin: 52px auto 0;
+  padding: 9px;
+  border-radius: 13px;
+  background: var(--ink);
+  box-shadow: 0 24px 55px rgba(23, 24, 17, 0.2);
+  transform: rotate(-1deg);
+}
+
+.apes-gif img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+}
+
+.apes-gif figcaption {
+  padding: 9px 6px 2px;
+  color: #aaa99e;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.06em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.apes-gif a:hover {
+  color: var(--acid);
+}
+
 footer {
   display: grid;
   min-height: 100px;
@@ -670,24 +663,28 @@ footer a:hover,
     padding: 28px 0 68px;
   }
 
-  .command-row code {
-    padding: 15px 13px;
-    font-size: 9px;
+  .agent-ask-row p {
+    padding: 14px 12px;
+    font-size: 10px;
   }
 
-  .command-row button {
+  .agent-ask-row button {
     min-width: 70px;
     font-size: 10px;
   }
 
   .hero-grid {
-    grid-template-columns: 1fr;
     gap: 28px;
     margin-top: 42px;
   }
 
   .hero h1 {
-    font-size: clamp(48px, 15vw, 82px);
+    font-size: clamp(20px, 6vw, 36px);
+  }
+
+  .hero-side {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .hero-copy {
@@ -781,7 +778,7 @@ footer a:hover,
     font-size: 10px;
   }
 
-  .command-label {
+  .agent-ask-label {
     padding: 8px 12px;
     font-size: 8px;
   }
@@ -792,14 +789,6 @@ footer a:hover,
 
   .hero-grid {
     margin-top: 34px;
-  }
-
-  .hero h1 {
-    font-size: clamp(45px, 14.5vw, 66px);
-  }
-
-  .hero h1 em {
-    -webkit-text-stroke-width: 1.3px;
   }
 
   .hero-facts {
