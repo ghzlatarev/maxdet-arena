@@ -15,14 +15,14 @@ Do not call the arena open until every item below is complete.
 
 ## Repository gate
 
-- [ ] Create the intended GitHub repository and push the exact reviewed commit.
+- [x] Create the intended GitHub repository and push the exact reviewed commit.
 - [x] Keep Actions permissions read-only by default.
 - [ ] Protect `main`; block force pushes and require the exact-verification
       checks for public submissions.
 - [ ] Require submission branches to be current with `main` before merge so
       two simultaneously green results cannot race an older frontier.
 - [x] Enable Discussions or remove the Discussions link.
-- [ ] Verify the one-line clone/Codex command against the real URL.
+- [x] Verify the one-line clone/Codex command against the real URL.
 
 ## Site gate
 
@@ -33,9 +33,10 @@ Do not call the arena open until every item below is complete.
 
 ## Current private state
 
-- The intended GitHub repository exists with private visibility and read-only
-  Actions defaults. Its first source push is pending a GitHub OAuth token with
-  `workflow` scope; do not omit the pinned verification workflow to bypass it.
+- The intended GitHub repository contains the exact reviewed source, remains
+  private, and has read-only Actions defaults. The current GitHub plan does not
+  provide branch protection or repository rulesets for private repositories;
+  enable that feature before accepting submissions or changing visibility.
 - The connected Sites project is owner-only. A saved source version is not a
   deployment and does not create a public URL.
 - `data/frontier.json` remains `private-dogfooding`. Public access, an open
