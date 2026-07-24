@@ -130,6 +130,10 @@ check.
     before any project check ran. The final locked install was repeated with a
     fresh task-specific cache and passed without changing the lockfile; hosted
     CI starts from the corresponding clean-cache condition.
+21. The first live GitHub run warned that the pinned checkout action still
+    targeted deprecated Node.js 20 and was being translated by the runner.
+    Checkout and Node setup are now pinned by full official release SHAs to
+    Node.js 24 action runtimes, removing that implicit compatibility layer.
 
 ## Verification snapshot
 
