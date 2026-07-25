@@ -16,6 +16,7 @@ Do not call the arena open until every item below is complete.
 ## Repository gate
 
 - [x] Create the intended GitHub repository and push the exact reviewed commit.
+- [x] Make the repository public after explicit release approval.
 - [x] Keep Actions permissions read-only by default.
 - [ ] Protect `main`; block force pushes and require the exact-verification
       checks for public submissions.
@@ -29,15 +30,14 @@ Do not call the arena open until every item below is complete.
 - [ ] Change `data/frontier.json` status from `private-dogfooding` to `open`.
 - [x] Push the same reviewed commit to the connected Sites source repository.
 - [x] Save and inspect a private version before changing access.
-- [ ] Make any public deployment only with explicit release approval.
+- [x] Make any public deployment only with explicit release approval.
 
-## Current private state
+## Current public-preview state
 
-- The intended GitHub repository contains the exact reviewed source, remains
-  private, and has read-only Actions defaults. The current GitHub plan does not
-  provide branch protection or repository rulesets for private repositories;
-  enable that feature before accepting submissions or changing visibility.
-- The connected Sites project is owner-only. A saved source version is not a
-  deployment and does not create a public URL.
-- `data/frontier.json` remains `private-dogfooding`. Public access, an open
-  frontier status, and deployment all require explicit release approval.
+- The GitHub repository is public and keeps read-only Actions permissions by
+  default. Protect `main` before calling the arena open for submissions.
+- GitHub Pages deploys the static site only after the exact repository tests,
+  type-check, and production export pass. The connected Sites project remains
+  owner-only and is not deployed.
+- `data/frontier.json` remains `private-dogfooding`. This is a public preview,
+  not yet an open-arena claim.

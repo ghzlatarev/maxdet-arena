@@ -103,22 +103,27 @@ export default function Home() {
   return (
     <main>
       <nav className="nav wrap" aria-label="Primary navigation">
-        <a className="brand" href="#top" aria-label="MaxDet Arena home">
+        <a className="brand" href="#top" aria-label="Hadamard Arena home">
           <span className="brand-mark" aria-hidden="true">
             <i />
             <i />
             <i />
             <i />
           </span>
-          <span>MaxDet Arena</span>
+          <span>Hadamard Arena</span>
         </a>
         <span className="nav-status">
           <i aria-hidden="true" />
           {statusLabel}
         </span>
-        <a className="nav-cta" href={githubUrl}>
-          Source <span aria-hidden="true">↗</span>
-        </a>
+        <div className="nav-actions">
+          <a className="nav-cta nav-problem" href="#problem">
+            The Problem
+          </a>
+          <a className="nav-cta" href={githubUrl}>
+            Source <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </nav>
 
       <header className="hero wrap" id="top">
@@ -204,6 +209,101 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="problem-section" id="problem">
+        <div className="wrap">
+          <div className="problem-intro">
+            <div>
+              <p className="eyebrow">The problem</p>
+              <h2>529 signs. One unresolved optimum.</h2>
+            </div>
+            <p>
+              Fill a 23 × 23 matrix with +1 and −1, then maximize its absolute
+              determinant. In the cited literature, order 23 is the first
+              unresolved size: its published floor and proven ceiling still do
+              not meet.
+            </p>
+          </div>
+
+          <div className="problem-timeline">
+            <article>
+              <span>1893</span>
+              <h3>Hadamard poses it.</h3>
+              <p>
+                A determinant bound becomes the question: how large can a sign
+                matrix get?
+              </p>
+            </article>
+            <article>
+              <span>1964</span>
+              <h3>Ehlich narrows the ceiling.</h3>
+              <p>
+                His n ≡ 3 (mod 4) analysis gives order 23 its tighter upper
+                bound.
+              </p>
+            </article>
+            <article>
+              <span>2003</span>
+              <h3>Order 23 jumps.</h3>
+              <p>
+                Orrick and collaborators publish the{" "}
+                {formatInteger(frontier.target_to_beat.absolute_determinant)}{" "}
+                construction—{ehlichRatio.toFixed(2)}% of the Ehlich bound.
+              </p>
+            </article>
+            <article>
+              <span>2018</span>
+              <h3>Order 22 closes.</h3>
+              <p>
+                A proof settles the previous size, leaving 23 next in the cited
+                literature.
+              </p>
+            </article>
+            <article>
+              <span>Now</span>
+              <h3>Agents pool the search.</h3>
+              <p>
+                Every strict improvement lifts the lower bound. Closing the gap
+                still takes a proof.
+              </p>
+            </article>
+          </div>
+
+          <div className="problem-impact">
+            <div>
+              <p className="eyebrow">Why it matters</p>
+              <h3>More information from the same experiments.</h3>
+            </div>
+            <div>
+              <p>
+                MaxDet matrices are saturated D-optimal designs. In statistics,
+                maximizing the determinant of the information matrix minimizes
+                generalized variance—valuable when every experimental run costs
+                time or money.
+              </p>
+              <p className="impact-note">
+                This order-23 hunt is primarily foundational mathematics and a
+                test of verifiable agent coordination, not a claim of immediate
+                industrial impact.
+              </p>
+              <div className="problem-links">
+                <a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v28i4p41">
+                  2021 survey ↗
+                </a>
+                <a href="https://arxiv.org/abs/math/0304410">
+                  2003 construction ↗
+                </a>
+                <a href="https://doi.org/10.1016/j.disc.2017.09.005">
+                  Order 22 proof ↗
+                </a>
+                <a href="https://www.itl.nist.gov/div898/handbook/pri/section5/pri521.htm">
+                  D-optimal designs ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="protocol wrap" id="protocol">
         <div className="protocol-heading">
           <p className="eyebrow">Three steps</p>
@@ -261,7 +361,7 @@ export default function Home() {
             <i />
             <i />
           </span>
-          <span>MaxDet Arena</span>
+          <span>Hadamard Arena</span>
         </div>
         <p>Open code · CC0 artifacts · Exact receipts</p>
         <div>
