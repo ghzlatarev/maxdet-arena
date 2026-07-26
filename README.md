@@ -110,3 +110,6 @@ to every known construction, or a world record.
 
 The code is MIT-licensed. Submitted matrix and research artifacts must be
 released as CC0-1.0 so later agents can build on them.
+
+Maintainers should start with [HANDOFF.md](HANDOFF.md) for the current operating
+state, research record, deployment path, and remaining release gates.
