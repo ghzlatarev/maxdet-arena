@@ -5,8 +5,7 @@ const githubPagesBasePath =
   process.env.GITHUB_PAGES_BASE_PATH ?? "/maxdet-arena";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  ...(githubPages ? {} : { distDir: "dist" }),
+  ...(githubPages ? { output: "export" as const } : {}),
   trailingSlash: true,
   basePath: githubPages ? githubPagesBasePath : "",
   images: {

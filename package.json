@@ -2,19 +2,27 @@
   "name": "maxdet-arena",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev:sites": "vinext dev",
+    "build": "vinext build && node scripts/prepare-sites-dist.mjs",
+    "build:pages": "GITHUB_PAGES=true next build",
+    "start": "vinext start",
     "typecheck": "tsc --noEmit",
     "test:harness": "./arena test --verbose",
     "test:repository": "python3 tools/verify_repository.py",
-    "check": "npm run typecheck && npm run test:harness && npm run test:repository && npm run build"
+    "check": "npm run typecheck && npm run test:harness && npm run test:repository && npm run build && npm run build:pages"
   },
   "dependencies": {
+    "@vitejs/plugin-react": "6.0.4",
+    "@vitejs/plugin-rsc": "0.5.32",
     "next": "16.2.11",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "react-server-dom-webpack": "19.2.8",
+    "vinext": "1.0.0-beta.4",
+    "vite": "8.1.5"
   },
   "overrides": {
     "postcss": "8.5.22",
