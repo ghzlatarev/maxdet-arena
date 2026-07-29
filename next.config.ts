@@ -6,6 +6,7 @@ const githubPagesBasePath =
 
 const nextConfig: NextConfig = {
   output: "export",
+  ...(githubPages ? {} : { distDir: "dist" }),
   trailingSlash: true,
   basePath: githubPages ? githubPagesBasePath : "",
   images: {

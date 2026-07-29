@@ -2,6 +2,7 @@
 .next/
 node_modules/
 out/
+dist/
 build/
 coverage/
 *.pyc
