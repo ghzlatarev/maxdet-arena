@@ -211,6 +211,7 @@ struct Arguments {
   double seconds = 3600.0;
   std::uint64_t passes = 0;
   int kick_size = 0;
+  std::uint64_t settle_passes = 1;
 };
 
 Arguments parse_arguments(int argc, char** argv) {
@@ -229,6 +230,9 @@ Arguments parse_arguments(int argc, char** argv) {
     else if (option == "--seconds") arguments.seconds = std::stod(value());
     else if (option == "--passes") arguments.passes = std::stoull(value());
     else if (option == "--kick-size") arguments.kick_size = std::stoi(value());
+    else if (option == "--settle-passes") {
+      arguments.settle_passes = std::stoull(value());
+    }
     else throw std::runtime_error("unknown option: " + option);
   }
   if (arguments.start.empty()) throw std::runtime_error("--start is required");
@@ -257,6 +261,9 @@ Arguments parse_arguments(int argc, char** argv) {
   if (arguments.kick_size < 0 ||
       arguments.kick_size > kOrder * kOrder) {
     throw std::runtime_error("--kick-size must be between 0 and 529");
+  }
+  if (arguments.settle_passes == 0) {
+    throw std::runtime_error("--settle-passes must be positive");
   }
   return arguments;
 }
@@ -326,7 +333,10 @@ int main(int argc, char** argv) {
         started + std::chrono::duration<double>(arguments.seconds);
     std::uint64_t total_assignments = 0;
     std::uint64_t completed_passes = 0;
+    std::uint64_t passes_in_basin = 0;
+    std::uint64_t moves_in_pass = 0;
     int examined = 0;
+    bool kick_pending = arguments.kick_size != 0;
     log_record(
         log, best_score, state_score, state_score, 0.0, 0, -1, -1, false,
         "start", arguments.seed);
@@ -355,15 +365,31 @@ int main(int argc, char** argv) {
                : std::chrono::steady_clock::now() < deadline) {
       if (examined == pair_count) {
         ++completed_passes;
+        ++passes_in_basin;
         if (arguments.passes != 0 &&
             completed_passes >= arguments.passes) {
           break;
         }
+        if (arguments.kick_size != 0 &&
+            (moves_in_pass == 0 ||
+             passes_in_basin >= arguments.settle_passes)) {
+          const double elapsed = std::chrono::duration<double>(
+              std::chrono::steady_clock::now() - started).count();
+          log_record(
+              log, best_score, state_score, state_score, elapsed,
+              total_assignments, -1, -1, false,
+              moves_in_pass == 0 ? "basin_settled" : "basin_limit",
+              arguments.seed);
+          kick_pending = true;
+          passes_in_basin = 0;
+        }
         std::shuffle(pairs.begin(), pairs.begin() + pair_count, randomizer);
         examined = 0;
+        moves_in_pass = 0;
       }
-      if (examined == 0 && arguments.kick_size != 0) {
+      if (examined == 0 && kick_pending) {
         kick_from_best();
+        kick_pending = false;
         const double elapsed = std::chrono::duration<double>(
             std::chrono::steady_clock::now() - started).count();
         log_record(
@@ -386,6 +412,7 @@ int main(int argc, char** argv) {
       const bool moved = candidate_score > state_score;
       bool improved = false;
       if (moved) {
+        ++moves_in_pass;
         state_score = candidate_score;
         state_matrix = candidate;
         if (state_score > best_score) {

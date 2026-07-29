@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "challenge_id": "maxdet-23-v1",
+  "method": "dephased-bipartite-odd-matching-cycle-v1",
+  "representation": "dephased 22x22 binary matrix as a bipartite graph",
+  "theorem": "an alternating cycle on k matched pairs changes perfect-matching sign by (-1)^(k-1)",
+  "cycle_lengths": [
+    3,
+    5
+  ],
+  "moves": [
+    "completion",
+    "degree-preserving exchange"
+  ],
+  "inputs": [
+    {
+      "label": "frontier",
+      "path": "references/orrick-et-al-2003/matrix.txt",
+      "matrix_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+      "source_absolute_determinant": "2779447296000000",
+      "absent_cycle_count": 20364,
+      "candidate_count": 40728,
+      "best_retained_absolute_determinant": "2458818969600000"
+    },
+    {
+      "label": "component5-arm0",
+      "path": "runs/direct-search/order22-component5-order23-search-20260729/arm0/best.matrix.txt",
+      "matrix_sha256": "f97adf27174dd4c025821035110d85a253d103c51f2eb8d33d579344e75e8d9e",
+      "source_absolute_determinant": "2687827968000000",
+      "absent_cycle_count": 23425,
+      "candidate_count": 46850,
+      "best_retained_absolute_determinant": "2346172022784000"
+    },
+    {
+      "label": "component5-arm1",
+      "path": "runs/direct-search/order22-component5-order23-search-20260729/arm1/best.matrix.txt",
+      "matrix_sha256": "d101d65613e7dfee4d27eba1db7dc3463cd1f047fbf7f26a699e1152f20eb068",
+      "source_absolute_determinant": "2687827968000000",
+      "absent_cycle_count": 21830,
+      "candidate_count": 43660,
+      "best_retained_absolute_determinant": "2419200098304000"
+    },
+    {
+      "label": "component5-arm2",
+      "path": "runs/direct-search/order22-component5-order23-search-20260729/arm2/best.matrix.txt",
+      "matrix_sha256": "5239345a691a12aa0e72fd25e685dfa5db728b14d0acb35c372154965ddc1569",
+      "source_absolute_determinant": "2687827968000000",
+      "absent_cycle_count": 19986,
+      "candidate_count": 39972,
+      "best_retained_absolute_determinant": "2408448000000000"
+    },
+    {
+      "label": "component5-arm3",
+      "path": "runs/direct-search/order22-component5-order23-search-20260729/arm3/best.matrix.txt",
+      "matrix_sha256": "b3c429c73c74e4cfc47d767935d78ba436f55f6fd87eb94dc737b7a40396fcd5",
+      "source_absolute_determinant": "2621033676800000",
+      "absent_cycle_count": 24526,
+      "candidate_count": 49052,
+      "best_retained_absolute_determinant": "2341416730624000"
+    }
+  ],
+  "coverage": {
+    "input_count": 5,
+    "absent_cycle_count": 110131,
+    "exact_candidate_count": 220262,
+    "strict_source_improvement_count": 0,
+    "strict_frontier_win_count": 0,
+    "retained_family_winner_count": 20
+  },
+  "audit": {
+    "screen_arithmetic": "exact integer adjugate determinant lemma",
+    "retained_core_bareiss_count": 20,
+    "retained_sign_matrix_bareiss_count": 20,
+    "arena_verified_count": 20,
+    "independently_reverified_receipt_count": 20,
+    "receipt_inventory_sha256": "a4703d8b74a29a1875d34a8a4d8bb8d1ad5cacb3e3e8f384b8c2e938cc21e4d7"
+  },
+  "artifacts": {
+    "helper": "research/matching_cycle_search.py",
+    "helper_sha256": "489b5b188207bbfe6a1a6799c2f55b46bf45eed916ad5318e3381e2aefdb0a00",
+    "report": "runs/direct-search/matching-cycle-pilot-20260729/report.json",
+    "report_sha256": "7ec1fdc966d18cf37275d814e10db21bd86306258795391be24f29687494938d"
+  },
+  "claim_boundary": "Exact only for absent directed cycles of lengths 3 and 5, at the fixed first-row/first-column dephasing and one deterministic determinant-majority-sign matching per input. This is not a complete neighborhood audit, an optimality result, or a novelty claim."
+}

@@ -1,0 +1,1987 @@
+{
+  "alignment_records": [
+    {
+      "artifacts": {
+        "metadata": {
+          "path": "runs/direct-search/path-relink/frontier-class14-aligned-to-near.json",
+          "sha256": "3fabf8b93f18612a3d6c65ed90bf3b72b7ffcf28a59ede4fad5ef756d96ab6df",
+          "size_bytes": 1416
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/path-relink/frontier-class14-aligned-to-near.matrix.txt",
+          "row_major_sign_bits_hex": "47701b088c8dcb312e15d131cb68b8189726f3c496749f01dbcd4546b0382204b7e6a259e70a05e2aa4f036ec52ee87ad39cfed0678187a68806fe6856ad550e948f0",
+          "sha256": "6f2afb9b563b38ea017a5222644cac717806086fa0bb2e3527bedffcd25001e4",
+          "size_bytes": 1337
+        },
+        "source": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/best-below/frontier-class14-late-28751.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+          "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "size_bytes": 1318
+        },
+        "target": {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/audits/class14-near-frontier-audit3-29507.matrix.txt",
+          "row_major_sign_bits_hex": "46521b020c8ce9312e17e139cb70b108b62ef2c5b673bb08dbcd4542b038a61cb7768248a20a05e3ab5f076e443fe83ad39ed6d1678007a28a2ee868d60c55c68c9d0",
+          "sha256": "57bb0839fe1831f79449e8578921a50ac458817ad3585634499f49d697592b8f",
+          "size_bytes": 1340
+        }
+      },
+      "evidence": {
+        "determinant_preserved": true,
+        "hamming_distance": 77,
+        "signed_permutation_replay": true
+      },
+      "record_id": "frontier-class14-aligned-to-near"
+    },
+    {
+      "artifacts": {
+        "metadata": {
+          "path": "runs/direct-search/path-relink/frontier-class14-aligned-to-class42-near.json",
+          "sha256": "28739ca2a1a2c76272338ad336a56dd2f387ffdde77ca9ce49adbf8f793772fe",
+          "size_bytes": 1407
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/path-relink/frontier-class14-aligned-to-class42-near.matrix.txt",
+          "row_major_sign_bits_hex": "261e76fdbb1924ffb850905bbb75dd9616fac2363c6da99e6bdf80f8294c04fe35cb40d8b153118dc7057476239cc287c69fc8b77d49945eed9ff2d0254c2c96abac0",
+          "sha256": "7aae387b7b1eb66112aac1741da5574c216e42b47722522f1416f2d12fd0530c",
+          "size_bytes": 1313
+        },
+        "source": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/best-below/frontier-class14-late-28751.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+          "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "size_bytes": 1318
+        },
+        "target": {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/cross/class42-alt-near-29543.matrix.txt",
+          "row_major_sign_bits_hex": "224956dd33182cffba50104b3971c5d6c669c33e6d4cbd9e6a9f8078295c42dc338948d8b3429185c705747422dfc687c69fc8bbf979945ee41ff2d037541c94bbec0",
+          "sha256": "a2fb78b1cf18d9af8eee5766949ff71b0db1796259ec5818c0ea8568551af89b",
+          "size_bytes": 1323
+        }
+      },
+      "evidence": {
+        "determinant_preserved": true,
+        "hamming_distance": 80,
+        "signed_permutation_replay": true
+      },
+      "record_id": "frontier-class14-aligned-to-class42-near"
+    }
+  ],
+  "challenge_id": "maxdet-23-v1",
+  "claim_boundary": "This is a retrospective digest binding of currently retained files. Pre-hardening radius snapshots did not record their start hashes, and path logs recorded elite paths and exact scores but not hashes. Matching current bytes, determinants, zero-promotion radius outputs, and log/snapshot records strongly reconcile the artifacts but cannot prove that an input file was unchanged between historical execution and creation of this manifest.",
+  "full_radius4_campaigns": [
+    {
+      "campaign_id": "class51",
+      "complete_floating_screen": true,
+      "exact_audit": false,
+      "expected_combinations": 3226076876,
+      "run_ids": [
+        "class51-shard0",
+        "class51-shard1",
+        "class51-shard2",
+        "class51-shard3"
+      ],
+      "screened_combinations": 3226076876,
+      "semantic_start_sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce"
+    },
+    {
+      "campaign_id": "frontier",
+      "complete_floating_screen": true,
+      "exact_audit": false,
+      "expected_combinations": 3226076876,
+      "run_ids": [
+        "frontier-shard0-29660",
+        "frontier-shard1-29661",
+        "frontier-shard2-29662",
+        "frontier-shard3-29663"
+      ],
+      "screened_combinations": 3226076876,
+      "semantic_start_sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0"
+    },
+    {
+      "campaign_id": "historical",
+      "complete_floating_screen": true,
+      "exact_audit": false,
+      "expected_combinations": 3226076876,
+      "run_ids": [
+        "historical-shard0",
+        "historical-shard1",
+        "historical-shard2",
+        "historical-shard3"
+      ],
+      "screened_combinations": 3226076876,
+      "semantic_start_sha256": "b6a0801d0d1459ec262ae4e640c1b94b4baa3c44ea4b20aafbd1f8ae62f82be1"
+    },
+    {
+      "campaign_id": "reference",
+      "complete_floating_screen": true,
+      "exact_audit": false,
+      "expected_combinations": 3226076876,
+      "run_ids": [
+        "reference-shard0",
+        "reference-shard1",
+        "reference-shard2",
+        "reference-shard3"
+      ],
+      "screened_combinations": 3226076876,
+      "semantic_start_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850"
+    }
+  ],
+  "manifest_id": "direct-search-radius4-path-20260728",
+  "path_relink_runs": [
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/path-relink/class14-campaign-29630.jsonl",
+          "sha256": "b2cee05b6a1ef33425d2b44f8d9e10ce3f4d7f95b71736f76fb87b2e30880aed",
+          "size_bytes": 1546764
+        },
+        "output": {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/path-relink/class14-campaign-29630.matrix.txt",
+          "row_major_sign_bits_hex": "46521b020c8ce9312e17e139cb70b108b62ef2c5b673bb08dbcd4542b038a61cb7768248a20a05e3ab5f076e443fe83ad39ed6d1678007a28a2ee868d60c55c68c9d0",
+          "sha256": "57bb0839fe1831f79449e8578921a50ac458817ad3585634499f49d697592b8f",
+          "size_bytes": 1340
+        },
+        "snapshot": {
+          "path": "runs/direct-search/path-relink/class14-campaign-29630.snapshot.json",
+          "sha256": "4f9306c0a53f05650eb2ad022f31e48890d257adf20be56e8c93dd7bbaa13f0b",
+          "size_bytes": 687
+        }
+      },
+      "elite_inputs": [
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/audits/class14-near-frontier-audit3-29507.matrix.txt",
+          "row_major_sign_bits_hex": "46521b020c8ce9312e17e139cb70b108b62ef2c5b673bb08dbcd4542b038a61cb7768248a20a05e3ab5f076e443fe83ad39ed6d1678007a28a2ee868d60c55c68c9d0",
+          "sha256": "57bb0839fe1831f79449e8578921a50ac458817ad3585634499f49d697592b8f",
+          "size_bytes": 1340
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-01.matrix.txt",
+          "row_major_sign_bits_hex": "46521b0a2dccf973ae17e139cb70b108b62ff6edb673bb08dbcd4d63f038a61cb7768248a20a87f7ab5f076e443fe83ad39ed6d177c287a28a2ee868d60c55c68c9d0",
+          "sha256": "be2ca762e85d66d2ea07ce049f4f7d4d5d64adcbd2c7dffbdcec4da3654f146c",
+          "size_bytes": 1316
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-02.matrix.txt",
+          "row_major_sign_bits_hex": "4242bb020c8ce9312e17e1398a7ab18aa22ef2c5b673bb08dbcd4542b038a61cb7768248a20a05e3aa5b2f6e443fe83ad39ed6d1678007820f2ee868d68e41c68c9d0",
+          "sha256": "8c9e3fa81e88df6c4ebc1b39731d92498196a7481ded96d0c27ad29afadcd3d2",
+          "size_bytes": 1340
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-03.matrix.txt",
+          "row_major_sign_bits_hex": "4242bb0a2dccf973ae17e1398a7ab18aa22ff6edb673bb08dbcd4d63f038a61cb7768248a20a87f7aa5b2f6e443fe83ad39ed6d177c287820f2ee868d68e41c68c9d0",
+          "sha256": "26c714d0136db23460c6306aeda3cdd10d305aae9405a79a06230568e1d1586e",
+          "size_bytes": 1316
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-04.matrix.txt",
+          "row_major_sign_bits_hex": "46521b020c8ce9312e376439cb70b108b62ef2c5b673bb08dbcd4542b028e49c97f38248a20a05e3ab5f076e443fe83ad39ed6d1678007a28a2ea962d60c55c788b50",
+          "sha256": "091a59a4d2b183212daf9d347b892551512271275b1d8f2eed51d847f8404a67",
+          "size_bytes": 1340
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-05.matrix.txt",
+          "row_major_sign_bits_hex": "46521b0a2dccf973ae376439cb70b108b62ff6edb673bb08dbcd4d63f028e49c97f38248a20a87f7ab5f076e443fe83ad39ed6d177c287a28a2ea962d60c55c788b50",
+          "sha256": "d6b9b977a0610fdba929ecb991f9d289807ed8668aa4f7820a5812288735f86c",
+          "size_bytes": 1316
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-06.matrix.txt",
+          "row_major_sign_bits_hex": "4242bb020c8ce9312e3764398a7ab18aa22ef2c5b673bb08dbcd4542b028e49c97f38248a20a05e3aa5b2f6e443fe83ad39ed6d1678007820f2ea962d68e41c788b50",
+          "sha256": "b5457e8079a80bd231ec2d8a259b7e519ecc302fd207bd8a1161e6b735399e1a",
+          "size_bytes": 1340
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-07.matrix.txt",
+          "row_major_sign_bits_hex": "4242bb0a2dccf973ae3764398a7ab18aa22ff6edb673bb08dbcd4d63f028e49c97f38248a20a87f7aa5b2f6e443fe83ad39ed6d177c287820f2ea962d68e41c788b50",
+          "sha256": "9a9aafdc47364c27337d00f131ae704f77641977946c62c9b59a3c41e3d866ca",
+          "size_bytes": 1316
+        }
+      ],
+      "evidence": {
+        "snapshot_equals_final_log_record": true
+      },
+      "parameters": {
+        "beam_width": 1000,
+        "bidirectional": true,
+        "elite_count": 8,
+        "exact_pool": 4000,
+        "random_fraction": 0.18,
+        "seed": 29630
+      },
+      "run_id": "class14-campaign-29630",
+      "semantics": "pruned_heuristic_not_exhaustive",
+      "telemetry": {
+        "best_score": "2762200842240000",
+        "complete": true,
+        "completed_depths": 2176,
+        "completed_pairs": 56,
+        "elapsed_seconds": 322.763355,
+        "exact_checks": 7128239,
+        "generated": 45713333,
+        "promotions": 0,
+        "retained_states": 1937438,
+        "singular_candidates": 83,
+        "termination": "all_pairs_completed",
+        "unique_candidates": 33872965
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/path-relink/class42-campaign-29631.jsonl",
+          "sha256": "0dc1fbf6d7097a928f9b545b8f73775426b583592ca21c1cfa2d9bc76287e59e",
+          "size_bytes": 1524050
+        },
+        "output": {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/path-relink/class42-campaign-29631.matrix.txt",
+          "row_major_sign_bits_hex": "224956dd33182cffba50104b3971c5d6c669c33e6d4cbd9e6a9f8078295c42dc338948d8b3429185c705747422dfc687c69fc8bbf979945ee41ff2d037541c94bbec0",
+          "sha256": "a2fb78b1cf18d9af8eee5766949ff71b0db1796259ec5818c0ea8568551af89b",
+          "size_bytes": 1323
+        },
+        "snapshot": {
+          "path": "runs/direct-search/path-relink/class42-campaign-29631.snapshot.json",
+          "sha256": "fe8e757adfe86ddb08ef51f5381412eb6c8d272f4e22344458847f09a3f5f4a8",
+          "size_bytes": 680
+        }
+      },
+      "elite_inputs": [
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/cross/class42-alt-near-29543.matrix.txt",
+          "row_major_sign_bits_hex": "224956dd33182cffba50104b3971c5d6c669c33e6d4cbd9e6a9f8078295c42dc338948d8b3429185c705747422dfc687c69fc8bbf979945ee41ff2d037541c94bbec0",
+          "sha256": "a2fb78b1cf18d9af8eee5766949ff71b0db1796259ec5818c0ea8568551af89b",
+          "size_bytes": 1323
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class42/rows-1-6-11-17-mask-01.matrix.txt",
+          "row_major_sign_bits_hex": "224956f1370c2cffba50104b3971c5d6c66c43bced4cbd9e6a9f8078295c42dc839918d8b3429185c705747422dfc687c6b3ccaff979945ee41ff2d037541c94bbec0",
+          "sha256": "ad6a34e2115149aa1390d044bde5dbb3156352a7287b9a861ea043fec712eaf4",
+          "size_bytes": 1323
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class42/rows-1-6-11-17-mask-02.matrix.txt",
+          "row_major_sign_bits_hex": "2249569de2182cffba50104b3971c5d6c661d91e6d4cbd9e6a9f8078295c42dd30cd48d8b3429185c705747422dfc687c6df19bbf979945ee41ff2d037541c94bbec0",
+          "sha256": "08a00fd569638ffd727040e669db4fde9159fe2672e9ffddeb3d5fea88223077",
+          "size_bytes": 1323
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class42/rows-1-6-11-17-mask-03.matrix.txt",
+          "row_major_sign_bits_hex": "224956b1e60c2cffba50104b3971c5d6c664599ced4cbd9e6a9f8078295c42dd80dd18d8b3429185c705747422dfc687c6f31daff979945ee41ff2d037541c94bbec0",
+          "sha256": "b1efe4d1e730953a8e095dee84443554c7696a5a1926e506bd5ad1a2226d7863",
+          "size_bytes": 1323
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class42/rows-1-6-11-17-mask-04.matrix.txt",
+          "row_major_sign_bits_hex": "224956df19b82cffba50104b3971c5d6c669866a6d4cbd9e6a9f8078295c42dc3b23c8d8b3429185c705747422dfc687c69de21bf979945ee41ff2d037541c94bbec0",
+          "sha256": "d3a347ec00eb06921de2c9e931285742b118fb15b31acd98ac184d7a2f655354",
+          "size_bytes": 1323
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class42/rows-1-6-11-17-mask-05.matrix.txt",
+          "row_major_sign_bits_hex": "224956f31dac2cffba50104b3971c5d6c66c06e8ed4cbd9e6a9f8078295c42dc8b3398d8b3429185c705747422dfc687c6b1e60ff979945ee41ff2d037541c94bbec0",
+          "sha256": "7ee7c11329e5a141a58dda648c28d45059c100029f6ee79219bb8cc11ff285fd",
+          "size_bytes": 1323
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class42/rows-1-6-11-17-mask-06.matrix.txt",
+          "row_major_sign_bits_hex": "2249569fc8b82cffba50104b3971c5d6c6619c4a6d4cbd9e6a9f8078295c42dd3867c8d8b3429185c705747422dfc687c6dd331bf979945ee41ff2d037541c94bbec0",
+          "sha256": "3c25d59d945a4e9997fd5049b422714547198e3ce8ed1f517a24d5b68099183f",
+          "size_bytes": 1323
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class42/rows-1-6-11-17-mask-07.matrix.txt",
+          "row_major_sign_bits_hex": "224956b3ccac2cffba50104b3971c5d6c6641cc8ed4cbd9e6a9f8078295c42dd887798d8b3429185c705747422dfc687c6f1370ff979945ee41ff2d037541c94bbec0",
+          "sha256": "0030e4b6beed67efd1bbbdd43b70d515b3843455a5ff6e782c5ba68e51a45cc7",
+          "size_bytes": 1323
+        }
+      ],
+      "evidence": {
+        "snapshot_equals_final_log_record": true
+      },
+      "parameters": {
+        "beam_width": 1000,
+        "bidirectional": true,
+        "elite_count": 8,
+        "exact_pool": 4000,
+        "random_fraction": 0.18,
+        "seed": 29631
+      },
+      "run_id": "class42-campaign-29631",
+      "semantics": "pruned_heuristic_not_exhaustive",
+      "telemetry": {
+        "best_score": "2762200842240000",
+        "complete": true,
+        "completed_depths": 2176,
+        "completed_pairs": 56,
+        "elapsed_seconds": 335.544135,
+        "exact_checks": 7128212,
+        "generated": 45713120,
+        "promotions": 0,
+        "retained_states": 1937363,
+        "singular_candidates": 101,
+        "termination": "all_pairs_completed",
+        "unique_candidates": 33873022
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/path-relink/frontier-to-class14-switches-29641.jsonl",
+          "sha256": "1abcbb6bb74c179e4b6c478063c4b8f33bce6dc781929fc246a8692b36540539",
+          "size_bytes": 1176381
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/path-relink/frontier-to-class14-switches-29641.matrix.txt",
+          "row_major_sign_bits_hex": "47701b088c8dcb312e15d131cb68b8189726f3c496749f01dbcd4546b0382204b7e6a259e70a05e2aa4f036ec52ee87ad39cfed0678187a68806fe6856ad550e948f0",
+          "sha256": "6f2afb9b563b38ea017a5222644cac717806086fa0bb2e3527bedffcd25001e4",
+          "size_bytes": 1337
+        },
+        "snapshot": {
+          "path": "runs/direct-search/path-relink/frontier-to-class14-switches-29641.snapshot.json",
+          "sha256": "194f54b0969a64871eb4176b981b64c01931f9eba4cde8c891cbf3944cc5ae06",
+          "size_bytes": 685
+        }
+      },
+      "elite_inputs": [
+        {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/path-relink/frontier-class14-aligned-to-near.matrix.txt",
+          "row_major_sign_bits_hex": "47701b088c8dcb312e15d131cb68b8189726f3c496749f01dbcd4546b0382204b7e6a259e70a05e2aa4f036ec52ee87ad39cfed0678187a68806fe6856ad550e948f0",
+          "sha256": "6f2afb9b563b38ea017a5222644cac717806086fa0bb2e3527bedffcd25001e4",
+          "size_bytes": 1337
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/audits/class14-near-frontier-audit3-29507.matrix.txt",
+          "row_major_sign_bits_hex": "46521b020c8ce9312e17e139cb70b108b62ef2c5b673bb08dbcd4542b038a61cb7768248a20a05e3ab5f076e443fe83ad39ed6d1678007a28a2ee868d60c55c68c9d0",
+          "sha256": "57bb0839fe1831f79449e8578921a50ac458817ad3585634499f49d697592b8f",
+          "size_bytes": 1340
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-01.matrix.txt",
+          "row_major_sign_bits_hex": "46521b0a2dccf973ae17e139cb70b108b62ff6edb673bb08dbcd4d63f038a61cb7768248a20a87f7ab5f076e443fe83ad39ed6d177c287a28a2ee868d60c55c68c9d0",
+          "sha256": "be2ca762e85d66d2ea07ce049f4f7d4d5d64adcbd2c7dffbdcec4da3654f146c",
+          "size_bytes": 1316
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-02.matrix.txt",
+          "row_major_sign_bits_hex": "4242bb020c8ce9312e17e1398a7ab18aa22ef2c5b673bb08dbcd4542b038a61cb7768248a20a05e3aa5b2f6e443fe83ad39ed6d1678007820f2ee868d68e41c68c9d0",
+          "sha256": "8c9e3fa81e88df6c4ebc1b39731d92498196a7481ded96d0c27ad29afadcd3d2",
+          "size_bytes": 1340
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-03.matrix.txt",
+          "row_major_sign_bits_hex": "4242bb0a2dccf973ae17e1398a7ab18aa22ff6edb673bb08dbcd4d63f038a61cb7768248a20a87f7aa5b2f6e443fe83ad39ed6d177c287820f2ee868d68e41c68c9d0",
+          "sha256": "26c714d0136db23460c6306aeda3cdd10d305aae9405a79a06230568e1d1586e",
+          "size_bytes": 1316
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-04.matrix.txt",
+          "row_major_sign_bits_hex": "46521b020c8ce9312e376439cb70b108b62ef2c5b673bb08dbcd4542b028e49c97f38248a20a05e3ab5f076e443fe83ad39ed6d1678007a28a2ea962d60c55c788b50",
+          "sha256": "091a59a4d2b183212daf9d347b892551512271275b1d8f2eed51d847f8404a67",
+          "size_bytes": 1340
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-05.matrix.txt",
+          "row_major_sign_bits_hex": "46521b0a2dccf973ae376439cb70b108b62ff6edb673bb08dbcd4d63f028e49c97f38248a20a87f7ab5f076e443fe83ad39ed6d177c287a28a2ea962d60c55c788b50",
+          "sha256": "d6b9b977a0610fdba929ecb991f9d289807ed8668aa4f7820a5812288735f86c",
+          "size_bytes": 1316
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-06.matrix.txt",
+          "row_major_sign_bits_hex": "4242bb020c8ce9312e3764398a7ab18aa22ef2c5b673bb08dbcd4542b028e49c97f38248a20a05e3aa5b2f6e443fe83ad39ed6d1678007820f2ea962d68e41c788b50",
+          "sha256": "b5457e8079a80bd231ec2d8a259b7e519ecc302fd207bd8a1161e6b735399e1a",
+          "size_bytes": 1340
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-07.matrix.txt",
+          "row_major_sign_bits_hex": "4242bb0a2dccf973ae3764398a7ab18aa22ff6edb673bb08dbcd4d63f028e49c97f38248a20a87f7aa5b2f6e443fe83ad39ed6d177c287820f2ea962d68e41c788b50",
+          "sha256": "9a9aafdc47364c27337d00f131ae704f77641977946c62c9b59a3c41e3d866ca",
+          "size_bytes": 1316
+        }
+      ],
+      "evidence": {
+        "snapshot_equals_final_log_record": true
+      },
+      "parameters": {
+        "beam_width": 1000,
+        "bidirectional": true,
+        "elite_count": 9,
+        "exact_pool": 4000,
+        "random_fraction": 0.2,
+        "seed": 29641
+      },
+      "run_id": "frontier-to-class14-switches-29641",
+      "semantics": "pruned_heuristic_not_exhaustive",
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "complete": true,
+        "completed_depths": 1680,
+        "completed_pairs": 16,
+        "elapsed_seconds": 395.13905,
+        "exact_checks": 6352848,
+        "generated": 87926527,
+        "promotions": 0,
+        "retained_states": 1619912,
+        "singular_candidates": 36,
+        "termination": "all_pairs_completed",
+        "unique_candidates": 79570144
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/path-relink/frontier-to-class42-switches-29643.jsonl",
+          "sha256": "1c717d679d5290a98952cb39845471a3376149b1f5877335468a8f0c11fc605d",
+          "size_bytes": 1180767
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/path-relink/frontier-to-class42-switches-29643.matrix.txt",
+          "row_major_sign_bits_hex": "261e76fdbb1924ffb850905bbb75dd9616fac2363c6da99e6bdf80f8294c04fe35cb40d8b153118dc7057476239cc287c69fc8b77d49945eed9ff2d0254c2c96abac0",
+          "sha256": "7aae387b7b1eb66112aac1741da5574c216e42b47722522f1416f2d12fd0530c",
+          "size_bytes": 1313
+        },
+        "snapshot": {
+          "path": "runs/direct-search/path-relink/frontier-to-class42-switches-29643.snapshot.json",
+          "sha256": "521be4c4aed23b45c040c6428574d852b6dcdb44b296b7f565e4d73c88d4ffbe",
+          "size_bytes": 688
+        }
+      },
+      "elite_inputs": [
+        {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/path-relink/frontier-class14-aligned-to-class42-near.matrix.txt",
+          "row_major_sign_bits_hex": "261e76fdbb1924ffb850905bbb75dd9616fac2363c6da99e6bdf80f8294c04fe35cb40d8b153118dc7057476239cc287c69fc8b77d49945eed9ff2d0254c2c96abac0",
+          "sha256": "7aae387b7b1eb66112aac1741da5574c216e42b47722522f1416f2d12fd0530c",
+          "size_bytes": 1313
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/cross/class42-alt-near-29543.matrix.txt",
+          "row_major_sign_bits_hex": "224956dd33182cffba50104b3971c5d6c669c33e6d4cbd9e6a9f8078295c42dc338948d8b3429185c705747422dfc687c69fc8bbf979945ee41ff2d037541c94bbec0",
+          "sha256": "a2fb78b1cf18d9af8eee5766949ff71b0db1796259ec5818c0ea8568551af89b",
+          "size_bytes": 1323
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class42/rows-1-6-11-17-mask-01.matrix.txt",
+          "row_major_sign_bits_hex": "224956f1370c2cffba50104b3971c5d6c66c43bced4cbd9e6a9f8078295c42dc839918d8b3429185c705747422dfc687c6b3ccaff979945ee41ff2d037541c94bbec0",
+          "sha256": "ad6a34e2115149aa1390d044bde5dbb3156352a7287b9a861ea043fec712eaf4",
+          "size_bytes": 1323
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class42/rows-1-6-11-17-mask-02.matrix.txt",
+          "row_major_sign_bits_hex": "2249569de2182cffba50104b3971c5d6c661d91e6d4cbd9e6a9f8078295c42dd30cd48d8b3429185c705747422dfc687c6df19bbf979945ee41ff2d037541c94bbec0",
+          "sha256": "08a00fd569638ffd727040e669db4fde9159fe2672e9ffddeb3d5fea88223077",
+          "size_bytes": 1323
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class42/rows-1-6-11-17-mask-03.matrix.txt",
+          "row_major_sign_bits_hex": "224956b1e60c2cffba50104b3971c5d6c664599ced4cbd9e6a9f8078295c42dd80dd18d8b3429185c705747422dfc687c6f31daff979945ee41ff2d037541c94bbec0",
+          "sha256": "b1efe4d1e730953a8e095dee84443554c7696a5a1926e506bd5ad1a2226d7863",
+          "size_bytes": 1323
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class42/rows-1-6-11-17-mask-04.matrix.txt",
+          "row_major_sign_bits_hex": "224956df19b82cffba50104b3971c5d6c669866a6d4cbd9e6a9f8078295c42dc3b23c8d8b3429185c705747422dfc687c69de21bf979945ee41ff2d037541c94bbec0",
+          "sha256": "d3a347ec00eb06921de2c9e931285742b118fb15b31acd98ac184d7a2f655354",
+          "size_bytes": 1323
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class42/rows-1-6-11-17-mask-05.matrix.txt",
+          "row_major_sign_bits_hex": "224956f31dac2cffba50104b3971c5d6c66c06e8ed4cbd9e6a9f8078295c42dc8b3398d8b3429185c705747422dfc687c6b1e60ff979945ee41ff2d037541c94bbec0",
+          "sha256": "7ee7c11329e5a141a58dda648c28d45059c100029f6ee79219bb8cc11ff285fd",
+          "size_bytes": 1323
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class42/rows-1-6-11-17-mask-06.matrix.txt",
+          "row_major_sign_bits_hex": "2249569fc8b82cffba50104b3971c5d6c6619c4a6d4cbd9e6a9f8078295c42dd3867c8d8b3429185c705747422dfc687c6dd331bf979945ee41ff2d037541c94bbec0",
+          "sha256": "3c25d59d945a4e9997fd5049b422714547198e3ce8ed1f517a24d5b68099183f",
+          "size_bytes": 1323
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class42/rows-1-6-11-17-mask-07.matrix.txt",
+          "row_major_sign_bits_hex": "224956b3ccac2cffba50104b3971c5d6c6641cc8ed4cbd9e6a9f8078295c42dd887798d8b3429185c705747422dfc687c6f1370ff979945ee41ff2d037541c94bbec0",
+          "sha256": "0030e4b6beed67efd1bbbdd43b70d515b3843455a5ff6e782c5ba68e51a45cc7",
+          "size_bytes": 1323
+        }
+      ],
+      "evidence": {
+        "snapshot_equals_final_log_record": true
+      },
+      "parameters": {
+        "beam_width": 1000,
+        "bidirectional": true,
+        "elite_count": 9,
+        "exact_pool": 4000,
+        "random_fraction": 0.2,
+        "seed": 29643
+      },
+      "run_id": "frontier-to-class42-switches-29643",
+      "semantics": "pruned_heuristic_not_exhaustive",
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "complete": true,
+        "completed_depths": 1680,
+        "completed_pairs": 16,
+        "elapsed_seconds": 399.581769,
+        "exact_checks": 6355397,
+        "generated": 87518441,
+        "promotions": 0,
+        "retained_states": 1620217,
+        "singular_candidates": 0,
+        "termination": "all_pairs_completed",
+        "unique_candidates": 79033074
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/path-relink/sanitizer.jsonl",
+          "sha256": "cd6382a3e18f9152a9148c216072379cf7c1f9f3e0fa0e6f76475b40b68ff101",
+          "size_bytes": 17630
+        },
+        "output": {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/path-relink/sanitizer.matrix.txt",
+          "row_major_sign_bits_hex": "46521b020c8ce9312e17e139cb70b108b62ef2c5b673bb08dbcd4542b038a61cb7768248a20a05e3ab5f076e443fe83ad39ed6d1678007a28a2ee868d60c55c68c9d0",
+          "sha256": "57bb0839fe1831f79449e8578921a50ac458817ad3585634499f49d697592b8f",
+          "size_bytes": 1340
+        },
+        "snapshot": {
+          "path": "runs/direct-search/path-relink/sanitizer.snapshot.json",
+          "sha256": "f8741253bce315c8ee7a820d7b4b5bb05f5543c4016c1f3295ef78acb342396b",
+          "size_bytes": 660
+        }
+      },
+      "elite_inputs": [
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/audits/class14-near-frontier-audit3-29507.matrix.txt",
+          "row_major_sign_bits_hex": "46521b020c8ce9312e17e139cb70b108b62ef2c5b673bb08dbcd4542b038a61cb7768248a20a05e3ab5f076e443fe83ad39ed6d1678007a28a2ee868d60c55c68c9d0",
+          "sha256": "57bb0839fe1831f79449e8578921a50ac458817ad3585634499f49d697592b8f",
+          "size_bytes": 1340
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-01.matrix.txt",
+          "row_major_sign_bits_hex": "46521b0a2dccf973ae17e139cb70b108b62ff6edb673bb08dbcd4d63f038a61cb7768248a20a87f7ab5f076e443fe83ad39ed6d177c287a28a2ee868d60c55c68c9d0",
+          "sha256": "be2ca762e85d66d2ea07ce049f4f7d4d5d64adcbd2c7dffbdcec4da3654f146c",
+          "size_bytes": 1316
+        }
+      ],
+      "evidence": {
+        "snapshot_equals_final_log_record": true
+      },
+      "parameters": {
+        "beam_width": 16,
+        "bidirectional": false,
+        "elite_count": 2,
+        "exact_pool": 32,
+        "random_fraction": 0.2,
+        "seed": 29622
+      },
+      "run_id": "sanitizer",
+      "semantics": "pruned_heuristic_not_exhaustive",
+      "telemetry": {
+        "best_score": "2762200842240000",
+        "complete": true,
+        "completed_depths": 24,
+        "completed_pairs": 1,
+        "elapsed_seconds": 0.215931,
+        "exact_checks": 699,
+        "generated": 4434,
+        "promotions": 0,
+        "retained_states": 363,
+        "singular_candidates": 0,
+        "termination": "all_pairs_completed",
+        "unique_candidates": 3681
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/path-relink/smoke-depth.jsonl",
+          "sha256": "d729b586c37940be0bee3252fb5001c2d69a82867a315d38a4d101f764fe512e",
+          "size_bytes": 15808
+        },
+        "output": {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/path-relink/smoke-depth.matrix.txt",
+          "row_major_sign_bits_hex": "46521b020c8ce9312e17e139cb70b108b62ef2c5b673bb08dbcd4542b038a61cb7768248a20a05e3ab5f076e443fe83ad39ed6d1678007a28a2ee868d60c55c68c9d0",
+          "sha256": "57bb0839fe1831f79449e8578921a50ac458817ad3585634499f49d697592b8f",
+          "size_bytes": 1340
+        },
+        "snapshot": {
+          "path": "runs/direct-search/path-relink/smoke-depth.snapshot.json",
+          "sha256": "22c2c1849cd927040419a3d28bfcd3c1bae01cc14db1f6de34b20dfe70265eb0",
+          "size_bytes": 698
+        }
+      },
+      "elite_inputs": [
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/audits/class14-near-frontier-audit3-29507.matrix.txt",
+          "row_major_sign_bits_hex": "46521b020c8ce9312e17e139cb70b108b62ef2c5b673bb08dbcd4542b038a61cb7768248a20a05e3ab5f076e443fe83ad39ed6d1678007a28a2ee868d60c55c68c9d0",
+          "sha256": "57bb0839fe1831f79449e8578921a50ac458817ad3585634499f49d697592b8f",
+          "size_bytes": 1340
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-04.matrix.txt",
+          "row_major_sign_bits_hex": "46521b020c8ce9312e376439cb70b108b62ef2c5b673bb08dbcd4542b028e49c97f38248a20a05e3ab5f076e443fe83ad39ed6d1678007a28a2ea962d60c55c788b50",
+          "sha256": "091a59a4d2b183212daf9d347b892551512271275b1d8f2eed51d847f8404a67",
+          "size_bytes": 1340
+        }
+      ],
+      "evidence": {
+        "snapshot_equals_final_log_record": true
+      },
+      "parameters": {
+        "beam_width": 16,
+        "bidirectional": false,
+        "elite_count": 2,
+        "exact_pool": 32,
+        "random_fraction": 0.15,
+        "seed": 29644
+      },
+      "run_id": "smoke-depth",
+      "semantics": "pruned_heuristic_not_exhaustive",
+      "telemetry": {
+        "best_score": "2762200842240000",
+        "complete": true,
+        "completed_depths": 20,
+        "completed_pairs": 1,
+        "elapsed_seconds": 0.021936,
+        "exact_checks": 576,
+        "generated": 3056,
+        "promotions": 0,
+        "retained_states": 301,
+        "singular_candidates": 0,
+        "termination": "all_pairs_completed",
+        "unique_candidates": 2332
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/path-relink/smoke-near.jsonl",
+          "sha256": "22d09c7fc7863db65beffc61f787ed794b450b37aee5b39392d21666574bf8e9",
+          "size_bytes": 15045
+        },
+        "output": {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/path-relink/smoke-near.matrix.txt",
+          "row_major_sign_bits_hex": "46521b020c8ce9312e17e139cb70b108b62ef2c5b673bb08dbcd4542b038a61cb7768248a20a05e3ab5f076e443fe83ad39ed6d1678007a28a2ee868d60c55c68c9d0",
+          "sha256": "57bb0839fe1831f79449e8578921a50ac458817ad3585634499f49d697592b8f",
+          "size_bytes": 1340
+        },
+        "snapshot": {
+          "path": "runs/direct-search/path-relink/smoke-near.snapshot.json",
+          "sha256": "e012a899f926a4394cc38dc168d407e747311f4407beaccbd33f79cf71694e6e",
+          "size_bytes": 663
+        }
+      },
+      "elite_inputs": [
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/audits/class14-near-frontier-audit3-29507.matrix.txt",
+          "row_major_sign_bits_hex": "46521b020c8ce9312e17e139cb70b108b62ef2c5b673bb08dbcd4542b038a61cb7768248a20a05e3ab5f076e443fe83ad39ed6d1678007a28a2ee868d60c55c68c9d0",
+          "sha256": "57bb0839fe1831f79449e8578921a50ac458817ad3585634499f49d697592b8f",
+          "size_bytes": 1340
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-04.matrix.txt",
+          "row_major_sign_bits_hex": "46521b020c8ce9312e376439cb70b108b62ef2c5b673bb08dbcd4542b028e49c97f38248a20a05e3ab5f076e443fe83ad39ed6d1678007a28a2ea962d60c55c788b50",
+          "sha256": "091a59a4d2b183212daf9d347b892551512271275b1d8f2eed51d847f8404a67",
+          "size_bytes": 1340
+        }
+      ],
+      "evidence": {
+        "snapshot_equals_final_log_record": true
+      },
+      "parameters": {
+        "beam_width": 64,
+        "bidirectional": false,
+        "elite_count": 2,
+        "exact_pool": 256,
+        "random_fraction": 0.15,
+        "seed": 29621
+      },
+      "run_id": "smoke-near",
+      "semantics": "pruned_heuristic_not_exhaustive",
+      "telemetry": {
+        "best_score": "2762200842240000",
+        "complete": true,
+        "completed_depths": 20,
+        "completed_pairs": 1,
+        "elapsed_seconds": 0.168258,
+        "exact_checks": 3873,
+        "generated": 11269,
+        "promotions": 0,
+        "retained_states": 1110,
+        "singular_candidates": 0,
+        "termination": "all_pairs_completed",
+        "unique_candidates": 6771
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/path-relink/smoke.jsonl",
+          "sha256": "090870595472327c1bc804283d3f4fef15307a1abe71ef2931242a7430261eb7",
+          "size_bytes": 175153
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/path-relink/smoke.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+          "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "size_bytes": 1318
+        },
+        "snapshot": {
+          "path": "runs/direct-search/path-relink/smoke.snapshot.json",
+          "sha256": "0218f6c6b3d6b38affcb27a62f02417bcb1208876e57a6c56d7f9516b79de20e",
+          "size_bytes": 652
+        }
+      },
+      "elite_inputs": [
+        {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/h24-long/class-14-28751.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+          "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "size_bytes": 1318
+        },
+        {
+          "absolute_determinant": "2762200842240000",
+          "path": "runs/direct-search/quad-switch/class14/columns-5-11-16-18-mask-04.matrix.txt",
+          "row_major_sign_bits_hex": "46521b020c8ce9312e376439cb70b108b62ef2c5b673bb08dbcd4542b028e49c97f38248a20a05e3ab5f076e443fe83ad39ed6d1678007a28a2ea962d60c55c788b50",
+          "sha256": "091a59a4d2b183212daf9d347b892551512271275b1d8f2eed51d847f8404a67",
+          "size_bytes": 1340
+        }
+      ],
+      "evidence": {
+        "snapshot_equals_final_log_record": true
+      },
+      "parameters": {
+        "beam_width": 32,
+        "bidirectional": false,
+        "elite_count": 2,
+        "exact_pool": 128,
+        "random_fraction": 0.15,
+        "seed": 29620
+      },
+      "run_id": "smoke",
+      "semantics": "pruned_heuristic_not_exhaustive",
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "complete": true,
+        "completed_depths": 264,
+        "completed_pairs": 1,
+        "elapsed_seconds": 1.431121,
+        "exact_checks": 33333,
+        "generated": 1111155,
+        "promotions": 0,
+        "retained_states": 8396,
+        "singular_candidates": 0,
+        "termination": "all_pairs_completed",
+        "unique_candidates": 1089764
+      }
+    }
+  ],
+  "path_relink_semantics": {
+    "classification": "pruned_heuristic_not_exhaustive",
+    "exact_promotion": "Bareiss",
+    "numerically_singular_states_may_be_pruned": true
+  },
+  "radius4_runs": [
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/benchmark.jsonl",
+          "sha256": "8085806b8608c2960e61cee7a692a1dbf0afb2af1ec81b8a48d13be9e4275931",
+          "size_bytes": 1303
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/benchmark.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+          "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "size_bytes": 1318
+        },
+        "research_output": {
+          "absolute_determinant": "2414542848000000",
+          "path": "runs/direct-search/radius4/benchmark-research.matrix.txt",
+          "row_major_sign_bits_hex": "f27137567e3f97bad4ca619f29a284c9e03e50d10fc10a6dd5396e2fe5062e498632ffead52aaf4b263de418deb2d7dd8f4b6005cc92241f0bcb4099da84e5cffaea8",
+          "sha256": "9cab6c348f2b55f2a00929676250cd857fa76ddb295fd9e6d46b1c37d2b74a84",
+          "size_bytes": 1314
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/benchmark.snapshot.json",
+          "sha256": "05eb64e81b3b553fb053a1e1620eafcf46f1c254273776bee4d23f8d1e165c40",
+          "size_bytes": 676
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "benchmark",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "runs/direct-search/best-below/frontier-class14-late-28751.matrix.txt",
+        "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+        "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+        "size_bytes": 1318
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.75,
+        "calibration_samples": 64,
+        "complete": true,
+        "elapsed_seconds": 0.097837,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 24393776,
+        "final_pool_exact_checks": 128,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2414542848000000",
+        "screened_combinations": 24393776,
+        "seed": 29652,
+        "shard_count": 529,
+        "shard_index": 0,
+        "termination": "shard_completed",
+        "top_pool": 128
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/class51-shard0.jsonl",
+          "sha256": "1be28876bd22d0d95976178348e9968bc4e0fb330f7f8432d2feab7c4ddb9c81",
+          "size_bytes": 1958
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/class51-shard0.matrix.txt",
+          "row_major_sign_bits_hex": "5b9d42380bde10791586ebc130fb4f954eb2af2faaeb6e6035d18d17b4ba5c76c010c0cc890c498bcc2ba2c4f3abbf2cd85235f6ca435fe2fcb15391fd3131869ef30",
+          "sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "size_bytes": 1320
+        },
+        "research_output": {
+          "absolute_determinant": "2651258880000000",
+          "path": "runs/direct-search/radius4/class51-shard0-research.matrix.txt",
+          "row_major_sign_bits_hex": "5b9d42380bde10791586ebc130fb4f954eb22f2faaeb6e6035d18d57f4ba5c76c010c0cc890c498bcc2ba2c4f3abbf2cd85235f6ca435fe2fcb15391fc3131869ef30",
+          "sha256": "6c65a9de101b2f96cf1a4495182b0ceee9ac3ce5de2c4b6eba16123775e27cef",
+          "size_bytes": 1320
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/class51-shard0.snapshot.json",
+          "sha256": "747c60bdc1cbac09184831cf607241c76cf90c912f26c60de9bf6434713ef59b",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "class51-shard0",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "runs/direct-search/best-below/frontier-class51-28752.matrix.txt",
+        "row_major_sign_bits_hex": "5b9d42380bde10791586ebc130fb4f954eb2af2faaeb6e6035d18d17b4ba5c76c010c0cc890c498bcc2ba2c4f3abbf2cd85235f6ca435fe2fcb15391fd3131869ef30",
+        "sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+        "size_bytes": 1320
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.75,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 5.838263,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 815710280,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2651258880000000",
+        "screened_combinations": 815710280,
+        "seed": 29690,
+        "shard_count": 4,
+        "shard_index": 0,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/class51-shard1.jsonl",
+          "sha256": "a7f72d3750c0ac07b0aa129a5aeef3f4ea53b44bcef8a8b1ad869624afec3ef1",
+          "size_bytes": 1958
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/class51-shard1.matrix.txt",
+          "row_major_sign_bits_hex": "5b9d42380bde10791586ebc130fb4f954eb2af2faaeb6e6035d18d17b4ba5c76c010c0cc890c498bcc2ba2c4f3abbf2cd85235f6ca435fe2fcb15391fd3131869ef30",
+          "sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "size_bytes": 1320
+        },
+        "research_output": {
+          "absolute_determinant": "2619015168000000",
+          "path": "runs/direct-search/radius4/class51-shard1-research.matrix.txt",
+          "row_major_sign_bits_hex": "5b9d42380bde10791586ebc130fb4f954eb2af2faaeb6e6035d18d57f4ba5c76c010c0cc890c498bcc2ba2c4f3abbf2cd85235f6ca435fe2fcb15391fc3139869ef30",
+          "sha256": "76c3f0c7044782f0f900fe7698708cc5a27c1fa0d3c588c10215211dbe290ac7",
+          "size_bytes": 1318
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/class51-shard1.snapshot.json",
+          "sha256": "3deb9f39ebf1920a4d226a0dbc92d4a770d69431eda1249ffe690270938f3c20",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "class51-shard1",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "runs/direct-search/best-below/frontier-class51-28752.matrix.txt",
+        "row_major_sign_bits_hex": "5b9d42380bde10791586ebc130fb4f954eb2af2faaeb6e6035d18d17b4ba5c76c010c0cc890c498bcc2ba2c4f3abbf2cd85235f6ca435fe2fcb15391fd3131869ef30",
+        "sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+        "size_bytes": 1320
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.75,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 5.794784,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 809559696,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2619015168000000",
+        "screened_combinations": 809559696,
+        "seed": 29691,
+        "shard_count": 4,
+        "shard_index": 1,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/class51-shard2.jsonl",
+          "sha256": "8a60fec61ecdeae4084836eb0be0cec766b90be6b6a25568b7a055ee5a492ebc",
+          "size_bytes": 1958
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/class51-shard2.matrix.txt",
+          "row_major_sign_bits_hex": "5b9d42380bde10791586ebc130fb4f954eb2af2faaeb6e6035d18d17b4ba5c76c010c0cc890c498bcc2ba2c4f3abbf2cd85235f6ca435fe2fcb15391fd3131869ef30",
+          "sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "size_bytes": 1320
+        },
+        "research_output": {
+          "absolute_determinant": "2651258880000000",
+          "path": "runs/direct-search/radius4/class51-shard2-research.matrix.txt",
+          "row_major_sign_bits_hex": "5b9d42380bde10791586ebc130fb4f956eb2af2faaeb6e4035d18d17b4ba5c66c010c0cc890c498bcc2ba2c4f3abbf2cd85235f6ca435fe2fc915391fd3131869ef30",
+          "sha256": "ea52bd402ae32b12909d055cdccddd84210e46bee6b828684e5023203bfa9f02",
+          "size_bytes": 1322
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/class51-shard2.snapshot.json",
+          "sha256": "62bab1b9f2e04e9f559b208a912cf153f225d9811dcdb20cf50243b6978dec85",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "class51-shard2",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "runs/direct-search/best-below/frontier-class51-28752.matrix.txt",
+        "row_major_sign_bits_hex": "5b9d42380bde10791586ebc130fb4f954eb2af2faaeb6e6035d18d17b4ba5c76c010c0cc890c498bcc2ba2c4f3abbf2cd85235f6ca435fe2fcb15391fd3131869ef30",
+        "sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+        "size_bytes": 1320
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.75,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 5.765887,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 803443960,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2651258880000000",
+        "screened_combinations": 803443960,
+        "seed": 29692,
+        "shard_count": 4,
+        "shard_index": 2,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/class51-shard3.jsonl",
+          "sha256": "54c1f800d171cc2d5ec88f44d743acafa1eb3f1a13827c2ec4a09072f0aed1ba",
+          "size_bytes": 1958
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/class51-shard3.matrix.txt",
+          "row_major_sign_bits_hex": "5b9d42380bde10791586ebc130fb4f954eb2af2faaeb6e6035d18d17b4ba5c76c010c0cc890c498bcc2ba2c4f3abbf2cd85235f6ca435fe2fcb15391fd3131869ef30",
+          "sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "size_bytes": 1320
+        },
+        "research_output": {
+          "absolute_determinant": "2651258880000000",
+          "path": "runs/direct-search/radius4/class51-shard3-research.matrix.txt",
+          "row_major_sign_bits_hex": "5b9c42380bde10791586ebc130fb4f956eb2af2faaeb6e4035d18d17b4ba5c76c010c0cc890c498bcc2ba2c4f3abbf2cd85235f6ca435fe2fc915391fd3131869ef30",
+          "sha256": "7332e86d3d97f5dab6b37adf30a473c38545384a95d4949ecb9158c9b500b446",
+          "size_bytes": 1322
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/class51-shard3.snapshot.json",
+          "sha256": "2a8756f916cebd7e2e2d742589be8ac36c0ed58721b73971b571aa3095817a56",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "class51-shard3",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "runs/direct-search/best-below/frontier-class51-28752.matrix.txt",
+        "row_major_sign_bits_hex": "5b9d42380bde10791586ebc130fb4f954eb2af2faaeb6e6035d18d17b4ba5c76c010c0cc890c498bcc2ba2c4f3abbf2cd85235f6ca435fe2fcb15391fd3131869ef30",
+        "sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+        "size_bytes": 1320
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.75,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 5.651187,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 797362940,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2651258880000000",
+        "screened_combinations": 797362940,
+        "seed": 29693,
+        "shard_count": 4,
+        "shard_index": 3,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/frontier-shard0-29660.jsonl",
+          "sha256": "7717caba86d589096c78c5135cd2593a9b9e697726368a50a254bd19f0fa5934",
+          "size_bytes": 1304
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/frontier-shard0-29660.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+          "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "size_bytes": 1318
+        },
+        "research_output": {
+          "absolute_determinant": "2651258880000000",
+          "path": "runs/direct-search/radius4/frontier-shard0-29660-research.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f9fbad4ca619f29a280c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de418deb2d7dd8f4be005cc92241f0bcb4099da84e5cf7aea8",
+          "sha256": "1bbaabc8e608b74e54323f3f729caa3c0179540a670249ede72699cb51f9982e",
+          "size_bytes": 1316
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/frontier-shard0-29660.snapshot.json",
+          "sha256": "72ed742894f22e58a962c87b0a98d07793d91546e88b155c7f00b32a3fcc8634",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "frontier-shard0-29660",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "runs/direct-search/best-below/frontier-class14-late-28751.matrix.txt",
+        "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+        "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+        "size_bytes": 1318
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.75,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 6.2034,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 815710280,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2651258880000000",
+        "screened_combinations": 815710280,
+        "seed": 29660,
+        "shard_count": 4,
+        "shard_index": 0,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/frontier-shard1-29661.jsonl",
+          "sha256": "852fece8b7ac728171736dd2d926d3b3a35c9c7195a9972a19b41518c684ca78",
+          "size_bytes": 1304
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/frontier-shard1-29661.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+          "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "size_bytes": 1318
+        },
+        "research_output": {
+          "absolute_determinant": "2651258880000000",
+          "path": "runs/direct-search/radius4/frontier-shard1-29661-research.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a280c9e03e50d10fc10a6dd5396e2fe5062e498632ffead52aaf4b263de418deb2d7dd8f4b6005cc92241f0bcb4099da84e5cffaea8",
+          "sha256": "d8987013c7472d85fcd1979af612cdc0fb11e9a3a17bb6415747a90fc402f600",
+          "size_bytes": 1316
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/frontier-shard1-29661.snapshot.json",
+          "sha256": "5d43800691356747e3287568d9481acb6e6d75499b3a13ccb4c9325e691615ff",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "frontier-shard1-29661",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "runs/direct-search/best-below/frontier-class14-late-28751.matrix.txt",
+        "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+        "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+        "size_bytes": 1318
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.75,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 6.052554,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 809559696,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2651258880000000",
+        "screened_combinations": 809559696,
+        "seed": 29661,
+        "shard_count": 4,
+        "shard_index": 1,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/frontier-shard2-29662.jsonl",
+          "sha256": "435f32ec4d99171333cd140be452a5933a2143533f6643237f27ef48fe561d69",
+          "size_bytes": 1304
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/frontier-shard2-29662.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+          "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "size_bytes": 1318
+        },
+        "research_output": {
+          "absolute_determinant": "2569207808000000",
+          "path": "runs/direct-search/radius4/frontier-shard2-29662-research.matrix.txt",
+          "row_major_sign_bits_hex": "727137567c3f97bad4ca619f29a284c9e03e50d10fc11a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd0f4b6005cc92241f0bcb4099d884e5cf7aea8",
+          "sha256": "09d8cede561016655f42eddb63ee33860f6111da0404430c620130c81563a32a",
+          "size_bytes": 1320
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/frontier-shard2-29662.snapshot.json",
+          "sha256": "81ac642b4ecfb152b077f8a4fdf69347e22e5e023001e628d347104e6e7e94a2",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "frontier-shard2-29662",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "runs/direct-search/best-below/frontier-class14-late-28751.matrix.txt",
+        "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+        "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+        "size_bytes": 1318
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.75,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 5.659743,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 803443960,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2569207808000000",
+        "screened_combinations": 803443960,
+        "seed": 29662,
+        "shard_count": 4,
+        "shard_index": 2,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/frontier-shard3-29663.jsonl",
+          "sha256": "60105650a80deb2d7c1c1d551561a280bea9d27f51ec72f99c40cd597d4b1206",
+          "size_bytes": 1304
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/frontier-shard3-29663.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+          "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "size_bytes": 1318
+        },
+        "research_output": {
+          "absolute_determinant": "2651258880000000",
+          "path": "runs/direct-search/radius4/frontier-shard3-29663-research.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fd11a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7d58f4b6005cc92241f0bcb4099da84e54f7aea8",
+          "sha256": "fc4ead8d3c024c01fa516f5c65bca15d3a1fedf4a7150fcb6474be67735e8220",
+          "size_bytes": 1318
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/frontier-shard3-29663.snapshot.json",
+          "sha256": "0a3f8fca933bd4c2581e20232b7d41e66ace7c599d6f9be753d1324e8e19486b",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "frontier-shard3-29663",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "runs/direct-search/best-below/frontier-class14-late-28751.matrix.txt",
+        "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+        "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+        "size_bytes": 1318
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.5,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 5.621885,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 797362940,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2651258880000000",
+        "screened_combinations": 797362940,
+        "seed": 29663,
+        "shard_count": 4,
+        "shard_index": 3,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/historical-shard0.jsonl",
+          "sha256": "dcebb782bde0548d210e15410865dedc28d78ad5f96003024e348e3da5a7f4bf",
+          "size_bytes": 1958
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/historical-shard0.matrix.txt",
+          "row_major_sign_bits_hex": "a187fecc33ff6187f98fcc329f8788382a50682b4fc8a69f88b2740194f004d2c8f95589ed50034ce007667aaa70ed2bc1d5a743cab58759a0beccc0fe96437cd2870",
+          "sha256": "b6a0801d0d1459ec262ae4e640c1b94b4baa3c44ea4b20aafbd1f8ae62f82be1",
+          "size_bytes": 1329
+        },
+        "research_output": {
+          "absolute_determinant": "2651258880000000",
+          "path": "runs/direct-search/radius4/historical-shard0-research.matrix.txt",
+          "row_major_sign_bits_hex": "a987fecf33ff61a7f98fcc329f8788382a50682b4fc8a69f88b2740194f004d2c8f95589ed50034ce007667aaa70ed2bc1d5a743cab58759a0beccc0fe96437cd2870",
+          "sha256": "eb36784181c67d262ead8fac97dfc73bb4350b1f869e2e2944f7b31fb8325dad",
+          "size_bytes": 1325
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/historical-shard0.snapshot.json",
+          "sha256": "021f67fa8fb52aae0297094cc415a93c2db0a59ee9889e6a60b3c16898223ac1",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "historical-shard0",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "runs/direct-search/reference-data/orrick-pre-april2003.matrix.txt",
+        "row_major_sign_bits_hex": "a187fecc33ff6187f98fcc329f8788382a50682b4fc8a69f88b2740194f004d2c8f95589ed50034ce007667aaa70ed2bc1d5a743cab58759a0beccc0fe96437cd2870",
+        "sha256": "b6a0801d0d1459ec262ae4e640c1b94b4baa3c44ea4b20aafbd1f8ae62f82be1",
+        "size_bytes": 1329
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.75,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 6.028581,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 815710280,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2651258880000000",
+        "screened_combinations": 815710280,
+        "seed": 29680,
+        "shard_count": 4,
+        "shard_index": 0,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/historical-shard1.jsonl",
+          "sha256": "41d7a11ddb92f75680294e5f1d273b61842f1b203158677a3275eb51d1a4292c",
+          "size_bytes": 1958
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/historical-shard1.matrix.txt",
+          "row_major_sign_bits_hex": "a187fecc33ff6187f98fcc329f8788382a50682b4fc8a69f88b2740194f004d2c8f95589ed50034ce007667aaa70ed2bc1d5a743cab58759a0beccc0fe96437cd2870",
+          "sha256": "b6a0801d0d1459ec262ae4e640c1b94b4baa3c44ea4b20aafbd1f8ae62f82be1",
+          "size_bytes": 1329
+        },
+        "research_output": {
+          "absolute_determinant": "2651258880000000",
+          "path": "runs/direct-search/radius4/historical-shard1-research.matrix.txt",
+          "row_major_sign_bits_hex": "a187fecc33ff6187fd8fcc3a9f8788382a50682b6fc8a69f88b2740194f004d3c8f95589ed50034ce007667aaa70ed2bc1d5a743cab58759a0beccc0fe96437cd2870",
+          "sha256": "70cbf936fa6614bb0a4b03545ae2d7fccbd432b3e6f6f5a893b767bc2ae44773",
+          "size_bytes": 1325
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/historical-shard1.snapshot.json",
+          "sha256": "26b5caf48c28bf4caf22a447a62d134164ec02b9ff7a4ad142fdd20b517b3452",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "historical-shard1",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "runs/direct-search/reference-data/orrick-pre-april2003.matrix.txt",
+        "row_major_sign_bits_hex": "a187fecc33ff6187f98fcc329f8788382a50682b4fc8a69f88b2740194f004d2c8f95589ed50034ce007667aaa70ed2bc1d5a743cab58759a0beccc0fe96437cd2870",
+        "sha256": "b6a0801d0d1459ec262ae4e640c1b94b4baa3c44ea4b20aafbd1f8ae62f82be1",
+        "size_bytes": 1329
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 1.0,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 5.838377,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 809559696,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2651258880000000",
+        "screened_combinations": 809559696,
+        "seed": 29681,
+        "shard_count": 4,
+        "shard_index": 1,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/historical-shard2.jsonl",
+          "sha256": "5cbb5ed04792fa1e0f2a8681843d24e4fdaa2a3e492d18d6082b28f5af784275",
+          "size_bytes": 1958
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/historical-shard2.matrix.txt",
+          "row_major_sign_bits_hex": "a187fecc33ff6187f98fcc329f8788382a50682b4fc8a69f88b2740194f004d2c8f95589ed50034ce007667aaa70ed2bc1d5a743cab58759a0beccc0fe96437cd2870",
+          "sha256": "b6a0801d0d1459ec262ae4e640c1b94b4baa3c44ea4b20aafbd1f8ae62f82be1",
+          "size_bytes": 1329
+        },
+        "research_output": {
+          "absolute_determinant": "2619093811200000",
+          "path": "runs/direct-search/radius4/historical-shard2-research.matrix.txt",
+          "row_major_sign_bits_hex": "a187fecc33ff61a7f98fcc329f8788382a50682b6fc8a69f88b2740194f004d3c8f95789ed50034ce007667aaa70ed2bc1d5a743cab58759a0beccc0fe96437cd2870",
+          "sha256": "8585e3093cd689a2253b585907a5f1becb8990d600bcda602a8338ef34209f34",
+          "size_bytes": 1325
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/historical-shard2.snapshot.json",
+          "sha256": "f72eab799065198df2e98c0c06848389815d0cbdf6d36ba8755abcd2327b7e62",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "historical-shard2",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "runs/direct-search/reference-data/orrick-pre-april2003.matrix.txt",
+        "row_major_sign_bits_hex": "a187fecc33ff6187f98fcc329f8788382a50682b4fc8a69f88b2740194f004d2c8f95589ed50034ce007667aaa70ed2bc1d5a743cab58759a0beccc0fe96437cd2870",
+        "sha256": "b6a0801d0d1459ec262ae4e640c1b94b4baa3c44ea4b20aafbd1f8ae62f82be1",
+        "size_bytes": 1329
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.75,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 5.771916,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 803443960,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2619093811200000",
+        "screened_combinations": 803443960,
+        "seed": 29682,
+        "shard_count": 4,
+        "shard_index": 2,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/historical-shard3.jsonl",
+          "sha256": "2792f47a7b26021f16d2a3cad97e074871acd1decc1b2492eafb28368e2799db",
+          "size_bytes": 1958
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/historical-shard3.matrix.txt",
+          "row_major_sign_bits_hex": "a187fecc33ff6187f98fcc329f8788382a50682b4fc8a69f88b2740194f004d2c8f95589ed50034ce007667aaa70ed2bc1d5a743cab58759a0beccc0fe96437cd2870",
+          "sha256": "b6a0801d0d1459ec262ae4e640c1b94b4baa3c44ea4b20aafbd1f8ae62f82be1",
+          "size_bytes": 1329
+        },
+        "research_output": {
+          "absolute_determinant": "2651258880000000",
+          "path": "runs/direct-search/radius4/historical-shard3-research.matrix.txt",
+          "row_major_sign_bits_hex": "b187fecf33ff61c7f98fcc329f8788382a50682b4fc8a69f88b2740194f004d2c8f95589ed50034ce007667aaa70ed2bc1d5a743cab58759a0beccc0fe96437cd2870",
+          "sha256": "654aa0a18ffde2ccc8c9b2173570cee04cab0815208f04a4cea5a8d5b44a0a0c",
+          "size_bytes": 1325
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/historical-shard3.snapshot.json",
+          "sha256": "98c5190f095c5028dc79d7af032340a74f1222147b247f32d2a152d2e9e606d4",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "historical-shard3",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "runs/direct-search/reference-data/orrick-pre-april2003.matrix.txt",
+        "row_major_sign_bits_hex": "a187fecc33ff6187f98fcc329f8788382a50682b4fc8a69f88b2740194f004d2c8f95589ed50034ce007667aaa70ed2bc1d5a743cab58759a0beccc0fe96437cd2870",
+        "sha256": "b6a0801d0d1459ec262ae4e640c1b94b4baa3c44ea4b20aafbd1f8ae62f82be1",
+        "size_bytes": 1329
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.75,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 5.691796,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 797362940,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2651258880000000",
+        "screened_combinations": 797362940,
+        "seed": 29683,
+        "shard_count": 4,
+        "shard_index": 3,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/reference-shard0.jsonl",
+          "sha256": "48da5a5949f5731714a7da78ab54effbc7f9ef5f1c66b9bb0e1ed50af39f8ffb",
+          "size_bytes": 1958
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/reference-shard0.matrix.txt",
+          "row_major_sign_bits_hex": "a187fecc33ff6187f98fccc29f8668381990684ccfc8969f88d2780168e8052ac8faa589eab0038f2006e1f99970f4cb61d96b83ad368796a0bf52c0fdaa437aaa870",
+          "sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "size_bytes": 1329
+        },
+        "research_output": {
+          "absolute_determinant": "2651258880000000",
+          "path": "runs/direct-search/radius4/reference-shard0-research.matrix.txt",
+          "row_major_sign_bits_hex": "a987fece33ff61e7f98fccc29f8668381990684ccfc8969f88d2780168e8052ac8faa589eab0038f2006e1f99970f4cb61d96b83ad368796a0bf52c0fdaa437aaa870",
+          "sha256": "819ca4fcef9dfdefd357cf75377e6d037e29aab6439d29b4cc3167b18a0dfbdf",
+          "size_bytes": 1325
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/reference-shard0.snapshot.json",
+          "sha256": "d4908fd7a5db031ed163bf7fcc852b1b12102150265cf928fcc2a2c740963b9a",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "reference-shard0",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "references/orrick-et-al-2003/matrix.txt",
+        "row_major_sign_bits_hex": "a187fecc33ff6187f98fccc29f8668381990684ccfc8969f88d2780168e8052ac8faa589eab0038f2006e1f99970f4cb61d96b83ad368796a0bf52c0fdaa437aaa870",
+        "sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+        "size_bytes": 1329
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.5,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 6.015091,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 815710280,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2651258880000000",
+        "screened_combinations": 815710280,
+        "seed": 29670,
+        "shard_count": 4,
+        "shard_index": 0,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/reference-shard1.jsonl",
+          "sha256": "b472e3cca35dc9ba673356f5de847f7701569254a89909c84080c32cd4cc9f2a",
+          "size_bytes": 1958
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/reference-shard1.matrix.txt",
+          "row_major_sign_bits_hex": "a187fecc33ff6187f98fccc29f8668381990684ccfc8969f88d2780168e8052ac8faa589eab0038f2006e1f99970f4cb61d96b83ad368796a0bf52c0fdaa437aaa870",
+          "sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "size_bytes": 1329
+        },
+        "research_output": {
+          "absolute_determinant": "2651258880000000",
+          "path": "runs/direct-search/radius4/reference-shard1-research.matrix.txt",
+          "row_major_sign_bits_hex": "a187fecc33ff6187fd8fccca9f8668381990684ccfc896df88d2780168e8052ac8faa789eab0038f2006e1f99970f4cb61d96b83ad368796a0bf52c0fdaa437aaa870",
+          "sha256": "6952f3a9faa6c37a5229c7cce4ad1ff42527e4dfd9914e748387edd91594dcf8",
+          "size_bytes": 1325
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/reference-shard1.snapshot.json",
+          "sha256": "8bd68141ce929125d92b8c79f0f7aa2815ceb743c764bfe70b8c73955c263179",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "reference-shard1",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "references/orrick-et-al-2003/matrix.txt",
+        "row_major_sign_bits_hex": "a187fecc33ff6187f98fccc29f8668381990684ccfc8969f88d2780168e8052ac8faa589eab0038f2006e1f99970f4cb61d96b83ad368796a0bf52c0fdaa437aaa870",
+        "sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+        "size_bytes": 1329
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.75,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 5.888826,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 809559696,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2651258880000000",
+        "screened_combinations": 809559696,
+        "seed": 29671,
+        "shard_count": 4,
+        "shard_index": 1,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/reference-shard2.jsonl",
+          "sha256": "861456ea7278adc6f9a96442e38645830c6de819e7ecd141a890145f151ed426",
+          "size_bytes": 1958
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/reference-shard2.matrix.txt",
+          "row_major_sign_bits_hex": "a187fecc33ff6187f98fccc29f8668381990684ccfc8969f88d2780168e8052ac8faa589eab0038f2006e1f99970f4cb61d96b83ad368796a0bf52c0fdaa437aaa870",
+          "sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "size_bytes": 1329
+        },
+        "research_output": {
+          "absolute_determinant": "2619093811200000",
+          "path": "runs/direct-search/radius4/reference-shard2-research.matrix.txt",
+          "row_major_sign_bits_hex": "a187fecc33ff61a7f98fccc29f8668381990684cefc8969f88d2780168e8052bc8faa789eab0038f2006e1f99970f4cb61d96b83ad368796a0bf52c0fdaa437aaa870",
+          "sha256": "2351c04b7ff6fd7398fc6edd8328d06d6837d1239384d60cc3bf2e87073180ae",
+          "size_bytes": 1325
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/reference-shard2.snapshot.json",
+          "sha256": "89705e96ee3e5742e61e05b5449d0f980c8d081327a2e68d59952fc18e23fa87",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "reference-shard2",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "references/orrick-et-al-2003/matrix.txt",
+        "row_major_sign_bits_hex": "a187fecc33ff6187f98fccc29f8668381990684ccfc8969f88d2780168e8052ac8faa589eab0038f2006e1f99970f4cb61d96b83ad368796a0bf52c0fdaa437aaa870",
+        "sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+        "size_bytes": 1329
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.75,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 5.975994,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 803443960,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2619093811200000",
+        "screened_combinations": 803443960,
+        "seed": 29672,
+        "shard_count": 4,
+        "shard_index": 2,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/reference-shard3.jsonl",
+          "sha256": "e7adfdad1d27f4a30316dd2d843abf6049550066f95bc94ea988051498650385",
+          "size_bytes": 1958
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/reference-shard3.matrix.txt",
+          "row_major_sign_bits_hex": "a187fecc33ff6187f98fccc29f8668381990684ccfc8969f88d2780168e8052ac8faa589eab0038f2006e1f99970f4cb61d96b83ad368796a0bf52c0fdaa437aaa870",
+          "sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "size_bytes": 1329
+        },
+        "research_output": {
+          "absolute_determinant": "2651258880000000",
+          "path": "runs/direct-search/radius4/reference-shard3-research.matrix.txt",
+          "row_major_sign_bits_hex": "b987fece33ff61c7f98fccc29f8668381990684ccfc8969f88d2780168e8052ac8faa589eab0038f2006e1f99970f4cb61d96b83ad368796a0bf52c0fdaa437aaa870",
+          "sha256": "9f7f8cd1845cfbc83d908ae2451ca8881bbc7bd0fa8f1b23be23764f913dfa36",
+          "size_bytes": 1325
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/reference-shard3.snapshot.json",
+          "sha256": "deba799de4b5b0ef68e70a6d4d68b629411c37782c7bb631529864eb3718746d",
+          "size_bytes": 677
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "reference-shard3",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "references/orrick-et-al-2003/matrix.txt",
+        "row_major_sign_bits_hex": "a187fecc33ff6187f98fccc29f8668381990684ccfc8969f88d2780168e8052ac8faa589eab0038f2006e1f99970f4cb61d96b83ad368796a0bf52c0fdaa437aaa870",
+        "sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+        "size_bytes": 1329
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.75,
+        "calibration_samples": 256,
+        "complete": true,
+        "elapsed_seconds": 5.989507,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 797362940,
+        "final_pool_exact_checks": 512,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "2651258880000000",
+        "screened_combinations": 797362940,
+        "seed": 29673,
+        "shard_count": 4,
+        "shard_index": 3,
+        "termination": "shard_completed",
+        "top_pool": 512
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/sanitizer.jsonl",
+          "sha256": "45a56852eb466f8488e2eb60cccd07631e4143c9f5ca4d8240a476a161342dac",
+          "size_bytes": 1280
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/sanitizer.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+          "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "size_bytes": 1318
+        },
+        "research_output": {
+          "absolute_determinant": "1796092723200000",
+          "path": "runs/direct-search/radius4/sanitizer-research.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7ae58",
+          "sha256": "e6ed560296d79615f62a3db077de0f3d67c402ee642c040311276643d6d096db",
+          "size_bytes": 1318
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/sanitizer.snapshot.json",
+          "sha256": "8f243888151787c920c515b44dfc0c3935d89a5f8878c55fbdff958042b3b86d",
+          "size_bytes": 660
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "sanitizer",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "runs/direct-search/best-below/frontier-class14-late-28751.matrix.txt",
+        "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+        "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+        "size_bytes": 1318
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.5,
+        "calibration_samples": 32,
+        "complete": true,
+        "elapsed_seconds": 0.004783,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 4,
+        "final_pool_exact_checks": 4,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "1796092723200000",
+        "screened_combinations": 4,
+        "seed": 29651,
+        "shard_count": 529,
+        "shard_index": 524,
+        "termination": "shard_completed",
+        "top_pool": 8
+      }
+    },
+    {
+      "artifacts": {
+        "jsonl": {
+          "path": "runs/direct-search/radius4/smoke.jsonl",
+          "sha256": "c917ae4a2c25b1f5d2211970c182015fabc85f91d6582bf681dcc17aabf287e4",
+          "size_bytes": 1280
+        },
+        "output": {
+          "absolute_determinant": "2779447296000000",
+          "path": "runs/direct-search/radius4/smoke.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+          "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "size_bytes": 1318
+        },
+        "research_output": {
+          "absolute_determinant": "1824364953600000",
+          "path": "runs/direct-search/radius4/smoke-research.matrix.txt",
+          "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aed0",
+          "sha256": "78d5a8a81485180ae5600d986d1162354f30ce9aaffd8b6dc05275232288329e",
+          "size_bytes": 1318
+        },
+        "snapshot": {
+          "path": "runs/direct-search/radius4/smoke.snapshot.json",
+          "sha256": "95a8da79b8070dc5b13196bae4c3f57f61d839a4ebcb9ffa9c5be538d6c448e6",
+          "size_bytes": 660
+        }
+      },
+      "evidence": {
+        "output_bytes_equal_intended_start": true,
+        "promotions": 0,
+        "snapshot_equals_final_log_record": true
+      },
+      "run_id": "smoke",
+      "semantic_start": {
+        "absolute_determinant": "2779447296000000",
+        "path": "runs/direct-search/best-below/frontier-class14-late-28751.matrix.txt",
+        "row_major_sign_bits_hex": "727137567e3f97bad4ca619f29a284c9e03e50d10fc10a6d95396e2fe5062e498632ffead52aaf4b263de408deb2d7dd8f4b6005cc92241f0bcb4099da84e5cf7aea8",
+        "sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+        "size_bytes": 1318
+      },
+      "telemetry": {
+        "best_score": "2779447296000000",
+        "calibration_maximum_absolute_error": 0.75,
+        "calibration_samples": 64,
+        "complete": true,
+        "elapsed_seconds": 0.002338,
+        "exact_margin": "1000000000000",
+        "expected_combinations": 1,
+        "final_pool_exact_checks": 1,
+        "near_gate_candidates": 0,
+        "near_gate_exact_checks": 0,
+        "research_best_score": "1824364953600000",
+        "screened_combinations": 1,
+        "seed": 29650,
+        "shard_count": 529,
+        "shard_index": 525,
+        "termination": "shard_completed",
+        "top_pool": 8
+      }
+    }
+  ],
+  "radius4_semantics": {
+    "classification": "complete_floating_screen_not_exact_audit",
+    "exact_promotion": "Bareiss",
+    "rounding_certificate": false,
+    "screening_semantics": "all_combinations_floating_score_exact_margin_gate_no_rounding_certificate"
+  },
+  "schema_version": 1
+}

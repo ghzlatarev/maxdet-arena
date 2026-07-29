@@ -1,0 +1,32 @@
+# Exact 12-entry difference between the Orrick reference and the independently
+# verified QUBO tie (the H2-to-reference neutral bridge).
+1 6
+1 7
+2 10
+2 11
+3 14
+3 15
+4 1
+5 1
+8 2
+9 2
+12 3
+13 3
+
+# Fifteen row/column-disjoint transverse coordinates, greedily ranked by the
+# best exact one-flip determinant at either bridge endpoint.
+1 4
+2 8
+3 12
+6 3
+10 1
+14 2
+4 5
+7 11
+8 13
+11 7
+12 9
+15 15
+16 20
+17 21
+18 22

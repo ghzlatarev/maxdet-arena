@@ -1,0 +1,33 @@
+# One-based coordinates for a 27-bit exact cube around the class-9 frontier.
+# First 12: the verified neutral generator A0.
+4 5
+4 9
+7 4
+9 12
+10 19
+13 4
+15 19
+16 14
+16 21
+18 12
+22 10
+22 20
+
+# Last 15: a row/column-disjoint matching chosen greedily by the best exact
+# one-flip score at either endpoint of A0, excluding the known 72-coordinate
+# six-generator neutral support.
+1 14
+2 20
+3 9
+7 15
+9 11
+10 2
+13 16
+14 21
+15 8
+17 10
+18 13
+19 5
+5 7
+6 1
+8 17

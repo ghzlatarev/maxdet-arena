@@ -15,7 +15,11 @@
 
 namespace {
 
-constexpr int kOrder = 23;
+#ifndef MAXDET_SEARCH_ORDER
+#define MAXDET_SEARCH_ORDER 23
+#endif
+
+constexpr int kOrder = MAXDET_SEARCH_ORDER;
 using Matrix = std::array<std::array<int, kOrder>, kOrder>;
 using Wide = __int128_t;
 
@@ -268,6 +272,7 @@ struct Arguments {
   std::filesystem::path log;
   std::string mode = "hybrid";
   std::uint64_t seed = 23;
+  std::uint64_t initial_kick = 0;
   double seconds = 3600.0;
   double heartbeat_seconds = 60.0;
 };
@@ -285,6 +290,9 @@ Arguments parse_arguments(int argc, char** argv) {
     else if (option == "--log") arguments.log = value();
     else if (option == "--mode") arguments.mode = value();
     else if (option == "--seed") arguments.seed = std::stoull(value());
+    else if (option == "--initial-kick") {
+      arguments.initial_kick = std::stoull(value());
+    }
     else if (option == "--seconds") arguments.seconds = std::stod(value());
     else if (option == "--heartbeat-seconds") {
       arguments.heartbeat_seconds = std::stod(value());
@@ -300,6 +308,10 @@ Arguments parse_arguments(int argc, char** argv) {
       arguments.heartbeat_seconds < 0) {
     throw std::runtime_error(
         "--heartbeat-seconds must be finite and non-negative");
+  }
+  if (arguments.initial_kick >
+      static_cast<std::uint64_t>(kOrder * kOrder)) {
+    throw std::runtime_error("--initial-kick exceeds the matrix entry count");
   }
   if (arguments.mode != "hill" && arguments.mode != "anneal" &&
       arguments.mode != "hybrid" && arguments.mode != "coordinate" &&
@@ -321,7 +333,8 @@ void log_record(std::ofstream& log, const Arguments& arguments,
       << elapsed_seconds
       << ",\"epoch\":" << epoch
       << ",\"event\":\"" << event
-      << "\",\"mode\":\"" << arguments.mode
+      << "\",\"initial_kick\":" << arguments.initial_kick
+      << ",\"mode\":\"" << arguments.mode
       << "\",\"seed\":" << arguments.seed << "}\n";
   log.flush();
 }
@@ -342,6 +355,17 @@ int main(int argc, char** argv) {
     state.matrix = arguments.start.empty()
                        ? random_matrix(randomizer)
                        : read_matrix(arguments.start);
+    if (arguments.initial_kick != 0) {
+      std::vector<int> coordinates(kOrder * kOrder);
+      for (int index = 0; index < kOrder * kOrder; ++index) {
+        coordinates[index] = index;
+      }
+      std::shuffle(coordinates.begin(), coordinates.end(), randomizer);
+      for (std::uint64_t index = 0; index < arguments.initial_kick; ++index) {
+        const int coordinate_index = coordinates[index];
+        state.matrix[coordinate_index / kOrder][coordinate_index % kOrder] *= -1;
+      }
+    }
     rebuild(state);
 
     Matrix best_matrix = state.matrix;
