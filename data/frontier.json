@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "challenge_id": "maxdet-23-v1",
-  "status": "private-dogfooding",
+  "status": "open",
   "target_to_beat": {
     "absolute_determinant": "2779447296000000",
     "label": "Published 2003 comparison point",
@@ -15,5 +15,5 @@
     "source": "records/prelaunch-pair-kick"
   },
   "claim_boundary": "Verified scores are not world-record or optimality claims.",
-  "updated": "2026-07-24"
+  "updated": "2026-07-29"
 }

@@ -1,0 +1,238 @@
+{
+  "schema_version": 10,
+  "updated": "2026-07-29",
+  "status": "frontier-tie",
+  "frontier": {
+    "absolute_determinant": "2779447296000000",
+    "first_possible_strict_score": "2779447300194304",
+    "lattice_step": "4194304"
+  },
+  "best_new_verified": {
+    "absolute_determinant": "2779447296000000",
+    "gap": "0"
+  },
+  "search_space_map": {
+    "status": "active",
+    "universe": "2^529",
+    "known_components": 5,
+    "known_h_classes": 30,
+    "known_ht_classes": 26,
+    "radius_1": {
+      "cores": "968",
+      "exact_border_assignments": "2030043136"
+    },
+    "radius_2": {
+      "orbit_representatives": "20770",
+      "exact_border_assignments": "43557847040"
+    },
+    "basin_harvest": {
+      "trials": "29235563",
+      "target_hits": "11657646",
+      "saved_raw_targets": "22480",
+      "new_components": 3
+    },
+    "order_23_probes": {
+      "trajectories": 4,
+      "active_searches": 4,
+      "seconds_per_arm": 900,
+      "latest_elapsed_seconds": 900,
+      "best_absolute_determinant": "2694905856000000",
+      "best_ratio_percent": "96.96"
+    },
+    "claim_boundary": "This is a schematic topology of seeded components and executed searches, not a metric embedding or a measure of the fraction of 2^529 matrices covered."
+  },
+  "exact_audits": [
+    {
+      "label": "Entry radius ≤ 3",
+      "assignments": "24673089",
+      "detail": "Exact · no gain"
+    },
+    {
+      "label": "Two-line pairs",
+      "assignments": "2122317824",
+      "detail": "Exact · no gain"
+    },
+    {
+      "label": "Row × column",
+      "assignments": "1109393408",
+      "detail": "Exact · no gain"
+    },
+    {
+      "label": "3-line rectangles",
+      "assignments": "157718176",
+      "detail": "Exact · no gain"
+    }
+  ],
+  "radius_4_screen": {
+    "label": "Radius 4",
+    "assignments": "12904307504",
+    "detail": "Complete floating screen · no gain"
+  },
+  "h24_seed_sweep": {
+    "pivots": "34560",
+    "classes": 60,
+    "frontier_ties": 1,
+    "strict_wins": 0
+  },
+  "neutral_frontier": {
+    "verified_raw_matrices": 24,
+    "new_raw_matrices": 23,
+    "exact_cycles": 2,
+    "states_per_cycle": 12,
+    "neutral_edges": 25,
+    "max_hamming_from_baseline": 90,
+    "h_equivalence": {
+      "classes": 2,
+      "class_sizes": [
+        12,
+        12
+      ],
+      "classes_allowing_transpose": 2,
+      "normalized_row_gram_classes": 1,
+      "cross_class_cycle_edges": 24,
+      "within_class_bridge_edges": 1,
+      "new_classes_vs_local_corpus": 0,
+      "evidence": "runs/direct-search/neutral-cycle/two-cycle-union-29952/h-equivalence-audit.json"
+    },
+    "strict_wins": 0,
+    "claim_boundary": "24 raw verified matrices split into two known H-classes of 12; no strict win."
+  },
+  "qubo_trust_region": {
+    "models": "26883",
+    "exact_pair_coefficients": "122586480",
+    "exact_block_evaluations": "650768",
+    "frontier_ties": 1,
+    "new_local_h_classes": 1,
+    "local_h_classes_after": 7,
+    "strict_wins": 0,
+    "evidence": "runs/qubo-trust-pilot-20260728-seed31003/h-equivalence-audit.json",
+    "claim_boundary": "The tie adds one H-class to the frozen local corpus; this is not a literature-novelty claim."
+  },
+  "fast_principal_cube": {
+    "affine_searches": 364,
+    "completed_27_bit_cubes": 359,
+    "completed_28_bit_cubes": 1,
+    "completed_31_bit_cubes": 1,
+    "completed_32_bit_cubes": 3,
+    "exact_assignment_visits": "63484985344",
+    "assignments_per_engine_second": "50465789",
+    "frontier_tie_assignments": 72,
+    "proven_new_dephased_states_relative_prior": "4294967296",
+    "proven_new_dephased_states_across_pinned_audits": "4697620472",
+    "zero_pivot_corrections": 0,
+    "new_local_h_classes": 0,
+    "strict_wins": 0,
+    "evidence": "research/EXACT_SEARCH_EXTENSION_20260728.md",
+    "claim_boundary": "The two latest bridge cubes overlap in exactly 8 states. Other assignment-visits may overlap. No strict win."
+  },
+  "campaign_extensions": [
+    {
+      "id": "remaining-qd-bridges",
+      "kicker": "Exact affine bridges",
+      "headline": {
+        "value": "402653184",
+        "label": "assignment-visits"
+      },
+      "metrics": [
+        {
+          "label": "Proven new states",
+          "value": "402653176"
+        },
+        {
+          "label": "Frontier ties",
+          "value": "1"
+        },
+        {
+          "label": "Strict wins",
+          "value": "0"
+        }
+      ],
+      "summary": "Two remaining QD bridges were exhausted. The sole frontier tie belongs to a known local class.",
+      "evidence": "runs/qd-remaining-bridges-20260728/aggregate-report.json"
+    },
+    {
+      "id": "gm-switching",
+      "kicker": "Godsil–McKay switching",
+      "headline": {
+        "value": "209715150",
+        "label": "masks exhausted"
+      },
+      "metrics": [
+        {
+          "label": "Valid sets",
+          "value": "38207"
+        },
+        {
+          "label": "Labeled mates",
+          "value": "32582"
+        },
+        {
+          "label": "Novel classes",
+          "value": "0"
+        }
+      ],
+      "summary": "The mates collapsed to 6 source-snapshot classes; the exact shell gate rejected all 6.",
+      "evidence": "runs/direct-search/gram-gm-switch-20260728/report.json"
+    },
+    {
+      "id": "gram-radius3-orbits",
+      "kicker": "Exact Aut(B0) quotient",
+      "headline": {
+        "value": "20976452640",
+        "label": "labeled swaps covered"
+      },
+      "metrics": [
+        {
+          "label": "Orbit reps",
+          "value": "9967496"
+        },
+        {
+          "label": "Square orbits",
+          "value": "55"
+        },
+        {
+          "label": "> frontier det.",
+          "value": "1958"
+        }
+      ],
+      "summary": "0 above-frontier squares · 0 route hits · 0 wins · exact screen 83.2679 s.",
+      "evidence": "runs/direct-search/gram-radius3-orbits-20260728/screen.json"
+    }
+  ],
+  "diversified_search": {
+    "eo_exact_directions": "31872722713",
+    "gomea_exact_evaluations": "4207670",
+    "gomea_archive_entries": 99,
+    "tempering_exact_proposals": "539528248",
+    "tempering_elite_reseeds": 11,
+    "quality_diversity_exact_directions": "3905433389",
+    "quality_diversity_archive_cells": 1933,
+    "quality_diversity_frontier_cores_seen": 37,
+    "new_h_only_classes": 2,
+    "local_h_classes_after": 9,
+    "local_ht_classes_after": 7,
+    "strict_wins": 0,
+    "evidence": "research/MAP_ELITES_20260728.md",
+    "claim_boundary": "The two added H-only classes are transpose partners of known classes; H/HT remains at 7. Direction and proposal counts repeat states."
+  },
+  "gram_campaign_snapshot": {
+    "campaigns": 5,
+    "exact_screens": "104345214",
+    "stored_square_grams": "4159",
+    "hasse": {
+      "rejected": "2674",
+      "no_obstruction": "1485"
+    },
+    "shell": {
+      "tested": "1485",
+      "rejected": "1485"
+    },
+    "sign_factor_survivors": 0,
+    "shell_milp": {
+      "signed_column_canonical_factors": 4,
+      "frontier_ties": 4,
+      "strict_wins": 0
+    },
+    "claim_boundary": "Shell MILP reconstructed 4 distinct signed-column-canonical frontier ties. No strict win."
+  }
+}

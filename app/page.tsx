@@ -1,8 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
+import { CampaignSnapshot } from "@/components/CampaignSnapshot";
 import { CopyInstruction } from "@/components/CopyInstruction";
 import { MatrixField } from "@/components/MatrixField";
+import { SearchSpaceMap } from "@/components/SearchSpaceMap";
 import challenge from "@/challenge.json";
+import directSearch from "@/data/direct-search.json";
 import frontier from "@/data/frontier.json";
 
 const githubUrl = "https://github.com/ghzlatarev/maxdet-arena";
@@ -86,13 +89,23 @@ export default function Home() {
   const matrix = loadReferenceMatrix();
   const targetToBeat = loadTargetToBeat();
   const target = targetToBeat.absoluteDeterminant;
-  const arenaBest = frontier.arena_best.absolute_determinant;
+  const campaignBest = directSearch.best_new_verified.absolute_determinant;
+  const campaignGap = directSearch.best_new_verified.gap;
   const statusLabel =
     frontier.status === "private-dogfooding"
       ? "Private dogfooding"
       : "Open arena";
-  const progress =
-    Number((BigInt(arenaBest) * 10_000n) / BigInt(target)) / 100;
+  const campaignProgress =
+    Number(
+      (BigInt(campaignBest) * 1_000_000n) /
+        BigInt(directSearch.frontier.absolute_determinant),
+    ) / 10_000;
+  const campaignStatus =
+    directSearch.status === "frontier-tie"
+      ? "Frontier tie"
+      : directSearch.status === "no-strict-win"
+        ? "No strict win"
+        : directSearch.status;
   const ehlichRatioSquared =
     Number(
       (BigInt(target) * BigInt(target) * 1_000_000_000n) /
@@ -175,6 +188,15 @@ export default function Home() {
                 <span className="verified-badge">✓ Exact receipt</span>
               </div>
               <div className="frontier-number">{formatInteger(target)}</div>
+              <div className="frontier-threshold">
+                <span>First possible strict win</span>
+                <strong>
+                  {formatInteger(
+                    directSearch.frontier.first_possible_strict_score,
+                  )}
+                </strong>
+                <small>+2²²</small>
+              </div>
               <div className="frontier-meta">
                 <div>
                   <span>Source</span>
@@ -191,23 +213,54 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="dogfood-row">
-              <div>
-                <span>{frontier.arena_best.label}</span>
-                <strong>{formatInteger(arenaBest)}</strong>
+            <div className="campaign-best-row">
+              <div className="campaign-best-copy">
+                <span>Best campaign verified</span>
+                <strong>{formatInteger(campaignBest)}</strong>
               </div>
               <div
                 className="progress-track"
-                aria-label={`${progress}% of target`}
+                aria-label={`${campaignProgress}% of the campaign frontier`}
               >
-                <span style={{ width: `${progress}%` }} />
+                <span style={{ width: `${campaignProgress}%` }} />
               </div>
-              <b>{progress.toFixed(2)}%</b>
+              <b>{campaignProgress.toFixed(2)}%</b>
+              <div className="campaign-best-status">
+                <strong>{campaignStatus}</strong>
+                <span>
+                  {BigInt(campaignGap) === 0n
+                    ? "must exceed target"
+                    : `${formatInteger(campaignGap)} short`}
+                </span>
+              </div>
             </div>
           </div>
           <MatrixField matrix={matrix} />
         </div>
       </section>
+
+      <section className="search-map-section" id="search-map">
+        <div className="wrap">
+          <SearchSpaceMap
+            basinTrials="29.24M"
+            bestRatio={`${directSearch.search_space_map.order_23_probes.best_ratio_percent}%`}
+            knownComponents={directSearch.search_space_map.known_components}
+            knownHClasses={directSearch.search_space_map.known_h_classes}
+            knownHtClasses={directSearch.search_space_map.known_ht_classes}
+            probeCount={
+              directSearch.search_space_map.order_23_probes.trajectories
+            }
+            radiusOneAssignments="2.03B"
+            radiusTwoAssignments="43.56B"
+            statusLabel={`${directSearch.search_space_map.order_23_probes.active_searches} searches active`}
+          />
+          <p className="search-map-note">
+            {directSearch.search_space_map.claim_boundary}
+          </p>
+        </div>
+      </section>
+
+      <CampaignSnapshot snapshot={directSearch} />
 
       <section className="problem-section" id="problem">
         <div className="wrap">

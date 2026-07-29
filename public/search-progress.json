@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-29T02:11:31.005989+00:00",
+  "frontier_absolute_determinant": "2779447296000000",
+  "arms": [
+    {
+      "id": "arm0",
+      "label": "probe 1",
+      "engine": "reactive-tabu",
+      "status": "active",
+      "elapsed_seconds": 540.003,
+      "budget_seconds": 900.0,
+      "progress_percent": 60.0,
+      "best_absolute_determinant": "2687827968000000",
+      "best_ratio_percent": 96.7037
+    },
+    {
+      "id": "arm1",
+      "label": "probe 2",
+      "engine": "core-adjugate-reactive-tabu-v1+exact-breakout",
+      "status": "active",
+      "elapsed_seconds": 551.606,
+      "budget_seconds": 900.0,
+      "progress_percent": 61.29,
+      "best_absolute_determinant": "2630667468800000",
+      "best_ratio_percent": 94.6471
+    },
+    {
+      "id": "arm2",
+      "label": "probe 3",
+      "engine": "reactive-tabu",
+      "status": "active",
+      "elapsed_seconds": 540.001,
+      "budget_seconds": 900.0,
+      "progress_percent": 60.0,
+      "best_absolute_determinant": "2687827968000000",
+      "best_ratio_percent": 96.7037
+    },
+    {
+      "id": "arm3",
+      "label": "probe 4",
+      "engine": "core-adjugate-reactive-tabu-v1+exact-breakout",
+      "status": "active",
+      "elapsed_seconds": 551.302,
+      "budget_seconds": 900.0,
+      "progress_percent": 61.26,
+      "best_absolute_determinant": "2591711041683456",
+      "best_ratio_percent": 93.2456
+    }
+  ]
+}
