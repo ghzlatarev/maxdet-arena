@@ -216,9 +216,14 @@ export function SearchSpaceMap({
   const activeSearches = telemetryIsFresh
     ? liveArms.filter((arm) => arm.status === "active").length
     : 0;
+  const allSearchesComplete =
+    liveArms.length > 0 &&
+    liveArms.every((arm) => arm.status === "complete");
   const resolvedStatus =
     liveArms.length > 0
-      ? !telemetryIsFresh
+      ? allSearchesComplete
+        ? `${liveArms.length} searches complete`
+        : !telemetryIsFresh
         ? `${liveArms.length}-probe telemetry snapshot`
         : activeSearches > 0
         ? `${activeSearches} searches active`
@@ -525,7 +530,11 @@ export function SearchSpaceMap({
                 />
               </div>
               <div className={styles.liveRunMeta}>
-                <span>{telemetryIsFresh ? arm.status : "snapshot"}</span>
+                <span>
+                  {arm.status === "complete" || telemetryIsFresh
+                    ? arm.status
+                    : "snapshot"}
+                </span>
                 <span>
                   {formatDuration(arm.elapsed_seconds)} /{" "}
                   {formatDuration(arm.budget_seconds)}

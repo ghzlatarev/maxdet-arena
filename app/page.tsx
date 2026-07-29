@@ -252,7 +252,11 @@ export default function Home() {
             }
             radiusOneAssignments="2.03B"
             radiusTwoAssignments="43.56B"
-            statusLabel={`${directSearch.search_space_map.order_23_probes.active_searches} searches active`}
+            statusLabel={
+              directSearch.search_space_map.order_23_probes.active_searches > 0
+                ? `${directSearch.search_space_map.order_23_probes.active_searches} searches active`
+                : `${directSearch.search_space_map.order_23_probes.trajectories} searches complete`
+            }
           />
           <p className="search-map-note">
             {directSearch.search_space_map.claim_boundary}

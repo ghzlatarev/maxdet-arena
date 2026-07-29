@@ -33,7 +33,7 @@
     },
     "order_23_probes": {
       "trajectories": 4,
-      "active_searches": 4,
+      "active_searches": 0,
       "seconds_per_arm": 900,
       "latest_elapsed_seconds": 900,
       "best_absolute_determinant": "2694905856000000",

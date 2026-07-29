@@ -150,9 +150,9 @@ export function CampaignSnapshot({ snapshot }: CampaignSnapshotProps) {
             <h2 id="campaign-title">New matrices. Same frontier.</h2>
           </div>
           <p>
-            <strong>{status}.</strong> The mapped neutral component contains{" "}
-            {neutral.verified_raw_matrices} raw frontier matrices;{" "}
-            {neutral.new_raw_matrices} are new to this search.
+            <strong>{status}.</strong> The earlier neutral order-23 sweep
+            contains {neutral.verified_raw_matrices} raw frontier matrices;{" "}
+            {neutral.new_raw_matrices} are new to that sweep.
           </p>
         </div>
 
