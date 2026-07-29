@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "engine": "exact-core-gram-sketch-basin-hopper-v1",
+  "complete": true,
+  "reason": "time_limit",
+  "elapsed_seconds": 120.024924,
+  "seed": 37148,
+  "known_core_frontier": 662671875,
+  "strict_core_target": 662671876,
+  "best_core_quotient": 662671875,
+  "best_absolute_determinant": "2779447296000000",
+  "strict_target_reached_unverified": false,
+  "epochs_started": 648,
+  "epochs_completed": 647,
+  "tabu_moves": 25890751,
+  "polish_moves": 0,
+  "moves_per_second": 215711.455364,
+  "candidate_evaluations": 13696550071,
+  "directions_per_second": 114114215.894501,
+  "kick_evaluations": 5184,
+  "kick_singular": 0,
+  "kick_endpoints": 648,
+  "parent_selection": {
+    "configured_probabilities": {
+      "quality": 0.50,
+      "least_used": 0.35,
+      "uniform": 0.15
+    },
+    "quality": 321,
+    "least_used": 231,
+    "uniform": 96
+  },
+  "observations": 1326,
+  "observation_origins": {
+    "seed": 8,
+    "kick_before_repair": 648,
+    "transient": 0,
+    "epoch_peak": 648,
+    "polished": 22
+  },
+  "quotient_gate": 620000000,
+  "gate_rejections": 0,
+  "sketch_evaluations": 1390,
+  "sketch_discoveries": 1248,
+  "archive_size": 256,
+  "archive_capacity": 256,
+  "archive_insertions": 665,
+  "archive_replacements": 3,
+  "archive_rejections": 75,
+  "archive_capacity_rejections": 583,
+  "archive_evictions": 409,
+  "archive_output_count": 64,
+  "promotions": 1,
+  "strict_target_states": 0,
+  "identity_checks": 7777,
+  "determinant_checks": 3310,
+  "descriptor_invariance_checks": 192,
+  "search": {
+    "epoch_move_range": [40000, 40000],
+    "kick_flips": 48,
+    "kick_attempts": 8,
+    "transient_stride": 1024,
+    "polish_move_limit": 96
+  },
+  "gram_sketch": {
+    "canonical": false,
+    "signed_line_orientation": "odd-order line product",
+    "mod4_normalized_labels": true,
+    "global_label_histogram": true,
+    "sorted_incident_label_histograms": true,
+    "row_column_pair_unordered": true
+  },
+  "claim_boundary": [
+    "Every reported determinant objective is an exact integer.",
+    "The Gram sketch is invariant but not canonical; collisions are possible.",
+    "Distinct sketches imply distinct signed Gram orbits, but matching sketches do not prove equivalence.",
+    "Any strict target must pass the independent arena verifier before promotion.",
+    "This stochastic search makes no optimality or literature-novelty claim."
+  ]
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 
 import styles from "./SearchSpaceMap.module.css";
 
@@ -29,13 +29,122 @@ type LiveSearchArm = {
   best_ratio_percent: number;
 };
 
-const LIVE_TELEMETRY_MAX_AGE_MS = 15_000;
-
-type LiveSearchProgress = {
+type LegacySearchProgress = {
+  schema_version?: 1;
   updated_at: string;
   frontier_absolute_determinant: string;
   arms: LiveSearchArm[];
 };
+
+type GramCampaignStatus =
+  | "pending"
+  | "active"
+  | "complete"
+  | "stopped"
+  | "stale";
+
+type GramCampaignHistoryPoint = {
+  elapsed_seconds: number;
+  best_absolute_determinant: string;
+  best_ratio_percent: number;
+  archive_size: number;
+  sketch_discoveries: number;
+  epochs_completed: number;
+};
+
+type GramCampaignArm = {
+  id: string;
+  label: string;
+  engine: string;
+  status: GramCampaignStatus;
+  source_updated_at: string | null;
+  elapsed_seconds: number;
+  budget_seconds: number;
+  progress_percent: number;
+  best_absolute_determinant: string;
+  best_ratio_percent: number;
+  best_core_quotient: number;
+  seed_basin_ids: string[];
+  random_seed: number;
+  kick_flips: number;
+  epoch_moves: number;
+  archive_size: number;
+  archive_capacity: number;
+  sketch_discoveries: number;
+  epochs_completed: number;
+  strict_target_states: number;
+  history: GramCampaignHistoryPoint[];
+};
+
+type GramCampaignThreshold = {
+  id: "archive-gate" | "near-frontier" | "frontier" | "strict";
+  label: string;
+  core_quotient: string;
+  absolute_determinant: string;
+};
+
+type GramSeedBasin = {
+  id: string;
+  label: string;
+  absolute_determinant: string;
+  gram_basin_key_sha256: string;
+};
+
+type CoronalProjectionPoint = {
+  arm_id: string;
+  rank: number;
+  orientation: number;
+  core_quotient: string;
+  absolute_determinant: string;
+  det_m: string;
+  kappa_numerator: string;
+  kappa_denominator: string;
+  kappa_decimal: number;
+  pareto_front: boolean;
+  identity?: "frontier" | "seed";
+  seed_id?: string;
+  seed_label?: string;
+};
+
+type CoronalProjection = {
+  kind: "retained_exact_coronal";
+  x_axis: "det_m";
+  x_preference: "larger";
+  y_axis: "kappa";
+  y_preference: "smaller";
+  points: CoronalProjectionPoint[];
+};
+
+type GramCampaignProgress = {
+  schema_version: 2;
+  updated_at: string;
+  source_updated_at: string | null;
+  campaign: {
+    id: string;
+    label: string;
+    status: GramCampaignStatus;
+  };
+  frontier_absolute_determinant: string;
+  strict_target_absolute_determinant: string;
+  best_absolute_determinant: string;
+  best_ratio_percent: number;
+  thresholds: GramCampaignThreshold[];
+  seed_basins: GramSeedBasin[];
+  totals: {
+    archive_cells: number;
+    sketch_discoveries: number;
+    epochs_completed: number;
+    strict_target_states: number;
+  };
+  arms: GramCampaignArm[];
+  coronal_projection?: CoronalProjection;
+  claim_boundary: string;
+};
+
+const LIVE_TELEMETRY_MAX_AGE_MS = 15_000;
+const GRAM_TELEMETRY_MAX_AGE_MS = 30_000;
+
+type LiveSearchProgress = LegacySearchProgress | GramCampaignProgress;
 
 const historicalRoutePaths = [
   "M282 136 C434 85 632 79 807 119",
@@ -58,13 +167,43 @@ function formatDuration(seconds: number) {
   return `${minutes}:${remainder.toString().padStart(2, "0")}`;
 }
 
-function isLiveSearchProgress(value: unknown): value is LiveSearchProgress {
-  if (!value || typeof value !== "object") {
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return Boolean(value) && typeof value === "object";
+}
+
+function isFiniteNumber(value: unknown): value is number {
+  return typeof value === "number" && Number.isFinite(value);
+}
+
+function isExactInteger(value: unknown): value is string {
+  return typeof value === "string" && /^\d+$/.test(value);
+}
+
+function isExactSignedInteger(value: unknown): value is string {
+  return typeof value === "string" && /^-?\d+$/.test(value);
+}
+
+function isGramStatus(value: unknown): value is GramCampaignStatus {
+  return (
+    value === "pending" ||
+    value === "active" ||
+    value === "complete" ||
+    value === "stopped" ||
+    value === "stale"
+  );
+}
+
+function isLegacySearchProgress(
+  value: unknown,
+): value is LegacySearchProgress {
+  if (!isRecord(value)) {
     return false;
   }
 
-  const candidate = value as Partial<LiveSearchProgress>;
+  const candidate = value as Partial<LegacySearchProgress>;
   return (
+    (candidate.schema_version === undefined ||
+      candidate.schema_version === 1) &&
     typeof candidate.updated_at === "string" &&
     typeof candidate.frontier_absolute_determinant === "string" &&
     Array.isArray(candidate.arms) &&
@@ -82,6 +221,139 @@ function isLiveSearchProgress(value: unknown): value is LiveSearchProgress {
         typeof arm.best_ratio_percent === "number",
     )
   );
+}
+
+function isGramHistoryPoint(value: unknown): value is GramCampaignHistoryPoint {
+  if (!isRecord(value)) return false;
+  return (
+    isFiniteNumber(value.elapsed_seconds) &&
+    isExactInteger(value.best_absolute_determinant) &&
+    isFiniteNumber(value.best_ratio_percent) &&
+    isFiniteNumber(value.archive_size) &&
+    isFiniteNumber(value.sketch_discoveries) &&
+    isFiniteNumber(value.epochs_completed)
+  );
+}
+
+function isGramCampaignArm(value: unknown): value is GramCampaignArm {
+  if (!isRecord(value)) return false;
+  return (
+    typeof value.id === "string" &&
+    typeof value.label === "string" &&
+    typeof value.engine === "string" &&
+    isGramStatus(value.status) &&
+    (value.source_updated_at === null ||
+      typeof value.source_updated_at === "string") &&
+    isFiniteNumber(value.elapsed_seconds) &&
+    isFiniteNumber(value.budget_seconds) &&
+    isFiniteNumber(value.progress_percent) &&
+    isExactInteger(value.best_absolute_determinant) &&
+    isFiniteNumber(value.best_ratio_percent) &&
+    isFiniteNumber(value.best_core_quotient) &&
+    Array.isArray(value.seed_basin_ids) &&
+    value.seed_basin_ids.every((item) => typeof item === "string") &&
+    isFiniteNumber(value.random_seed) &&
+    isFiniteNumber(value.kick_flips) &&
+    isFiniteNumber(value.epoch_moves) &&
+    isFiniteNumber(value.archive_size) &&
+    isFiniteNumber(value.archive_capacity) &&
+    isFiniteNumber(value.sketch_discoveries) &&
+    isFiniteNumber(value.epochs_completed) &&
+    isFiniteNumber(value.strict_target_states) &&
+    Array.isArray(value.history) &&
+    value.history.every(isGramHistoryPoint)
+  );
+}
+
+function isCoronalProjectionPoint(
+  value: unknown,
+): value is CoronalProjectionPoint {
+  if (!isRecord(value)) return false;
+  return (
+    typeof value.arm_id === "string" &&
+    Number.isInteger(value.rank) &&
+    Number.isInteger(value.orientation) &&
+    isExactInteger(value.core_quotient) &&
+    isExactInteger(value.absolute_determinant) &&
+    isExactInteger(value.det_m) &&
+    isExactSignedInteger(value.kappa_numerator) &&
+    isExactInteger(value.kappa_denominator) &&
+    BigInt(value.kappa_denominator) > 0n &&
+    isFiniteNumber(value.kappa_decimal) &&
+    typeof value.pareto_front === "boolean" &&
+    (value.identity === undefined ||
+      value.identity === "frontier" ||
+      value.identity === "seed") &&
+    (value.seed_id === undefined || typeof value.seed_id === "string") &&
+    (value.seed_label === undefined || typeof value.seed_label === "string")
+  );
+}
+
+function isCoronalProjection(value: unknown): value is CoronalProjection {
+  if (!isRecord(value)) return false;
+  return (
+    value.kind === "retained_exact_coronal" &&
+    value.x_axis === "det_m" &&
+    value.x_preference === "larger" &&
+    value.y_axis === "kappa" &&
+    value.y_preference === "smaller" &&
+    Array.isArray(value.points) &&
+    value.points.length > 0 &&
+    value.points.every(isCoronalProjectionPoint)
+  );
+}
+
+function isGramCampaignProgress(
+  value: unknown,
+): value is GramCampaignProgress {
+  if (!isRecord(value) || value.schema_version !== 2) return false;
+  if (!isRecord(value.campaign) || !isRecord(value.totals)) return false;
+  return (
+    typeof value.updated_at === "string" &&
+    (value.source_updated_at === null ||
+      typeof value.source_updated_at === "string") &&
+    typeof value.campaign.id === "string" &&
+    typeof value.campaign.label === "string" &&
+    isGramStatus(value.campaign.status) &&
+    isExactInteger(value.frontier_absolute_determinant) &&
+    isExactInteger(value.strict_target_absolute_determinant) &&
+    isExactInteger(value.best_absolute_determinant) &&
+    isFiniteNumber(value.best_ratio_percent) &&
+    Array.isArray(value.thresholds) &&
+    value.thresholds.every(
+      (threshold) =>
+        isRecord(threshold) &&
+        (threshold.id === "archive-gate" ||
+          threshold.id === "near-frontier" ||
+          threshold.id === "frontier" ||
+          threshold.id === "strict") &&
+        typeof threshold.label === "string" &&
+        isExactInteger(threshold.core_quotient) &&
+        isExactInteger(threshold.absolute_determinant),
+    ) &&
+    Array.isArray(value.seed_basins) &&
+    value.seed_basins.every(
+      (seed) =>
+        isRecord(seed) &&
+        typeof seed.id === "string" &&
+        typeof seed.label === "string" &&
+        isExactInteger(seed.absolute_determinant) &&
+        typeof seed.gram_basin_key_sha256 === "string",
+    ) &&
+    isFiniteNumber(value.totals.archive_cells) &&
+    isFiniteNumber(value.totals.sketch_discoveries) &&
+    isFiniteNumber(value.totals.epochs_completed) &&
+    isFiniteNumber(value.totals.strict_target_states) &&
+    Array.isArray(value.arms) &&
+    value.arms.every(isGramCampaignArm) &&
+    (value.coronal_projection === undefined ||
+      isCoronalProjection(value.coronal_projection)) &&
+    typeof value.claim_boundary === "string"
+  );
+}
+
+function isLiveSearchProgress(value: unknown): value is LiveSearchProgress {
+  return isGramCampaignProgress(value) || isLegacySearchProgress(value);
 }
 
 const alphaNodes = [
@@ -151,6 +423,976 @@ function BasinNodes({
   );
 }
 
+const GRAM_ARM_COLORS = [
+  "#55e6d2",
+  "#9e87ff",
+  "#ffbd62",
+  "#ff7895",
+  "#66a7ff",
+  "#8ee86f",
+] as const;
+
+const gramThresholdY: Record<GramCampaignThreshold["id"], number> = {
+  "archive-gate": 396,
+  "near-frontier": 286,
+  frontier: 137,
+  strict: 67,
+};
+
+const GRAM_GRAPH_LEFT = 164;
+const GRAM_GRAPH_RIGHT = 884;
+const GRAM_GRAPH_WIDTH = GRAM_GRAPH_RIGHT - GRAM_GRAPH_LEFT;
+
+function formatExactInteger(value: string | number): string {
+  return BigInt(value).toLocaleString("en-US");
+}
+
+function clamp(value: number, minimum: number, maximum: number): number {
+  return Math.min(maximum, Math.max(minimum, value));
+}
+
+function gramScoreY(
+  score: string,
+  thresholds: GramCampaignThreshold[],
+): number {
+  const scale = (
+    ["archive-gate", "near-frontier", "frontier", "strict"] as const
+  )
+    .map((id) => {
+      const threshold = thresholds.find((item) => item.id === id);
+      return threshold
+        ? {
+            score: Number(threshold.absolute_determinant),
+            y: gramThresholdY[id],
+          }
+        : null;
+    })
+    .filter(
+      (
+        item,
+      ): item is {
+        score: number;
+        y: number;
+      } => item !== null,
+    );
+  const value = Number(score);
+  if (scale.length < 2 || !Number.isFinite(value)) return 396;
+  if (value <= scale[0].score) return scale[0].y;
+  for (let index = 1; index < scale.length; index += 1) {
+    const lower = scale[index - 1];
+    const upper = scale[index];
+    if (value <= upper.score) {
+      const span = upper.score - lower.score;
+      const fraction = span > 0 ? (value - lower.score) / span : 1;
+      return lower.y + fraction * (upper.y - lower.y);
+    }
+  }
+  return scale[scale.length - 1].y;
+}
+
+function gramArmStatus(
+  arm: GramCampaignArm,
+  telemetryClock: number,
+): GramCampaignStatus {
+  if (arm.status !== "active") return arm.status;
+  if (!arm.source_updated_at) return "stale";
+  const age = telemetryClock - Date.parse(arm.source_updated_at);
+  return Number.isFinite(age) &&
+    age >= -5_000 &&
+    age <= GRAM_TELEMETRY_MAX_AGE_MS
+    ? "active"
+    : "stale";
+}
+
+function aggregateGramStatus(statuses: GramCampaignStatus[]): string {
+  if (statuses.length === 0) return "Waiting for search arms";
+  if (statuses.every((status) => status === "complete")) {
+    return `${statuses.length} search arms complete`;
+  }
+  const active = statuses.filter((status) => status === "active").length;
+  if (active > 0) return `${active} search arms active`;
+  if (statuses.includes("stale")) return "Search telemetry stale";
+  if (statuses.includes("stopped")) return "Search stopped";
+  return "Waiting for search arms";
+}
+
+const CORONAL_PLOT_LEFT = 94;
+const CORONAL_PLOT_RIGHT = 884;
+const CORONAL_PLOT_TOP = 48;
+const CORONAL_PLOT_BOTTOM = 424;
+const CORONAL_PLOT_WIDTH = CORONAL_PLOT_RIGHT - CORONAL_PLOT_LEFT;
+const CORONAL_PLOT_HEIGHT = CORONAL_PLOT_BOTTOM - CORONAL_PLOT_TOP;
+
+function formatDetMScale(value: number): string {
+  const scaled = value / 1e15;
+  return scaled >= 100 ? scaled.toFixed(0) : scaled.toFixed(1);
+}
+
+function coronalArmLabel(arm: GramCampaignArm): string {
+  return arm.id
+    .replace(/^arm-/, "")
+    .replace(/-k(\d+)$/, " · k=$1")
+    .replaceAll("-", " ");
+}
+
+function CoronalCampaignMap({
+  className,
+  progress,
+  telemetryClock,
+}: {
+  className?: string;
+  progress: GramCampaignProgress & {
+    coronal_projection: CoronalProjection;
+  };
+  telemetryClock: number;
+}) {
+  const rootClassName = [
+    styles.root,
+    styles.gramRoot,
+    styles.coronalRoot,
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const statuses = progress.arms.map((arm) =>
+    gramArmStatus(arm, telemetryClock),
+  );
+  const statusLabel = aggregateGramStatus(statuses);
+  const points = progress.coronal_projection.points;
+  const retainedMatrices = new Set(
+    points.map((point) => `${point.arm_id}:${point.rank}`),
+  ).size;
+  const paretoMatrices = new Set(
+    points
+      .filter((point) => point.pareto_front)
+      .map((point) => `${point.arm_id}:${point.rank}`),
+  ).size;
+  const armLookup = new Map(
+    progress.arms.map((arm, index) => [
+      arm.id,
+      {
+        label: coronalArmLabel(arm),
+        color: GRAM_ARM_COLORS[index % GRAM_ARM_COLORS.length],
+      },
+    ]),
+  );
+
+  const detMValues = points.map((point) => Number(point.det_m));
+  const kappaValues = points.map((point) => point.kappa_decimal);
+  const rawMinDetM = Math.min(...detMValues);
+  const rawMaxDetM = Math.max(...detMValues);
+  const rawMinKappa = Math.min(...kappaValues);
+  const rawMaxKappa = Math.max(...kappaValues);
+  const detMSpan = Math.max(1, rawMaxDetM - rawMinDetM);
+  const kappaSpan = Math.max(0.01, rawMaxKappa - rawMinKappa);
+  const minDetM = rawMinDetM - detMSpan * 0.055;
+  const maxDetM = rawMaxDetM + detMSpan * 0.055;
+  const minKappa = rawMinKappa - kappaSpan * 0.11;
+  const maxKappa = rawMaxKappa + kappaSpan * 0.11;
+  const plotX = (value: number) =>
+    CORONAL_PLOT_LEFT +
+    ((value - minDetM) / (maxDetM - minDetM)) * CORONAL_PLOT_WIDTH;
+  // A smaller kappa is desirable and therefore appears higher in the plane.
+  const plotY = (value: number) =>
+    CORONAL_PLOT_TOP +
+    ((value - minKappa) / (maxKappa - minKappa)) * CORONAL_PLOT_HEIGHT;
+  const xTicks = Array.from(
+    { length: 5 },
+    (_, index) => minDetM + (index * (maxDetM - minDetM)) / 4,
+  );
+  const yTicks = Array.from(
+    { length: 5 },
+    (_, index) => minKappa + (index * (maxKappa - minKappa)) / 4,
+  );
+
+  const locationTotals = new Map<string, number>();
+  for (const point of points) {
+    const key = `${point.det_m}:${point.kappa_numerator}/${point.kappa_denominator}`;
+    locationTotals.set(key, (locationTotals.get(key) ?? 0) + 1);
+  }
+  const locationIndices = new Map<string, number>();
+  const plottedPoints = points.map((point) => {
+    const key = `${point.det_m}:${point.kappa_numerator}/${point.kappa_denominator}`;
+    const duplicateCount = locationTotals.get(key) ?? 1;
+    const duplicateIndex = locationIndices.get(key) ?? 0;
+    locationIndices.set(key, duplicateIndex + 1);
+    const angle = (2 * Math.PI * duplicateIndex) / duplicateCount;
+    const offset = duplicateCount > 1 ? Math.min(6, 2.2 + duplicateCount) : 0;
+    const x = plotX(Number(point.det_m));
+    const y = plotY(point.kappa_decimal);
+    return {
+      ...point,
+      x,
+      y,
+      displayX: x + Math.cos(angle) * offset,
+      displayY: y + Math.sin(angle) * offset,
+    };
+  });
+
+  const paretoByCoordinate = new Map<
+    string,
+    (typeof plottedPoints)[number]
+  >();
+  for (const point of plottedPoints) {
+    if (!point.pareto_front) continue;
+    const key = `${point.det_m}:${point.kappa_numerator}/${point.kappa_denominator}`;
+    if (!paretoByCoordinate.has(key)) {
+      paretoByCoordinate.set(key, point);
+    }
+  }
+  const paretoPoints = [...paretoByCoordinate.values()].sort(
+    (left, right) => Number(left.det_m) - Number(right.det_m),
+  );
+  const firstFrontierIndex = plottedPoints.findIndex(
+    (point) => point.identity === "frontier",
+  );
+
+  return (
+    <section
+      className={rootClassName}
+      aria-label="Exact coronal projection of retained MaxDet matrices"
+    >
+      <header className={styles.header}>
+        <div>
+          <p className={styles.eyebrow}>
+            Coronal plane · retained exact matrices
+          </p>
+          <h3>The archive, viewed in a different geometry.</h3>
+        </div>
+        <dl
+          className={`${styles.metrics} ${styles.gramMetrics}`}
+          aria-label="Exact coronal campaign totals"
+        >
+          <div>
+            <dt>Seed basins</dt>
+            <dd>{progress.seed_basins.length}</dd>
+          </div>
+          <div>
+            <dt>Retained matrices</dt>
+            <dd>{retainedMatrices}</dd>
+          </div>
+          <div className={styles.gramBestMetric}>
+            <dt>Exact best</dt>
+            <dd title={formatExactInteger(progress.best_absolute_determinant)}>
+              {formatExactInteger(progress.best_absolute_determinant)}
+            </dd>
+          </div>
+        </dl>
+      </header>
+
+      <div className={`${styles.mapFrame} ${styles.coronalMapFrame}`}>
+        <svg
+          className={`${styles.map} ${styles.coronalMap}`}
+          viewBox="0 0 920 480"
+          role="img"
+          aria-label={`${retainedMatrices} retained exact matrices projected by det M and kappa; larger det M is right, smaller kappa is up`}
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <title>Exact coronal-Pareto archive projection</title>
+          <desc>
+            This is a two-dimensional projection of retained exact matrices,
+            not coverage of the full search space. Horizontal position is exact
+            det M, increasing to the right. Vertical position is exact kappa,
+            with smaller values higher. Colors identify search arms. A bright
+            line joins the nondominated points in these two plotted
+            coordinates, and the published frontier matrix is ringed.
+          </desc>
+
+          <rect
+            className={styles.coronalPlotField}
+            x={CORONAL_PLOT_LEFT}
+            y={CORONAL_PLOT_TOP}
+            width={CORONAL_PLOT_WIDTH}
+            height={CORONAL_PLOT_HEIGHT}
+            rx="14"
+            aria-hidden="true"
+          />
+
+          <g className={styles.coronalGrid} aria-hidden="true">
+            {xTicks.map((tick, index) => {
+              const x = plotX(tick);
+              return (
+                <g key={`coronal-x-${index}`}>
+                  <line
+                    x1={x}
+                    x2={x}
+                    y1={CORONAL_PLOT_TOP}
+                    y2={CORONAL_PLOT_BOTTOM}
+                  />
+                  <text
+                    textAnchor="middle"
+                    x={x}
+                    y={CORONAL_PLOT_BOTTOM + 22}
+                  >
+                    {formatDetMScale(tick)}
+                  </text>
+                </g>
+              );
+            })}
+            {yTicks.map((tick, index) => {
+              const y = plotY(tick);
+              return (
+                <g key={`coronal-y-${index}`}>
+                  <line
+                    x1={CORONAL_PLOT_LEFT}
+                    x2={CORONAL_PLOT_RIGHT}
+                    y1={y}
+                    y2={y}
+                  />
+                  <text
+                    textAnchor="end"
+                    x={CORONAL_PLOT_LEFT - 12}
+                    y={y + 3}
+                  >
+                    {tick.toFixed(3)}
+                  </text>
+                </g>
+              );
+            })}
+          </g>
+
+          {paretoPoints.length > 1 ? (
+            <polyline
+              className={styles.coronalParetoLine}
+              points={paretoPoints
+                .map((point) => `${point.x},${point.y}`)
+                .join(" ")}
+              aria-hidden="true"
+            />
+          ) : null}
+
+          <g role="list" aria-label="Retained exact matrix projections">
+            {plottedPoints.map((point, index) => {
+              const armDetails = armLookup.get(point.arm_id);
+              const armLabel = armDetails?.label ?? point.arm_id;
+              const armColor =
+                armDetails?.color ?? GRAM_ARM_COLORS[index % GRAM_ARM_COLORS.length];
+              const pointStyle = {
+                "--arm-color": armColor,
+              } as CSSProperties;
+              const identityLabel =
+                point.identity === "frontier"
+                  ? "published frontier"
+                  : point.identity === "seed"
+                    ? point.seed_label ?? "campaign seed"
+                    : null;
+              const accessibleLabel = `${armLabel}, archive rank ${
+                point.rank
+              }, absolute determinant ${formatExactInteger(
+                point.absolute_determinant,
+              )}, det M ${formatExactInteger(point.det_m)}, kappa ${
+                point.kappa_numerator
+              } over ${point.kappa_denominator}${
+                point.pareto_front ? ", on the plotted Pareto front" : ""
+              }${identityLabel ? `, ${identityLabel}` : ""}`;
+              return (
+                <g
+                  className={styles.coronalPointGroup}
+                  data-frontier={
+                    point.identity === "frontier" ? "true" : undefined
+                  }
+                  data-pareto={point.pareto_front ? "true" : undefined}
+                  data-seed={point.identity === "seed" ? "true" : undefined}
+                  key={`${point.arm_id}-${point.rank}-${point.orientation}`}
+                  role="listitem"
+                  aria-label={accessibleLabel}
+                  style={pointStyle}
+                  tabIndex={0}
+                >
+                  <title>{accessibleLabel}</title>
+                  {point.pareto_front ? (
+                    <circle
+                      className={styles.coronalParetoHalo}
+                      cx={point.displayX}
+                      cy={point.displayY}
+                      r="7.5"
+                    />
+                  ) : null}
+                  {point.identity === "seed" ? (
+                    <circle
+                      className={styles.coronalSeedRing}
+                      cx={point.displayX}
+                      cy={point.displayY}
+                      r="6.2"
+                    />
+                  ) : null}
+                  {point.identity === "frontier" ? (
+                    <circle
+                      className={styles.coronalFrontierRing}
+                      cx={point.displayX}
+                      cy={point.displayY}
+                      r="9.5"
+                    />
+                  ) : null}
+                  <circle
+                    className={styles.coronalPoint}
+                    cx={point.displayX}
+                    cy={point.displayY}
+                    r={point.pareto_front ? 4.2 : 3.2}
+                  />
+                  {index === firstFrontierIndex ? (
+                    <g className={styles.coronalFrontierLabel}>
+                      <line
+                        x1={point.displayX + 7}
+                        x2={point.displayX + 35}
+                        y1={point.displayY - 7}
+                        y2={point.displayY - 25}
+                      />
+                      <text
+                        x={point.displayX + 39}
+                        y={point.displayY - 27}
+                      >
+                        FRONTIER MATRIX
+                      </text>
+                    </g>
+                  ) : null}
+                </g>
+              );
+            })}
+          </g>
+
+          <g className={styles.coronalAxes} aria-hidden="true">
+            <text
+              textAnchor="middle"
+              x={(CORONAL_PLOT_LEFT + CORONAL_PLOT_RIGHT) / 2}
+              y="474"
+            >
+              det(M) × 10¹⁵ · LARGER →
+            </text>
+            <text
+              textAnchor="middle"
+              transform={`translate(20 ${
+                (CORONAL_PLOT_TOP + CORONAL_PLOT_BOTTOM) / 2
+              }) rotate(-90)`}
+            >
+              κ · SMALLER ↑
+            </text>
+            <text x={CORONAL_PLOT_LEFT + 12} y={CORONAL_PLOT_TOP + 20}>
+              DESIRABLE ↑
+            </text>
+            <text
+              textAnchor="end"
+              x={CORONAL_PLOT_RIGHT - 12}
+              y={CORONAL_PLOT_BOTTOM - 12}
+            >
+              RETAINED ARCHIVE PROJECTION
+            </text>
+          </g>
+        </svg>
+
+        <div
+          className={styles.coronalLegend}
+          aria-label="Coronal projection legend"
+        >
+          {progress.arms.map((arm, index) => {
+            const legendStyle = {
+              "--arm-color":
+                GRAM_ARM_COLORS[index % GRAM_ARM_COLORS.length],
+            } as CSSProperties;
+            return (
+              <span key={arm.id} style={legendStyle}>
+                <i className={styles.coronalLegendArm} aria-hidden="true" />
+                {coronalArmLabel(arm)}
+              </span>
+            );
+          })}
+          <span>
+            <i className={styles.coronalLegendSeed} aria-hidden="true" />
+            campaign seed
+          </span>
+          <span>
+            <i className={styles.coronalLegendPareto} aria-hidden="true" />
+            plotted Pareto front
+          </span>
+          <span>
+            <i className={styles.coronalLegendFrontier} aria-hidden="true" />
+            frontier matrix
+          </span>
+        </div>
+      </div>
+
+      <div
+        className={styles.coronalArms}
+        aria-label="Coronal-Pareto campaign arms"
+      >
+        {progress.arms.map((arm, index) => {
+          const armStyle = {
+            "--arm-color":
+              GRAM_ARM_COLORS[index % GRAM_ARM_COLORS.length],
+          } as CSSProperties;
+          return (
+            <article className={styles.coronalArm} key={arm.id} style={armStyle}>
+              <div>
+                <strong title={arm.id}>{coronalArmLabel(arm)}</strong>
+                <span data-status={statuses[index]}>{statuses[index]}</span>
+              </div>
+              <p>
+                {arm.archive_size} retained · best{" "}
+                {formatExactInteger(arm.best_absolute_determinant)}
+              </p>
+            </article>
+          );
+        })}
+      </div>
+
+      <dl className={styles.coverage} aria-label="Coronal projection totals">
+        <div>
+          <dt>Retained matrices</dt>
+          <dd>{retainedMatrices}</dd>
+        </div>
+        <div>
+          <dt>Exact orientations</dt>
+          <dd>{points.length}</dd>
+        </div>
+        <div>
+          <dt>2D Pareto matrices</dt>
+          <dd>{paretoMatrices}</dd>
+        </div>
+        <div>
+          <dt>Strict target states</dt>
+          <dd>{formatExactInteger(progress.totals.strict_target_states)}</dd>
+        </div>
+      </dl>
+
+      <footer className={styles.footer}>
+        <p>
+          <span className={styles.liveDot} aria-hidden="true" />
+          {statusLabel}
+        </p>
+        <p>Projection of retained exact matrices · not global coverage</p>
+      </footer>
+
+      <p className={styles.gramClaim}>{progress.claim_boundary}</p>
+    </section>
+  );
+}
+
+function GramCampaignMap({
+  className,
+  progress,
+  telemetryClock,
+}: {
+  className?: string;
+  progress: GramCampaignProgress;
+  telemetryClock: number;
+}) {
+  const rootClassName = [styles.root, styles.gramRoot, className]
+    .filter(Boolean)
+    .join(" ");
+  const statuses = progress.arms.map((arm) =>
+    gramArmStatus(arm, telemetryClock),
+  );
+  const statusLabel = aggregateGramStatus(statuses);
+  const thresholdLookup = new Map(
+    progress.thresholds.map((threshold) => [threshold.id, threshold]),
+  );
+
+  if (
+    progress.coronal_projection &&
+    progress.coronal_projection.points.length > 0
+  ) {
+    return (
+      <CoronalCampaignMap
+        className={className}
+        progress={
+          progress as GramCampaignProgress & {
+            coronal_projection: CoronalProjection;
+          }
+        }
+        telemetryClock={telemetryClock}
+      />
+    );
+  }
+
+  return (
+    <section
+      className={rootClassName}
+      aria-label="Gram-sketch basin-hopper campaign telemetry"
+    >
+      <header className={styles.header}>
+        <div>
+          <p className={styles.eyebrow}>
+            Gram-basin campaign · exact telemetry
+          </p>
+          <h3>Seed basins fan into a live sketch archive.</h3>
+        </div>
+        <dl
+          className={`${styles.metrics} ${styles.gramMetrics}`}
+          aria-label="Gram campaign totals"
+        >
+          <div>
+            <dt>Seed basins</dt>
+            <dd>{progress.seed_basins.length}</dd>
+          </div>
+          <div>
+            <dt>Archive cells</dt>
+            <dd>{formatExactInteger(progress.totals.archive_cells)}</dd>
+          </div>
+          <div className={styles.gramBestMetric}>
+            <dt>Exact best</dt>
+            <dd title={formatExactInteger(progress.best_absolute_determinant)}>
+              {formatExactInteger(progress.best_absolute_determinant)}
+            </dd>
+          </div>
+        </dl>
+      </header>
+
+      <div className={`${styles.mapFrame} ${styles.gramMapFrame}`}>
+        <svg
+          className={`${styles.map} ${styles.gramMap}`}
+          viewBox="0 0 920 460"
+          role="img"
+          aria-label={`${progress.seed_basins.length} exact local seed basins and ${progress.arms.length} Gram-sketch search arms plotted over elapsed time and schematic score bands`}
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <title>Gram-sketch basin-hopper campaign</title>
+          <desc>
+            Exact local seed basins begin at the left. Each colored arm moves
+            across elapsed search time. Circles mark increases in the
+            noncanonical Gram-sketch discovery count. Vertical position uses
+            schematic score bands so the frontier and first strict score remain
+            visually distinct.
+          </desc>
+
+          <g className={styles.grid} aria-hidden="true">
+            {Array.from({ length: 13 }, (_, index) => (
+              <line
+                key={`gram-vertical-${index}`}
+                x1={GRAM_GRAPH_LEFT + index * (GRAM_GRAPH_WIDTH / 12)}
+                x2={GRAM_GRAPH_LEFT + index * (GRAM_GRAPH_WIDTH / 12)}
+                y1="42"
+                y2="421"
+              />
+            ))}
+          </g>
+
+          <g className={styles.gramBands} aria-hidden="true">
+            <rect
+              className={styles.gramStrictBand}
+              x={GRAM_GRAPH_LEFT}
+              y="43"
+              width={GRAM_GRAPH_WIDTH}
+              height={gramThresholdY.frontier - 43}
+            />
+            <rect
+              className={styles.gramNearBand}
+              x={GRAM_GRAPH_LEFT}
+              y={gramThresholdY.frontier}
+              width={GRAM_GRAPH_WIDTH}
+              height={gramThresholdY["near-frontier"] - gramThresholdY.frontier}
+            />
+            {progress.thresholds.map((threshold) => (
+              <g key={threshold.id} data-threshold={threshold.id}>
+                <line
+                  x1={GRAM_GRAPH_LEFT}
+                  x2={GRAM_GRAPH_RIGHT}
+                  y1={gramThresholdY[threshold.id]}
+                  y2={gramThresholdY[threshold.id]}
+                />
+                <text
+                  className={styles.gramThresholdLabel}
+                  x={GRAM_GRAPH_LEFT + 10}
+                  y={gramThresholdY[threshold.id] - 8}
+                >
+                  {threshold.label}
+                </text>
+                <text
+                  className={styles.gramThresholdValue}
+                  textAnchor="end"
+                  x={GRAM_GRAPH_RIGHT - 8}
+                  y={gramThresholdY[threshold.id] - 8}
+                >
+                  {formatExactInteger(threshold.absolute_determinant)}
+                </text>
+              </g>
+            ))}
+          </g>
+
+          <g className={styles.gramSeedCloud}>
+            <text className={styles.gramSeedHeading} x="33" y="33">
+              EXACT LOCAL
+            </text>
+            <text className={styles.gramSeedHeading} x="33" y="47">
+              SEED BASINS
+            </text>
+            {progress.seed_basins.map((seed, index) => {
+              const x = 62 + (index % 3) * 25;
+              const y =
+                gramScoreY(seed.absolute_determinant, progress.thresholds) +
+                (index % 2 === 0 ? -4 : 4);
+              return (
+                <g key={seed.id}>
+                  <circle className={styles.gramSeedHalo} cx={x} cy={y} r="9" />
+                  <circle className={styles.gramSeedCore} cx={x} cy={y} r="3.5">
+                    <title>
+                      {seed.label} ·{" "}
+                      {formatExactInteger(seed.absolute_determinant)} · basin{" "}
+                      {seed.gram_basin_key_sha256.slice(0, 12)}
+                    </title>
+                  </circle>
+                </g>
+              );
+            })}
+          </g>
+
+          <line
+            className={styles.gramSweep}
+            x1={GRAM_GRAPH_LEFT}
+            x2={GRAM_GRAPH_LEFT}
+            y1="43"
+            y2="421"
+            aria-hidden="true"
+          />
+
+          <g className={styles.gramTrails}>
+            {progress.arms.map((arm, armIndex) => {
+              const history =
+                arm.history.length > 0
+                  ? arm.history
+                  : [
+                      {
+                        elapsed_seconds: arm.elapsed_seconds,
+                        best_absolute_determinant:
+                          arm.best_absolute_determinant,
+                        best_ratio_percent: arm.best_ratio_percent,
+                        archive_size: arm.archive_size,
+                        sketch_discoveries: arm.sketch_discoveries,
+                        epochs_completed: arm.epochs_completed,
+                      },
+                    ];
+              const laneOffset =
+                (armIndex - (progress.arms.length - 1) / 2) * 6;
+              const points = history.map((point) => {
+                const fraction =
+                  arm.budget_seconds > 0
+                    ? clamp(
+                        point.elapsed_seconds / arm.budget_seconds,
+                        0,
+                        1,
+                      )
+                    : 0;
+                return {
+                  ...point,
+                  x: GRAM_GRAPH_LEFT + fraction * GRAM_GRAPH_WIDTH,
+                  y:
+                    gramScoreY(
+                      point.best_absolute_determinant,
+                      progress.thresholds,
+                    ) + laneOffset,
+                };
+              });
+              const firstPoint = points[0];
+              const finalPoint = points[points.length - 1];
+              const armColor = GRAM_ARM_COLORS[
+                armIndex % GRAM_ARM_COLORS.length
+              ];
+              const armStyle = {
+                "--arm-color": armColor,
+              } as CSSProperties;
+              const resolvedStatus = statuses[armIndex];
+              return (
+                <g key={arm.id} style={armStyle}>
+                  <path
+                    className={styles.gramSeedLink}
+                    d={`M126 ${firstPoint.y} L${firstPoint.x} ${firstPoint.y}`}
+                  />
+                  <polyline
+                    className={styles.gramTrail}
+                    points={points
+                      .map((point) => `${point.x},${point.y}`)
+                      .join(" ")}
+                  />
+                  {points.map((point, pointIndex) => {
+                    const previous =
+                      pointIndex > 0
+                        ? points[pointIndex - 1].sketch_discoveries
+                        : 0;
+                    const discoveries = Math.max(
+                      0,
+                      point.sketch_discoveries - previous,
+                    );
+                    if (discoveries === 0) return null;
+                    const radius = Math.min(
+                      5.4,
+                      1.6 + Math.log2(discoveries + 1) * 0.48,
+                    );
+                    return (
+                      <circle
+                        className={styles.gramDiscovery}
+                        cx={point.x}
+                        cy={point.y}
+                        data-recent={
+                          pointIndex >= points.length - 6 ? "true" : undefined
+                        }
+                        key={`${arm.id}-${point.elapsed_seconds}`}
+                        r={radius}
+                      >
+                        <title>
+                          {arm.label} · {formatDuration(point.elapsed_seconds)} ·{" "}
+                          {formatExactInteger(point.sketch_discoveries)}{" "}
+                          cumulative Gram-sketch discoveries
+                        </title>
+                      </circle>
+                    );
+                  })}
+                  <g
+                    className={styles.gramHead}
+                    data-active={
+                      resolvedStatus === "active" ? "true" : undefined
+                    }
+                    transform={`translate(${finalPoint.x} ${finalPoint.y})`}
+                  >
+                    <circle className={styles.gramHeadWake} r="10" />
+                    <circle className={styles.gramHeadCore} r="3.7" />
+                  </g>
+                  <text
+                    className={styles.gramArmLabel}
+                    textAnchor="end"
+                    x={GRAM_GRAPH_RIGHT - 7}
+                    y={finalPoint.y + 18}
+                  >
+                    {arm.label}
+                  </text>
+                </g>
+              );
+            })}
+          </g>
+
+          <g className={styles.axisLabels} aria-hidden="true">
+            <text x={GRAM_GRAPH_LEFT} y="447">
+              ELAPSED SEARCH TIME →
+            </text>
+            <text textAnchor="end" x={GRAM_GRAPH_RIGHT} y="447">
+              SCORE BANDS ARE SCHEMATIC
+            </text>
+          </g>
+        </svg>
+
+        <div className={styles.gramLegend} aria-label="Campaign map legend">
+          <span>
+            <i className={styles.gramLegendSeed} aria-hidden="true" />
+            exact seed basin
+          </span>
+          <span>
+            <i className={styles.gramLegendDiscovery} aria-hidden="true" />
+            sketch discovery
+          </span>
+          <span>
+            <i className={styles.gramLegendTrail} aria-hidden="true" />
+            search arm
+          </span>
+          <span>
+            <i className={styles.gramLegendThreshold} aria-hidden="true" />
+            score threshold
+          </span>
+        </div>
+      </div>
+
+      <div
+        className={styles.gramLiveRuns}
+        aria-label="Gram-sketch search arms"
+      >
+        {progress.arms.map((arm, index) => {
+          const armStyle = {
+            "--arm-color":
+              GRAM_ARM_COLORS[index % GRAM_ARM_COLORS.length],
+          } as CSSProperties;
+          return (
+            <article
+              className={styles.gramLiveRun}
+              key={arm.id}
+              style={armStyle}
+              title={arm.engine}
+            >
+              <header className={styles.gramLiveRunHead}>
+                <strong>{arm.label}</strong>
+                <span data-status={statuses[index]}>{statuses[index]}</span>
+              </header>
+              <p className={styles.gramRunScore}>
+                {formatExactInteger(arm.best_absolute_determinant)}
+              </p>
+              <div
+                className={styles.gramLiveRunTrack}
+                aria-label={`${arm.label}: ${arm.progress_percent.toFixed(1)}% of run time`}
+              >
+                <span
+                  style={{
+                    width: `${clamp(arm.progress_percent, 0, 100)}%`,
+                  }}
+                />
+              </div>
+              <dl className={styles.gramRunMetrics}>
+                <div>
+                  <dt>Archive</dt>
+                  <dd>
+                    {arm.archive_size}/{arm.archive_capacity}
+                  </dd>
+                </div>
+                <div>
+                  <dt>Sketches</dt>
+                  <dd>{formatExactInteger(arm.sketch_discoveries)}</dd>
+                </div>
+                <div>
+                  <dt>Epochs</dt>
+                  <dd>{formatExactInteger(arm.epochs_completed)}</dd>
+                </div>
+                <div>
+                  <dt>Time</dt>
+                  <dd>
+                    {formatDuration(arm.elapsed_seconds)} /{" "}
+                    {formatDuration(arm.budget_seconds)}
+                  </dd>
+                </div>
+              </dl>
+            </article>
+          );
+        })}
+      </div>
+
+      <dl className={styles.coverage} aria-label="Gram campaign totals">
+        <div>
+          <dt>Exact seed basins</dt>
+          <dd>{progress.seed_basins.length}</dd>
+        </div>
+        <div>
+          <dt>Arm-local sketches</dt>
+          <dd>{formatExactInteger(progress.totals.sketch_discoveries)}</dd>
+        </div>
+        <div>
+          <dt>Epochs completed</dt>
+          <dd>{formatExactInteger(progress.totals.epochs_completed)}</dd>
+        </div>
+        <div>
+          <dt>Strict target states</dt>
+          <dd>{formatExactInteger(progress.totals.strict_target_states)}</dd>
+        </div>
+      </dl>
+
+      <footer className={styles.footer}>
+        <p>
+          <span className={styles.liveDot} aria-hidden="true" />
+          {statusLabel}
+        </p>
+        <p>Noncanonical Gram sketches · arm counts may overlap</p>
+      </footer>
+
+      <p className={styles.gramClaim}>{progress.claim_boundary}</p>
+      <p className={styles.visuallyHidden}>
+        The map distinguishes exactly classified local seed basins from
+        noncanonical Gram-sketch search descriptors. Archive and discovery
+        totals are summed across arms and may overlap. A different sketch
+        proves a different signed Gram orbit, while a matching sketch does not
+        prove equivalence.
+        {thresholdLookup.get("frontier")
+          ? ` The exact frontier is ${formatExactInteger(
+              thresholdLookup.get("frontier")!.absolute_determinant,
+            )}.`
+          : ""}
+      </p>
+    </section>
+  );
+}
+
 export function SearchSpaceMap({
   className,
   basinTrials = "29.24M",
@@ -199,20 +1441,32 @@ export function SearchSpaceMap({
     };
   }, []);
 
-  const liveArms = liveProgress?.arms.slice(0, routePaths.length) ?? [];
-  const telemetryAge = liveProgress
-    ? telemetryClock - Date.parse(liveProgress.updated_at)
+  if (liveProgress?.schema_version === 2) {
+    return (
+      <GramCampaignMap
+        className={className}
+        progress={liveProgress}
+        telemetryClock={telemetryClock}
+      />
+    );
+  }
+
+  const legacyProgress = liveProgress;
+  const liveArms =
+    legacyProgress?.arms.slice(0, routePaths.length) ?? [];
+  const telemetryAge = legacyProgress
+    ? telemetryClock - Date.parse(legacyProgress.updated_at)
     : Number.POSITIVE_INFINITY;
   const telemetryIsFresh =
     Number.isFinite(telemetryAge) &&
     telemetryAge >= 0 &&
     telemetryAge <= LIVE_TELEMETRY_MAX_AGE_MS;
-  const liveBestRatio = useMemo(() => {
-    if (liveArms.length === 0) {
-      return bestRatio;
-    }
-    return `${Math.max(...liveArms.map((arm) => arm.best_ratio_percent)).toFixed(2)}%`;
-  }, [bestRatio, liveArms]);
+  const liveBestRatio =
+    liveArms.length === 0
+      ? bestRatio
+      : `${Math.max(
+          ...liveArms.map((arm) => arm.best_ratio_percent),
+        ).toFixed(2)}%`;
   const activeSearches = telemetryIsFresh
     ? liveArms.filter((arm) => arm.status === "active").length
     : 0;

@@ -11,6 +11,10 @@ Keep your best matrix at `candidate/matrix.txt` and verify it:
 ./arena verify --json candidate/receipt.json
 ```
 
+`--json` consumes the next argument as an output path and requires a `.json`
+suffix. Verify an arbitrary matrix without writing a receipt with
+`./arena verify PATH --quiet`.
+
 ## Prepare the immutable bundle
 
 ```sh

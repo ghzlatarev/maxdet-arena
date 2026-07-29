@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "descriptor": "invariant-noncanonical-gram-sketch-v1",
+  "coronal_pareto": true,
+  "elites": [
+    {"rank": 0, "path": "runs/gram-basin-hopper-coronal-pareto-20260729/arm-c4-k12/archive/elite-000-q640828125-s1387274bc2d6c192.txt", "core_quotient": 640828125, "absolute_determinant": "2687827968000000", "sketch_hash": "1387274bc2d6c192", "origin": "epoch_peak", "coronal_points": [{"det_m":"291607546289062500","kappa_numerator":"8843","kappa_denominator":"3412"},{"det_m":"299812213476562500","kappa_numerator":"9227","kappa_denominator":"3508"}]},
+    {"rank": 1, "path": "runs/gram-basin-hopper-coronal-pareto-20260729/arm-c4-k12/archive/elite-001-q638666000-sa46abf4584cbaec5.txt", "core_quotient": 638666000, "absolute_determinant": "2678759358464000", "sketch_hash": "a46abf4584cbaec5", "origin": "epoch_peak", "coronal_points": [{"det_m":"348009506768000000","kappa_numerator":"871","kappa_denominator":"308"},{"det_m":"348009506768000000","kappa_numerator":"871","kappa_denominator":"308"}]},
+    {"rank": 2, "path": "runs/gram-basin-hopper-coronal-pareto-20260729/arm-c4-k12/archive/elite-002-q627004000-s3e55635a09d4a6af.txt", "core_quotient": 627004000, "absolute_determinant": "2629845385216000", "sketch_hash": "3e55635a09d4a6af", "origin": "epoch_peak", "coronal_points": [{"det_m":"319824571136000000","kappa_numerator":"470767","kappa_denominator":"169904"},{"det_m":"319824571136000000","kappa_numerator":"470767","kappa_denominator":"169904"}]},
+    {"rank": 3, "path": "runs/gram-basin-hopper-coronal-pareto-20260729/arm-c4-k12/archive/elite-003-q622339200-s2811fe85df0ed0ef.txt", "core_quotient": 622339200, "absolute_determinant": "2610279795916800", "sketch_hash": "2811fe85df0ed0ef", "origin": "seed", "coronal_points": [{"det_m":"293534443238400000","kappa_numerator":"2962","kappa_denominator":"1105"},{"det_m":"293534443238400000","kappa_numerator":"2962","kappa_denominator":"1105"}]}
+  ]
+}

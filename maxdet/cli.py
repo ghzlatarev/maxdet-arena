@@ -50,7 +50,16 @@ def build_parser() -> argparse.ArgumentParser:
         default=None,
         help="challenge contract (defaults to repository challenge.json)",
     )
-    verify.add_argument("--json", type=Path, default=None, dest="json_path")
+    verify.add_argument(
+        "--json",
+        type=Path,
+        default=None,
+        dest="json_path",
+        help=(
+            "write the receipt to a .json file "
+            "(this option consumes the next argument)"
+        ),
+    )
     verify.add_argument(
         "--quiet",
         action="store_true",
@@ -83,6 +92,14 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def command_verify(args: argparse.Namespace) -> int:
+    if args.json_path is not None and args.json_path.suffix.lower() != ".json":
+        raise ValueError("--json output path must end in .json")
+    if (
+        args.json_path is not None
+        and args.json_path.resolve() == args.matrix.resolve()
+    ):
+        raise ValueError("--json output path must differ from the matrix input")
+
     root = repository_root()
     contract_path = args.contract or root / "challenge.json"
     contract = load_contract(contract_path)

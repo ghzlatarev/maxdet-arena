@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "campaign_id": "hamming-clique-sparse-t11-smoke-20260729",
+  "status": "complete",
+  "engine_source_sha256": "ebe4731fe25bf26e6499824906fb7b066ae926f5fb980d7cc941f3f788149f61",
+  "known_absolute_frontier": "2779447296000000",
+  "best_absolute_determinant": "2779447296000000",
+  "strict_wins": 0,
+  "runner_status": "deadline",
+  "elapsed_seconds": 3.005789,
+  "maximum_resident_bytes": 84656128,
+  "statistics": {
+    "iterations_started": 1,
+    "exact_neighborhoods_completed": 0,
+    "deadline_interrupted_iterations": 1,
+    "pool_words_examined": 8388608,
+    "candidate_pool_size": 2715,
+    "graph_pair_checks": 3684255,
+    "graph_edges": 1795185,
+    "clique_nodes": 591872,
+    "color_checks": 533971,
+    "color_prunes": 239673,
+    "bound_checks": 294298,
+    "bound_prunes": 291191,
+    "clique_leaves": 0,
+    "exact_matrix_scores": 0,
+    "improvements": 0
+  },
+  "verification": {
+    "output_verified_at_frontier": true,
+    "receipt_written": true
+  },
+  "claim_boundary": "The sparse exact kernel crossed the former dense-memory refusal and searched for three seconds, but the recorded size-eleven neighborhood was interrupted and is not an exact closure."
+}

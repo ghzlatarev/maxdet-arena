@@ -236,7 +236,7 @@ double strict_double(std::string_view text, std::string_view option,
   return result;
 }
 
-Arguments parse_arguments(int argc, char** argv) {
+[[maybe_unused]] Arguments parse_arguments(int argc, char** argv) {
   Arguments arguments;
   for (int index = 1; index < argc; ++index) {
     const std::string option = argv[index];
@@ -831,7 +831,7 @@ void apply_move(State& state, const Move& move,
   ++statistics.whole_complements;
 }
 
-bool apply_exact_breakout(
+[[maybe_unused]] bool apply_exact_breakout(
     State& state, const CoreMatrix& best_core,
     std::uint64_t& hash,
     const std::array<std::uint64_t, kCoreEntries>& zobrist,
@@ -865,7 +865,8 @@ bool apply_exact_breakout(
   return false;
 }
 
-void log_record(std::ofstream& log, const Arguments& arguments,
+[[maybe_unused]] void log_record(
+                std::ofstream& log, const Arguments& arguments,
                 const Statistics& statistics, const char* event,
                 double elapsed, const State& state,
                 std::uint64_t best_magnitude, int tenure) {
@@ -917,6 +918,7 @@ void log_record(std::ofstream& log, const Arguments& arguments,
 
 }  // namespace
 
+#ifndef CORE_ADJUGATE_TABU_NO_MAIN
 int main(int argc, char** argv) {
   try {
     const Arguments arguments = parse_arguments(argc, argv);
@@ -1172,3 +1174,4 @@ int main(int argc, char** argv) {
     return 2;
   }
 }
+#endif

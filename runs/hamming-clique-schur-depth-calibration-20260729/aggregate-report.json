@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "campaign_id": "hamming-clique-schur-depth-calibration-20260729",
+  "status": "complete",
+  "engine_source_sha256": "97eb017e4f9df338b6f1594b862cf48e70140531030aaca56e499add24f4076d",
+  "engine_binary_sha256": "2d507e3694edbd6ee94f852eed816b773cb9442d8cf0a8fd5638026f1d20af26",
+  "known_absolute_frontier": "2779447296000000",
+  "best_absolute_determinant": "2779447296000000",
+  "strict_wins": 0,
+  "arms": {
+    "t9": {
+      "status": "completed",
+      "elapsed_seconds": 0.613866,
+      "exact_neighborhoods_completed": 1,
+      "candidate_pool_size": 774,
+      "clique_nodes": 144146,
+      "output_verified_at_frontier": true
+    },
+    "t10": {
+      "status": "completed",
+      "elapsed_seconds": 25.324854,
+      "exact_neighborhoods_completed": 1,
+      "candidate_pool_size": 1430,
+      "clique_nodes": 7372965,
+      "output_verified_at_frontier": true
+    },
+    "t11": {
+      "status": "aborted",
+      "elapsed_seconds": 0.071033,
+      "exact_neighborhoods_completed": 0,
+      "candidate_pool_size": 2715,
+      "clique_nodes": 0,
+      "reason": "exact Schur kernel would exceed its checked memory safety limit; no candidate pool was truncated",
+      "output_verified_at_frontier": true
+    }
+  },
+  "claim_boundary": "Only the single recorded size-nine and size-ten destroyed-row sets are exact closures for distance alphabet {10,12}. The size-eleven arm is a checked implementation-boundary measurement, not a searched neighborhood. The timings are single-host calibration measurements, not general guarantees."
+}

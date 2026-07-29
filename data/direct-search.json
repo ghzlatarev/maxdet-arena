@@ -1,5 +1,5 @@
 {
-  "schema_version": 11,
+  "schema_version": 12,
   "updated": "2026-07-29",
   "status": "frontier-tie",
   "frontier": {
@@ -160,6 +160,54 @@
     "claim_boundary": "The two latest bridge cubes overlap in exactly 8 states. Other assignment-visits may overlap. No strict win."
   },
   "campaign_extensions": [
+    {
+      "id": "hamming-clique-schur",
+      "kicker": "Exact Schur clique repair",
+      "headline": {
+        "value": "70702",
+        "label": "size-8/9 neighborhoods"
+      },
+      "metrics": [
+        {
+          "label": "Candidate-word tests",
+          "value": "593183428614"
+        },
+        {
+          "label": "Clique nodes",
+          "value": "2892598718"
+        },
+        {
+          "label": "Strict wins",
+          "value": "0"
+        }
+      ],
+      "summary": "Sixteen verified frontier/portal arms closed only their recorded row or column sets for the {10,12} alphabet; 15 interrupted iterations are excluded.",
+      "evidence": "research/HAMMING_CLIQUE_LNS_20260729.md"
+    },
+    {
+      "id": "gram-basin-hopper",
+      "kicker": "Exact Gram-basin hopper",
+      "headline": {
+        "value": "382425745935",
+        "label": "move-direction evaluations"
+      },
+      "metrics": [
+        {
+          "label": "Pilot local basins",
+          "value": "220"
+        },
+        {
+          "label": "Coronal additions",
+          "value": "18"
+        },
+        {
+          "label": "Strict wins",
+          "value": "0"
+        }
+      ],
+      "summary": "Four exact moving-parent waves found many basins outside frozen local corpora, but none above the determinant frontier.",
+      "evidence": "research/GRAM_BASIN_HOPPER_20260729.md"
+    },
     {
       "id": "remaining-qd-bridges",
       "kicker": "Exact affine bridges",

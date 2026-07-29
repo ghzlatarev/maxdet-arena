@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "campaign_id": "hamming-clique-schur-t9-portal-wave-20260729",
+  "status": "complete",
+  "engine_source_sha256": "97eb017e4f9df338b6f1594b862cf48e70140531030aaca56e499add24f4076d",
+  "engine_binary_sha256": "2d507e3694edbd6ee94f852eed816b773cb9442d8cf0a8fd5638026f1d20af26",
+  "known_absolute_frontier": "2779447296000000",
+  "first_strict_absolute_determinant": "2779447300194304",
+  "best_absolute_determinant": "2779447296000000",
+  "strict_wins": 0,
+  "arms": 8,
+  "arm_statuses": {
+    "deadline": 8
+  },
+  "elapsed_arm_seconds": 7200.030528,
+  "statistics": {
+    "iterations_started": 16910,
+    "exact_neighborhoods_completed": 16902,
+    "deadline_interrupted_iterations": 8,
+    "pool_words_examined": "141842649090",
+    "full_candidate_pools_completed": 16908,
+    "words_in_completed_pools": "141834584064",
+    "words_in_completed_neighborhoods": "141784252416",
+    "pool_candidates": 10897169,
+    "maximum_pool_size": 1183,
+    "graph_pair_checks": 3531813041,
+    "graph_edges": 1619511213,
+    "graphs_completed": 16908,
+    "clique_nodes": 2340939470,
+    "cardinality_prunes": 371185817,
+    "color_checks": 1994632333,
+    "color_prunes": 1227908000,
+    "bound_checks": 766792639,
+    "bound_prunes": 741823879,
+    "clique_leaves": 0,
+    "exact_matrix_scores": 0,
+    "improvements": 0
+  },
+  "verification": {
+    "output_matrices_checked": 8,
+    "output_matrices_at_frontier": 8,
+    "receipts_written": 8
+  },
+  "retained_iteration_logs": "arm-*/run.jsonl.gz; deterministic gzip stream",
+  "claim_boundary": "The 16,902 completed iterations close only their recorded nine-row or nine-column destroyed sets for distance alphabet {10,12}. The eight deadline-interrupted iterations are excluded. The frontier shards are disjoint only for their shared unchanged parent generation. This is neither a closure of all size-nine neighborhoods nor a global-optimality or literature-novelty claim."
+}

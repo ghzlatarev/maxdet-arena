@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "campaign_id": "hamming-clique-schur-depth-calibration-20260729",
+  "label": "Exact Schur-residual destroy-depth calibration",
+  "purpose": "Measure one deterministic frontier neighborhood at destroy sizes 9, 10, and 11 before assigning longer pooled budgets.",
+  "claim_boundary": "The completed size-9 and size-10 runs close only their one recorded destroyed-row set for distance alphabet {10,12}. The size-11 run is a checked memory-bound refusal, not a searched neighborhood.",
+  "known_absolute_frontier": "2779447296000000",
+  "first_strict_absolute_determinant": "2779447300194304",
+  "engine_source_sha256": "97eb017e4f9df338b6f1594b862cf48e70140531030aaca56e499add24f4076d",
+  "algorithm": "exact-hamming-code-clique-lns-v2",
+  "start": "references/orrick-et-al-2003/matrix.txt",
+  "allowed_distances": [10, 12],
+  "arms": [
+    {
+      "id": "t9",
+      "random_seed": 42401,
+      "destroy_size": 9,
+      "max_iterations": 1
+    },
+    {
+      "id": "t10",
+      "random_seed": 42402,
+      "destroy_size": 10,
+      "max_iterations": 1
+    },
+    {
+      "id": "t11",
+      "random_seed": 42403,
+      "destroy_size": 11,
+      "max_iterations": 1,
+      "expected_boundary": "checked dense Schur-kernel memory refusal; no pool truncation"
+    }
+  ]
+}

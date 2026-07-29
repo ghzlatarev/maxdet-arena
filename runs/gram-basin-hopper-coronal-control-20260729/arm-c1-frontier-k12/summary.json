@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "engine": "exact-core-gram-sketch-basin-hopper-v1",
+  "complete": true,
+  "reason": "time_limit",
+  "elapsed_seconds": 300.002553,
+  "seed": 39712,
+  "known_core_frontier": 662671875,
+  "strict_core_target": 662671876,
+  "best_core_quotient": 662671875,
+  "best_absolute_determinant": "2779447296000000",
+  "strict_target_reached_unverified": false,
+  "epochs_started": 3057,
+  "epochs_completed": 3056,
+  "tabu_moves": 61133055,
+  "polish_moves": 0,
+  "moves_per_second": 203775.115648,
+  "candidate_evaluations": 32341002719,
+  "directions_per_second": 107802424.878370,
+  "kick_evaluations": 48912,
+  "kick_singular": 0,
+  "kick_endpoints": 3057,
+  "parent_selection": {
+    "configured_probabilities": {
+      "quality": 0.50,
+      "least_used": 0.35,
+      "uniform": 0.15
+    },
+    "quality": 1544,
+    "least_used": 1064,
+    "uniform": 449
+  },
+  "observations": 9173,
+  "observation_origins": {
+    "seed": 2,
+    "kick_before_repair": 3057,
+    "transient": 0,
+    "epoch_peak": 3057,
+    "polished": 3057
+  },
+  "quotient_gate": 600000000,
+  "gate_all": true,
+  "gate_scope": "all_nonseed_archive_observations",
+  "gate_rejections": 3057,
+  "sketch_evaluations": 6118,
+  "sketch_discoveries": 2,
+  "initialization_baseline": {
+    "sketch_discoveries": 2,
+    "promotions": 2,
+    "archive_size": 2
+  },
+  "search_added_sketch_discoveries": 0,
+  "archive_size": 2,
+  "archive_capacity": 256,
+  "archive_insertions": 2,
+  "archive_replacements": 0,
+  "archive_rejections": 6114,
+  "archive_capacity_rejections": 0,
+  "archive_evictions": 0,
+  "archive_output_count": 2,
+  "promotions": 2,
+  "search_added_promotions": 0,
+  "strict_target_states": 0,
+  "identity_checks": 21400,
+  "determinant_checks": 12232,
+  "descriptor_invariance_checks": 192,
+  "search": {
+    "epoch_move_range": [20000, 20000],
+    "kick_flips": 12,
+    "kick_attempts": 16,
+    "transient_stride": 1024,
+    "polish_move_limit": 96,
+    "gate_scope": "all_nonseed_archive_observations"
+  },
+  "gram_sketch": {
+    "canonical": false,
+    "signed_line_orientation": "odd-order line product",
+    "mod4_normalized_labels": true,
+    "global_label_histogram": true,
+    "sorted_incident_label_histograms": true,
+    "row_column_pair_unordered": true,
+    "lifetime_discovery_set_bounded": false
+  },
+  "claim_boundary": [
+    "Every reported determinant objective is an exact integer.",
+    "The Gram sketch is invariant but not canonical; collisions are possible.",
+    "Distinct sketches imply distinct signed Gram orbits, but matching sketches do not prove equivalence.",
+    "Any strict target must pass the independent arena verifier before publication or a claim of improvement.",
+    "This stochastic search makes no optimality or literature-novelty claim."
+  ]
+}

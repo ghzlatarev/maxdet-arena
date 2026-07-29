@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "campaign_id": "gram-basin-hopper-pilot-20260729",
+  "claim_boundary": "Gram-basin novelty is exact only relative to the explicitly classified local seed and output corpus. Live Gram sketches are invariant search descriptors, not canonical classes. Scores require the independent arena verifier.",
+  "known_core_frontier": 662671875,
+  "strict_core_target": 662671876,
+  "frontier_absolute_determinant": "2779447296000000",
+  "first_strict_absolute_determinant": "2779447300194304",
+  "quotient_gate": 620000000,
+  "gate_absolute_determinant": "2600468480000000",
+  "budget_seconds_per_arm": 120,
+  "seed_basins": [
+    {
+      "id": "frontier",
+      "label": "Published frontier",
+      "path": "references/orrick-et-al-2003/matrix.txt",
+      "absolute_determinant": "2779447296000000",
+      "ht_gram_basin_key_sha256": "f1b1629c964a8d21f09aa2d4feffd6d11e00bfb7c103c3bed1a8f84de681e13c"
+    },
+    {
+      "id": "pairkick",
+      "label": "Prelaunch pair-kick",
+      "path": "records/prelaunch-pair-kick/matrix.txt",
+      "absolute_determinant": "2726756352000000",
+      "ht_gram_basin_key_sha256": "a4c349ca3eb43f6d2da89a960ddf4e7af36c03ff70617e379a91cf0fd6f60cec"
+    },
+    {
+      "id": "gomea30",
+      "label": "GOMEA diverse member 30",
+      "path": "runs/linkage-gomea-diverse-pilot-20260728-seed33013/archive/member-030-q646078125-ab44c26b0d6bf9b0.matrix.txt",
+      "absolute_determinant": "2709848064000000",
+      "ht_gram_basin_key_sha256": "402eee7af65f50816a2c53f6f859d496a045058488b7e26bfc63152692628c73"
+    },
+    {
+      "id": "class51a",
+      "label": "Class 51 basin A",
+      "path": "runs/direct-search/best-below/2694905856000000-class51.matrix.txt",
+      "absolute_determinant": "2694905856000000",
+      "ht_gram_basin_key_sha256": "6faa758fba00e3a8f9b65bed8528447790c5d81d3e1e3e369353997c4d8bc9f4"
+    },
+    {
+      "id": "class51b",
+      "label": "Class 51 basin B",
+      "path": "runs/direct-search/best-below/2687827968000000-class51.matrix.txt",
+      "absolute_determinant": "2687827968000000",
+      "ht_gram_basin_key_sha256": "6c001529af0ffc4418ba1b023dd99a250a21ac500c53c41c5029ec9036337567"
+    },
+    {
+      "id": "component3arm3",
+      "label": "Component 3 arm 3",
+      "path": "runs/direct-search/order22-component3-order23-search-20260729/arm3/best.matrix.txt",
+      "absolute_determinant": "2678759358464000",
+      "ht_gram_basin_key_sha256": "70591e0fc80787753eb92e2d42bf791ffe89c00e1b24be7af33580ec70dc870b"
+    },
+    {
+      "id": "gomea35",
+      "label": "GOMEA diverse member 35",
+      "path": "runs/linkage-gomea-diverse-pilot-20260728-seed33013/archive/member-035-q637265625-f7474d6b73a39bb4.matrix.txt",
+      "absolute_determinant": "2672885760000000",
+      "ht_gram_basin_key_sha256": "8442cb76dae2c53a122fcbb99a646d83a53e1421b14b9df0bb36a56dd21b82d4"
+    },
+    {
+      "id": "component3arm2",
+      "label": "Component 3 arm 2",
+      "path": "runs/direct-search/order22-component3-order23-search-20260729/arm2/best.matrix.txt",
+      "absolute_determinant": "2663196917760000",
+      "ht_gram_basin_key_sha256": "f6f165211edde934db213a37926fae1971e8adaab76a42a245d82d825691930d"
+    }
+  ],
+  "arms": [
+    {
+      "id": "arm-k12",
+      "random_seed": 37112,
+      "kick_flips": 12,
+      "epoch_moves": 10000
+    },
+    {
+      "id": "arm-k24",
+      "random_seed": 37124,
+      "kick_flips": 24,
+      "epoch_moves": 20000
+    },
+    {
+      "id": "arm-k48",
+      "random_seed": 37148,
+      "kick_flips": 48,
+      "epoch_moves": 40000
+    },
+    {
+      "id": "arm-k72",
+      "random_seed": 37172,
+      "kick_flips": 72,
+      "epoch_moves": 20000
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "campaign_id": "hamming-clique-schur-t9-portal-wave-20260729",
+  "label": "Exact nine-row Schur-residual frontier and portal wave",
+  "purpose": "Push the exact Hamming-code repair radius from eight to nine rows from the published frontier and two locally distinct frontier-equivalent H/HT factors, in both row and transposed orientations.",
+  "claim_boundary": "Each completed iteration closes only its recorded destroyed row or column set for the distance alphabet {10,12}. Shard coverage is complete and disjoint only while shards share the same parent generation. Exact determinant promotion still requires the independent arena verifier; no global-optimality or literature-novelty claim is made.",
+  "known_absolute_frontier": "2779447296000000",
+  "first_strict_absolute_determinant": "2779447300194304",
+  "engine_source_sha256": "97eb017e4f9df338b6f1594b862cf48e70140531030aaca56e499add24f4076d",
+  "algorithm": "exact-hamming-code-clique-lns-v2",
+  "budget_seconds_per_arm": 900,
+  "destroy_size": 9,
+  "pool_limit": 20000,
+  "allowed_distances": [10, 12],
+  "destroy_schedule": "deterministic-without-replacement",
+  "calibration": {
+    "seed": 42401,
+    "elapsed_seconds": 0.635482,
+    "candidate_words": 774,
+    "clique_nodes": 144146,
+    "strict_wins": 0
+  },
+  "seed_basins": [
+    {
+      "id": "frontier",
+      "label": "Published frontier",
+      "path": "references/orrick-et-al-2003/matrix.txt",
+      "absolute_determinant": "2779447296000000"
+    },
+    {
+      "id": "de764",
+      "label": "Frontier-equivalent H/HT portal de764",
+      "path": "runs/direct-search/polar-dr-new-portals-aligned-20260729/ht-de7642266b69.matrix.txt",
+      "absolute_determinant": "2779447296000000"
+    },
+    {
+      "id": "1e4b",
+      "label": "Frontier-equivalent H/HT portal 1e4b",
+      "path": "runs/direct-search/polar-dr-new-portals-aligned-20260729/ht-1e4b14334f15.matrix.txt",
+      "absolute_determinant": "2779447296000000"
+    }
+  ],
+  "arms": [
+    {
+      "id": "arm-frontier-row-s0",
+      "seed_basin_id": "frontier",
+      "random_seed": 42411,
+      "transpose_start": false,
+      "destroy_shard_count": 2,
+      "destroy_shard_index": 0
+    },
+    {
+      "id": "arm-frontier-row-s1",
+      "seed_basin_id": "frontier",
+      "random_seed": 42412,
+      "transpose_start": false,
+      "destroy_shard_count": 2,
+      "destroy_shard_index": 1
+    },
+    {
+      "id": "arm-frontier-col-s0",
+      "seed_basin_id": "frontier",
+      "random_seed": 42413,
+      "transpose_start": true,
+      "destroy_shard_count": 2,
+      "destroy_shard_index": 0
+    },
+    {
+      "id": "arm-frontier-col-s1",
+      "seed_basin_id": "frontier",
+      "random_seed": 42414,
+      "transpose_start": true,
+      "destroy_shard_count": 2,
+      "destroy_shard_index": 1
+    },
+    {
+      "id": "arm-de764-row",
+      "seed_basin_id": "de764",
+      "random_seed": 42415,
+      "transpose_start": false,
+      "destroy_shard_count": 1,
+      "destroy_shard_index": 0
+    },
+    {
+      "id": "arm-de764-col",
+      "seed_basin_id": "de764",
+      "random_seed": 42416,
+      "transpose_start": true,
+      "destroy_shard_count": 1,
+      "destroy_shard_index": 0
+    },
+    {
+      "id": "arm-1e4b-row",
+      "seed_basin_id": "1e4b",
+      "random_seed": 42417,
+      "transpose_start": false,
+      "destroy_shard_count": 1,
+      "destroy_shard_index": 0
+    },
+    {
+      "id": "arm-1e4b-col",
+      "seed_basin_id": "1e4b",
+      "random_seed": 42418,
+      "transpose_start": true,
+      "destroy_shard_count": 1,
+      "destroy_shard_index": 0
+    }
+  ]
+}

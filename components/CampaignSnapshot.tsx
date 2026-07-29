@@ -159,6 +159,7 @@ export function CampaignSnapshot({ snapshot }: CampaignSnapshotProps) {
   const cubes = snapshot.fast_principal_cube;
   const diverse = snapshot.diversified_search;
   const gram = snapshot.gram_campaign_snapshot;
+  const newestExtension = snapshot.campaign_extensions[0];
 
   return (
     <section className="campaign-section" aria-labelledby="campaign-title">
@@ -171,12 +172,16 @@ export function CampaignSnapshot({ snapshot }: CampaignSnapshotProps) {
             <h2 id="campaign-title">New matrices. Same frontier.</h2>
           </div>
           <p>
-            <strong>No strict score improvement.</strong> The latest portal
-            campaign returned{" "}
-            {formatInteger(portal.substantive_frontier_ties)} exact frontier
-            ties and expanded the frozen local H/HT atlas from{" "}
-            {portal.local_h_ht_classes_before} to{" "}
-            {portal.local_h_ht_classes_after} classes.
+            <strong>No strict score improvement.</strong>{" "}
+            {newestExtension ? (
+              <>
+                The newest extension, {newestExtension.kicker}, logged{" "}
+                {formatMetricValue(newestExtension.headline.value)}{" "}
+                {newestExtension.headline.label}. {newestExtension.summary}
+              </>
+            ) : (
+              <>No campaign extension is recorded yet.</>
+            )}
           </p>
         </div>
 

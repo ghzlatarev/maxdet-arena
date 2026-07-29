@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "descriptor": "invariant-noncanonical-gram-sketch-v1",
+  "elites": [
+    {"rank": 0, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-c1-frontier-k12/archive/elite-000-q662671875-s9a3e31db1ac2c783.txt", "core_quotient": 662671875, "absolute_determinant": "2779447296000000", "sketch_hash": "9a3e31db1ac2c783", "origin": "seed"},
+    {"rank": 1, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-c1-frontier-k12/archive/elite-001-q629034375-s3512f19523788dc0.txt", "core_quotient": 629034375, "absolute_determinant": "2638361395200000", "sketch_hash": "3512f19523788dc0", "origin": "seed"}
+  ]
+}

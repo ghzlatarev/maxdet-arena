@@ -71,5 +71,9 @@ After a strict improvement:
 ./arena check-submission submissions/HANDLE/RESULT_ID
 ```
 
+`--json` consumes the next argument as the receipt output and only accepts a
+`.json` path. To check another matrix without writing a receipt, use
+`./arena verify PATH --quiet`.
+
 Return the exact score, receipt hash, method, parent, runtime, and the prepared
 submission path.

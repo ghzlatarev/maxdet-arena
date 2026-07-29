@@ -10,13 +10,35 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from maxdet.cli import command_prepare
+from maxdet.cli import command_prepare, command_verify
 from maxdet.contract import load_contract
 from maxdet.errors import SubmissionError
 from maxdet.receipt import verify_matrix
 from maxdet.submission import verify_submission
 
 ROOT = Path(__file__).resolve().parent.parent
+
+
+class VerifyCommandTests(unittest.TestCase):
+    def test_json_output_rejects_a_matrix_like_path(self) -> None:
+        arguments = argparse.Namespace(
+            matrix=Path("candidate/matrix.txt"),
+            contract=None,
+            json_path=Path("references/seed.matrix.txt"),
+            quiet=True,
+        )
+        with self.assertRaisesRegex(ValueError, "must end in .json"):
+            command_verify(arguments)
+
+    def test_json_output_rejects_the_input_path(self) -> None:
+        arguments = argparse.Namespace(
+            matrix=Path("candidate/receipt.json"),
+            contract=None,
+            json_path=Path("candidate/receipt.json"),
+            quiet=True,
+        )
+        with self.assertRaisesRegex(ValueError, "must differ"):
+            command_verify(arguments)
 
 
 class PrepareCommandTests(unittest.TestCase):

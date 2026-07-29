@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "campaign_id": "hamming-clique-lns-wave-20260729",
+  "label": "Exact Hamming-clique repair wave",
+  "purpose": "Destroy rows and exhaustively repair each fixed-row neighborhood as a clique of 23-bit words at Hamming distances 10 or 12.",
+  "claim_boundary": "Each completed iteration is exhaustive only for its recorded destroyed row set and distance alphabet. Exact determinant promotion still requires the independent arena verifier; no global-optimality or literature-novelty claim is made.",
+  "known_absolute_frontier": "2779447296000000",
+  "first_strict_absolute_determinant": "2779447300194304",
+  "budget_seconds_per_arm": 300,
+  "allowed_distances": [10, 12],
+  "seed_basins": [
+    {
+      "id": "frontier",
+      "label": "Published frontier",
+      "path": "references/orrick-et-al-2003/matrix.txt",
+      "absolute_determinant": "2779447296000000",
+      "ht_gram_basin_key_sha256": "f1b1629c964a8d21f09aa2d4feffd6d11e00bfb7c103c3bed1a8f84de681e13c"
+    },
+    {
+      "id": "c1",
+      "label": "New basin c1",
+      "path": "runs/gram-basin-hopper-pilot-20260729/arm-k24/archive/elite-008-q629034375-s3512f19523788dc0.txt",
+      "absolute_determinant": "2638361395200000",
+      "ht_gram_basin_key_sha256": "fcc618bf2ab4c670fa7a35d669ed52e40baaeec6e92831b96e88560114a6245d"
+    },
+    {
+      "id": "c4",
+      "label": "Coronal-rich basin c4",
+      "path": "runs/gram-basin-hopper-pilot-20260729/arm-k12/archive/elite-009-q622339200-s2811fe85df0ed0ef.txt",
+      "absolute_determinant": "2610279795916800",
+      "ht_gram_basin_key_sha256": "5b458ededf897312c4dd32c76925d0b88ada1a18d16b41eaf664cfacf9b865dc"
+    },
+    {
+      "id": "q632590",
+      "label": "High-detM control basin",
+      "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-c4-b06-k24/archive/elite-003-q632590000-s24d326be74e8488a.txt",
+      "absolute_determinant": "2653274767360000",
+      "ht_gram_basin_key_sha256": "3b76bc43eb141e52591a885651b06c836b47aabe07d140ef6a73eb335442591a"
+    }
+  ],
+  "arms": [
+    {
+      "id": "arm-frontier-r4-8",
+      "seed_basin_id": "frontier",
+      "random_seed": 42101,
+      "destroy_min": 4,
+      "destroy_max": 8
+    },
+    {
+      "id": "arm-c1-r4-8",
+      "seed_basin_id": "c1",
+      "random_seed": 42102,
+      "destroy_min": 4,
+      "destroy_max": 8
+    },
+    {
+      "id": "arm-c4-r4-8",
+      "seed_basin_id": "c4",
+      "random_seed": 42103,
+      "destroy_min": 4,
+      "destroy_max": 8
+    },
+    {
+      "id": "arm-q632590-r4-8",
+      "seed_basin_id": "q632590",
+      "random_seed": 42104,
+      "destroy_min": 4,
+      "destroy_max": 8
+    }
+  ]
+}

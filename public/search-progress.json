@@ -1,51 +1,3279 @@
 {
-  "schema_version": 1,
-  "updated_at": "2026-07-29T02:17:26.926646+00:00",
+  "schema_version": 2,
+  "updated_at": "2026-07-29T06:09:43.146761+00:00",
+  "source_updated_at": "2026-07-29T05:50:20.595296+00:00",
+  "campaign": {
+    "id": "gram-basin-hopper-coronal-pareto-20260729",
+    "label": "Exact coronal-Pareto wave",
+    "status": "complete"
+  },
   "frontier_absolute_determinant": "2779447296000000",
+  "strict_target_absolute_determinant": "2779447300194304",
+  "best_absolute_determinant": "2779447296000000",
+  "best_ratio_percent": 100.0,
+  "thresholds": [
+    {
+      "id": "archive-gate",
+      "label": "Archive gate",
+      "core_quotient": "600000000",
+      "absolute_determinant": "2516582400000000"
+    },
+    {
+      "id": "near-frontier",
+      "label": "99% corridor",
+      "core_quotient": "656045157",
+      "absolute_determinant": "2751652826185728"
+    },
+    {
+      "id": "frontier",
+      "label": "Frontier tie",
+      "core_quotient": "662671875",
+      "absolute_determinant": "2779447296000000"
+    },
+    {
+      "id": "strict",
+      "label": "First strict score",
+      "core_quotient": "662671876",
+      "absolute_determinant": "2779447300194304"
+    }
+  ],
+  "seed_basins": [
+    {
+      "id": "c4",
+      "label": "Coronal-rich basin c4",
+      "absolute_determinant": "2610279795916800",
+      "gram_basin_key_sha256": "5b458ededf897312c4dd32c76925d0b88ada1a18d16b41eaf664cfacf9b865dc"
+    },
+    {
+      "id": "baseline06",
+      "label": "Component-3 baseline",
+      "absolute_determinant": "2678759358464000",
+      "gram_basin_key_sha256": "70591e0fc80787753eb92e2d42bf791ffe89c00e1b24be7af33580ec70dc870b"
+    },
+    {
+      "id": "c1",
+      "label": "New basin c1",
+      "absolute_determinant": "2638361395200000",
+      "gram_basin_key_sha256": "fcc618bf2ab4c670fa7a35d669ed52e40baaeec6e92831b96e88560114a6245d"
+    },
+    {
+      "id": "frontier",
+      "label": "Published frontier",
+      "absolute_determinant": "2779447296000000",
+      "gram_basin_key_sha256": "f1b1629c964a8d21f09aa2d4feffd6d11e00bfb7c103c3bed1a8f84de681e13c"
+    },
+    {
+      "id": "control632812500",
+      "label": "Control basin q632812500",
+      "absolute_determinant": "2654208000000000",
+      "gram_basin_key_sha256": "b978ddd683812870e176fdcdb3b265f2adbd380c253417f50c790d01c6d83a4a"
+    },
+    {
+      "id": "control632590000",
+      "label": "Control basin q632590000",
+      "absolute_determinant": "2653274767360000",
+      "gram_basin_key_sha256": "3b76bc43eb141e52591a885651b06c836b47aabe07d140ef6a73eb335442591a"
+    }
+  ],
+  "totals": {
+    "archive_cells": 46,
+    "sketch_discoveries": 32,
+    "epochs_completed": 13199,
+    "strict_target_states": 0
+  },
   "arms": [
     {
-      "id": "arm0",
-      "label": "probe 1",
-      "engine": "reactive-tabu",
+      "id": "arm-c4-k12",
+      "label": "k=12",
+      "engine": "exact-core-gram-sketch-basin-hopper-coronal-pareto-v1",
       "status": "complete",
-      "elapsed_seconds": 900.0,
-      "budget_seconds": 900.0,
+      "source_updated_at": "2026-07-29T05:50:20.591413+00:00",
+      "elapsed_seconds": 300.006,
+      "budget_seconds": 300.0,
       "progress_percent": 100.0,
       "best_absolute_determinant": "2687827968000000",
-      "best_ratio_percent": 96.7037
+      "best_ratio_percent": 96.7037,
+      "best_core_quotient": 640828125,
+      "seed_basin_ids": [
+        "c4"
+      ],
+      "random_seed": 40112,
+      "kick_flips": 12,
+      "epoch_moves": 10000,
+      "archive_size": 4,
+      "archive_capacity": 256,
+      "sketch_discoveries": 3,
+      "epochs_completed": 5507,
+      "strict_target_states": 0,
+      "history": [
+        {
+          "elapsed_seconds": 0.01,
+          "best_absolute_determinant": "2610279795916800",
+          "best_ratio_percent": 93.9136,
+          "archive_size": 0,
+          "sketch_discoveries": 0,
+          "epochs_completed": 0
+        },
+        {
+          "elapsed_seconds": 4.092,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 75
+        },
+        {
+          "elapsed_seconds": 8.622,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 153
+        },
+        {
+          "elapsed_seconds": 13.123,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 230
+        },
+        {
+          "elapsed_seconds": 17.508,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 308
+        },
+        {
+          "elapsed_seconds": 21.914,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 386
+        },
+        {
+          "elapsed_seconds": 26.313,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 464
+        },
+        {
+          "elapsed_seconds": 30.662,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 541
+        },
+        {
+          "elapsed_seconds": 34.987,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 618
+        },
+        {
+          "elapsed_seconds": 39.339,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 696
+        },
+        {
+          "elapsed_seconds": 43.759,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 774
+        },
+        {
+          "elapsed_seconds": 48.157,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 852
+        },
+        {
+          "elapsed_seconds": 52.462,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 929
+        },
+        {
+          "elapsed_seconds": 57.004,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 1007
+        },
+        {
+          "elapsed_seconds": 61.915,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 1084
+        },
+        {
+          "elapsed_seconds": 66.416,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 1162
+        },
+        {
+          "elapsed_seconds": 70.696,
+          "best_absolute_determinant": "2678759358464000",
+          "best_ratio_percent": 96.3774,
+          "archive_size": 3,
+          "sketch_discoveries": 2,
+          "epochs_completed": 1240
+        },
+        {
+          "elapsed_seconds": 74.862,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 1316
+        },
+        {
+          "elapsed_seconds": 79.09,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 1394
+        },
+        {
+          "elapsed_seconds": 83.364,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 1472
+        },
+        {
+          "elapsed_seconds": 87.58,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 1550
+        },
+        {
+          "elapsed_seconds": 91.76,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 1627
+        },
+        {
+          "elapsed_seconds": 96.022,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 1704
+        },
+        {
+          "elapsed_seconds": 100.302,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 1782
+        },
+        {
+          "elapsed_seconds": 104.492,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 1860
+        },
+        {
+          "elapsed_seconds": 108.776,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 1938
+        },
+        {
+          "elapsed_seconds": 112.954,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 2016
+        },
+        {
+          "elapsed_seconds": 117.228,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 2093
+        },
+        {
+          "elapsed_seconds": 121.368,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 2170
+        },
+        {
+          "elapsed_seconds": 125.545,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 2248
+        },
+        {
+          "elapsed_seconds": 129.722,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 2326
+        },
+        {
+          "elapsed_seconds": 133.838,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 2403
+        },
+        {
+          "elapsed_seconds": 138.0,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 2481
+        },
+        {
+          "elapsed_seconds": 142.167,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 2559
+        },
+        {
+          "elapsed_seconds": 146.326,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 2637
+        },
+        {
+          "elapsed_seconds": 150.466,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 2714
+        },
+        {
+          "elapsed_seconds": 154.591,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 2791
+        },
+        {
+          "elapsed_seconds": 158.813,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 2869
+        },
+        {
+          "elapsed_seconds": 163.033,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 2947
+        },
+        {
+          "elapsed_seconds": 167.194,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 3025
+        },
+        {
+          "elapsed_seconds": 171.316,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 3103
+        },
+        {
+          "elapsed_seconds": 175.66,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 3180
+        },
+        {
+          "elapsed_seconds": 179.954,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 3258
+        },
+        {
+          "elapsed_seconds": 184.167,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 3335
+        },
+        {
+          "elapsed_seconds": 188.441,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 3413
+        },
+        {
+          "elapsed_seconds": 192.613,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 3490
+        },
+        {
+          "elapsed_seconds": 196.716,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 3568
+        },
+        {
+          "elapsed_seconds": 200.865,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 3646
+        },
+        {
+          "elapsed_seconds": 204.987,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 3724
+        },
+        {
+          "elapsed_seconds": 209.134,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 3802
+        },
+        {
+          "elapsed_seconds": 213.166,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 3878
+        },
+        {
+          "elapsed_seconds": 217.28,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 3956
+        },
+        {
+          "elapsed_seconds": 221.419,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 4034
+        },
+        {
+          "elapsed_seconds": 225.609,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 4112
+        },
+        {
+          "elapsed_seconds": 229.842,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 4190
+        },
+        {
+          "elapsed_seconds": 234.037,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 4267
+        },
+        {
+          "elapsed_seconds": 238.323,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 4345
+        },
+        {
+          "elapsed_seconds": 242.407,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 4422
+        },
+        {
+          "elapsed_seconds": 246.493,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 4500
+        },
+        {
+          "elapsed_seconds": 250.608,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 4578
+        },
+        {
+          "elapsed_seconds": 254.666,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 4655
+        },
+        {
+          "elapsed_seconds": 258.798,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 4733
+        },
+        {
+          "elapsed_seconds": 262.925,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 4811
+        },
+        {
+          "elapsed_seconds": 267.071,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 4889
+        },
+        {
+          "elapsed_seconds": 271.112,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 4965
+        },
+        {
+          "elapsed_seconds": 275.239,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 5043
+        },
+        {
+          "elapsed_seconds": 279.384,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 5121
+        },
+        {
+          "elapsed_seconds": 283.516,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 5199
+        },
+        {
+          "elapsed_seconds": 287.649,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 5277
+        },
+        {
+          "elapsed_seconds": 291.706,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 5354
+        },
+        {
+          "elapsed_seconds": 295.958,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 5432
+        },
+        {
+          "elapsed_seconds": 300.006,
+          "best_absolute_determinant": "2687827968000000",
+          "best_ratio_percent": 96.7037,
+          "archive_size": 4,
+          "sketch_discoveries": 3,
+          "epochs_completed": 5507
+        }
+      ]
     },
     {
-      "id": "arm1",
-      "label": "probe 2",
-      "engine": "core-adjugate-reactive-tabu-v1+exact-breakout",
+      "id": "arm-c4-high-k24",
+      "label": "k=24",
+      "engine": "exact-core-gram-sketch-basin-hopper-coronal-pareto-v1",
       "status": "complete",
-      "elapsed_seconds": 900.001,
-      "budget_seconds": 900.0,
+      "source_updated_at": "2026-07-29T05:50:20.595183+00:00",
+      "elapsed_seconds": 300.009,
+      "budget_seconds": 300.0,
       "progress_percent": 100.0,
-      "best_absolute_determinant": "2687827968000000",
-      "best_ratio_percent": 96.7037
+      "best_absolute_determinant": "2694905856000000",
+      "best_ratio_percent": 96.9583,
+      "best_core_quotient": 642515625,
+      "seed_basin_ids": [
+        "c4",
+        "baseline06",
+        "control632812500",
+        "control632590000"
+      ],
+      "random_seed": 40624,
+      "kick_flips": 24,
+      "epoch_moves": 20000,
+      "archive_size": 17,
+      "archive_capacity": 256,
+      "sketch_discoveries": 13,
+      "epochs_completed": 3047,
+      "strict_target_states": 0,
+      "history": [
+        {
+          "elapsed_seconds": 0.01,
+          "best_absolute_determinant": "2610279795916800",
+          "best_ratio_percent": 93.9136,
+          "archive_size": 0,
+          "sketch_discoveries": 0,
+          "epochs_completed": 0
+        },
+        {
+          "elapsed_seconds": 3.577,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 5,
+          "sketch_discoveries": 1,
+          "epochs_completed": 36
+        },
+        {
+          "elapsed_seconds": 8.061,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 5,
+          "sketch_discoveries": 1,
+          "epochs_completed": 79
+        },
+        {
+          "elapsed_seconds": 12.717,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 5,
+          "sketch_discoveries": 1,
+          "epochs_completed": 123
+        },
+        {
+          "elapsed_seconds": 17.076,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 5,
+          "sketch_discoveries": 1,
+          "epochs_completed": 166
+        },
+        {
+          "elapsed_seconds": 21.452,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 6,
+          "sketch_discoveries": 2,
+          "epochs_completed": 209
+        },
+        {
+          "elapsed_seconds": 25.826,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 6,
+          "sketch_discoveries": 2,
+          "epochs_completed": 252
+        },
+        {
+          "elapsed_seconds": 30.102,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 6,
+          "sketch_discoveries": 2,
+          "epochs_completed": 294
+        },
+        {
+          "elapsed_seconds": 34.454,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 6,
+          "sketch_discoveries": 2,
+          "epochs_completed": 337
+        },
+        {
+          "elapsed_seconds": 38.888,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 6,
+          "sketch_discoveries": 2,
+          "epochs_completed": 381
+        },
+        {
+          "elapsed_seconds": 43.241,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 6,
+          "sketch_discoveries": 2,
+          "epochs_completed": 424
+        },
+        {
+          "elapsed_seconds": 47.652,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 6,
+          "sketch_discoveries": 2,
+          "epochs_completed": 467
+        },
+        {
+          "elapsed_seconds": 52.012,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 6,
+          "sketch_discoveries": 2,
+          "epochs_completed": 510
+        },
+        {
+          "elapsed_seconds": 56.471,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 6,
+          "sketch_discoveries": 2,
+          "epochs_completed": 553
+        },
+        {
+          "elapsed_seconds": 61.292,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 6,
+          "sketch_discoveries": 2,
+          "epochs_completed": 595
+        },
+        {
+          "elapsed_seconds": 65.976,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 7,
+          "sketch_discoveries": 3,
+          "epochs_completed": 639
+        },
+        {
+          "elapsed_seconds": 70.248,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 7,
+          "sketch_discoveries": 3,
+          "epochs_completed": 682
+        },
+        {
+          "elapsed_seconds": 74.5,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 7,
+          "sketch_discoveries": 3,
+          "epochs_completed": 725
+        },
+        {
+          "elapsed_seconds": 78.731,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 7,
+          "sketch_discoveries": 3,
+          "epochs_completed": 768
+        },
+        {
+          "elapsed_seconds": 82.981,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 7,
+          "sketch_discoveries": 3,
+          "epochs_completed": 811
+        },
+        {
+          "elapsed_seconds": 87.186,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 7,
+          "sketch_discoveries": 3,
+          "epochs_completed": 854
+        },
+        {
+          "elapsed_seconds": 91.387,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 7,
+          "sketch_discoveries": 3,
+          "epochs_completed": 897
+        },
+        {
+          "elapsed_seconds": 95.668,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 8,
+          "sketch_discoveries": 4,
+          "epochs_completed": 940
+        },
+        {
+          "elapsed_seconds": 99.946,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 8,
+          "sketch_discoveries": 4,
+          "epochs_completed": 983
+        },
+        {
+          "elapsed_seconds": 104.126,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 8,
+          "sketch_discoveries": 4,
+          "epochs_completed": 1026
+        },
+        {
+          "elapsed_seconds": 108.391,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 8,
+          "sketch_discoveries": 4,
+          "epochs_completed": 1069
+        },
+        {
+          "elapsed_seconds": 112.557,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 8,
+          "sketch_discoveries": 4,
+          "epochs_completed": 1112
+        },
+        {
+          "elapsed_seconds": 116.936,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 8,
+          "sketch_discoveries": 4,
+          "epochs_completed": 1156
+        },
+        {
+          "elapsed_seconds": 121.038,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 8,
+          "sketch_discoveries": 4,
+          "epochs_completed": 1198
+        },
+        {
+          "elapsed_seconds": 125.201,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 8,
+          "sketch_discoveries": 4,
+          "epochs_completed": 1241
+        },
+        {
+          "elapsed_seconds": 129.366,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 8,
+          "sketch_discoveries": 4,
+          "epochs_completed": 1284
+        },
+        {
+          "elapsed_seconds": 133.52,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 9,
+          "sketch_discoveries": 5,
+          "epochs_completed": 1327
+        },
+        {
+          "elapsed_seconds": 137.668,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 9,
+          "sketch_discoveries": 5,
+          "epochs_completed": 1370
+        },
+        {
+          "elapsed_seconds": 141.91,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 9,
+          "sketch_discoveries": 5,
+          "epochs_completed": 1414
+        },
+        {
+          "elapsed_seconds": 146.062,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 9,
+          "sketch_discoveries": 5,
+          "epochs_completed": 1457
+        },
+        {
+          "elapsed_seconds": 150.135,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 9,
+          "sketch_discoveries": 5,
+          "epochs_completed": 1499
+        },
+        {
+          "elapsed_seconds": 154.295,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 9,
+          "sketch_discoveries": 5,
+          "epochs_completed": 1542
+        },
+        {
+          "elapsed_seconds": 158.496,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 9,
+          "sketch_discoveries": 5,
+          "epochs_completed": 1585
+        },
+        {
+          "elapsed_seconds": 162.703,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 9,
+          "sketch_discoveries": 5,
+          "epochs_completed": 1628
+        },
+        {
+          "elapsed_seconds": 166.962,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 9,
+          "sketch_discoveries": 5,
+          "epochs_completed": 1672
+        },
+        {
+          "elapsed_seconds": 171.076,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 9,
+          "sketch_discoveries": 5,
+          "epochs_completed": 1715
+        },
+        {
+          "elapsed_seconds": 175.443,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 9,
+          "sketch_discoveries": 5,
+          "epochs_completed": 1758
+        },
+        {
+          "elapsed_seconds": 179.72,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 10,
+          "sketch_discoveries": 6,
+          "epochs_completed": 1801
+        },
+        {
+          "elapsed_seconds": 183.871,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 10,
+          "sketch_discoveries": 6,
+          "epochs_completed": 1843
+        },
+        {
+          "elapsed_seconds": 188.138,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 11,
+          "sketch_discoveries": 7,
+          "epochs_completed": 1886
+        },
+        {
+          "elapsed_seconds": 192.461,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 13,
+          "sketch_discoveries": 9,
+          "epochs_completed": 1930
+        },
+        {
+          "elapsed_seconds": 196.546,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 13,
+          "sketch_discoveries": 9,
+          "epochs_completed": 1973
+        },
+        {
+          "elapsed_seconds": 200.678,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 14,
+          "sketch_discoveries": 10,
+          "epochs_completed": 2016
+        },
+        {
+          "elapsed_seconds": 204.791,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 16,
+          "sketch_discoveries": 12,
+          "epochs_completed": 2059
+        },
+        {
+          "elapsed_seconds": 208.924,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 16,
+          "sketch_discoveries": 12,
+          "epochs_completed": 2102
+        },
+        {
+          "elapsed_seconds": 212.955,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 16,
+          "sketch_discoveries": 12,
+          "epochs_completed": 2144
+        },
+        {
+          "elapsed_seconds": 217.152,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 16,
+          "sketch_discoveries": 12,
+          "epochs_completed": 2188
+        },
+        {
+          "elapsed_seconds": 221.281,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 16,
+          "sketch_discoveries": 12,
+          "epochs_completed": 2231
+        },
+        {
+          "elapsed_seconds": 225.455,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 16,
+          "sketch_discoveries": 12,
+          "epochs_completed": 2274
+        },
+        {
+          "elapsed_seconds": 229.676,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 16,
+          "sketch_discoveries": 12,
+          "epochs_completed": 2317
+        },
+        {
+          "elapsed_seconds": 233.912,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 16,
+          "sketch_discoveries": 12,
+          "epochs_completed": 2360
+        },
+        {
+          "elapsed_seconds": 238.183,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 16,
+          "sketch_discoveries": 12,
+          "epochs_completed": 2403
+        },
+        {
+          "elapsed_seconds": 242.315,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 16,
+          "sketch_discoveries": 12,
+          "epochs_completed": 2446
+        },
+        {
+          "elapsed_seconds": 246.404,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 16,
+          "sketch_discoveries": 12,
+          "epochs_completed": 2489
+        },
+        {
+          "elapsed_seconds": 250.507,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 17,
+          "sketch_discoveries": 13,
+          "epochs_completed": 2532
+        },
+        {
+          "elapsed_seconds": 254.606,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 17,
+          "sketch_discoveries": 13,
+          "epochs_completed": 2575
+        },
+        {
+          "elapsed_seconds": 258.73,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 17,
+          "sketch_discoveries": 13,
+          "epochs_completed": 2618
+        },
+        {
+          "elapsed_seconds": 262.851,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 17,
+          "sketch_discoveries": 13,
+          "epochs_completed": 2661
+        },
+        {
+          "elapsed_seconds": 267.078,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 17,
+          "sketch_discoveries": 13,
+          "epochs_completed": 2705
+        },
+        {
+          "elapsed_seconds": 271.114,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 17,
+          "sketch_discoveries": 13,
+          "epochs_completed": 2747
+        },
+        {
+          "elapsed_seconds": 275.228,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 17,
+          "sketch_discoveries": 13,
+          "epochs_completed": 2790
+        },
+        {
+          "elapsed_seconds": 279.354,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 17,
+          "sketch_discoveries": 13,
+          "epochs_completed": 2833
+        },
+        {
+          "elapsed_seconds": 283.474,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 17,
+          "sketch_discoveries": 13,
+          "epochs_completed": 2876
+        },
+        {
+          "elapsed_seconds": 287.596,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 17,
+          "sketch_discoveries": 13,
+          "epochs_completed": 2919
+        },
+        {
+          "elapsed_seconds": 291.8,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 17,
+          "sketch_discoveries": 13,
+          "epochs_completed": 2963
+        },
+        {
+          "elapsed_seconds": 296.022,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 17,
+          "sketch_discoveries": 13,
+          "epochs_completed": 3006
+        },
+        {
+          "elapsed_seconds": 300.009,
+          "best_absolute_determinant": "2694905856000000",
+          "best_ratio_percent": 96.9583,
+          "archive_size": 17,
+          "sketch_discoveries": 13,
+          "epochs_completed": 3047
+        }
+      ]
     },
     {
-      "id": "arm2",
-      "label": "probe 3",
-      "engine": "reactive-tabu",
+      "id": "arm-c1-frontier-k12",
+      "label": "k=12",
+      "engine": "exact-core-gram-sketch-basin-hopper-coronal-pareto-v1",
       "status": "complete",
-      "elapsed_seconds": 900.0,
-      "budget_seconds": 900.0,
+      "source_updated_at": "2026-07-29T05:50:20.591607+00:00",
+      "elapsed_seconds": 300.005,
+      "budget_seconds": 300.0,
       "progress_percent": 100.0,
-      "best_absolute_determinant": "2687827968000000",
-      "best_ratio_percent": 96.7037
+      "best_absolute_determinant": "2779447296000000",
+      "best_ratio_percent": 100.0,
+      "best_core_quotient": 662671875,
+      "seed_basin_ids": [
+        "c1",
+        "frontier",
+        "control632812500"
+      ],
+      "random_seed": 40712,
+      "kick_flips": 12,
+      "epoch_moves": 20000,
+      "archive_size": 8,
+      "archive_capacity": 256,
+      "sketch_discoveries": 5,
+      "epochs_completed": 3035,
+      "strict_target_states": 0,
+      "history": [
+        {
+          "elapsed_seconds": 0.01,
+          "best_absolute_determinant": "2638361395200000",
+          "best_ratio_percent": 94.924,
+          "archive_size": 0,
+          "sketch_discoveries": 0,
+          "epochs_completed": 0
+        },
+        {
+          "elapsed_seconds": 3.768,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 38
+        },
+        {
+          "elapsed_seconds": 8.265,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 81
+        },
+        {
+          "elapsed_seconds": 12.814,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 124
+        },
+        {
+          "elapsed_seconds": 17.198,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 167
+        },
+        {
+          "elapsed_seconds": 21.605,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 210
+        },
+        {
+          "elapsed_seconds": 26.009,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 253
+        },
+        {
+          "elapsed_seconds": 30.306,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 295
+        },
+        {
+          "elapsed_seconds": 34.672,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 338
+        },
+        {
+          "elapsed_seconds": 39.009,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 381
+        },
+        {
+          "elapsed_seconds": 43.407,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 424
+        },
+        {
+          "elapsed_seconds": 47.819,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 467
+        },
+        {
+          "elapsed_seconds": 52.194,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 510
+        },
+        {
+          "elapsed_seconds": 56.717,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 553
+        },
+        {
+          "elapsed_seconds": 61.52,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 595
+        },
+        {
+          "elapsed_seconds": 66.091,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 638
+        },
+        {
+          "elapsed_seconds": 70.375,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 681
+        },
+        {
+          "elapsed_seconds": 74.658,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 724
+        },
+        {
+          "elapsed_seconds": 78.806,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 766
+        },
+        {
+          "elapsed_seconds": 83.075,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 809
+        },
+        {
+          "elapsed_seconds": 87.296,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 852
+        },
+        {
+          "elapsed_seconds": 91.424,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 894
+        },
+        {
+          "elapsed_seconds": 95.744,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 937
+        },
+        {
+          "elapsed_seconds": 100.047,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 980
+        },
+        {
+          "elapsed_seconds": 104.249,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 1023
+        },
+        {
+          "elapsed_seconds": 108.528,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 1066
+        },
+        {
+          "elapsed_seconds": 112.711,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 1109
+        },
+        {
+          "elapsed_seconds": 117.027,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 1152
+        },
+        {
+          "elapsed_seconds": 121.144,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 1194
+        },
+        {
+          "elapsed_seconds": 125.331,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 1237
+        },
+        {
+          "elapsed_seconds": 129.511,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 1280
+        },
+        {
+          "elapsed_seconds": 133.691,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 1323
+        },
+        {
+          "elapsed_seconds": 137.867,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 1366
+        },
+        {
+          "elapsed_seconds": 142.04,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 4,
+          "sketch_discoveries": 1,
+          "epochs_completed": 1409
+        },
+        {
+          "elapsed_seconds": 146.207,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 5,
+          "sketch_discoveries": 2,
+          "epochs_completed": 1452
+        },
+        {
+          "elapsed_seconds": 150.306,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 5,
+          "sketch_discoveries": 2,
+          "epochs_completed": 1494
+        },
+        {
+          "elapsed_seconds": 154.49,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 5,
+          "sketch_discoveries": 2,
+          "epochs_completed": 1537
+        },
+        {
+          "elapsed_seconds": 158.708,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 5,
+          "sketch_discoveries": 2,
+          "epochs_completed": 1580
+        },
+        {
+          "elapsed_seconds": 162.93,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 5,
+          "sketch_discoveries": 2,
+          "epochs_completed": 1623
+        },
+        {
+          "elapsed_seconds": 167.107,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 1666
+        },
+        {
+          "elapsed_seconds": 171.237,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 1709
+        },
+        {
+          "elapsed_seconds": 175.618,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 1752
+        },
+        {
+          "elapsed_seconds": 179.905,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 1795
+        },
+        {
+          "elapsed_seconds": 184.077,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 1837
+        },
+        {
+          "elapsed_seconds": 188.352,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 1880
+        },
+        {
+          "elapsed_seconds": 192.591,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 1923
+        },
+        {
+          "elapsed_seconds": 196.701,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 1966
+        },
+        {
+          "elapsed_seconds": 200.863,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 2009
+        },
+        {
+          "elapsed_seconds": 204.987,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 2052
+        },
+        {
+          "elapsed_seconds": 209.137,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 2095
+        },
+        {
+          "elapsed_seconds": 213.183,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 2137
+        },
+        {
+          "elapsed_seconds": 217.297,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 2180
+        },
+        {
+          "elapsed_seconds": 221.441,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 2223
+        },
+        {
+          "elapsed_seconds": 225.622,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 2266
+        },
+        {
+          "elapsed_seconds": 229.761,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 2308
+        },
+        {
+          "elapsed_seconds": 234.008,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 4,
+          "epochs_completed": 2351
+        },
+        {
+          "elapsed_seconds": 238.293,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 2394
+        },
+        {
+          "elapsed_seconds": 242.339,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 2436
+        },
+        {
+          "elapsed_seconds": 246.428,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 2479
+        },
+        {
+          "elapsed_seconds": 250.543,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 2522
+        },
+        {
+          "elapsed_seconds": 254.653,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 2565
+        },
+        {
+          "elapsed_seconds": 258.788,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 2608
+        },
+        {
+          "elapsed_seconds": 262.919,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 2651
+        },
+        {
+          "elapsed_seconds": 267.064,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 2694
+        },
+        {
+          "elapsed_seconds": 271.116,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 2736
+        },
+        {
+          "elapsed_seconds": 275.242,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 2779
+        },
+        {
+          "elapsed_seconds": 279.381,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 2822
+        },
+        {
+          "elapsed_seconds": 283.515,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 2865
+        },
+        {
+          "elapsed_seconds": 287.648,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 2908
+        },
+        {
+          "elapsed_seconds": 291.765,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 2951
+        },
+        {
+          "elapsed_seconds": 296.007,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 2994
+        },
+        {
+          "elapsed_seconds": 300.005,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 5,
+          "epochs_completed": 3035
+        }
+      ]
     },
     {
-      "id": "arm3",
-      "label": "probe 4",
-      "engine": "core-adjugate-reactive-tabu-v1+exact-breakout",
+      "id": "arm-mixed-k48",
+      "label": "k=48",
+      "engine": "exact-core-gram-sketch-basin-hopper-coronal-pareto-v1",
       "status": "complete",
-      "elapsed_seconds": 900.0,
-      "budget_seconds": 900.0,
+      "source_updated_at": "2026-07-29T05:50:20.595296+00:00",
+      "elapsed_seconds": 300.009,
+      "budget_seconds": 300.0,
       "progress_percent": 100.0,
-      "best_absolute_determinant": "2621033676800000",
-      "best_ratio_percent": 94.3005
+      "best_absolute_determinant": "2779447296000000",
+      "best_ratio_percent": 100.0,
+      "best_core_quotient": 662671875,
+      "seed_basin_ids": [
+        "c1",
+        "c4",
+        "baseline06",
+        "frontier",
+        "control632812500",
+        "control632590000"
+      ],
+      "random_seed": 40948,
+      "kick_flips": 48,
+      "epoch_moves": 40000,
+      "archive_size": 17,
+      "archive_capacity": 256,
+      "sketch_discoveries": 11,
+      "epochs_completed": 1610,
+      "strict_target_states": 0,
+      "history": [
+        {
+          "elapsed_seconds": 0.01,
+          "best_absolute_determinant": "2638361395200000",
+          "best_ratio_percent": 94.924,
+          "archive_size": 0,
+          "sketch_discoveries": 0,
+          "epochs_completed": 0
+        },
+        {
+          "elapsed_seconds": 2.651,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 7,
+          "sketch_discoveries": 1,
+          "epochs_completed": 14
+        },
+        {
+          "elapsed_seconds": 7.043,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 37
+        },
+        {
+          "elapsed_seconds": 11.748,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 60
+        },
+        {
+          "elapsed_seconds": 16.153,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 83
+        },
+        {
+          "elapsed_seconds": 20.573,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 106
+        },
+        {
+          "elapsed_seconds": 25.003,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 129
+        },
+        {
+          "elapsed_seconds": 29.407,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 152
+        },
+        {
+          "elapsed_seconds": 33.63,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 174
+        },
+        {
+          "elapsed_seconds": 38.028,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 197
+        },
+        {
+          "elapsed_seconds": 42.424,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 220
+        },
+        {
+          "elapsed_seconds": 46.894,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 243
+        },
+        {
+          "elapsed_seconds": 51.086,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 265
+        },
+        {
+          "elapsed_seconds": 55.592,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 288
+        },
+        {
+          "elapsed_seconds": 60.328,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 310
+        },
+        {
+          "elapsed_seconds": 65.022,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 333
+        },
+        {
+          "elapsed_seconds": 69.337,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 356
+        },
+        {
+          "elapsed_seconds": 73.651,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 379
+        },
+        {
+          "elapsed_seconds": 77.932,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 402
+        },
+        {
+          "elapsed_seconds": 82.216,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 8,
+          "sketch_discoveries": 2,
+          "epochs_completed": 425
+        },
+        {
+          "elapsed_seconds": 86.493,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 9,
+          "sketch_discoveries": 3,
+          "epochs_completed": 448
+        },
+        {
+          "elapsed_seconds": 90.55,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 9,
+          "sketch_discoveries": 3,
+          "epochs_completed": 470
+        },
+        {
+          "elapsed_seconds": 94.888,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 9,
+          "sketch_discoveries": 3,
+          "epochs_completed": 493
+        },
+        {
+          "elapsed_seconds": 99.214,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 9,
+          "sketch_discoveries": 3,
+          "epochs_completed": 516
+        },
+        {
+          "elapsed_seconds": 103.451,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 9,
+          "sketch_discoveries": 3,
+          "epochs_completed": 539
+        },
+        {
+          "elapsed_seconds": 107.778,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 9,
+          "sketch_discoveries": 3,
+          "epochs_completed": 562
+        },
+        {
+          "elapsed_seconds": 111.992,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 10,
+          "sketch_discoveries": 4,
+          "epochs_completed": 585
+        },
+        {
+          "elapsed_seconds": 116.334,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 10,
+          "sketch_discoveries": 4,
+          "epochs_completed": 608
+        },
+        {
+          "elapsed_seconds": 120.417,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 10,
+          "sketch_discoveries": 4,
+          "epochs_completed": 630
+        },
+        {
+          "elapsed_seconds": 124.63,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 10,
+          "sketch_discoveries": 4,
+          "epochs_completed": 653
+        },
+        {
+          "elapsed_seconds": 128.851,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 10,
+          "sketch_discoveries": 4,
+          "epochs_completed": 676
+        },
+        {
+          "elapsed_seconds": 133.045,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 10,
+          "sketch_discoveries": 4,
+          "epochs_completed": 699
+        },
+        {
+          "elapsed_seconds": 137.251,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 10,
+          "sketch_discoveries": 4,
+          "epochs_completed": 722
+        },
+        {
+          "elapsed_seconds": 141.443,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 11,
+          "sketch_discoveries": 5,
+          "epochs_completed": 745
+        },
+        {
+          "elapsed_seconds": 145.648,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 11,
+          "sketch_discoveries": 5,
+          "epochs_completed": 768
+        },
+        {
+          "elapsed_seconds": 149.881,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 11,
+          "sketch_discoveries": 5,
+          "epochs_completed": 791
+        },
+        {
+          "elapsed_seconds": 153.734,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 11,
+          "sketch_discoveries": 5,
+          "epochs_completed": 812
+        },
+        {
+          "elapsed_seconds": 157.987,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 11,
+          "sketch_discoveries": 5,
+          "epochs_completed": 835
+        },
+        {
+          "elapsed_seconds": 162.214,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 11,
+          "sketch_discoveries": 5,
+          "epochs_completed": 858
+        },
+        {
+          "elapsed_seconds": 166.464,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 11,
+          "sketch_discoveries": 5,
+          "epochs_completed": 881
+        },
+        {
+          "elapsed_seconds": 170.621,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 11,
+          "sketch_discoveries": 5,
+          "epochs_completed": 904
+        },
+        {
+          "elapsed_seconds": 174.984,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 11,
+          "sketch_discoveries": 5,
+          "epochs_completed": 927
+        },
+        {
+          "elapsed_seconds": 179.333,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 11,
+          "sketch_discoveries": 5,
+          "epochs_completed": 950
+        },
+        {
+          "elapsed_seconds": 183.465,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 11,
+          "sketch_discoveries": 5,
+          "epochs_completed": 972
+        },
+        {
+          "elapsed_seconds": 187.78,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 11,
+          "sketch_discoveries": 5,
+          "epochs_completed": 995
+        },
+        {
+          "elapsed_seconds": 192.067,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 12,
+          "sketch_discoveries": 6,
+          "epochs_completed": 1018
+        },
+        {
+          "elapsed_seconds": 196.212,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 12,
+          "sketch_discoveries": 6,
+          "epochs_completed": 1041
+        },
+        {
+          "elapsed_seconds": 200.394,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 13,
+          "sketch_discoveries": 7,
+          "epochs_completed": 1064
+        },
+        {
+          "elapsed_seconds": 204.557,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 13,
+          "sketch_discoveries": 7,
+          "epochs_completed": 1087
+        },
+        {
+          "elapsed_seconds": 208.741,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 14,
+          "sketch_discoveries": 8,
+          "epochs_completed": 1110
+        },
+        {
+          "elapsed_seconds": 212.726,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 14,
+          "sketch_discoveries": 8,
+          "epochs_completed": 1132
+        },
+        {
+          "elapsed_seconds": 216.887,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 14,
+          "sketch_discoveries": 8,
+          "epochs_completed": 1155
+        },
+        {
+          "elapsed_seconds": 221.066,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 15,
+          "sketch_discoveries": 9,
+          "epochs_completed": 1178
+        },
+        {
+          "elapsed_seconds": 225.282,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 15,
+          "sketch_discoveries": 9,
+          "epochs_completed": 1201
+        },
+        {
+          "elapsed_seconds": 229.546,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 15,
+          "sketch_discoveries": 9,
+          "epochs_completed": 1224
+        },
+        {
+          "elapsed_seconds": 233.837,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 15,
+          "sketch_discoveries": 9,
+          "epochs_completed": 1247
+        },
+        {
+          "elapsed_seconds": 238.168,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 15,
+          "sketch_discoveries": 9,
+          "epochs_completed": 1270
+        },
+        {
+          "elapsed_seconds": 242.172,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 15,
+          "sketch_discoveries": 9,
+          "epochs_completed": 1292
+        },
+        {
+          "elapsed_seconds": 246.302,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 15,
+          "sketch_discoveries": 9,
+          "epochs_completed": 1315
+        },
+        {
+          "elapsed_seconds": 250.457,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 15,
+          "sketch_discoveries": 9,
+          "epochs_completed": 1338
+        },
+        {
+          "elapsed_seconds": 254.417,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 15,
+          "sketch_discoveries": 9,
+          "epochs_completed": 1360
+        },
+        {
+          "elapsed_seconds": 258.59,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 15,
+          "sketch_discoveries": 9,
+          "epochs_completed": 1383
+        },
+        {
+          "elapsed_seconds": 262.76,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 16,
+          "sketch_discoveries": 10,
+          "epochs_completed": 1406
+        },
+        {
+          "elapsed_seconds": 266.939,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 16,
+          "sketch_discoveries": 10,
+          "epochs_completed": 1429
+        },
+        {
+          "elapsed_seconds": 270.939,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 16,
+          "sketch_discoveries": 10,
+          "epochs_completed": 1451
+        },
+        {
+          "elapsed_seconds": 275.097,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 16,
+          "sketch_discoveries": 10,
+          "epochs_completed": 1474
+        },
+        {
+          "elapsed_seconds": 279.276,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 16,
+          "sketch_discoveries": 10,
+          "epochs_completed": 1497
+        },
+        {
+          "elapsed_seconds": 283.45,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 17,
+          "sketch_discoveries": 11,
+          "epochs_completed": 1520
+        },
+        {
+          "elapsed_seconds": 287.617,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 17,
+          "sketch_discoveries": 11,
+          "epochs_completed": 1543
+        },
+        {
+          "elapsed_seconds": 291.775,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 17,
+          "sketch_discoveries": 11,
+          "epochs_completed": 1566
+        },
+        {
+          "elapsed_seconds": 296.057,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 17,
+          "sketch_discoveries": 11,
+          "epochs_completed": 1589
+        },
+        {
+          "elapsed_seconds": 300.009,
+          "best_absolute_determinant": "2779447296000000",
+          "best_ratio_percent": 100.0,
+          "archive_size": 17,
+          "sketch_discoveries": 11,
+          "epochs_completed": 1610
+        }
+      ]
     }
-  ]
+  ],
+  "claim_boundary": "The coronal identity and determinant objectives are exact. Gram sketches are invariant but noncanonical. Local basin labels refer only to the frozen classified corpus, and strict promotion still requires the independent arena verifier.",
+  "coronal_projection": {
+    "kind": "retained_exact_coronal",
+    "x_axis": "det_m",
+    "x_preference": "larger",
+    "y_axis": "kappa",
+    "y_preference": "smaller",
+    "points": [
+      {
+        "arm_id": "arm-c1-frontier-k12",
+        "rank": 0,
+        "orientation": 0,
+        "core_quotient": "662671875",
+        "absolute_determinant": "2779447296000000",
+        "det_m": "267647730468750000",
+        "kappa_numerator": "6455",
+        "kappa_denominator": "2736",
+        "kappa_decimal": 2.359283625730994,
+        "identity": "frontier",
+        "seed_id": "frontier",
+        "seed_label": "Published frontier",
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-c1-frontier-k12",
+        "rank": 1,
+        "orientation": 0,
+        "core_quotient": "642515625",
+        "absolute_determinant": "2694905856000000",
+        "det_m": "263043228515625000",
+        "kappa_numerator": "10776805",
+        "kappa_denominator": "4433848",
+        "kappa_decimal": 2.4305761045484644,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c1-frontier-k12",
+        "rank": 2,
+        "orientation": 0,
+        "core_quotient": "632812500",
+        "absolute_determinant": "2654208000000000",
+        "det_m": "240270996093750000",
+        "kappa_numerator": "7",
+        "kappa_denominator": "3",
+        "kappa_decimal": 2.3333333333333335,
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-c1-frontier-k12",
+        "rank": 3,
+        "orientation": 0,
+        "core_quotient": "632812500",
+        "absolute_determinant": "2654208000000000",
+        "det_m": "240270996093750000",
+        "kappa_numerator": "7",
+        "kappa_denominator": "3",
+        "kappa_decimal": 2.3333333333333335,
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-c1-frontier-k12",
+        "rank": 4,
+        "orientation": 0,
+        "core_quotient": "629034375",
+        "absolute_determinant": "2638361395200000",
+        "det_m": "236046727089843750",
+        "kappa_numerator": "6240741415",
+        "kappa_denominator": "2685687206",
+        "kappa_decimal": 2.3237037437039496,
+        "identity": "seed",
+        "seed_id": "c1",
+        "seed_label": "New basin c1",
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-c1-frontier-k12",
+        "rank": 5,
+        "orientation": 0,
+        "core_quotient": "622598635",
+        "absolute_determinant": "2611367945175040",
+        "det_m": "258497323677456650",
+        "kappa_numerator": "25854409376238535",
+        "kappa_denominator": "10339892947098266",
+        "kappa_decimal": 2.500452326587596,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c1-frontier-k12",
+        "rank": 5,
+        "orientation": 1,
+        "core_quotient": "622598635",
+        "absolute_determinant": "2611367945175040",
+        "det_m": "260767474124514650",
+        "kappa_numerator": "26217633447767815",
+        "kappa_denominator": "10430698964980586",
+        "kappa_decimal": 2.513506864284872,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c1-frontier-k12",
+        "rank": 6,
+        "orientation": 0,
+        "core_quotient": "620200525",
+        "absolute_determinant": "2601309542809600",
+        "det_m": "247853386048283750",
+        "kappa_numerator": "138689109253225",
+        "kappa_denominator": "56652202525322",
+        "kappa_decimal": 2.4480797404343586,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c1-frontier-k12",
+        "rank": 6,
+        "orientation": 1,
+        "core_quotient": "620200525",
+        "absolute_determinant": "2601309542809600",
+        "det_m": "247969027906433750",
+        "kappa_numerator": "19827834136015",
+        "kappa_denominator": "8096947850006",
+        "kappa_decimal": 2.4488034878476226,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c1-frontier-k12",
+        "rank": 7,
+        "orientation": 0,
+        "core_quotient": "601957500",
+        "absolute_determinant": "2524792750080000",
+        "det_m": "229809358598917680",
+        "kappa_numerator": "773450836929751",
+        "kappa_denominator": "319179664720719",
+        "kappa_decimal": 2.4232459721596538,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c1-frontier-k12",
+        "rank": 7,
+        "orientation": 1,
+        "core_quotient": "601957500",
+        "absolute_determinant": "2524792750080000",
+        "det_m": "230950582918860600",
+        "kappa_numerator": "311916388816218",
+        "kappa_denominator": "128305879399367",
+        "kappa_decimal": 2.4310373793966362,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 0,
+        "orientation": 0,
+        "core_quotient": "642515625",
+        "absolute_determinant": "2694905856000000",
+        "det_m": "263043228515625000",
+        "kappa_numerator": "10776805",
+        "kappa_denominator": "4433848",
+        "kappa_decimal": 2.4305761045484644,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 1,
+        "orientation": 0,
+        "core_quotient": "638666000",
+        "absolute_determinant": "2678759358464000",
+        "det_m": "348009506768000000",
+        "kappa_numerator": "871",
+        "kappa_denominator": "308",
+        "kappa_decimal": 2.8279220779220777,
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 2,
+        "orientation": 0,
+        "core_quotient": "632812500",
+        "absolute_determinant": "2654208000000000",
+        "det_m": "240270996093750000",
+        "kappa_numerator": "7",
+        "kappa_denominator": "3",
+        "kappa_decimal": 2.3333333333333335,
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 3,
+        "orientation": 0,
+        "core_quotient": "632812500",
+        "absolute_determinant": "2654208000000000",
+        "det_m": "240270996093750000",
+        "kappa_numerator": "7",
+        "kappa_denominator": "3",
+        "kappa_decimal": 2.3333333333333335,
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 4,
+        "orientation": 0,
+        "core_quotient": "632590000",
+        "absolute_determinant": "2653274767360000",
+        "det_m": "293037171168000000",
+        "kappa_numerator": "80380943",
+        "kappa_denominator": "30511992",
+        "kappa_decimal": 2.6344049578932767,
+        "identity": "seed",
+        "seed_id": "control632590000",
+        "seed_label": "Control basin q632590000",
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 5,
+        "orientation": 0,
+        "core_quotient": "627195000",
+        "absolute_determinant": "2630646497280000",
+        "det_m": "254137135760156250",
+        "kappa_numerator": "88629329780",
+        "kappa_denominator": "36143948197",
+        "kappa_decimal": 2.452120872266975,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 5,
+        "orientation": 1,
+        "core_quotient": "627195000",
+        "absolute_determinant": "2630646497280000",
+        "det_m": "254141358975000000",
+        "kappa_numerator": "2769741635",
+        "kappa_denominator": "1129517151",
+        "kappa_decimal": 2.452146594275132,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 6,
+        "orientation": 0,
+        "core_quotient": "626430000",
+        "absolute_determinant": "2627437854720000",
+        "det_m": "249866178975000000",
+        "kappa_numerator": "2897960",
+        "kappa_denominator": "1192821",
+        "kappa_decimal": 2.429501157340456,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 6,
+        "orientation": 1,
+        "core_quotient": "626430000",
+        "absolute_determinant": "2627437854720000",
+        "det_m": "250523790447656250",
+        "kappa_numerator": "12387161740",
+        "kappa_denominator": "5090007171",
+        "kappa_decimal": 2.433623632315311,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 7,
+        "orientation": 0,
+        "core_quotient": "625248750",
+        "absolute_determinant": "2622483333120000",
+        "det_m": "249611036568750000",
+        "kappa_numerator": "43200579335",
+        "kappa_denominator": "17750118156",
+        "kappa_decimal": 2.4338192543466017,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 7,
+        "orientation": 1,
+        "core_quotient": "625248750",
+        "absolute_determinant": "2622483333120000",
+        "det_m": "250387428529687500",
+        "kappa_numerator": "43421419715",
+        "kappa_denominator": "17805328251",
+        "kappa_decimal": 2.4386756089465145,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 8,
+        "orientation": 0,
+        "core_quotient": "622598635",
+        "absolute_determinant": "2611367945175040",
+        "det_m": "258497323677456650",
+        "kappa_numerator": "25854409376238535",
+        "kappa_denominator": "10339892947098266",
+        "kappa_decimal": 2.500452326587596,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 8,
+        "orientation": 1,
+        "core_quotient": "622598635",
+        "absolute_determinant": "2611367945175040",
+        "det_m": "260767474124514650",
+        "kappa_numerator": "26217633447767815",
+        "kappa_denominator": "10430698964980586",
+        "kappa_decimal": 2.513506864284872,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 9,
+        "orientation": 0,
+        "core_quotient": "622339200",
+        "absolute_determinant": "2610279795916800",
+        "det_m": "293534443238400000",
+        "kappa_numerator": "2962",
+        "kappa_denominator": "1105",
+        "kappa_decimal": 2.680542986425339,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 10,
+        "orientation": 0,
+        "core_quotient": "620662500",
+        "absolute_determinant": "2603247206400000",
+        "det_m": "236231197031250000",
+        "kappa_numerator": "1637905",
+        "kappa_denominator": "691303",
+        "kappa_decimal": 2.3693011602727023,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 11,
+        "orientation": 0,
+        "core_quotient": "605052000",
+        "absolute_determinant": "2537772023808000",
+        "det_m": "312417625394000000",
+        "kappa_numerator": "1564",
+        "kappa_denominator": "553",
+        "kappa_decimal": 2.8282097649186255,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 12,
+        "orientation": 0,
+        "core_quotient": "605052000",
+        "absolute_determinant": "2537772023808000",
+        "det_m": "300553664936000000",
+        "kappa_numerator": "370",
+        "kappa_denominator": "133",
+        "kappa_decimal": 2.781954887218045,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 12,
+        "orientation": 1,
+        "core_quotient": "605052000",
+        "absolute_determinant": "2537772023808000",
+        "det_m": "325411486848000000",
+        "kappa_numerator": "23",
+        "kappa_denominator": "8",
+        "kappa_decimal": 2.875,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 13,
+        "orientation": 0,
+        "core_quotient": "605052000",
+        "absolute_determinant": "2537772023808000",
+        "det_m": "296599011450000000",
+        "kappa_numerator": "484",
+        "kappa_denominator": "175",
+        "kappa_decimal": 2.7657142857142856,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 13,
+        "orientation": 1,
+        "core_quotient": "605052000",
+        "absolute_determinant": "2537772023808000",
+        "det_m": "312417625394000000",
+        "kappa_numerator": "1564",
+        "kappa_denominator": "553",
+        "kappa_decimal": 2.8282097649186255,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 14,
+        "orientation": 0,
+        "core_quotient": "605052000",
+        "absolute_determinant": "2537772023808000",
+        "det_m": "300553664936000000",
+        "kappa_numerator": "370",
+        "kappa_denominator": "133",
+        "kappa_decimal": 2.781954887218045,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 14,
+        "orientation": 1,
+        "core_quotient": "605052000",
+        "absolute_determinant": "2537772023808000",
+        "det_m": "325411486848000000",
+        "kappa_numerator": "23",
+        "kappa_denominator": "8",
+        "kappa_decimal": 2.875,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 15,
+        "orientation": 0,
+        "core_quotient": "601346290",
+        "absolute_determinant": "2522229149532160",
+        "det_m": "228071383720871150",
+        "kappa_numerator": "11013363487734410",
+        "kappa_denominator": "4561427674417423",
+        "kappa_decimal": 2.4144553578043997,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 15,
+        "orientation": 1,
+        "core_quotient": "601346290",
+        "absolute_determinant": "2522229149532160",
+        "det_m": "231267346188259400",
+        "kappa_numerator": "5634520242562735",
+        "kappa_denominator": "2312673461882594",
+        "kappa_decimal": 2.436366540901994,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 16,
+        "orientation": 0,
+        "core_quotient": "600985908",
+        "absolute_determinant": "2520717597868032",
+        "det_m": "227109752272364096",
+        "kappa_numerator": "34203434217179495",
+        "kappa_denominator": "14194359517022756",
+        "kappa_decimal": 2.4096497045999588,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-high-k24",
+        "rank": 16,
+        "orientation": 1,
+        "core_quotient": "600985908",
+        "absolute_determinant": "2520717597868032",
+        "det_m": "227535796839371616",
+        "kappa_numerator": "3812216150992375",
+        "kappa_denominator": "1580109700273414",
+        "kappa_decimal": 2.412627522211103,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-c4-k12",
+        "rank": 0,
+        "orientation": 0,
+        "core_quotient": "640828125",
+        "absolute_determinant": "2687827968000000",
+        "det_m": "291607546289062500",
+        "kappa_numerator": "8843",
+        "kappa_denominator": "3412",
+        "kappa_decimal": 2.5917350527549825,
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-c4-k12",
+        "rank": 0,
+        "orientation": 1,
+        "core_quotient": "640828125",
+        "absolute_determinant": "2687827968000000",
+        "det_m": "299812213476562500",
+        "kappa_numerator": "9227",
+        "kappa_denominator": "3508",
+        "kappa_decimal": 2.630273660205245,
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-c4-k12",
+        "rank": 1,
+        "orientation": 0,
+        "core_quotient": "638666000",
+        "absolute_determinant": "2678759358464000",
+        "det_m": "348009506768000000",
+        "kappa_numerator": "871",
+        "kappa_denominator": "308",
+        "kappa_decimal": 2.8279220779220777,
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-c4-k12",
+        "rank": 2,
+        "orientation": 0,
+        "core_quotient": "627004000",
+        "absolute_determinant": "2629845385216000",
+        "det_m": "319824571136000000",
+        "kappa_numerator": "470767",
+        "kappa_denominator": "169904",
+        "kappa_decimal": 2.7707823241359826,
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-c4-k12",
+        "rank": 3,
+        "orientation": 0,
+        "core_quotient": "622339200",
+        "absolute_determinant": "2610279795916800",
+        "det_m": "293534443238400000",
+        "kappa_numerator": "2962",
+        "kappa_denominator": "1105",
+        "kappa_decimal": 2.680542986425339,
+        "identity": "seed",
+        "seed_id": "c4",
+        "seed_label": "Coronal-rich basin c4",
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 0,
+        "orientation": 0,
+        "core_quotient": "662671875",
+        "absolute_determinant": "2779447296000000",
+        "det_m": "267647730468750000",
+        "kappa_numerator": "6455",
+        "kappa_denominator": "2736",
+        "kappa_decimal": 2.359283625730994,
+        "identity": "frontier",
+        "seed_id": "frontier",
+        "seed_label": "Published frontier",
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 1,
+        "orientation": 0,
+        "core_quotient": "642515625",
+        "absolute_determinant": "2694905856000000",
+        "det_m": "263043228515625000",
+        "kappa_numerator": "10776805",
+        "kappa_denominator": "4433848",
+        "kappa_decimal": 2.4305761045484644,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 2,
+        "orientation": 0,
+        "core_quotient": "638666000",
+        "absolute_determinant": "2678759358464000",
+        "det_m": "348009506768000000",
+        "kappa_numerator": "871",
+        "kappa_denominator": "308",
+        "kappa_decimal": 2.8279220779220777,
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 3,
+        "orientation": 0,
+        "core_quotient": "632812500",
+        "absolute_determinant": "2654208000000000",
+        "det_m": "240270996093750000",
+        "kappa_numerator": "7",
+        "kappa_denominator": "3",
+        "kappa_decimal": 2.3333333333333335,
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 4,
+        "orientation": 0,
+        "core_quotient": "632590000",
+        "absolute_determinant": "2653274767360000",
+        "det_m": "293037171168000000",
+        "kappa_numerator": "80380943",
+        "kappa_denominator": "30511992",
+        "kappa_decimal": 2.6344049578932767,
+        "identity": "seed",
+        "seed_id": "control632590000",
+        "seed_label": "Control basin q632590000",
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 5,
+        "orientation": 0,
+        "core_quotient": "629034375",
+        "absolute_determinant": "2638361395200000",
+        "det_m": "236046727089843750",
+        "kappa_numerator": "6240741415",
+        "kappa_denominator": "2685687206",
+        "kappa_decimal": 2.3237037437039496,
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 6,
+        "orientation": 0,
+        "core_quotient": "627200000",
+        "absolute_determinant": "2630667468800000",
+        "det_m": "314703872000000000",
+        "kappa_numerator": "11",
+        "kappa_denominator": "4",
+        "kappa_decimal": 2.75,
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 7,
+        "orientation": 0,
+        "core_quotient": "622339200",
+        "absolute_determinant": "2610279795916800",
+        "det_m": "293534443238400000",
+        "kappa_numerator": "2962",
+        "kappa_denominator": "1105",
+        "kappa_decimal": 2.680542986425339,
+        "identity": "seed",
+        "seed_id": "c4",
+        "seed_label": "Coronal-rich basin c4",
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 8,
+        "orientation": 0,
+        "core_quotient": "620145000",
+        "absolute_determinant": "2601076654080000",
+        "det_m": "225199248834375000",
+        "kappa_numerator": "18354388420",
+        "kappa_denominator": "8007084403",
+        "kappa_decimal": 2.2922686331523114,
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 9,
+        "orientation": 0,
+        "core_quotient": "612090374",
+        "absolute_determinant": "2567293104029696",
+        "det_m": "243739124491249928",
+        "kappa_numerator": "150075468005384959",
+        "kappa_denominator": "60934781122812482",
+        "kappa_decimal": 2.462886798639872,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 10,
+        "orientation": 0,
+        "core_quotient": "608671875",
+        "absolute_determinant": "2552954880000000",
+        "det_m": "218876989746093750",
+        "kappa_numerator": "9193727",
+        "kappa_denominator": "3984534",
+        "kappa_decimal": 2.3073531308805495,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 11,
+        "orientation": 0,
+        "core_quotient": "604851468",
+        "absolute_determinant": "2536930931638272",
+        "det_m": "224801220858800616",
+        "kappa_numerator": "7407772015186770",
+        "kappa_denominator": "3122239178594453",
+        "kappa_decimal": 2.3725831339165846,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 12,
+        "orientation": 0,
+        "core_quotient": "603254375",
+        "absolute_determinant": "2530232238080000",
+        "det_m": "221975300186718750",
+        "kappa_numerator": "1595008943",
+        "kappa_denominator": "675691758",
+        "kappa_decimal": 2.3605570500387842,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 12,
+        "orientation": 1,
+        "core_quotient": "603254375",
+        "absolute_determinant": "2530232238080000",
+        "det_m": "232474932139843750",
+        "kappa_numerator": "1448918752263",
+        "kappa_denominator": "595135826278",
+        "kappa_decimal": 2.434601797247845,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 13,
+        "orientation": 0,
+        "core_quotient": "603046875",
+        "absolute_determinant": "2529361920000000",
+        "det_m": "203567871093750000",
+        "kappa_numerator": "8203031",
+        "kappa_denominator": "3705840",
+        "kappa_decimal": 2.2135415992055782,
+        "pareto_front": true
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 13,
+        "orientation": 1,
+        "core_quotient": "603046875",
+        "absolute_determinant": "2529361920000000",
+        "det_m": "220328107910156250",
+        "kappa_numerator": "47117371",
+        "kappa_denominator": "20054754",
+        "kappa_decimal": 2.349436497700246,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 14,
+        "orientation": 0,
+        "core_quotient": "602652331",
+        "absolute_determinant": "2527707082522624",
+        "det_m": "242297062020066144",
+        "kappa_numerator": "605998416020531015",
+        "kappa_denominator": "242297062020066144",
+        "kappa_decimal": 2.501055567773845,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 14,
+        "orientation": 1,
+        "core_quotient": "602652331",
+        "absolute_determinant": "2527707082522624",
+        "det_m": "243167111364006374",
+        "kappa_numerator": "8584205822482985",
+        "kappa_denominator": "3424888892450794",
+        "kappa_decimal": 2.5064187750453617,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 15,
+        "orientation": 0,
+        "core_quotient": "602091780",
+        "absolute_determinant": "2525355961221120",
+        "det_m": "234479965582840050",
+        "kappa_numerator": "1278678557306204",
+        "kappa_denominator": "521066590184089",
+        "kappa_decimal": 2.453963814595091,
+        "pareto_front": false
+      },
+      {
+        "arm_id": "arm-mixed-k48",
+        "rank": 16,
+        "orientation": 0,
+        "core_quotient": "601705002",
+        "absolute_determinant": "2523733696708608",
+        "det_m": "267180158259229608",
+        "kappa_numerator": "19629770100141623",
+        "kappa_denominator": "7421671062756378",
+        "kappa_decimal": 2.644925911449814,
+        "pareto_front": false
+      }
+    ]
+  }
 }

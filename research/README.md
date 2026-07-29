@@ -861,3 +861,210 @@ is the signed perfect-matching imbalance. The exact bounded `k=3,5`
 same-sign alternating-cycle pilot, including its negative result and receipt
 audit, is summarized in
 [`MATCHING_CYCLE_PILOT_20260729.md`](MATCHING_CYCLE_PILOT_20260729.md).
+
+## Gram-basin hopping and exact local classification
+
+`core_gram_basin_hopper.cpp` runs moving-parent reactive tabu search on
+dephased 22-by-22 cores. Every accepted state and promotion has an exact
+integer determinant. The archive key is an invariant but noncanonical
+signed-Gram sketch built from mod-4-normalized row and column Grams. Different
+sketches prove different signed-Gram orbits; matching sketches do not prove
+equivalence.
+
+`generalized_gram_basin.py` provides the separate exact local classifier. It
+uses fixed-palette colored-incidence certificates through pinned
+`pynauty==2.8.8.1` and treats the row/column pair as unordered, so its keys
+classify the supplied corpus up to the intended H/transpose Gram action.
+
+```sh
+clang++ -std=c++20 -O3 \
+  -Wall -Wextra -Wshadow -Wpedantic -Werror \
+  research/core_gram_basin_hopper.cpp \
+  -o build/research/core_gram_basin_hopper
+
+build/research/core_gram_basin_hopper --self-test 10000 --seed 38100
+/tmp/maxdet-h-audit/bin/python research/generalized_gram_basin.py --self-test
+
+build/research/core_gram_basin_hopper \
+  --seed-matrix references/orrick-et-al-2003/matrix.txt \
+  --output runs/gram-hopper/best.matrix.txt \
+  --archive-dir runs/gram-hopper/archive \
+  --log runs/gram-hopper/run.jsonl \
+  --summary runs/gram-hopper/summary.json \
+  --gate-all --quotient-gate 620000000 \
+  --kick-flips 24 --epoch-moves 20000 \
+  --seed 38224 --seconds 180
+```
+
+The retained 2026-07-29 evidence is summarized in
+[`GRAM_BASIN_HOPPER_20260729.md`](GRAM_BASIN_HOPPER_20260729.md):
+
+- The four-arm pilot completed 5,305 epochs, 96,978,140 tabu moves,
+  and 51,304,244,521 exact move-direction evaluations. All 256 exports verified.
+  It reached 220 exact HT-Gram basins outside the eight seed basins, including
+  three high basins absent from a frozen 20-representative local comparison.
+- Four exploitation arms completed 9,443 epochs, about 142.0 million moves,
+  and 75.1 billion direction evaluations. The best new pilot basin connected
+  back to a known frontier class; there was no strict improvement.
+- A matched determinant-only control completed 13,296 epochs and found 23
+  additional locally classified HT-Gram basins. Its strongest locally new
+  score was `2,654,208,000,000,000`.
+- The matched exact coronal-Pareto wave completed 13,199 epochs and added 18
+  basins beyond the pilot, exploitation, and control corpus. Its strongest new
+  basin tied the control's score with a different local certificate.
+
+None of these waves beat `2,779,447,296,000,000`. Basin novelty is relative
+only to the explicitly frozen local corpus; it is not a literature-wide
+novelty, matrix-factor-equivalence, optimality, or world-record claim.
+
+## Exact coronal-Pareto representation
+
+For normalized `H`, let `G=HH^T`, switch Gram lines so every off-diagonal entry
+is `3 mod 4`, and set
+
+```text
+W = (G - (24I - J)) / 4
+M = 6I + W
+kappa = 1^T M^-1 1.
+```
+
+The matrix determinant lemma gives the exact identities
+
+```text
+det(G) = 4^22 det(M) (4 - kappa)
+q^2    = det(M) (4 - kappa),  q = |det(H)| / 2^22.
+```
+
+`core_gram_basin_hopper --coronal-pareto` evaluates the sorted row/column pair
+of exact `(det(M), kappa)` points. Parent selection mixes determinant quality,
+larger `det(M)`, smaller `kappa`, the current Pareto front, and exploration.
+Strict promotion is still determinant-only.
+
+```sh
+build/research/core_gram_basin_hopper --coronal-pareto \
+  --seed-matrix SEED.txt \
+  --output runs/coronal/best.matrix.txt \
+  --archive-dir runs/coronal/archive \
+  --log runs/coronal/run.jsonl \
+  --summary runs/coronal/summary.json \
+  --gate-all --quotient-gate 620000000 \
+  --seed 40112 --seconds 180
+```
+
+The c4 pilot basin has a block determinant about 9.67 percent above the
+frontier's but a worse coronal factor. This is a search direction, not a valid
+above-frontier Gram or sign matrix. A continuous wheel-to-triangle Gram surgery
+lands slightly above the frontier but has nonsquare determinant and therefore
+cannot equal `HH^T`.
+
+## Exact Hamming-code clique LNS
+
+`hamming_clique_lns.cpp` represents normalized rows as 23-bit words. Gram
+entries `3`, `-1`, and `-5` correspond exactly to Hamming distances `10`, `12`,
+and `14`. Each iteration destroys a set of rows, exhaustively enumerates all
+compatible oriented words, builds their bitset compatibility graph, and uses
+proper coloring plus exact branch-and-bound to enumerate replacement cliques.
+
+```text
+A = F F^T,  D = det(A),  N_ij = D <x_i,x_j> - b_i^T adj(A) b_j
+N = g K,  D = g d
+det(Gram(F,Q)) = g det(K_Q) / d^(|Q|-1)
+```
+
+For a partial chosen set `Q`, the product of the largest remaining `K_ii`
+values gives an exact fixed-Gram Schur-residual Hadamard--Fischer bound. Every
+comparison and unpruned determinant is evaluated with `cpp_int`; no
+floating-point value can prune or promote a candidate. Source SHA-256
+`97eb017e4f9df338b6f1594b862cf48e70140531030aaca56e499add24f4076d`
+passed the built-in tests, sanitizers, and an independent 32,314-case
+proof-and-wiring audit.
+
+On the current macOS host, Boost headers are under Homebrew:
+
+```sh
+clang++ -std=c++20 -O3 -I/opt/homebrew/include \
+  -Wall -Wextra -Wshadow -Wpedantic -Werror \
+  research/hamming_clique_lns.cpp \
+  -o build/research/hamming_clique_lns
+
+build/research/hamming_clique_lns --self-test
+
+build/research/hamming_clique_lns \
+  --start references/orrick-et-al-2003/matrix.txt \
+  --output runs/hamming-clique/best.matrix.txt \
+  --log runs/hamming-clique/run.jsonl \
+  --summary runs/hamming-clique/summary.json \
+  --seed 2306 --seconds 300 \
+  --destroy-min 8 --destroy-max 8 \
+  --destroy-without-replacement
+```
+
+Use `--transpose-start` for the corresponding column neighborhoods without
+materializing a transposed input. Use `--allow-distance-14` only for an
+explicit arm whose normalized seed contains `-5` Gram entries.
+`--destroy-shard-count N --destroy-shard-index I` partitions destroy-mask
+ranks into deterministic disjoint shards for a shared parent generation.
+
+The historical row-oriented and transposed campaigns closed 159 recorded exact
+destroyed-line neighborhoods. The finalized v2 engine reduced a matched
+frontier size-eight neighborhood from about 81.2 seconds to 0.079474 seconds
+with byte-identical output. Its first optimized eight-arm frontier/portal wave
+then closed 53,800 recorded size-eight row or column neighborhoods, examined
+451,340,779,524 candidate words, and traversed 551,659,248 clique nodes, with
+no strict improvement. Seven deadline-interrupted neighborhoods are excluded;
+all eight final outputs independently verified at the frontier.
+
+The matched optimized size-nine wave closed another 16,902 recorded row or
+column neighborhoods, examined 141,842,649,090 candidate words, and traversed
+2,340,939,470 clique nodes. Eight interrupted iterations are excluded; all
+eight outputs verified at the frontier. Across size 8 and size 9, the engine
+completed 70,702 exact recorded neighborhoods with no strict win.
+
+One retained calibration closed a size-nine neighborhood in 0.613866 seconds
+and a size-ten neighborhood in 25.324854 seconds on the loaded development
+host. A size-eleven pool of 2,715 candidates triggered the checked dense-kernel
+memory boundary without truncation; it is not counted as a closure. These are
+single-neighborhood engineering measurements, not general timing guarantees.
+
+Current source SHA-256
+`ebe4731fe25bf26e6499824906fb7b066ae926f5fb980d7cc941f3f788149f61`
+stores exact Schur diagonals and compatibility edges only. A retained
+three-second size-eleven smoke crossed the former dense-memory boundary with
+2,715 candidates, 1,795,185 edges, and 80.73 MiB peak RSS. It was interrupted
+after 591,872 nodes with no win, so it validates the implementation boundary
+but is not an exact size-eleven closure.
+
+A completed iteration is exhaustive only for its recorded destroyed line set
+and selected distance alphabet. It says nothing about other subsets,
+orientations, alphabets, or global optimality. Implementation details,
+self-tests, and the narrower smoke result are in
+[`HAMMING_CLIQUE_LNS_20260729.md`](HAMMING_CLIQUE_LNS_20260729.md).
+
+## Publishing search visualization telemetry
+
+`tools/update_search_progress.py` reads `campaign.json`, every arm's
+`run.jsonl`, and its `summary.json`, then atomically writes a bounded
+schema-v2 snapshot. The site polls that snapshot every two seconds:
+
+```sh
+python3 tools/update_search_progress.py \
+  --run-root runs/gram-basin-hopper-coronal-pareto-20260729 \
+  --output public/search-progress.json
+
+python3 tools/update_search_progress.py \
+  --run-root runs/gram-basin-hopper-coronal-pareto-20260729 \
+  --output public/search-progress.json \
+  --watch --interval 2
+```
+
+The publisher uses source mtimes to distinguish active and stale arms and
+retains bounded best-score, archive, discovery, and epoch history. For an
+`exact_coronal_pareto` campaign it also sanitizes the exact row/column
+`(det(M), kappa)` records from every archive manifest, collapses duplicate
+orientations within an elite, and emits no source paths. The site plots those
+retained orientations in two dimensions with the exact Pareto front, seeds,
+and frontier marked. This is explicitly a retained-archive projection, not a
+map of global coverage. Live archive keys remain labeled “Gram sketches”
+because they are invariant descriptors, not confirmed canonical basins.
+GitHub Pages serves the checked-in snapshot; a local served checkout appears
+live only while the publisher is running.

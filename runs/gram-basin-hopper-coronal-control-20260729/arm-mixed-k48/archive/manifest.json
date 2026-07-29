@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "descriptor": "invariant-noncanonical-gram-sketch-v1",
+  "elites": [
+    {"rank": 0, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-mixed-k48/archive/elite-000-q662671875-s9a3e31db1ac2c783.txt", "core_quotient": 662671875, "absolute_determinant": "2779447296000000", "sketch_hash": "9a3e31db1ac2c783", "origin": "epoch_peak"},
+    {"rank": 1, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-mixed-k48/archive/elite-001-q638666000-sa46abf4584cbaec5.txt", "core_quotient": 638666000, "absolute_determinant": "2678759358464000", "sketch_hash": "a46abf4584cbaec5", "origin": "epoch_peak"},
+    {"rank": 2, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-mixed-k48/archive/elite-002-q629034375-s3512f19523788dc0.txt", "core_quotient": 629034375, "absolute_determinant": "2638361395200000", "sketch_hash": "3512f19523788dc0", "origin": "seed"},
+    {"rank": 3, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-mixed-k48/archive/elite-003-q622339200-s2811fe85df0ed0ef.txt", "core_quotient": 622339200, "absolute_determinant": "2610279795916800", "sketch_hash": "2811fe85df0ed0ef", "origin": "seed"},
+    {"rank": 4, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-mixed-k48/archive/elite-004-q621810000-s6689fe59cfd5ef4d.txt", "core_quotient": 621810000, "absolute_determinant": "2608060170240000", "sketch_hash": "6689fe59cfd5ef4d", "origin": "epoch_peak"},
+    {"rank": 5, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-mixed-k48/archive/elite-005-q621796875-sbdda292367edeb89.txt", "core_quotient": 621796875, "absolute_determinant": "2608005120000000", "sketch_hash": "bdda292367edeb89", "origin": "epoch_peak"},
+    {"rank": 6, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-mixed-k48/archive/elite-006-q619171875-sbf764e63c32086a1.txt", "core_quotient": 619171875, "absolute_determinant": "2596995072000000", "sketch_hash": "bf764e63c32086a1", "origin": "epoch_peak"},
+    {"rank": 7, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-mixed-k48/archive/elite-007-q613382455-s1f681f5eff586511.txt", "core_quotient": 613382455, "absolute_determinant": "2572712484536320", "sketch_hash": "1f681f5eff586511", "origin": "epoch_peak"},
+    {"rank": 8, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-mixed-k48/archive/elite-008-q608286840-sf77b619e9e59eb53.txt", "core_quotient": 608286840, "absolute_determinant": "2551339926159360", "sketch_hash": "f77b619e9e59eb53", "origin": "epoch_peak"},
+    {"rank": 9, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-mixed-k48/archive/elite-009-q607426110-sdeb98ad89830ec8f.txt", "core_quotient": 607426110, "absolute_determinant": "2547729762877440", "sketch_hash": "deb98ad89830ec8f", "origin": "epoch_peak"},
+    {"rank": 10, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-mixed-k48/archive/elite-010-q605052000-s097baddf154e78f3.txt", "core_quotient": 605052000, "absolute_determinant": "2537772023808000", "sketch_hash": "097baddf154e78f3", "origin": "epoch_peak"},
+    {"rank": 11, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-mixed-k48/archive/elite-011-q605052000-s77cc8e996db928ba.txt", "core_quotient": 605052000, "absolute_determinant": "2537772023808000", "sketch_hash": "77cc8e996db928ba", "origin": "epoch_peak"},
+    {"rank": 12, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-mixed-k48/archive/elite-012-q605052000-sddfafbc3ecb61fa1.txt", "core_quotient": 605052000, "absolute_determinant": "2537772023808000", "sketch_hash": "ddfafbc3ecb61fa1", "origin": "epoch_peak"},
+    {"rank": 13, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-mixed-k48/archive/elite-013-q602410272-s73e6a035319decf9.txt", "core_quotient": 602410272, "absolute_determinant": "2526691813490688", "sketch_hash": "73e6a035319decf9", "origin": "epoch_peak"},
+    {"rank": 14, "path": "runs/gram-basin-hopper-coronal-control-20260729/arm-mixed-k48/archive/elite-014-q602084030-sdfcec77f386be2b4.txt", "core_quotient": 602084030, "absolute_determinant": "2525323455365120", "sketch_hash": "dfcec77f386be2b4", "origin": "epoch_peak"}
+  ]
+}

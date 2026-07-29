@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "campaign_id": "hamming-clique-sparse-t11-smoke-20260729",
+  "label": "Exact sparse-kernel size-eleven boundary smoke",
+  "purpose": "Confirm that edge-only exact Schur storage crosses the prior dense-kernel memory refusal on the pinned frontier fixture.",
+  "claim_boundary": "This is a deadline-interrupted implementation and memory smoke. It does not complete or close the recorded size-eleven neighborhood.",
+  "known_absolute_frontier": "2779447296000000",
+  "engine_source_sha256": "ebe4731fe25bf26e6499824906fb7b066ae926f5fb980d7cc941f3f788149f61",
+  "algorithm": "exact-hamming-code-clique-lns-v2",
+  "start": "references/orrick-et-al-2003/matrix.txt",
+  "allowed_distances": [10, 12],
+  "arm": {
+    "id": "arm-frontier-row",
+    "random_seed": 42403,
+    "seconds": 3,
+    "destroy_size": 11,
+    "max_iterations": 1
+  }
+}
