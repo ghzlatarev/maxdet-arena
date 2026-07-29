@@ -112,3 +112,27 @@ that its table does not use the best known bound for orders at most 59.
   `2,391,226,070,335,488`, far below the kicked exact-pair basin.
 - Sign flips and row/column permutations create large duplicate families. Do
   not count them as progress.
+
+## Frontier-portal campaign (2026-07-29)
+
+- Polar/Douglas--Rachford projection with the Ehlich target spectrum found two
+  frontier H/HT classes absent from the frozen local corpus. The explicit
+  local union grew from 8 to 10 H/HT classes (14 H classes) but remained one
+  normalized row-Gram class. This is local-corpus novelty only.
+- The substantive projection run exact-scored 224,740 distinct sign matrices,
+  retained 155 search-discovered frontier ties (163 including inputs), and
+  found no strict win. Flat-spectrum guidance found no new local class; the
+  Ehlich geometry was the productive representation.
+- Exact entry-flip radius at most three is closed around six previously
+  uncovered portals and both new portals: 197,384,712 center/subset
+  assignments total, with zero frontier ties and zero strict wins.
+- Two exact integer functionals reject 14 of the 20 fixed-Gram small-shell
+  triples. The six surviving orientations are the observed `(0,2,4)` orbit;
+  this theorem does not classify all factorizations within that orbit.
+- Exact pairwise alignment under `Aut(G)` gives Hamming distances
+  `{32,46,47}` among the ten local H/HT portals. Four structurally different
+  distance-32 affine connector cubes were exhaustively enumerated
+  (`4 * 2^32 = 17,179,869,184` assignments); each contained only its two
+  frontier endpoints, with no interior tie or strict win. Direct portal-to-
+  portal interpolation is therefore a valley in these pinned geometries, not
+  an observed above-frontier ridge.

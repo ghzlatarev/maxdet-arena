@@ -19,9 +19,35 @@ type CampaignExtension = {
   evidence: string;
 };
 
+type PortalCampaign = {
+  method: string;
+  local_h_ht_classes_before: number;
+  new_local_h_ht_classes: number;
+  local_h_ht_classes_after: number;
+  substantive_frontier_ties: number;
+  strict_wins: number;
+  exact_radius_3_audits: {
+    id: string;
+    label: string;
+    assignments: string;
+    frontier_ties: number;
+    strict_wins: number;
+    status: string;
+  }[];
+  exact_connector_cubes: {
+    count: number;
+    assignments: string;
+    frontier_ties: number;
+    strict_wins: number;
+    result: string;
+  };
+  claim_boundary: string;
+};
+
 type Snapshot = {
   updated: string;
   status: string;
+  portal_campaign: PortalCampaign;
   exact_audits: Audit[];
   radius_4_screen: Audit;
   h24_seed_sweep: {
@@ -127,17 +153,12 @@ function formatDate(value: string): string {
 
 export function CampaignSnapshot({ snapshot }: CampaignSnapshotProps) {
   const audits = snapshot.exact_audits;
+  const portal = snapshot.portal_campaign;
   const neutral = snapshot.neutral_frontier;
   const qubo = snapshot.qubo_trust_region;
   const cubes = snapshot.fast_principal_cube;
   const diverse = snapshot.diversified_search;
   const gram = snapshot.gram_campaign_snapshot;
-  const status =
-    snapshot.status === "frontier-tie"
-      ? "Frontier tie — no strict win"
-      : snapshot.status === "no-strict-win"
-        ? "No strict win"
-        : snapshot.status;
 
   return (
     <section className="campaign-section" aria-labelledby="campaign-title">
@@ -150,11 +171,124 @@ export function CampaignSnapshot({ snapshot }: CampaignSnapshotProps) {
             <h2 id="campaign-title">New matrices. Same frontier.</h2>
           </div>
           <p>
-            <strong>{status}.</strong> The earlier neutral order-23 sweep
-            contains {neutral.verified_raw_matrices} raw frontier matrices;{" "}
-            {neutral.new_raw_matrices} are new to that sweep.
+            <strong>No strict score improvement.</strong> The latest portal
+            campaign returned{" "}
+            {formatInteger(portal.substantive_frontier_ties)} exact frontier
+            ties and expanded the frozen local H/HT atlas from{" "}
+            {portal.local_h_ht_classes_before} to{" "}
+            {portal.local_h_ht_classes_after} classes.
           </p>
         </div>
+
+        <section
+          className="portal-campaign"
+          aria-labelledby="portal-campaign-title"
+        >
+          <div className="portal-campaign-copy">
+            <p className="portal-campaign-kicker">{portal.method}</p>
+            <h3 id="portal-campaign-title">Two new portals. Same frontier.</h3>
+            <p>
+              The substantive run found{" "}
+              <strong>
+                {formatInteger(portal.substantive_frontier_ties)} exact ties
+              </strong>
+              , but no determinant above the target.
+            </p>
+            <dl className="portal-run-metrics">
+              <div>
+                <dt>New local classes</dt>
+                <dd>+{portal.new_local_h_ht_classes}</dd>
+              </div>
+              <div>
+                <dt>Frontier ties</dt>
+                <dd>{formatInteger(portal.substantive_frontier_ties)}</dd>
+              </div>
+              <div>
+                <dt>Strict wins</dt>
+                <dd>{portal.strict_wins}</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div className="portal-campaign-visual">
+            <div
+              className="portal-atlas-transition"
+              role="img"
+              aria-label={`Frozen local H/HT frontier atlas grew from ${portal.local_h_ht_classes_before} to ${portal.local_h_ht_classes_after} classes`}
+            >
+              <div className="portal-atlas-state">
+                <span>Frozen local atlas</span>
+                <strong>{portal.local_h_ht_classes_before}</strong>
+                <div className="portal-atlas-nodes" aria-hidden="true">
+                  {Array.from(
+                    { length: portal.local_h_ht_classes_before },
+                    (_, index) => (
+                      <i key={`before-${index}`} />
+                    ),
+                  )}
+                </div>
+              </div>
+              <div className="portal-atlas-route" aria-hidden="true">
+                <span>+{portal.new_local_h_ht_classes}</span>
+              </div>
+              <div className="portal-atlas-state portal-atlas-state-after">
+                <span>Local atlas now</span>
+                <strong>{portal.local_h_ht_classes_after}</strong>
+                <div className="portal-atlas-nodes" aria-hidden="true">
+                  {Array.from(
+                    { length: portal.local_h_ht_classes_after },
+                    (_, index) => (
+                      <i
+                        className={
+                          index >= portal.local_h_ht_classes_before
+                            ? "portal-atlas-node-new"
+                            : undefined
+                        }
+                        key={`after-${index}`}
+                      />
+                    ),
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="portal-radius-audits"
+              aria-label="Exact radius-three portal closures"
+            >
+              {portal.exact_radius_3_audits.map((audit) => (
+                <article key={audit.id}>
+                  <div className="portal-radius-glyph" aria-hidden="true">
+                    <i />
+                  </div>
+                  <div>
+                    <span>{audit.label} · exact radius ≤ 3</span>
+                    <strong>{formatInteger(audit.assignments)}</strong>
+                    <small>
+                      assignments · {audit.frontier_ties} ties ·{" "}
+                      {audit.strict_wins} wins · {audit.status}
+                    </small>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="portal-connector-summary">
+              <span>Exact portal connectors</span>
+              <strong>
+                {portal.exact_connector_cubes.count} × 2<sup>32</sup>
+              </strong>
+              <small>
+                {formatInteger(portal.exact_connector_cubes.assignments)}{" "}
+                assignments · {portal.exact_connector_cubes.frontier_ties}{" "}
+                endpoint ties · {portal.exact_connector_cubes.strict_wins} wins
+              </small>
+              <em>{portal.exact_connector_cubes.result}</em>
+            </div>
+
+            <p className="portal-claim-boundary">{portal.claim_boundary}</p>
+          </div>
+        </section>
 
         <div className="campaign-audits" aria-label="Completed exact audits">
           {audits.map((audit) => (

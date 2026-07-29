@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "challenge_id": "maxdet-23-v1",
+  "authority": {
+    "path": "runs/direct-search/frontier-factor-class-expansion-20260728/final-h-equivalence-audit.json",
+    "sha256": "1fdb0d9e45d573bd4616a99ca5f09ff3afad0c204843cf9eb2c3a8f5a121b372",
+    "ht_class_count": 8
+  },
+  "previous_radius3_coverage": [
+    {
+      "ht_certificate_sha256": "4072ead420f0688da998d030955fecc419fc96e0494c6771fe6a92f74615305f",
+      "representative_raw_sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+      "representative_path": "runs/direct-search/audits/frontier-class14-late-audit3-29713.matrix.txt",
+      "completion_log": {
+        "path": "runs/direct-search/audits/frontier-class14-late-audit3-29713.jsonl",
+        "sha256": "682824b8d103da6703a57b7982bad384ece86fb6f32bdebbfb43acd38f6f231e",
+        "terminal_event": "audit_finished",
+        "terminal_count": 24673089,
+        "strict_improvements": 0
+      }
+    },
+    {
+      "ht_certificate_sha256": "db2cddf4b8f12da99a32b1563689ad693b89d0a9ae343a4aedde56361fdc5a81",
+      "representative_raw_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+      "representative_path": "references/orrick-et-al-2003/matrix.txt",
+      "completion_evidence": [
+        {
+          "path": "research/DOGFOOD.md",
+          "sha256": "c47ab1fd7537d2d45517832564f3ae231edcfaa519088a7feb8c7bb0453a4f11"
+        },
+        {
+          "path": "memory/approaches.md",
+          "sha256": "96da70e8d00c2791d2088340cb41c4fbb7c051a2dff2c94c854f696134283813"
+        },
+        {
+          "path": "HANDOFF.md",
+          "sha256": "79801fa6754dc4fee2d47f91b98753d01bf24cacfd3c428c7dbf9a931ab94d3d"
+        }
+      ],
+      "documented_completion_count": 24673089,
+      "documented_strict_improvements": 0,
+      "raw_completion_log_retained_in_repository": false
+    }
+  ],
+  "new_coverage": {
+    "manifest": {
+      "path": "runs/direct-search/frontier-portal-radius3-20260729/manifest.tsv",
+      "sha256": "6327d0c918a42180e419683c8542e75633f77337116942d14c0717a77a202a8c"
+    },
+    "ht_certificates": [
+      "9035bdf2a85b8a2a600a76c6d55af36f627327694e904e7b483e88993716c91b",
+      "b584c923ea12af6634bb5681f1eb903196e5a7cedadf5d1ea321bc63613c986e",
+      "b64c33090c9aac4dc7386213917cec66ac28d2da9685319b585067e95d0d63f6",
+      "df0b940533f84c9d61ec8df73000b4fe3a646f073a6fd32f3826d72331ebedc0",
+      "eb138a06ec638735c34bdacf77bd1cdd869c5d2fbc3450be25d63af0cde1a134",
+      "ff1b5d3735bd5735fd4648ba24627fa997045ce004d6ea08a9a5ff7567919490"
+    ],
+    "report": {
+      "path": "runs/direct-search/frontier-portal-radius3-20260729/report.json",
+      "sha256": "395bc4db24b662c83e448dcc7fee80a2d9d6964f9b84876a5350679b2640c041",
+      "complete": true,
+      "exact_candidate_count": 148038534,
+      "frontier_ties": 0,
+      "strict_improvements": 0
+    }
+  },
+  "validation": {
+    "strict_release_build": {
+      "source_sha256": "35c3d6eaec65a2b79a5875b22306ea275a8dda0adcf674ee546c6c9ae8322f18",
+      "binary_sha256": "0b1a48faae3747cdb08881f90add1bd9ac89b573720ba83d98e3bdea546fad31",
+      "flags": "-std=c++20 -O3 -DNDEBUG -Wall -Wextra -Werror -pedantic -pthread"
+    },
+    "asan_ubsan_full_replay": {
+      "report_path": "runs/direct-search/frontier-portal-radius3-20260729/sanitizer-full-report.json",
+      "report_sha256": "9310e360ac1e1f6d08de450569543d89172d3784eb803cc35bc0a9c8bb4198ad",
+      "binary_sha256": "2134bae0a463b8789fa6d4b0c5bd785e36618f7cb644fb6b8a3590ebf1fca038",
+      "flags": "-std=c++20 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer -Wall -Wextra -Werror -pedantic -pthread",
+      "statistics_match_release": true
+    },
+    "asan_ubsan_differential": {
+      "report_path": "runs/direct-search/frontier-portal-radius3-20260729/sanitizer-differential-report-v2.json",
+      "report_sha256": "4e02878f42f06c9366345583c2736575f843b59c260f850787d0288ecd523849"
+    },
+    "bareiss_differential_samples_per_build": 7782,
+    "reported_radius_best_candidates_bareiss_checked": 18,
+    "all_six_bases_arena_verified": true,
+    "fresh_output_refusal_test": true,
+    "non_directory_ties_output_refusal_test": true
+  },
+  "claim_boundary": "The new exact result covers only entry-flip subsets of weights one, two, or three around the six pinned representatives. It found no additional frontier matrix in that neighborhood. The historical reference audit is documented in repository research files but its original raw completion log is not retained."
+}

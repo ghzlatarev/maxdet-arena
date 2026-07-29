@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "challenge_id": "maxdet-23-v1",
+  "portal": {
+    "ht_certificate_sha256": "1e4b14334f15ec751275a8383b5b7e8aa8270c951e3ff5a3d342c8fe203d9efe",
+    "matrix_path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6.matrix.txt",
+    "matrix_sha256": "56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6",
+    "arena_receipt_path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6.receipt.json",
+    "arena_receipt_file_sha256": "29ca4a003341a74c136518a51b4efc4106a45064f9bd4fd771940ad25fb5508d",
+    "arena_receipt_sha256": "4482881c3779f22f74fc18b535967e9e3920e7177732064dc31ff1343968d6ab",
+    "arena_verified": true,
+    "absolute_determinant": "2779447296000000"
+  },
+  "authority": {
+    "path": "runs/direct-search/polar-dr-portals-20260729/baseline27-plus-two-new-independent-audit.json",
+    "sha256": "adebf3cdead9d251b5994ce185561937748251dfec03a82c17eec991526cd617",
+    "h_class_count": 13,
+    "ht_class_count": 10,
+    "gram_class_count": 1
+  },
+  "audit": {
+    "manifest_path": "runs/direct-search/frontier-portal-radius3-1e4b-20260729/manifest.tsv",
+    "manifest_sha256": "5961eea678df95a25836b44fd2d14633aa0fde6523fb30642bc5feeb5ad14a3e",
+    "report_path": "runs/direct-search/frontier-portal-radius3-1e4b-20260729/report.json",
+    "report_sha256": "3a7d090675558caf513a4e852c0c29ede0df5827888a00aa17312dd2999ab2bd",
+    "complete": true,
+    "radius1_candidates": 529,
+    "radius2_candidates": 139656,
+    "radius3_candidates": 24532904,
+    "total_candidates": 24673089,
+    "frontier_ties": 0,
+    "strict_improvements": 0,
+    "best_by_exact_radius": {
+      "1": "2709848064000000",
+      "2": "2669740032000000",
+      "3": "2660499456000000"
+    }
+  },
+  "validation": {
+    "source_sha256": "313a58377ed07a9e0b3ed2353040b79d1105311c5900ed5f94d86c70e9e50c34",
+    "release_binary_sha256": "4364129cb3b8c041118b23d7a26138874146b2ced460cc93d9df445e386e27d6",
+    "release_flags": "-std=c++20 -O3 -DNDEBUG -Wall -Wextra -Werror -pedantic -pthread",
+    "asan_ubsan_binary_sha256": "eee2906cbfedf7dff512f5ec596d88d9ddca240ac6ddba07b2da5a789a241cc6",
+    "asan_ubsan_flags": "-std=c++20 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer -Wall -Wextra -Werror -pedantic -pthread",
+    "asan_ubsan_full_report_path": "runs/direct-search/frontier-portal-radius3-1e4b-20260729/sanitizer-full-report.json",
+    "asan_ubsan_full_report_sha256": "4d6e7c25fab5d8e561067458473781a6364923e1c9e6c60d2488f940f0db4c96",
+    "asan_ubsan_statistics_match_release": true,
+    "bareiss_differential_samples_per_build": 1297,
+    "reported_best_candidates_bareiss_checked": 3,
+    "original_six_class_regression_report_path": "runs/direct-search/frontier-portal-radius3-20260729/engine-v2-six-regression-report.json",
+    "original_six_class_regression_report_sha256": "422b2061363a5f9f92c87a74c610bc5dd5a5f9a37652df49728b1686b4833c36",
+    "original_six_class_statistics_match_v1": true,
+    "original_six_class_claim_fields_preserved": true
+  },
+  "claim_boundary": "This exact result covers only all entry-flip subsets of weights one, two, or three around the pinned 1e4b portal. It found no additional frontier matrix or strict improvement in that neighborhood."
+}

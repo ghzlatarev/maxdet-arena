@@ -1,0 +1,39 @@
+{
+  "artifacts": [
+    {
+      "path": "runs/direct-search/polar-dr-new-portals-aligned-20260729/alignment-report.json",
+      "sha256": "301f7891bdd5fc71453471d59922ae455eea007924a2a90ced46341586470f68"
+    },
+    {
+      "path": "runs/direct-search/polar-dr-new-portals-aligned-20260729/alignment-report.json.sha256",
+      "sha256": "35ef3369567938fb497cb183d27c8ea1dfb6d2710b81d93ea07a133fca46ffdd"
+    },
+    {
+      "path": "runs/direct-search/polar-dr-new-portals-aligned-20260729/reproduce.py",
+      "sha256": "4158408e2c1c7d58f9a560611ba2e928ee1487a8c7fbfc52f5310b260af25f24"
+    },
+    {
+      "path": "runs/direct-search/polar-dr-new-portals-aligned-20260729/ht-de7642266b69.matrix.txt",
+      "sha256": "26a3d69fd3233bea6df3a89839bcb507711005ab006bb41190a22e3739f5c710"
+    },
+    {
+      "path": "runs/direct-search/polar-dr-new-portals-aligned-20260729/ht-de7642266b69.receipt.json",
+      "sha256": "5d7bf7b4250b96c2360b1a24fe5821e384fc7dd465837c144e7c846522e52c8c"
+    },
+    {
+      "path": "runs/direct-search/polar-dr-new-portals-aligned-20260729/ht-1e4b14334f15.matrix.txt",
+      "sha256": "fcb7de086533ff6c3121da70398ebcf9ad5005dbc123d029981c83b85425e51d"
+    },
+    {
+      "path": "runs/direct-search/polar-dr-new-portals-aligned-20260729/ht-1e4b14334f15.receipt.json",
+      "sha256": "f2593ddfe3a9c78b9da9f9be79fc9942f5bf62b395a52d089a1faf42638b0fea"
+    }
+  ],
+  "command": [
+    "/private/tmp/maxdet-h-audit-20260729/bin/python",
+    "runs/direct-search/polar-dr-new-portals-aligned-20260729/reproduce.py"
+  ],
+  "complete": true,
+  "git_commit": "bb8da929be298393eabd4551ef6394a70cf9192b",
+  "schema_version": 1
+}

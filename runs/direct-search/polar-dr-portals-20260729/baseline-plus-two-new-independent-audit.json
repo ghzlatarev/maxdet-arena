@@ -1,0 +1,735 @@
+{
+  "duplicate_file_count": 14,
+  "duplicates": [
+    {
+      "duplicate": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-335095b653cb74ad9d120e6025a8dc1bdab978ce6aff305d9c45bcaa1d5d15e6.matrix.txt",
+      "first": "runs/direct-search/gram-factors/seed-23003/solution-335095b653cb74ad9d120e6025a8dc1bdab978ce6aff305d9c45bcaa1d5d15e6.matrix.txt",
+      "matrix_sha256": "335095b653cb74ad9d120e6025a8dc1bdab978ce6aff305d9c45bcaa1d5d15e6"
+    },
+    {
+      "duplicate": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-4f71f0e1eedb08d2479e643f3bc9af068663817b1dbc37fa18a4fd968af1948f.matrix.txt",
+      "first": "runs/direct-search/gram-factors/seed-23003/solution-4f71f0e1eedb08d2479e643f3bc9af068663817b1dbc37fa18a4fd968af1948f.matrix.txt",
+      "matrix_sha256": "4f71f0e1eedb08d2479e643f3bc9af068663817b1dbc37fa18a4fd968af1948f"
+    },
+    {
+      "duplicate": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-51b69246db728f3f19871540458614a75c79683478897a1d347705e192af7d07.matrix.txt",
+      "first": "runs/direct-search/gram-factors/seed-23003/solution-51b69246db728f3f19871540458614a75c79683478897a1d347705e192af7d07.matrix.txt",
+      "matrix_sha256": "51b69246db728f3f19871540458614a75c79683478897a1d347705e192af7d07"
+    },
+    {
+      "duplicate": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-5a453099e2b2254f1fc556433b22240fe3be365b95f4bd40d521ea80ba7527fe.matrix.txt",
+      "first": "runs/direct-search/gram-factors/seed-23003/solution-5a453099e2b2254f1fc556433b22240fe3be365b95f4bd40d521ea80ba7527fe.matrix.txt",
+      "matrix_sha256": "5a453099e2b2254f1fc556433b22240fe3be365b95f4bd40d521ea80ba7527fe"
+    },
+    {
+      "duplicate": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-6419e16fb852d21eb82fb5cfd6298058df4badde18e6d5ca2f4515d16af8e10b.matrix.txt",
+      "first": "runs/direct-search/gram-factors/seed-23003/solution-6419e16fb852d21eb82fb5cfd6298058df4badde18e6d5ca2f4515d16af8e10b.matrix.txt",
+      "matrix_sha256": "6419e16fb852d21eb82fb5cfd6298058df4badde18e6d5ca2f4515d16af8e10b"
+    },
+    {
+      "duplicate": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-9ddfedbd767a2da0e3bd6214f6f47f348e78299dd54eaa97f5bdfb39c8457516.matrix.txt",
+      "first": "runs/direct-search/gram-factors/seed-23003/solution-9ddfedbd767a2da0e3bd6214f6f47f348e78299dd54eaa97f5bdfb39c8457516.matrix.txt",
+      "matrix_sha256": "9ddfedbd767a2da0e3bd6214f6f47f348e78299dd54eaa97f5bdfb39c8457516"
+    },
+    {
+      "duplicate": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-e96edd75d01ad6f8caa8144a681a73106c2d87835ac2bde77876d000f1384fa9.matrix.txt",
+      "first": "runs/direct-search/gram-factors/seed-23003/solution-e96edd75d01ad6f8caa8144a681a73106c2d87835ac2bde77876d000f1384fa9.matrix.txt",
+      "matrix_sha256": "e96edd75d01ad6f8caa8144a681a73106c2d87835ac2bde77876d000f1384fa9"
+    },
+    {
+      "duplicate": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-1f52dfc4fe99f7a654fedec46d65f35626ee5f59ecf230a2e1e7f475cf2f7b1f.matrix.txt",
+      "first": "runs/direct-search/gram-factors/seed-23007-historical/solution-1f52dfc4fe99f7a654fedec46d65f35626ee5f59ecf230a2e1e7f475cf2f7b1f.matrix.txt",
+      "matrix_sha256": "1f52dfc4fe99f7a654fedec46d65f35626ee5f59ecf230a2e1e7f475cf2f7b1f"
+    },
+    {
+      "duplicate": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-316f578e8de1ca632cd126d5c6821cc2ed89fdbaef49de1138fee573ce27f6f7.matrix.txt",
+      "first": "runs/direct-search/gram-factors/seed-23007-historical/solution-316f578e8de1ca632cd126d5c6821cc2ed89fdbaef49de1138fee573ce27f6f7.matrix.txt",
+      "matrix_sha256": "316f578e8de1ca632cd126d5c6821cc2ed89fdbaef49de1138fee573ce27f6f7"
+    },
+    {
+      "duplicate": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-5dfb7aa365f6e222f31eded222b4a7c7c5a50eb840d5237b2bc0016f6497980a.matrix.txt",
+      "first": "runs/direct-search/gram-factors/seed-23007-historical/solution-5dfb7aa365f6e222f31eded222b4a7c7c5a50eb840d5237b2bc0016f6497980a.matrix.txt",
+      "matrix_sha256": "5dfb7aa365f6e222f31eded222b4a7c7c5a50eb840d5237b2bc0016f6497980a"
+    },
+    {
+      "duplicate": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-be313d0d2fc9d103e4e2523eebf4cda17b7faf289cb98335741652eddd357883.matrix.txt",
+      "first": "runs/direct-search/gram-factors/seed-23007-historical/solution-be313d0d2fc9d103e4e2523eebf4cda17b7faf289cb98335741652eddd357883.matrix.txt",
+      "matrix_sha256": "be313d0d2fc9d103e4e2523eebf4cda17b7faf289cb98335741652eddd357883"
+    },
+    {
+      "duplicate": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-c1336fd867ca5337b33be8bdbc136145ab74faa6d48aa0e3ca48874ae593dc85.matrix.txt",
+      "first": "runs/direct-search/gram-factors/seed-23007-historical/solution-c1336fd867ca5337b33be8bdbc136145ab74faa6d48aa0e3ca48874ae593dc85.matrix.txt",
+      "matrix_sha256": "c1336fd867ca5337b33be8bdbc136145ab74faa6d48aa0e3ca48874ae593dc85"
+    },
+    {
+      "duplicate": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-e3fb90382dc483cb56a603ae0219d76c5ed9a10a1211992dac8ee10def7ac18b.matrix.txt",
+      "first": "runs/direct-search/gram-factors/seed-23007-historical/solution-e3fb90382dc483cb56a603ae0219d76c5ed9a10a1211992dac8ee10def7ac18b.matrix.txt",
+      "matrix_sha256": "e3fb90382dc483cb56a603ae0219d76c5ed9a10a1211992dac8ee10def7ac18b"
+    },
+    {
+      "duplicate": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-fd7016cfbdf68cfc6117591d4ca9d590a162e78ac446e4408f8d550deeb9fff1.matrix.txt",
+      "first": "runs/direct-search/gram-factors/seed-23007-historical/solution-fd7016cfbdf68cfc6117591d4ca9d590a162e78ac446e4408f8d550deeb9fff1.matrix.txt",
+      "matrix_sha256": "fd7016cfbdf68cfc6117591d4ca9d590a162e78ac446e4408f8d550deeb9fff1"
+    }
+  ],
+  "expected_absolute_determinant": 2779447296000000,
+  "gram_class_count": 1,
+  "gram_classes": [
+    {
+      "automorphism_group_order": 442368,
+      "certificate_sha256": "e641e83822fae412ec3e1e4d8aa355f015d204f10fa98adde97c5da508fbf554",
+      "count": 43,
+      "degree_multiset": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6
+      ],
+      "edge_count": 45,
+      "members": [
+        {
+          "matrix_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "path": "references/orrick-et-al-2003/matrix.txt"
+        },
+        {
+          "matrix_sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "path": "runs/direct-search/best-below/frontier-class14-late-28751.matrix.txt"
+        },
+        {
+          "matrix_sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "path": "runs/direct-search/best-below/frontier-class51-28752.matrix.txt"
+        },
+        {
+          "matrix_sha256": "03c41bd2766c3b7220ccc2ad2c06156e47d5d39d2d559f19ae2c8d75ad320a95",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-03c41bd2766c3b7220ccc2ad2c06156e47d5d39d2d559f19ae2c8d75ad320a95.matrix.txt"
+        },
+        {
+          "matrix_sha256": "335095b653cb74ad9d120e6025a8dc1bdab978ce6aff305d9c45bcaa1d5d15e6",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-335095b653cb74ad9d120e6025a8dc1bdab978ce6aff305d9c45bcaa1d5d15e6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "4f71f0e1eedb08d2479e643f3bc9af068663817b1dbc37fa18a4fd968af1948f",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-4f71f0e1eedb08d2479e643f3bc9af068663817b1dbc37fa18a4fd968af1948f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "51b69246db728f3f19871540458614a75c79683478897a1d347705e192af7d07",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-51b69246db728f3f19871540458614a75c79683478897a1d347705e192af7d07.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5a453099e2b2254f1fc556433b22240fe3be365b95f4bd40d521ea80ba7527fe",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-5a453099e2b2254f1fc556433b22240fe3be365b95f4bd40d521ea80ba7527fe.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6419e16fb852d21eb82fb5cfd6298058df4badde18e6d5ca2f4515d16af8e10b",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-6419e16fb852d21eb82fb5cfd6298058df4badde18e6d5ca2f4515d16af8e10b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "717d9e16a4741e2a07ffaba6c66658715378aae1b1104a343ce8d44341aede21",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-717d9e16a4741e2a07ffaba6c66658715378aae1b1104a343ce8d44341aede21.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9ddfedbd767a2da0e3bd6214f6f47f348e78299dd54eaa97f5bdfb39c8457516",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-9ddfedbd767a2da0e3bd6214f6f47f348e78299dd54eaa97f5bdfb39c8457516.matrix.txt"
+        },
+        {
+          "matrix_sha256": "af93e101b9009ae4c89da2805bce7852aa557a0f54c98e092a48d3ef04ff09a6",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-af93e101b9009ae4c89da2805bce7852aa557a0f54c98e092a48d3ef04ff09a6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "e96edd75d01ad6f8caa8144a681a73106c2d87835ac2bde77876d000f1384fa9",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-e96edd75d01ad6f8caa8144a681a73106c2d87835ac2bde77876d000f1384fa9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1f52dfc4fe99f7a654fedec46d65f35626ee5f59ecf230a2e1e7f475cf2f7b1f",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-1f52dfc4fe99f7a654fedec46d65f35626ee5f59ecf230a2e1e7f475cf2f7b1f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "316f578e8de1ca632cd126d5c6821cc2ed89fdbaef49de1138fee573ce27f6f7",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-316f578e8de1ca632cd126d5c6821cc2ed89fdbaef49de1138fee573ce27f6f7.matrix.txt"
+        },
+        {
+          "matrix_sha256": "47a610904085b54bca1c5641b8ba67539366aaa29c7a25b23bae0f48c5fdc131",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-47a610904085b54bca1c5641b8ba67539366aaa29c7a25b23bae0f48c5fdc131.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5dfb7aa365f6e222f31eded222b4a7c7c5a50eb840d5237b2bc0016f6497980a",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-5dfb7aa365f6e222f31eded222b4a7c7c5a50eb840d5237b2bc0016f6497980a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "86dd9d870125b06a4b86e825089730f273a6bd4480cb3f17710a6e08968e356f",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-86dd9d870125b06a4b86e825089730f273a6bd4480cb3f17710a6e08968e356f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "be313d0d2fc9d103e4e2523eebf4cda17b7faf289cb98335741652eddd357883",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-be313d0d2fc9d103e4e2523eebf4cda17b7faf289cb98335741652eddd357883.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c1336fd867ca5337b33be8bdbc136145ab74faa6d48aa0e3ca48874ae593dc85",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-c1336fd867ca5337b33be8bdbc136145ab74faa6d48aa0e3ca48874ae593dc85.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d9ffbe7575bb3e46226c17b2d4c51403a716f9fce4ac38dc9822d972d6daccd9",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-d9ffbe7575bb3e46226c17b2d4c51403a716f9fce4ac38dc9822d972d6daccd9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "e3fb90382dc483cb56a603ae0219d76c5ed9a10a1211992dac8ee10def7ac18b",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-e3fb90382dc483cb56a603ae0219d76c5ed9a10a1211992dac8ee10def7ac18b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fd7016cfbdf68cfc6117591d4ca9d590a162e78ac446e4408f8d550deeb9fff1",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-fd7016cfbdf68cfc6117591d4ca9d590a162e78ac446e4408f8d550deeb9fff1.matrix.txt"
+        },
+        {
+          "matrix_sha256": "28568cfda725153a8b5a192a334a525cf9d5cf448320c186ee6afdda5d4b0659",
+          "path": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-28568cfda725153a8b5a192a334a525cf9d5cf448320c186ee6afdda5d4b0659.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3b33149c7fbd8d0f4ed62cbfb34f47aa7574371baef17d4be19c2155debe9e30",
+          "path": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-3b33149c7fbd8d0f4ed62cbfb34f47aa7574371baef17d4be19c2155debe9e30.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9bca96f39aa91114fdd4e02aff06e706b3713d5342dfe0b037a05752cc5ff71a",
+          "path": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-9bca96f39aa91114fdd4e02aff06e706b3713d5342dfe0b037a05752cc5ff71a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1ee5559276c6173a978f0c679c4e23e9a548b661315b5f62563e84e2d23f7627",
+          "path": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-1ee5559276c6173a978f0c679c4e23e9a548b661315b5f62563e84e2d23f7627.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5f2baf2110ef9f44ea98fd2a3eafc69d3d7b3b55b01ba034f8c16718c15e92a2",
+          "path": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-5f2baf2110ef9f44ea98fd2a3eafc69d3d7b3b55b01ba034f8c16718c15e92a2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d66631a41c852cd9bd0fb9fab972bada72e80812d3549d9310aa68821b8793c4",
+          "path": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-d66631a41c852cd9bd0fb9fab972bada72e80812d3549d9310aa68821b8793c4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a3ef7c0836fae230f7476ed7f97f15142a08a3b1760124310e82f7b715bff1f1",
+          "path": "runs/direct-search/gram-shell-milp-reference-29761.matrix.txt"
+        },
+        {
+          "matrix_sha256": "00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1",
+          "path": "runs/direct-search/gram-shell-milp-reference-seed29762.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d7599504a3b21239f62c9b6c9678f2b33e2b676f5ea437e778550954f270a1ea",
+          "path": "runs/direct-search/gram-shell-milp-reference-seed29768.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d161a22e1e13e45c4cddb4794b9c8b2140bac9a6a611a945139f666dd27e0e85",
+          "path": "runs/direct-search/gram-shell-milp-reference-seed29773.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3fa9fd308dc5634bc6d8ab02b90b995cfb60f7c2f84f1a26acb19fc5a0e77df1",
+          "path": "runs/direct-search/h24-deletion-remaining-classes/elites/class-9-r10-c24.matrix.txt"
+        },
+        {
+          "matrix_sha256": "eb29a4613abfeebf2f8a4922b4cc60bbde4bfc5cf54aaf4567dc863721625691",
+          "path": "runs/direct-search/hamming-sphere-long/class9-r32-29902/tie.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6e5f51f4cc7055b9ea32f8987a26e1c8d70c0fb76c25743f324215b9f9d4a410",
+          "path": "runs/direct-search/hamming-sphere-long/tie1-r24-29901/tie.matrix.txt"
+        },
+        {
+          "matrix_sha256": "edbf3e96a40f666f00d4d3bfdd82a8d0316317d94ef134cf9ba5bc3fbf3ff90d",
+          "path": "runs/direct-search/multiflip/class9-depth12-tie-replay-29831/tie.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b094145c07472526a430a06e2d54c70652bee236b7846be31483120632ea3a3e",
+          "path": "runs/direct-search/multiflip/depth12-tie-harvest-29851/tie.matrix.txt"
+        },
+        {
+          "matrix_sha256": "85a63a49240a8e09abf4cfe9ce4d3dd405e7ab3206b2aaedfc4c14cf2fe13fbc",
+          "path": "runs/direct-search/multiflip/sphere32-radius12-harvest-29940/tie.matrix.txt"
+        },
+        {
+          "matrix_sha256": "640813c0b9fbd14e8a8694972edee25008d62126a69fd50c33e1946a4118a6dc",
+          "path": "runs/direct-search/multiflip/tie2-radius12-harvest-29862/tie.matrix.txt"
+        },
+        {
+          "matrix_sha256": "56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b6a0801d0d1459ec262ae4e640c1b94b4baa3c44ea4b20aafbd1f8ae62f82be1",
+          "path": "runs/direct-search/reference-data/orrick-pre-april2003.matrix.txt"
+        }
+      ]
+    }
+  ],
+  "h_class_count": 8,
+  "h_classes": [
+    {
+      "certificate_sha256": "133097154bd369ae928c5c712f50745afd75f1d4265e2137dc57475cdb0c6d99",
+      "count": 4,
+      "members": [
+        {
+          "matrix_sha256": "a3ef7c0836fae230f7476ed7f97f15142a08a3b1760124310e82f7b715bff1f1",
+          "path": "runs/direct-search/gram-shell-milp-reference-29761.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3fa9fd308dc5634bc6d8ab02b90b995cfb60f7c2f84f1a26acb19fc5a0e77df1",
+          "path": "runs/direct-search/h24-deletion-remaining-classes/elites/class-9-r10-c24.matrix.txt"
+        },
+        {
+          "matrix_sha256": "eb29a4613abfeebf2f8a4922b4cc60bbde4bfc5cf54aaf4567dc863721625691",
+          "path": "runs/direct-search/hamming-sphere-long/class9-r32-29902/tie.matrix.txt"
+        },
+        {
+          "matrix_sha256": "640813c0b9fbd14e8a8694972edee25008d62126a69fd50c33e1946a4118a6dc",
+          "path": "runs/direct-search/multiflip/tie2-radius12-harvest-29862/tie.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "411ffbb1f7635c339ca3de9d970062026e50b371571426515c98e867d29e4f3a",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "5f3d7a03b4434c9e4432b084175480465bcbd410d8fba2fc5d360dd94667a63f",
+      "count": 2,
+      "members": [
+        {
+          "matrix_sha256": "d7599504a3b21239f62c9b6c9678f2b33e2b676f5ea437e778550954f270a1ea",
+          "path": "runs/direct-search/gram-shell-milp-reference-seed29768.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d161a22e1e13e45c4cddb4794b9c8b2140bac9a6a611a945139f666dd27e0e85",
+          "path": "runs/direct-search/gram-shell-milp-reference-seed29773.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "6114b83b5af6eadbabe64c941e9c6706293aec09490c33d6407e78559d87e482",
+      "count": 5,
+      "members": [
+        {
+          "matrix_sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "path": "runs/direct-search/best-below/frontier-class14-late-28751.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6e5f51f4cc7055b9ea32f8987a26e1c8d70c0fb76c25743f324215b9f9d4a410",
+          "path": "runs/direct-search/hamming-sphere-long/tie1-r24-29901/tie.matrix.txt"
+        },
+        {
+          "matrix_sha256": "edbf3e96a40f666f00d4d3bfdd82a8d0316317d94ef134cf9ba5bc3fbf3ff90d",
+          "path": "runs/direct-search/multiflip/class9-depth12-tie-replay-29831/tie.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b094145c07472526a430a06e2d54c70652bee236b7846be31483120632ea3a3e",
+          "path": "runs/direct-search/multiflip/depth12-tie-harvest-29851/tie.matrix.txt"
+        },
+        {
+          "matrix_sha256": "85a63a49240a8e09abf4cfe9ce4d3dd405e7ab3206b2aaedfc4c14cf2fe13fbc",
+          "path": "runs/direct-search/multiflip/sphere32-radius12-harvest-29940/tie.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "9035bdf2a85b8a2a600a76c6d55af36f627327694e904e7b483e88993716c91b",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "path": "runs/direct-search/best-below/frontier-class51-28752.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "b584c923ea12af6634bb5681f1eb903196e5a7cedadf5d1ea321bc63613c986e",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1",
+          "path": "runs/direct-search/gram-shell-milp-reference-seed29762.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "db2cddf4b8f12da99a32b1563689ad693b89d0a9ae343a4aedde56361fdc5a81",
+      "count": 28,
+      "members": [
+        {
+          "matrix_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "path": "references/orrick-et-al-2003/matrix.txt"
+        },
+        {
+          "matrix_sha256": "03c41bd2766c3b7220ccc2ad2c06156e47d5d39d2d559f19ae2c8d75ad320a95",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-03c41bd2766c3b7220ccc2ad2c06156e47d5d39d2d559f19ae2c8d75ad320a95.matrix.txt"
+        },
+        {
+          "matrix_sha256": "335095b653cb74ad9d120e6025a8dc1bdab978ce6aff305d9c45bcaa1d5d15e6",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-335095b653cb74ad9d120e6025a8dc1bdab978ce6aff305d9c45bcaa1d5d15e6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "4f71f0e1eedb08d2479e643f3bc9af068663817b1dbc37fa18a4fd968af1948f",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-4f71f0e1eedb08d2479e643f3bc9af068663817b1dbc37fa18a4fd968af1948f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "51b69246db728f3f19871540458614a75c79683478897a1d347705e192af7d07",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-51b69246db728f3f19871540458614a75c79683478897a1d347705e192af7d07.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5a453099e2b2254f1fc556433b22240fe3be365b95f4bd40d521ea80ba7527fe",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-5a453099e2b2254f1fc556433b22240fe3be365b95f4bd40d521ea80ba7527fe.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6419e16fb852d21eb82fb5cfd6298058df4badde18e6d5ca2f4515d16af8e10b",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-6419e16fb852d21eb82fb5cfd6298058df4badde18e6d5ca2f4515d16af8e10b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "717d9e16a4741e2a07ffaba6c66658715378aae1b1104a343ce8d44341aede21",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-717d9e16a4741e2a07ffaba6c66658715378aae1b1104a343ce8d44341aede21.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9ddfedbd767a2da0e3bd6214f6f47f348e78299dd54eaa97f5bdfb39c8457516",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-9ddfedbd767a2da0e3bd6214f6f47f348e78299dd54eaa97f5bdfb39c8457516.matrix.txt"
+        },
+        {
+          "matrix_sha256": "af93e101b9009ae4c89da2805bce7852aa557a0f54c98e092a48d3ef04ff09a6",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-af93e101b9009ae4c89da2805bce7852aa557a0f54c98e092a48d3ef04ff09a6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "e96edd75d01ad6f8caa8144a681a73106c2d87835ac2bde77876d000f1384fa9",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-e96edd75d01ad6f8caa8144a681a73106c2d87835ac2bde77876d000f1384fa9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1f52dfc4fe99f7a654fedec46d65f35626ee5f59ecf230a2e1e7f475cf2f7b1f",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-1f52dfc4fe99f7a654fedec46d65f35626ee5f59ecf230a2e1e7f475cf2f7b1f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "316f578e8de1ca632cd126d5c6821cc2ed89fdbaef49de1138fee573ce27f6f7",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-316f578e8de1ca632cd126d5c6821cc2ed89fdbaef49de1138fee573ce27f6f7.matrix.txt"
+        },
+        {
+          "matrix_sha256": "47a610904085b54bca1c5641b8ba67539366aaa29c7a25b23bae0f48c5fdc131",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-47a610904085b54bca1c5641b8ba67539366aaa29c7a25b23bae0f48c5fdc131.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5dfb7aa365f6e222f31eded222b4a7c7c5a50eb840d5237b2bc0016f6497980a",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-5dfb7aa365f6e222f31eded222b4a7c7c5a50eb840d5237b2bc0016f6497980a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "86dd9d870125b06a4b86e825089730f273a6bd4480cb3f17710a6e08968e356f",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-86dd9d870125b06a4b86e825089730f273a6bd4480cb3f17710a6e08968e356f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "be313d0d2fc9d103e4e2523eebf4cda17b7faf289cb98335741652eddd357883",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-be313d0d2fc9d103e4e2523eebf4cda17b7faf289cb98335741652eddd357883.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c1336fd867ca5337b33be8bdbc136145ab74faa6d48aa0e3ca48874ae593dc85",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-c1336fd867ca5337b33be8bdbc136145ab74faa6d48aa0e3ca48874ae593dc85.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d9ffbe7575bb3e46226c17b2d4c51403a716f9fce4ac38dc9822d972d6daccd9",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-d9ffbe7575bb3e46226c17b2d4c51403a716f9fce4ac38dc9822d972d6daccd9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "e3fb90382dc483cb56a603ae0219d76c5ed9a10a1211992dac8ee10def7ac18b",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-e3fb90382dc483cb56a603ae0219d76c5ed9a10a1211992dac8ee10def7ac18b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fd7016cfbdf68cfc6117591d4ca9d590a162e78ac446e4408f8d550deeb9fff1",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-fd7016cfbdf68cfc6117591d4ca9d590a162e78ac446e4408f8d550deeb9fff1.matrix.txt"
+        },
+        {
+          "matrix_sha256": "28568cfda725153a8b5a192a334a525cf9d5cf448320c186ee6afdda5d4b0659",
+          "path": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-28568cfda725153a8b5a192a334a525cf9d5cf448320c186ee6afdda5d4b0659.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3b33149c7fbd8d0f4ed62cbfb34f47aa7574371baef17d4be19c2155debe9e30",
+          "path": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-3b33149c7fbd8d0f4ed62cbfb34f47aa7574371baef17d4be19c2155debe9e30.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9bca96f39aa91114fdd4e02aff06e706b3713d5342dfe0b037a05752cc5ff71a",
+          "path": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-9bca96f39aa91114fdd4e02aff06e706b3713d5342dfe0b037a05752cc5ff71a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1ee5559276c6173a978f0c679c4e23e9a548b661315b5f62563e84e2d23f7627",
+          "path": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-1ee5559276c6173a978f0c679c4e23e9a548b661315b5f62563e84e2d23f7627.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5f2baf2110ef9f44ea98fd2a3eafc69d3d7b3b55b01ba034f8c16718c15e92a2",
+          "path": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-5f2baf2110ef9f44ea98fd2a3eafc69d3d7b3b55b01ba034f8c16718c15e92a2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d66631a41c852cd9bd0fb9fab972bada72e80812d3549d9310aa68821b8793c4",
+          "path": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-d66631a41c852cd9bd0fb9fab972bada72e80812d3549d9310aa68821b8793c4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b6a0801d0d1459ec262ae4e640c1b94b4baa3c44ea4b20aafbd1f8ae62f82be1",
+          "path": "runs/direct-search/reference-data/orrick-pre-april2003.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "de7642266b6997198a6892fe26c1e080d0c673f095f9710b5003bbb8b5de2345",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208.matrix.txt"
+        }
+      ]
+    }
+  ],
+  "ht_class_count": 8,
+  "ht_classes": [
+    {
+      "certificate_sha256": "1e4b14334f15ec751275a8383b5b7e8aa8270c951e3ff5a3d342c8fe203d9efe",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "4072ead420f0688da998d030955fecc419fc96e0494c6771fe6a92f74615305f",
+      "count": 5,
+      "members": [
+        {
+          "matrix_sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "path": "runs/direct-search/best-below/frontier-class14-late-28751.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6e5f51f4cc7055b9ea32f8987a26e1c8d70c0fb76c25743f324215b9f9d4a410",
+          "path": "runs/direct-search/hamming-sphere-long/tie1-r24-29901/tie.matrix.txt"
+        },
+        {
+          "matrix_sha256": "edbf3e96a40f666f00d4d3bfdd82a8d0316317d94ef134cf9ba5bc3fbf3ff90d",
+          "path": "runs/direct-search/multiflip/class9-depth12-tie-replay-29831/tie.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b094145c07472526a430a06e2d54c70652bee236b7846be31483120632ea3a3e",
+          "path": "runs/direct-search/multiflip/depth12-tie-harvest-29851/tie.matrix.txt"
+        },
+        {
+          "matrix_sha256": "85a63a49240a8e09abf4cfe9ce4d3dd405e7ab3206b2aaedfc4c14cf2fe13fbc",
+          "path": "runs/direct-search/multiflip/sphere32-radius12-harvest-29940/tie.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "9035bdf2a85b8a2a600a76c6d55af36f627327694e904e7b483e88993716c91b",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "path": "runs/direct-search/best-below/frontier-class51-28752.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "b584c923ea12af6634bb5681f1eb903196e5a7cedadf5d1ea321bc63613c986e",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1",
+          "path": "runs/direct-search/gram-shell-milp-reference-seed29762.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "db2cddf4b8f12da99a32b1563689ad693b89d0a9ae343a4aedde56361fdc5a81",
+      "count": 28,
+      "members": [
+        {
+          "matrix_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "path": "references/orrick-et-al-2003/matrix.txt"
+        },
+        {
+          "matrix_sha256": "03c41bd2766c3b7220ccc2ad2c06156e47d5d39d2d559f19ae2c8d75ad320a95",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-03c41bd2766c3b7220ccc2ad2c06156e47d5d39d2d559f19ae2c8d75ad320a95.matrix.txt"
+        },
+        {
+          "matrix_sha256": "335095b653cb74ad9d120e6025a8dc1bdab978ce6aff305d9c45bcaa1d5d15e6",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-335095b653cb74ad9d120e6025a8dc1bdab978ce6aff305d9c45bcaa1d5d15e6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "4f71f0e1eedb08d2479e643f3bc9af068663817b1dbc37fa18a4fd968af1948f",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-4f71f0e1eedb08d2479e643f3bc9af068663817b1dbc37fa18a4fd968af1948f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "51b69246db728f3f19871540458614a75c79683478897a1d347705e192af7d07",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-51b69246db728f3f19871540458614a75c79683478897a1d347705e192af7d07.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5a453099e2b2254f1fc556433b22240fe3be365b95f4bd40d521ea80ba7527fe",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-5a453099e2b2254f1fc556433b22240fe3be365b95f4bd40d521ea80ba7527fe.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6419e16fb852d21eb82fb5cfd6298058df4badde18e6d5ca2f4515d16af8e10b",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-6419e16fb852d21eb82fb5cfd6298058df4badde18e6d5ca2f4515d16af8e10b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "717d9e16a4741e2a07ffaba6c66658715378aae1b1104a343ce8d44341aede21",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-717d9e16a4741e2a07ffaba6c66658715378aae1b1104a343ce8d44341aede21.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9ddfedbd767a2da0e3bd6214f6f47f348e78299dd54eaa97f5bdfb39c8457516",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-9ddfedbd767a2da0e3bd6214f6f47f348e78299dd54eaa97f5bdfb39c8457516.matrix.txt"
+        },
+        {
+          "matrix_sha256": "af93e101b9009ae4c89da2805bce7852aa557a0f54c98e092a48d3ef04ff09a6",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-af93e101b9009ae4c89da2805bce7852aa557a0f54c98e092a48d3ef04ff09a6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "e96edd75d01ad6f8caa8144a681a73106c2d87835ac2bde77876d000f1384fa9",
+          "path": "runs/direct-search/gram-factors/seed-23003/solution-e96edd75d01ad6f8caa8144a681a73106c2d87835ac2bde77876d000f1384fa9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1f52dfc4fe99f7a654fedec46d65f35626ee5f59ecf230a2e1e7f475cf2f7b1f",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-1f52dfc4fe99f7a654fedec46d65f35626ee5f59ecf230a2e1e7f475cf2f7b1f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "316f578e8de1ca632cd126d5c6821cc2ed89fdbaef49de1138fee573ce27f6f7",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-316f578e8de1ca632cd126d5c6821cc2ed89fdbaef49de1138fee573ce27f6f7.matrix.txt"
+        },
+        {
+          "matrix_sha256": "47a610904085b54bca1c5641b8ba67539366aaa29c7a25b23bae0f48c5fdc131",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-47a610904085b54bca1c5641b8ba67539366aaa29c7a25b23bae0f48c5fdc131.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5dfb7aa365f6e222f31eded222b4a7c7c5a50eb840d5237b2bc0016f6497980a",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-5dfb7aa365f6e222f31eded222b4a7c7c5a50eb840d5237b2bc0016f6497980a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "86dd9d870125b06a4b86e825089730f273a6bd4480cb3f17710a6e08968e356f",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-86dd9d870125b06a4b86e825089730f273a6bd4480cb3f17710a6e08968e356f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "be313d0d2fc9d103e4e2523eebf4cda17b7faf289cb98335741652eddd357883",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-be313d0d2fc9d103e4e2523eebf4cda17b7faf289cb98335741652eddd357883.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c1336fd867ca5337b33be8bdbc136145ab74faa6d48aa0e3ca48874ae593dc85",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-c1336fd867ca5337b33be8bdbc136145ab74faa6d48aa0e3ca48874ae593dc85.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d9ffbe7575bb3e46226c17b2d4c51403a716f9fce4ac38dc9822d972d6daccd9",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-d9ffbe7575bb3e46226c17b2d4c51403a716f9fce4ac38dc9822d972d6daccd9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "e3fb90382dc483cb56a603ae0219d76c5ed9a10a1211992dac8ee10def7ac18b",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-e3fb90382dc483cb56a603ae0219d76c5ed9a10a1211992dac8ee10def7ac18b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fd7016cfbdf68cfc6117591d4ca9d590a162e78ac446e4408f8d550deeb9fff1",
+          "path": "runs/direct-search/gram-factors/seed-23007-historical/solution-fd7016cfbdf68cfc6117591d4ca9d590a162e78ac446e4408f8d550deeb9fff1.matrix.txt"
+        },
+        {
+          "matrix_sha256": "28568cfda725153a8b5a192a334a525cf9d5cf448320c186ee6afdda5d4b0659",
+          "path": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-28568cfda725153a8b5a192a334a525cf9d5cf448320c186ee6afdda5d4b0659.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3b33149c7fbd8d0f4ed62cbfb34f47aa7574371baef17d4be19c2155debe9e30",
+          "path": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-3b33149c7fbd8d0f4ed62cbfb34f47aa7574371baef17d4be19c2155debe9e30.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9bca96f39aa91114fdd4e02aff06e706b3713d5342dfe0b037a05752cc5ff71a",
+          "path": "runs/direct-search/gram-factors/seed-23012-reviewed/solution-9bca96f39aa91114fdd4e02aff06e706b3713d5342dfe0b037a05752cc5ff71a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1ee5559276c6173a978f0c679c4e23e9a548b661315b5f62563e84e2d23f7627",
+          "path": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-1ee5559276c6173a978f0c679c4e23e9a548b661315b5f62563e84e2d23f7627.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5f2baf2110ef9f44ea98fd2a3eafc69d3d7b3b55b01ba034f8c16718c15e92a2",
+          "path": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-5f2baf2110ef9f44ea98fd2a3eafc69d3d7b3b55b01ba034f8c16718c15e92a2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d66631a41c852cd9bd0fb9fab972bada72e80812d3549d9310aa68821b8793c4",
+          "path": "runs/direct-search/gram-factors/seed-23013-reviewed-historical/solution-d66631a41c852cd9bd0fb9fab972bada72e80812d3549d9310aa68821b8793c4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b6a0801d0d1459ec262ae4e640c1b94b4baa3c44ea4b20aafbd1f8ae62f82be1",
+          "path": "runs/direct-search/reference-data/orrick-pre-april2003.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "de7642266b6997198a6892fe26c1e080d0c673f095f9710b5003bbb8b5de2345",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "df0b940533f84c9d61ec8df73000b4fe3a646f073a6fd32f3826d72331ebedc0",
+      "count": 2,
+      "members": [
+        {
+          "matrix_sha256": "d7599504a3b21239f62c9b6c9678f2b33e2b676f5ea437e778550954f270a1ea",
+          "path": "runs/direct-search/gram-shell-milp-reference-seed29768.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d161a22e1e13e45c4cddb4794b9c8b2140bac9a6a611a945139f666dd27e0e85",
+          "path": "runs/direct-search/gram-shell-milp-reference-seed29773.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "ff1b5d3735bd5735fd4648ba24627fa997045ce004d6ea08a9a5ff7567919490",
+      "count": 4,
+      "members": [
+        {
+          "matrix_sha256": "a3ef7c0836fae230f7476ed7f97f15142a08a3b1760124310e82f7b715bff1f1",
+          "path": "runs/direct-search/gram-shell-milp-reference-29761.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3fa9fd308dc5634bc6d8ab02b90b995cfb60f7c2f84f1a26acb19fc5a0e77df1",
+          "path": "runs/direct-search/h24-deletion-remaining-classes/elites/class-9-r10-c24.matrix.txt"
+        },
+        {
+          "matrix_sha256": "eb29a4613abfeebf2f8a4922b4cc60bbde4bfc5cf54aaf4567dc863721625691",
+          "path": "runs/direct-search/hamming-sphere-long/class9-r32-29902/tie.matrix.txt"
+        },
+        {
+          "matrix_sha256": "640813c0b9fbd14e8a8694972edee25008d62126a69fd50c33e1946a4118a6dc",
+          "path": "runs/direct-search/multiflip/tie2-radius12-harvest-29862/tie.matrix.txt"
+        }
+      ]
+    }
+  ],
+  "input_file_count": 57,
+  "method": "minimum color-preserving nauty certificate over all 23^2 dephased pivots",
+  "pynauty_version": "2.8.8.1",
+  "schema_version": 1,
+  "unique_matrix_count": 43
+}

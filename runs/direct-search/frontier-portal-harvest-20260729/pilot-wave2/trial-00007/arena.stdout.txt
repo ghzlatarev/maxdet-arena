@@ -1,0 +1,14 @@
+VERIFIED
+challenge: maxdet-23-v1
+order: 23
+determinant: 2779447296000000
+score |det|: 2779447296000000
+Hadamard ratio: 60.8258699%
+order-23 Ehlich ratio: 93.1982582%
+generic Barba ratio: 70.9092182%
+matrix sha256: 0a42fd4f2b113249bc487d4c59ce99423210e15df99861cbe4d3c1a25982b98e
+normalized sha256: d360745863d3963c990166d337bb89ff364010c49dec8ed1f5a201e583245c51
+receipt sha256: af8916052a74594095d1fef60f816a73d246f2fcd11df91bea6ac253b74e1f55
+frontier gap: 0
+receipt: /Users/georgizlatarev/maxdet-arena-direct-search/runs/direct-search/frontier-portal-harvest-20260729/pilot-wave2/trial-00007/arena.receipt.json
+claim: verified arena score; not a world-record or optimality claim

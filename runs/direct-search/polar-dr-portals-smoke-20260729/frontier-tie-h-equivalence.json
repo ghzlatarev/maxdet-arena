@@ -1,0 +1,280 @@
+{
+  "duplicate_file_count": 0,
+  "duplicates": [],
+  "expected_absolute_determinant": 2779447296000000,
+  "gram_class_count": 1,
+  "gram_classes": [
+    {
+      "automorphism_group_order": 442368,
+      "certificate_sha256": "e641e83822fae412ec3e1e4d8aa355f015d204f10fa98adde97c5da508fbf554",
+      "count": 10,
+      "degree_multiset": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6
+      ],
+      "edge_count": 45,
+      "members": [
+        {
+          "matrix_sha256": "00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1.matrix.txt"
+        },
+        {
+          "matrix_sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6e5f51f4cc7055b9ea32f8987a26e1c8d70c0fb76c25743f324215b9f9d4a410",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/6e5f51f4cc7055b9ea32f8987a26e1c8d70c0fb76c25743f324215b9f9d4a410.matrix.txt"
+        },
+        {
+          "matrix_sha256": "81cecfb79e9365e1dc9d10a4fe0f8d8b31c979430f36b4ebbba0853b6ce375e2",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/81cecfb79e9365e1dc9d10a4fe0f8d8b31c979430f36b4ebbba0853b6ce375e2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ad70e10f36bb2ebed8e4698fc43fb7c0ebc0e4748890ba89a151e48da2ba2438",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/ad70e10f36bb2ebed8e4698fc43fb7c0ebc0e4748890ba89a151e48da2ba2438.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ae8f1de84c43f03065f8eb29df38d9208033c1d75b272a9ce527009a85b6d815",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/ae8f1de84c43f03065f8eb29df38d9208033c1d75b272a9ce527009a85b6d815.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850.matrix.txt"
+        }
+      ]
+    }
+  ],
+  "h_class_count": 9,
+  "h_classes": [
+    {
+      "certificate_sha256": "133097154bd369ae928c5c712f50745afd75f1d4265e2137dc57475cdb0c6d99",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "ad70e10f36bb2ebed8e4698fc43fb7c0ebc0e4748890ba89a151e48da2ba2438",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/ad70e10f36bb2ebed8e4698fc43fb7c0ebc0e4748890ba89a151e48da2ba2438.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "6114b83b5af6eadbabe64c941e9c6706293aec09490c33d6407e78559d87e482",
+      "count": 2,
+      "members": [
+        {
+          "matrix_sha256": "6e5f51f4cc7055b9ea32f8987a26e1c8d70c0fb76c25743f324215b9f9d4a410",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/6e5f51f4cc7055b9ea32f8987a26e1c8d70c0fb76c25743f324215b9f9d4a410.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "9035bdf2a85b8a2a600a76c6d55af36f627327694e904e7b483e88993716c91b",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "b584c923ea12af6634bb5681f1eb903196e5a7cedadf5d1ea321bc63613c986e",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "b64c33090c9aac4dc7386213917cec66ac28d2da9685319b585067e95d0d63f6",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "81cecfb79e9365e1dc9d10a4fe0f8d8b31c979430f36b4ebbba0853b6ce375e2",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/81cecfb79e9365e1dc9d10a4fe0f8d8b31c979430f36b4ebbba0853b6ce375e2.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "db2cddf4b8f12da99a32b1563689ad693b89d0a9ae343a4aedde56361fdc5a81",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "de7642266b6997198a6892fe26c1e080d0c673f095f9710b5003bbb8b5de2345",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "df0b940533f84c9d61ec8df73000b4fe3a646f073a6fd32f3826d72331ebedc0",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "ae8f1de84c43f03065f8eb29df38d9208033c1d75b272a9ce527009a85b6d815",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/ae8f1de84c43f03065f8eb29df38d9208033c1d75b272a9ce527009a85b6d815.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "eb138a06ec638735c34bdacf77bd1cdd869c5d2fbc3450be25d63af0cde1a134",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5.matrix.txt"
+        }
+      ]
+    }
+  ],
+  "ht_class_count": 9,
+  "ht_classes": [
+    {
+      "certificate_sha256": "4072ead420f0688da998d030955fecc419fc96e0494c6771fe6a92f74615305f",
+      "count": 2,
+      "members": [
+        {
+          "matrix_sha256": "6e5f51f4cc7055b9ea32f8987a26e1c8d70c0fb76c25743f324215b9f9d4a410",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/6e5f51f4cc7055b9ea32f8987a26e1c8d70c0fb76c25743f324215b9f9d4a410.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "9035bdf2a85b8a2a600a76c6d55af36f627327694e904e7b483e88993716c91b",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "b584c923ea12af6634bb5681f1eb903196e5a7cedadf5d1ea321bc63613c986e",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "b64c33090c9aac4dc7386213917cec66ac28d2da9685319b585067e95d0d63f6",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "81cecfb79e9365e1dc9d10a4fe0f8d8b31c979430f36b4ebbba0853b6ce375e2",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/81cecfb79e9365e1dc9d10a4fe0f8d8b31c979430f36b4ebbba0853b6ce375e2.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "db2cddf4b8f12da99a32b1563689ad693b89d0a9ae343a4aedde56361fdc5a81",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "de7642266b6997198a6892fe26c1e080d0c673f095f9710b5003bbb8b5de2345",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "df0b940533f84c9d61ec8df73000b4fe3a646f073a6fd32f3826d72331ebedc0",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "ae8f1de84c43f03065f8eb29df38d9208033c1d75b272a9ce527009a85b6d815",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/ae8f1de84c43f03065f8eb29df38d9208033c1d75b272a9ce527009a85b6d815.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "eb138a06ec638735c34bdacf77bd1cdd869c5d2fbc3450be25d63af0cde1a134",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "ff1b5d3735bd5735fd4648ba24627fa997045ce004d6ea08a9a5ff7567919490",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "ad70e10f36bb2ebed8e4698fc43fb7c0ebc0e4748890ba89a151e48da2ba2438",
+          "path": "/private/tmp/maxdet-polar-smoke2.LADsil/frontier-ties/ad70e10f36bb2ebed8e4698fc43fb7c0ebc0e4748890ba89a151e48da2ba2438.matrix.txt"
+        }
+      ]
+    }
+  ],
+  "input_file_count": 10,
+  "method": "minimum color-preserving nauty certificate over all 23^2 dephased pivots",
+  "pynauty_version": "2.8.8.1",
+  "schema_version": 1,
+  "unique_matrix_count": 10
+}

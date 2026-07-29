@@ -1,0 +1,47 @@
+{
+  "challenge_path": "challenge.json",
+  "challenge_sha256": "4e1928a317b078e135f3ae120ba633896f9cd4658d321ba17f6c0f50411fbdf9",
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "research/polar_dr_portals.py",
+    "--output-dir",
+    "/tmp/maxdet-polar-smoke2.LADsil",
+    "--iterations",
+    "24",
+    "--restarts",
+    "1",
+    "--postprocess-per-class",
+    "1",
+    "--line-max-sweeps",
+    "3",
+    "--retain",
+    "8",
+    "--heartbeat-seconds",
+    "0"
+  ],
+  "dependencies": {
+    "numpy": "1.22.4",
+    "pynauty": null,
+    "scipy": "1.13.1",
+    "sympy": "1.14.0"
+  },
+  "event_log_path": "/private/tmp/maxdet-polar-smoke2.LADsil/events.jsonl",
+  "event_log_sha256": "13ded9612c5901554768d1f77fe3f47e14c49fc2c4f6b40e8144036af256dddd",
+  "git": {
+    "branch": "research/direct-search-20260728",
+    "commit": "bb8da929be298393eabd4551ef6394a70cf9192b",
+    "status_short": "?? research/frontier_portal_harvest.py\n?? research/frontier_portal_radius3.cpp\n?? research/polar_dr_portals.py"
+  },
+  "input_audit_path": "runs/direct-search/frontier-factor-class-expansion-20260728/final-h-equivalence-audit.json",
+  "input_audit_sha256": "1fdb0d9e45d573bd4616a99ca5f09ff3afad0c204843cf9eb2c3a8f5a121b372",
+  "python": {
+    "executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "version": "3.9.6 (default, Nov 11 2024, 03:15:38) \n[Clang 16.0.0 (clang-1600.0.26.6)]"
+  },
+  "report_path": "/private/tmp/maxdet-polar-smoke2.LADsil/report.json",
+  "report_sha256": "20c88fdf2d664c5a5d3e50e3bbb55b476a271e805d4dc37b2249695cb3d6e30e",
+  "schema_version": 1,
+  "tool_path": "research/polar_dr_portals.py",
+  "tool_sha256": "555657b0ba88a58950ac608e58ac8983936840f52edd7803f1322fe8e818d8ed"
+}

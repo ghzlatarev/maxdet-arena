@@ -1,0 +1,780 @@
+{
+  "all_checks_passed": true,
+  "all_size_three_small_orbit_subsets": [
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 24,
+        "positive_cross_rows_3_4_to_15_18": -8
+      },
+      "satisfies_both_forced_equalities": false,
+      "triple": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 8,
+        "positive_cross_rows_3_4_to_15_18": 8
+      },
+      "satisfies_both_forced_equalities": false,
+      "triple": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 8,
+        "positive_cross_rows_3_4_to_15_18": -8
+      },
+      "satisfies_both_forced_equalities": true,
+      "triple": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 24,
+        "positive_cross_rows_3_4_to_15_18": -8
+      },
+      "satisfies_both_forced_equalities": false,
+      "triple": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 8,
+        "positive_cross_rows_3_4_to_15_18": 8
+      },
+      "satisfies_both_forced_equalities": false,
+      "triple": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 8,
+        "positive_cross_rows_3_4_to_15_18": -8
+      },
+      "satisfies_both_forced_equalities": true,
+      "triple": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 24,
+        "positive_cross_rows_3_4_to_15_18": -8
+      },
+      "satisfies_both_forced_equalities": false,
+      "triple": [
+        0,
+        2,
+        5
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": -8,
+        "positive_cross_rows_3_4_to_15_18": 8
+      },
+      "satisfies_both_forced_equalities": false,
+      "triple": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 8,
+        "positive_cross_rows_3_4_to_15_18": 8
+      },
+      "satisfies_both_forced_equalities": false,
+      "triple": [
+        0,
+        3,
+        5
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 8,
+        "positive_cross_rows_3_4_to_15_18": -8
+      },
+      "satisfies_both_forced_equalities": true,
+      "triple": [
+        0,
+        4,
+        5
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 8,
+        "positive_cross_rows_3_4_to_15_18": -8
+      },
+      "satisfies_both_forced_equalities": true,
+      "triple": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 8,
+        "positive_cross_rows_3_4_to_15_18": -24
+      },
+      "satisfies_both_forced_equalities": false,
+      "triple": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 24,
+        "positive_cross_rows_3_4_to_15_18": -24
+      },
+      "satisfies_both_forced_equalities": false,
+      "triple": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": -8,
+        "positive_cross_rows_3_4_to_15_18": -8
+      },
+      "satisfies_both_forced_equalities": false,
+      "triple": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 8,
+        "positive_cross_rows_3_4_to_15_18": -8
+      },
+      "satisfies_both_forced_equalities": true,
+      "triple": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 8,
+        "positive_cross_rows_3_4_to_15_18": -24
+      },
+      "satisfies_both_forced_equalities": false,
+      "triple": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": -8,
+        "positive_cross_rows_3_4_to_15_18": -8
+      },
+      "satisfies_both_forced_equalities": false,
+      "triple": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 8,
+        "positive_cross_rows_3_4_to_15_18": -8
+      },
+      "satisfies_both_forced_equalities": true,
+      "triple": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": 8,
+        "positive_cross_rows_3_4_to_15_18": -24
+      },
+      "satisfies_both_forced_equalities": false,
+      "triple": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "functional_values": {
+        "negative_cross_rows_9_10_to_15_18": -8,
+        "positive_cross_rows_3_4_to_15_18": -8
+      },
+      "satisfies_both_forced_equalities": false,
+      "triple": [
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "arithmetic": "Python arbitrary-precision integers; no floating point",
+  "checker": {
+    "path": "research/frontier_portal_farkas_check.py",
+    "sha256": "5bbb7efc1f95083449cea7995f81dec154914596cbbd9f15d7d1d8f991346c3d"
+  },
+  "claim": "Given the complete exported frontier-Gram shell and the exact forced size-six-orbit count of three, the representative slices 012, 013, and 025 are exactly infeasible. In fact the two sparse integer equalities reject 14 of the 20 possible triples.",
+  "claim_boundary": "This checker verifies the contradiction entirely in Python integers. Completeness of the exported shell and the independent 3/6/6/8 orbit-count derivation are bound by hashes rather than re-derived here.",
+  "frontier": "2779447296000000",
+  "functionals": {
+    "negative_cross_rows_9_10_to_15_18": {
+      "exact_kernel_check": true,
+      "factored_form_zero_based": "-(s[9]+s[10])*(s[15]+s[16]+s[17]+s[18])",
+      "non_small_shell_column_count": 1376,
+      "non_small_shell_value_histogram": {
+        "0": 1376
+      },
+      "target_gram_value": 8,
+      "terms": [
+        {
+          "coefficient": -1,
+          "column_one_based": 16,
+          "column_zero_based": 15,
+          "row_one_based": 10,
+          "row_zero_based": 9
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 17,
+          "column_zero_based": 16,
+          "row_one_based": 10,
+          "row_zero_based": 9
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 18,
+          "column_zero_based": 17,
+          "row_one_based": 10,
+          "row_zero_based": 9
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 19,
+          "column_zero_based": 18,
+          "row_one_based": 10,
+          "row_zero_based": 9
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 16,
+          "column_zero_based": 15,
+          "row_one_based": 11,
+          "row_zero_based": 10
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 17,
+          "column_zero_based": 16,
+          "row_one_based": 11,
+          "row_zero_based": 10
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 18,
+          "column_zero_based": 17,
+          "row_one_based": 11,
+          "row_zero_based": 10
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 19,
+          "column_zero_based": 18,
+          "row_one_based": 11,
+          "row_zero_based": 10
+        }
+      ]
+    },
+    "positive_cross_rows_3_4_to_15_18": {
+      "exact_kernel_check": true,
+      "factored_form_zero_based": "(s[3]+s[4])*(s[15]+s[16]+s[17]+s[18])",
+      "non_small_shell_column_count": 1376,
+      "non_small_shell_value_histogram": {
+        "0": 1376
+      },
+      "target_gram_value": -8,
+      "terms": [
+        {
+          "coefficient": 1,
+          "column_one_based": 16,
+          "column_zero_based": 15,
+          "row_one_based": 4,
+          "row_zero_based": 3
+        },
+        {
+          "coefficient": 1,
+          "column_one_based": 17,
+          "column_zero_based": 16,
+          "row_one_based": 4,
+          "row_zero_based": 3
+        },
+        {
+          "coefficient": 1,
+          "column_one_based": 18,
+          "column_zero_based": 17,
+          "row_one_based": 4,
+          "row_zero_based": 3
+        },
+        {
+          "coefficient": 1,
+          "column_one_based": 19,
+          "column_zero_based": 18,
+          "row_one_based": 4,
+          "row_zero_based": 3
+        },
+        {
+          "coefficient": 1,
+          "column_one_based": 16,
+          "column_zero_based": 15,
+          "row_one_based": 5,
+          "row_zero_based": 4
+        },
+        {
+          "coefficient": 1,
+          "column_one_based": 17,
+          "column_zero_based": 16,
+          "row_one_based": 5,
+          "row_zero_based": 4
+        },
+        {
+          "coefficient": 1,
+          "column_one_based": 18,
+          "column_zero_based": 17,
+          "row_one_based": 5,
+          "row_zero_based": 4
+        },
+        {
+          "coefficient": 1,
+          "column_one_based": 19,
+          "column_zero_based": 18,
+          "row_one_based": 5,
+          "row_zero_based": 4
+        }
+      ]
+    }
+  },
+  "invalid_triple_count": 14,
+  "invalid_triples": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      1,
+      3
+    ],
+    [
+      0,
+      1,
+      5
+    ],
+    [
+      0,
+      2,
+      3
+    ],
+    [
+      0,
+      2,
+      5
+    ],
+    [
+      0,
+      3,
+      4
+    ],
+    [
+      0,
+      3,
+      5
+    ],
+    [
+      1,
+      2,
+      4
+    ],
+    [
+      1,
+      2,
+      5
+    ],
+    [
+      1,
+      3,
+      4
+    ],
+    [
+      1,
+      4,
+      5
+    ],
+    [
+      2,
+      3,
+      4
+    ],
+    [
+      2,
+      4,
+      5
+    ],
+    [
+      3,
+      4,
+      5
+    ]
+  ],
+  "method": "two sparse eight-term integer linear combinations of off-diagonal Gram equations; every non-small shell column has coefficient zero",
+  "orbit_count_certificate": {
+    "forced_small_orbit_count": 3,
+    "path": "runs/direct-search/frontier-factor-class-expansion-20260728/calibration/orbit-proof-v4.json",
+    "rank": 4,
+    "sha256": "50748d3a21be9cba55c8e4a07cd0356c93e66142ee6e2d1b53c7e87a23b3f8cf",
+    "shell_orbit_sizes": [
+      6,
+      432,
+      432,
+      512
+    ],
+    "unique_counts": [
+      3,
+      6,
+      6,
+      8
+    ]
+  },
+  "representative_certificates": [
+    {
+      "all_free_shell_columns_annihilated_exactly": true,
+      "contradiction": "the free columns contribute exactly 0, but would have to contribute -16",
+      "fixed_triple_value": 24,
+      "free_shell_column_count": 1376,
+      "free_shell_value_histogram": {
+        "0": 1376
+      },
+      "functional": "negative_cross_rows_9_10_to_15_18",
+      "functional_terms": [
+        {
+          "coefficient": -1,
+          "column_one_based": 16,
+          "column_zero_based": 15,
+          "row_one_based": 10,
+          "row_zero_based": 9
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 17,
+          "column_zero_based": 16,
+          "row_one_based": 10,
+          "row_zero_based": 9
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 18,
+          "column_zero_based": 17,
+          "row_one_based": 10,
+          "row_zero_based": 9
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 19,
+          "column_zero_based": 18,
+          "row_one_based": 10,
+          "row_zero_based": 9
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 16,
+          "column_zero_based": 15,
+          "row_one_based": 11,
+          "row_zero_based": 10
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 17,
+          "column_zero_based": 16,
+          "row_one_based": 11,
+          "row_zero_based": 10
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 18,
+          "column_zero_based": 17,
+          "row_one_based": 11,
+          "row_zero_based": 10
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 19,
+          "column_zero_based": 18,
+          "row_one_based": 11,
+          "row_zero_based": 10
+        }
+      ],
+      "selected_masks": [
+        8161,
+        26521,
+        8356323
+      ],
+      "target_gram_value": 8,
+      "target_minus_fixed": -16,
+      "triple": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "all_free_shell_columns_annihilated_exactly": true,
+      "contradiction": "the free columns contribute exactly 0, but would have to contribute -16",
+      "fixed_triple_value": 8,
+      "free_shell_column_count": 1376,
+      "free_shell_value_histogram": {
+        "0": 1376
+      },
+      "functional": "positive_cross_rows_3_4_to_15_18",
+      "functional_terms": [
+        {
+          "coefficient": 1,
+          "column_one_based": 16,
+          "column_zero_based": 15,
+          "row_one_based": 4,
+          "row_zero_based": 3
+        },
+        {
+          "coefficient": 1,
+          "column_one_based": 17,
+          "column_zero_based": 16,
+          "row_one_based": 4,
+          "row_zero_based": 3
+        },
+        {
+          "coefficient": 1,
+          "column_one_based": 18,
+          "column_zero_based": 17,
+          "row_one_based": 4,
+          "row_zero_based": 3
+        },
+        {
+          "coefficient": 1,
+          "column_one_based": 19,
+          "column_zero_based": 18,
+          "row_one_based": 4,
+          "row_zero_based": 3
+        },
+        {
+          "coefficient": 1,
+          "column_one_based": 16,
+          "column_zero_based": 15,
+          "row_one_based": 5,
+          "row_zero_based": 4
+        },
+        {
+          "coefficient": 1,
+          "column_one_based": 17,
+          "column_zero_based": 16,
+          "row_one_based": 5,
+          "row_zero_based": 4
+        },
+        {
+          "coefficient": 1,
+          "column_one_based": 18,
+          "column_zero_based": 17,
+          "row_one_based": 5,
+          "row_zero_based": 4
+        },
+        {
+          "coefficient": 1,
+          "column_one_based": 19,
+          "column_zero_based": 18,
+          "row_one_based": 5,
+          "row_zero_based": 4
+        }
+      ],
+      "selected_masks": [
+        8161,
+        26521,
+        8357403
+      ],
+      "target_gram_value": -8,
+      "target_minus_fixed": -16,
+      "triple": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "all_free_shell_columns_annihilated_exactly": true,
+      "contradiction": "the free columns contribute exactly 0, but would have to contribute -16",
+      "fixed_triple_value": 24,
+      "free_shell_column_count": 1376,
+      "free_shell_value_histogram": {
+        "0": 1376
+      },
+      "functional": "negative_cross_rows_9_10_to_15_18",
+      "functional_terms": [
+        {
+          "coefficient": -1,
+          "column_one_based": 16,
+          "column_zero_based": 15,
+          "row_one_based": 10,
+          "row_zero_based": 9
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 17,
+          "column_zero_based": 16,
+          "row_one_based": 10,
+          "row_zero_based": 9
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 18,
+          "column_zero_based": 17,
+          "row_one_based": 10,
+          "row_zero_based": 9
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 19,
+          "column_zero_based": 18,
+          "row_one_based": 10,
+          "row_zero_based": 9
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 16,
+          "column_zero_based": 15,
+          "row_one_based": 11,
+          "row_zero_based": 10
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 17,
+          "column_zero_based": 16,
+          "row_one_based": 11,
+          "row_zero_based": 10
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 18,
+          "column_zero_based": 17,
+          "row_one_based": 11,
+          "row_zero_based": 10
+        },
+        {
+          "coefficient": -1,
+          "column_one_based": 19,
+          "column_zero_based": 18,
+          "row_one_based": 11,
+          "row_zero_based": 10
+        }
+      ],
+      "selected_masks": [
+        8161,
+        8356323,
+        8380805
+      ],
+      "target_gram_value": 8,
+      "target_minus_fixed": -16,
+      "triple": [
+        0,
+        2,
+        5
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "shell": {
+    "non_small_column_count": 1376,
+    "path": "runs/direct-search/gram-shell-reference-columns-29760.json",
+    "sha256": "68d6f8db05b409b83124883db101a8025f42ee6fc7441e8358fcf72795288f2a",
+    "size": 1382,
+    "small_orbit_masks": [
+      8161,
+      26521,
+      8356323,
+      8357403,
+      8363525,
+      8380805
+    ]
+  },
+  "source_matrix": {
+    "exact_absolute_determinant": "2779447296000000",
+    "path": "references/orrick-et-al-2003/matrix.txt",
+    "sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850"
+  },
+  "target_gram": {
+    "exact_determinant": "7725327271241711616000000000000",
+    "frontier_squared": "7725327271241711616000000000000"
+  },
+  "valid_triple_count": 6,
+  "valid_triples": [
+    [
+      0,
+      1,
+      4
+    ],
+    [
+      0,
+      2,
+      4
+    ],
+    [
+      0,
+      4,
+      5
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      1,
+      3,
+      5
+    ],
+    [
+      2,
+      3,
+      5
+    ]
+  ]
+}

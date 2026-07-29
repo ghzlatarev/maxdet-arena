@@ -1,0 +1,383 @@
+{
+  "baseline": {
+    "gram_classes": 1,
+    "h_classes": 11,
+    "ht_classes": 8,
+    "path": "runs/direct-search/frontier-factor-class-expansion-20260728/final-h-equivalence-audit.json",
+    "sha256": "1fdb0d9e45d573bd4616a99ca5f09ff3afad0c204843cf9eb2c3a8f5a121b372"
+  },
+  "campaign": "frontier-portal-harvest-20260729",
+  "campaign_receipt_sha256": "e4e645c2ad3058a7ffe04e0b975d50d06277fdc794930e3045a1711975c7b2a8",
+  "claim_boundary": "Novelty is relative to the pinned local baseline only. Non-feasible bounded runs do not prove empty slices. The fixed known Gram makes a new row-Gram class impossible in this model; transpose Gram is still classified explicitly.",
+  "classifier": {
+    "pynauty": "2.8.8.1",
+    "python": "/tmp/maxdet-h-audit-20260729/bin/python"
+  },
+  "elapsed_seconds": 17.932487583,
+  "frontier": "2779447296000000",
+  "jobs": 3,
+  "known_aligned_factors": [
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/known-ht-aligned/ht-4072ead420f0.matrix.txt",
+      "sha256": "2b7f3caefc3b2b7c8fed0d4a87ecd6d275b2d99e6b1da7fce8500eb309c9942f",
+      "small_orbit_masks": [
+        8161,
+        8356323,
+        8363525
+      ],
+      "small_orbit_triple": [
+        0,
+        2,
+        4
+      ],
+      "support_sha256": "ebb9b45479e1325a317edc752c2e2371a42c018b0409684489825d374bd76350"
+    },
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/known-ht-aligned/ht-9035bdf2a85b.matrix.txt",
+      "sha256": "f649b0cf6b773fde8de18e206d80cf99d60de4d1cf68cea79e80752ff9bdfaaa",
+      "small_orbit_masks": [
+        8161,
+        8356323,
+        8363525
+      ],
+      "small_orbit_triple": [
+        0,
+        2,
+        4
+      ],
+      "support_sha256": "f060a078cc9d7d51cfd6437cab0ea8eb6fe2f589499a77bb05f43a96e4269f41"
+    },
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/known-ht-aligned/ht-b584c923ea12.matrix.txt",
+      "sha256": "7afe4462fc717db8fbb09eccc02b9bf6511b0a21489a43cfe54c78b1050781e7",
+      "small_orbit_masks": [
+        8161,
+        8356323,
+        8363525
+      ],
+      "small_orbit_triple": [
+        0,
+        2,
+        4
+      ],
+      "support_sha256": "58d926c7617d4dbade735241795be0951b3191bc2c47f480498894e9005653c1"
+    },
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/known-ht-aligned/ht-b64c33090c9a.matrix.txt",
+      "sha256": "276ec14f7c6b9295d0e4ecbeed0bcd4dd8339d7170a28f16f5d232b6203ba899",
+      "small_orbit_masks": [
+        8161,
+        8356323,
+        8363525
+      ],
+      "small_orbit_triple": [
+        0,
+        2,
+        4
+      ],
+      "support_sha256": "a54045fa4747369a4ce027113e62b2bff10503bb20065da737166f65704797a5"
+    },
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/known-ht-aligned/ht-db2cddf4b8f1.matrix.txt",
+      "sha256": "6806c559884743f98fb3775009cee6e81ed096bd5cda54e1baad3915863105a5",
+      "small_orbit_masks": [
+        8161,
+        8356323,
+        8363525
+      ],
+      "small_orbit_triple": [
+        0,
+        2,
+        4
+      ],
+      "support_sha256": "e58e1425597a9483c5250785c4948d6624fe46bf62715dcca1df917140405b08"
+    },
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/known-ht-aligned/ht-df0b940533f8.matrix.txt",
+      "sha256": "c2809c47d3f771359fd47f6c8f04b589e6651b0ad8ba6e65af7fc90038007220",
+      "small_orbit_masks": [
+        8161,
+        8356323,
+        8363525
+      ],
+      "small_orbit_triple": [
+        0,
+        2,
+        4
+      ],
+      "support_sha256": "b5832db88d3d756d9687f24a974c3a62d7621187c81acb5b95060f5a3a685b87"
+    },
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/known-ht-aligned/ht-ff1b5d3735bd.matrix.txt",
+      "sha256": "62a6d539a8d31c866c9b54ae17378f1787bf4cd0b5a5a4547b76ca6b70ee2406",
+      "small_orbit_masks": [
+        8161,
+        8356323,
+        8363525
+      ],
+      "small_orbit_triple": [
+        0,
+        2,
+        4
+      ],
+      "support_sha256": "e3223e5726e54a9c31d8d765ec635affe7d0c9241b2ca4eaaecc9411dc2a2419"
+    },
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/seeds/h-eb138a06ec638735c34bdacf77bd1cdd869c5d2fbc3450be25d63af0cde1a134.matrix.txt",
+      "sha256": "a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5",
+      "small_orbit_masks": [
+        8161,
+        8356323,
+        8363525
+      ],
+      "small_orbit_triple": [
+        0,
+        2,
+        4
+      ],
+      "support_sha256": "ce4151ff8992a8f9dbed3980a9fcfc9e89b23e8a0716365041d3b02f0717007c"
+    }
+  ],
+  "known_support_small_orbit_assertion": {
+    "all_select_exactly_observed_triple": true,
+    "checked_supports": 8,
+    "observed_masks": [
+      8161,
+      8356323,
+      8363525
+    ],
+    "observed_triple": [
+      0,
+      2,
+      4
+    ]
+  },
+  "method": "exact 1,382-column frontier-Gram shell MILP; theorem-forced size-six-orbit triples; soft rarity objectives; no raw-support no-goods; exact Gram/Bareiss/arena and H/HT/Gram classification",
+  "new_gram_classes": 0,
+  "new_h_classes": 0,
+  "new_ht_classes": 0,
+  "records": [
+    {
+      "arena_receipt": null,
+      "classification": null,
+      "factor_found": false,
+      "global_index": 0,
+      "process_elapsed_seconds": 1.081093208,
+      "returncode": 3,
+      "solver": "runs/direct-search/frontier-portal-harvest-20260729/pilot-wave1/trial-00000/solver.json",
+      "solver_sha256": "d42ae488c756392254c9e46c57ea08f9a1f2d8a543b6e827e0a076b4a644fa48"
+    },
+    {
+      "arena_receipt": null,
+      "classification": null,
+      "factor_found": false,
+      "global_index": 1,
+      "process_elapsed_seconds": 0.704199125,
+      "returncode": 3,
+      "solver": "runs/direct-search/frontier-portal-harvest-20260729/pilot-wave1/trial-00001/solver.json",
+      "solver_sha256": "e07e0c9e0e5ccef8600462620d771737590f5f6ce552d6841b00bed3b83ec494"
+    },
+    {
+      "arena_receipt": null,
+      "classification": null,
+      "factor_found": false,
+      "global_index": 2,
+      "process_elapsed_seconds": 0.8252839169999999,
+      "returncode": 3,
+      "solver": "runs/direct-search/frontier-portal-harvest-20260729/pilot-wave1/trial-00002/solver.json",
+      "solver_sha256": "5e015a87d0b73b2702065377fe355f25a53f867b4a6642b35aaa0f63cee4f01a"
+    },
+    {
+      "arena_receipt": null,
+      "classification": null,
+      "factor_found": false,
+      "global_index": 3,
+      "process_elapsed_seconds": 0.971968458,
+      "returncode": 3,
+      "solver": "runs/direct-search/frontier-portal-harvest-20260729/pilot-wave1/trial-00003/solver.json",
+      "solver_sha256": "ce39a71ee23b398abbd275703d23712af95b60f7cd9107aaa497b9ddf10ac8c2"
+    },
+    {
+      "arena_receipt": null,
+      "classification": null,
+      "factor_found": false,
+      "global_index": 4,
+      "process_elapsed_seconds": 0.875972458,
+      "returncode": 3,
+      "solver": "runs/direct-search/frontier-portal-harvest-20260729/pilot-wave1/trial-00004/solver.json",
+      "solver_sha256": "266a79ea0d7382b43b8d059a321238a3884748a9d5ef38e7b68701ff8df89f27"
+    },
+    {
+      "arena_receipt": null,
+      "classification": null,
+      "factor_found": false,
+      "global_index": 5,
+      "process_elapsed_seconds": 1.0792121660000003,
+      "returncode": 3,
+      "solver": "runs/direct-search/frontier-portal-harvest-20260729/pilot-wave1/trial-00005/solver.json",
+      "solver_sha256": "27f8bf99bd8c7390c25a04999bb3d5a4355e4ed35013803ee2674bb8e4e88e69"
+    },
+    {
+      "arena_receipt": {
+        "file_sha256": "5df1563ee6fa96573f770a2eff24bd093ba043a2c4a0163e055e3be6d5108947",
+        "internal_receipt_sha256": "21f57e33516c36726026246599bea8ae933456ec550a7424a637f4a28051cf4a",
+        "path": "runs/direct-search/frontier-portal-harvest-20260729/pilot-wave1/trial-00006/arena.receipt.json"
+      },
+      "classification": {
+        "aligned_support_overlaps": [
+          3,
+          3,
+          4,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "baseline_known_gram": true,
+        "baseline_known_h": true,
+        "baseline_known_ht": true,
+        "exact_absolute_determinant": "2779447296000000",
+        "gram_automorphism_group_order": 442368,
+        "gram_certificate_sha256": "e641e83822fae412ec3e1e4d8aa355f015d204f10fa98adde97c5da508fbf554",
+        "gram_degree_multiset": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6
+        ],
+        "gram_edge_count": 45,
+        "h_certificate_sha256": "eb138a06ec638735c34bdacf77bd1cdd869c5d2fbc3450be25d63af0cde1a134",
+        "ht_certificate_sha256": "eb138a06ec638735c34bdacf77bd1cdd869c5d2fbc3450be25d63af0cde1a134",
+        "maximum_aligned_support_overlap": 4,
+        "minimum_aligned_support_symmetric_difference": 38,
+        "pynauty_version": "2.8.8.1",
+        "self_dual": true,
+        "stream_new_gram": false,
+        "stream_new_h": false,
+        "stream_new_ht": false,
+        "transpose_h_certificate_sha256": "eb138a06ec638735c34bdacf77bd1cdd869c5d2fbc3450be25d63af0cde1a134"
+      },
+      "factor_found": true,
+      "global_index": 6,
+      "process_elapsed_seconds": 11.387862250000001,
+      "returncode": 0,
+      "solver": "runs/direct-search/frontier-portal-harvest-20260729/pilot-wave1/trial-00006/solver.json",
+      "solver_sha256": "f4ab6550c67088b408bfb9b2f8b2554766006eb26f9feaf891d3f52e6565b652"
+    },
+    {
+      "arena_receipt": {
+        "file_sha256": "e6be06d6d644c86d62061b0d63f0619676d9d7839b3aca024313a6bd2af48856",
+        "internal_receipt_sha256": "f5ab9728b9e3f3c48693acf225beecf0e52ffefbc5b166b9be540e3034239e89",
+        "path": "runs/direct-search/frontier-portal-harvest-20260729/pilot-wave1/trial-00007/arena.receipt.json"
+      },
+      "classification": {
+        "aligned_support_overlaps": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "baseline_known_gram": true,
+        "baseline_known_h": true,
+        "baseline_known_ht": true,
+        "exact_absolute_determinant": "2779447296000000",
+        "gram_automorphism_group_order": 442368,
+        "gram_certificate_sha256": "e641e83822fae412ec3e1e4d8aa355f015d204f10fa98adde97c5da508fbf554",
+        "gram_degree_multiset": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6
+        ],
+        "gram_edge_count": 45,
+        "h_certificate_sha256": "133097154bd369ae928c5c712f50745afd75f1d4265e2137dc57475cdb0c6d99",
+        "ht_certificate_sha256": "ff1b5d3735bd5735fd4648ba24627fa997045ce004d6ea08a9a5ff7567919490",
+        "maximum_aligned_support_overlap": 3,
+        "minimum_aligned_support_symmetric_difference": 40,
+        "pynauty_version": "2.8.8.1",
+        "self_dual": false,
+        "stream_new_gram": false,
+        "stream_new_h": false,
+        "stream_new_ht": false,
+        "transpose_h_certificate_sha256": "ff1b5d3735bd5735fd4648ba24627fa997045ce004d6ea08a9a5ff7567919490"
+      },
+      "factor_found": true,
+      "global_index": 7,
+      "process_elapsed_seconds": 15.753475333,
+      "returncode": 0,
+      "solver": "runs/direct-search/frontier-portal-harvest-20260729/pilot-wave1/trial-00007/solver.json",
+      "solver_sha256": "8a6599fe5af58b7e7b0af8abe1cc0fed57fb24185187a6ba4c1964aaf7967a05"
+    }
+  ],
+  "requested_time_limit_seconds_per_trial": 45.0,
+  "schema_version": 1,
+  "shard": {
+    "count": 1,
+    "index": 0,
+    "seed_base": 731000,
+    "trials_per_shard": 8
+  },
+  "shell": {
+    "path": "runs/direct-search/gram-shell-reference-columns-29760.json",
+    "sha256": "68d6f8db05b409b83124883db101a8025f42ee6fc7441e8358fcf72795288f2a",
+    "size": 1382,
+    "source": "references/orrick-et-al-2003/matrix.txt",
+    "source_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850"
+  },
+  "solver_runtime": {
+    "numpy": "1.22.4",
+    "python_executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "python_full_version": "3.9.6 (default, Nov 11 2024, 03:15:38) \n[Clang 16.0.0 (clang-1600.0.26.6)]",
+    "python_version": "3.9.6",
+    "scipy": "1.13.1"
+  },
+  "source": {
+    "path": "research/frontier_portal_harvest.py",
+    "sha256": "c3e7c0a2120aa6390546d503ed50a256e8634c2ba86e3d6a460a13c8da1c5645"
+  },
+  "trials_completed": 8,
+  "verified_frontier_ties": 2
+}

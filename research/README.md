@@ -727,6 +727,20 @@ class and is documented in `FRONTIER_FACTOR_CLASS_EXPANSION_20260728.md`.
 The subsequent two-arm search and exhaustive `2^32` connector from that class
 are documented in `EB138A_SEARCH_20260728.md`.
 
+The later novelty-aware factor harvest and two sparse integer identities close
+the other three size-six triple orbits exactly for this fixed Gram, replacing
+their earlier `UNKNOWN` statuses with checkable linear contradictions. The
+pilot, proof boundary, standalone checker, and local-versus-literature claims
+are documented in
+[`FRONTIER_PORTAL_HARVEST_20260729.md`](FRONTIER_PORTAL_HARVEST_20260729.md).
+
+The full 2026-07-29 portal campaign synthesis, including the two new local
+H/HT classes, exact alignment and radius-three closures, pairwise portal
+geometry, four exhaustive 32-coordinate connector cubes, and completed
+core/fiber follow-ups, is documented with terminal statistics and provenance
+hashes in
+[`FRONTIER_PORTAL_CAMPAIGN_20260729.md`](FRONTIER_PORTAL_CAMPAIGN_20260729.md).
+
 Always pass an emitted matrix through `./arena verify` before promotion.
 
 ## Randomized Gram decomposition

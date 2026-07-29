@@ -1,0 +1,46 @@
+{
+  "anchor_known_support_index": 2,
+  "claim_boundary": "factor_found=true is backed by exact Gram and Bareiss checks; a timeout or other non-factor result is not an infeasibility proof",
+  "dependencies": {
+    "numpy": "1.22.4",
+    "scipy": "1.13.1"
+  },
+  "elapsed_seconds": 0.279559459,
+  "engine": "frontier-portal-gram-shell-milp-v1",
+  "exact_absolute_determinant": null,
+  "factor_found": false,
+  "global_index": 2,
+  "known_support_count": 8,
+  "objective_max": 3823339,
+  "objective_min": 259,
+  "objective_mode": "rarity",
+  "objective_sha256": "06333196f7c14058d9e740c3b93d255a01f1e03dae8139125fa363d6260c6966",
+  "raw_support_no_goods": 0,
+  "requested_time_limit_seconds": 45.0,
+  "schema_version": 1,
+  "seed": 730002,
+  "selected_shell_masks": [],
+  "shard_count": 1,
+  "shard_index": 0,
+  "shell_report": "runs/direct-search/gram-shell-reference-columns-29760.json",
+  "shell_report_sha256": "68d6f8db05b409b83124883db101a8025f42ee6fc7441e8358fcf72795288f2a",
+  "small_orbit_masks": [
+    8161,
+    8356323,
+    8380805
+  ],
+  "small_orbit_triple": [
+    0,
+    2,
+    5
+  ],
+  "solver": {
+    "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+    "mip_gap": null,
+    "mip_node_count": null,
+    "status": 2,
+    "success": false
+  },
+  "source_matrix": "references/orrick-et-al-2003/matrix.txt",
+  "source_matrix_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850"
+}

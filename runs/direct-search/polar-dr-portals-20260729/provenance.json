@@ -1,0 +1,45 @@
+{
+  "challenge_path": "challenge.json",
+  "challenge_sha256": "4e1928a317b078e135f3ae120ba633896f9cd4658d321ba17f6c0f50411fbdf9",
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "research/polar_dr_portals.py"
+  ],
+  "dependencies": {
+    "numpy": "1.22.4",
+    "pynauty": null,
+    "scipy": "1.13.1",
+    "sympy": "1.14.0"
+  },
+  "event_log_path": "runs/direct-search/polar-dr-portals-20260729/events.jsonl",
+  "event_log_sha256": "36bf6e943789ef8ce1fc614263b953433107132336eaee995573fe73ca1c620f",
+  "git": {
+    "branch": "research/direct-search-20260728",
+    "commit": "bb8da929be298393eabd4551ef6394a70cf9192b",
+    "status_short": "?? research/frontier_portal_harvest.py\n?? research/frontier_portal_radius3.cpp\n?? research/polar_dr_portals.py"
+  },
+  "input_audit_path": "runs/direct-search/frontier-factor-class-expansion-20260728/final-h-equivalence-audit.json",
+  "input_audit_sha256": "1fdb0d9e45d573bd4616a99ca5f09ff3afad0c204843cf9eb2c3a8f5a121b372",
+  "postrun_metadata_corrections": [
+    {
+      "corrected_at": "2026-07-29T03:14:57.115127+00:00",
+      "detail": "The original receipt_sha256 field held the SHA-256 of receipt JSON bytes. It now holds receipt.receipt_sha256; receipt_file_sha256 preserves the file-byte hash.",
+      "kind": "receipt-hash-label-correction",
+      "old_event_log_sha256": "a8c46267220a1a6b344b2e6d86bd38d53ee38cfc843b8822a641efcf5b1bcc87",
+      "old_provenance_sha256": "51e66076d583104ad8a406ecba53be2b8e3c428fb5e7f7acfd539089ea203278",
+      "old_report_sha256": "944ca2ccaa0aca5c77aec14c6eaf12c924d2561ecd5146ea890c6b4fe16c76e2",
+      "old_tool_sha256": "555657b0ba88a58950ac608e58ac8983936840f52edd7803f1322fe8e818d8ed",
+      "scope": "report metadata only; matrices, receipts, exact scores, counts, and classifications unchanged"
+    }
+  ],
+  "python": {
+    "executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "version": "3.9.6 (default, Nov 11 2024, 03:15:38) \n[Clang 16.0.0 (clang-1600.0.26.6)]"
+  },
+  "report_path": "runs/direct-search/polar-dr-portals-20260729/report.json",
+  "report_sha256": "f5e3bbd0f027596b6e331831a93ca5a6f4774b0c98ed8440bcd4e7b2a143cd91",
+  "schema_version": 1,
+  "tool_path": "research/polar_dr_portals.py",
+  "tool_sha256": "27fc7561e6b85b961bff1a78d879877b71e78e43383de9dfe89176f90edfed42"
+}

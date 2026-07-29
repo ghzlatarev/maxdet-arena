@@ -1,0 +1,72 @@
+{
+  "anchor_known_support_index": 7,
+  "claim_boundary": "factor_found=true is backed by exact Gram and Bareiss checks; a timeout or other non-factor result is not an infeasibility proof",
+  "dependencies": {
+    "numpy": "1.22.4",
+    "scipy": "1.13.1"
+  },
+  "elapsed_seconds": 27.458753291,
+  "engine": "frontier-portal-gram-shell-milp-v1",
+  "exact_absolute_determinant": "2779447296000000",
+  "factor_found": true,
+  "global_index": 7,
+  "known_support_count": 8,
+  "objective_max": 999665,
+  "objective_min": 586,
+  "objective_mode": "control",
+  "objective_sha256": "3289480c5b69637660b310ef5ea94e70ae28f47dfc42d8c4ee05a27302d98bdf",
+  "output": "runs/direct-search/frontier-portal-harvest-20260729/pilot-wave0/trial-00007/factor.matrix.txt",
+  "output_sha256": "353d80654ee2a99f1ce3c0999da7860c4a47a5910eec42053b7c3901af03bbce",
+  "raw_support_no_goods": 0,
+  "requested_time_limit_seconds": 45.0,
+  "schema_version": 1,
+  "seed": 730007,
+  "selected_shell_masks": [
+    8161,
+    248527,
+    447671,
+    471895,
+    372015,
+    1769529,
+    1899131,
+    3272805,
+    3570057,
+    3689815,
+    2795517,
+    2975363,
+    6519931,
+    6586457,
+    6837039,
+    8356323,
+    8363525,
+    7350967,
+    5433091,
+    5588989,
+    5780687,
+    4848017,
+    5138533
+  ],
+  "shard_count": 1,
+  "shard_index": 0,
+  "shell_report": "runs/direct-search/gram-shell-reference-columns-29760.json",
+  "shell_report_sha256": "68d6f8db05b409b83124883db101a8025f42ee6fc7441e8358fcf72795288f2a",
+  "small_orbit_masks": [
+    8161,
+    8356323,
+    8363525
+  ],
+  "small_orbit_triple": [
+    0,
+    2,
+    4
+  ],
+  "solver": {
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "mip_gap": 0.48212888226645306,
+    "mip_node_count": 2,
+    "status": 0,
+    "success": true
+  },
+  "source_matrix": "references/orrick-et-al-2003/matrix.txt",
+  "source_matrix_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850"
+}

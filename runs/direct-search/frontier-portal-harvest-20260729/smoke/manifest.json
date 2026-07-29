@@ -1,0 +1,98 @@
+{
+  "baseline": {
+    "gram_classes": 1,
+    "h_classes": 11,
+    "ht_classes": 8,
+    "path": "runs/direct-search/frontier-factor-class-expansion-20260728/final-h-equivalence-audit.json",
+    "sha256": "1fdb0d9e45d573bd4616a99ca5f09ff3afad0c204843cf9eb2c3a8f5a121b372"
+  },
+  "campaign": "frontier-portal-harvest-20260729",
+  "campaign_receipt_sha256": "a5def1dc7e932ebce8322a6fea56df36fe15d689cbfc5f37a38706e2593d8496",
+  "claim_boundary": "Novelty is relative to the pinned local baseline only. Non-feasible bounded runs do not prove empty slices. The fixed known Gram makes a new row-Gram class impossible in this model; transpose Gram is still classified explicitly.",
+  "classifier": {
+    "pynauty": "2.8.8.1",
+    "python": "/tmp/maxdet-h-audit-20260729/bin/python"
+  },
+  "elapsed_seconds": 1.469828792,
+  "frontier": "2779447296000000",
+  "jobs": 1,
+  "known_aligned_factors": [
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/known-ht-aligned/ht-4072ead420f0.matrix.txt",
+      "sha256": "2b7f3caefc3b2b7c8fed0d4a87ecd6d275b2d99e6b1da7fce8500eb309c9942f",
+      "support_sha256": "ebb9b45479e1325a317edc752c2e2371a42c018b0409684489825d374bd76350"
+    },
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/known-ht-aligned/ht-9035bdf2a85b.matrix.txt",
+      "sha256": "f649b0cf6b773fde8de18e206d80cf99d60de4d1cf68cea79e80752ff9bdfaaa",
+      "support_sha256": "f060a078cc9d7d51cfd6437cab0ea8eb6fe2f589499a77bb05f43a96e4269f41"
+    },
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/known-ht-aligned/ht-b584c923ea12.matrix.txt",
+      "sha256": "7afe4462fc717db8fbb09eccc02b9bf6511b0a21489a43cfe54c78b1050781e7",
+      "support_sha256": "58d926c7617d4dbade735241795be0951b3191bc2c47f480498894e9005653c1"
+    },
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/known-ht-aligned/ht-b64c33090c9a.matrix.txt",
+      "sha256": "276ec14f7c6b9295d0e4ecbeed0bcd4dd8339d7170a28f16f5d232b6203ba899",
+      "support_sha256": "a54045fa4747369a4ce027113e62b2bff10503bb20065da737166f65704797a5"
+    },
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/known-ht-aligned/ht-db2cddf4b8f1.matrix.txt",
+      "sha256": "6806c559884743f98fb3775009cee6e81ed096bd5cda54e1baad3915863105a5",
+      "support_sha256": "e58e1425597a9483c5250785c4948d6624fe46bf62715dcca1df917140405b08"
+    },
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/known-ht-aligned/ht-df0b940533f8.matrix.txt",
+      "sha256": "c2809c47d3f771359fd47f6c8f04b589e6651b0ad8ba6e65af7fc90038007220",
+      "support_sha256": "b5832db88d3d756d9687f24a974c3a62d7621187c81acb5b95060f5a3a685b87"
+    },
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/known-ht-aligned/ht-ff1b5d3735bd.matrix.txt",
+      "sha256": "62a6d539a8d31c866c9b54ae17378f1787bf4cd0b5a5a4547b76ca6b70ee2406",
+      "support_sha256": "e3223e5726e54a9c31d8d765ec635affe7d0c9241b2ca4eaaecc9411dc2a2419"
+    },
+    {
+      "path": "runs/direct-search/frontier-factor-class-expansion-20260728/seeds/h-eb138a06ec638735c34bdacf77bd1cdd869c5d2fbc3450be25d63af0cde1a134.matrix.txt",
+      "sha256": "a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5",
+      "support_sha256": "ce4151ff8992a8f9dbed3980a9fcfc9e89b23e8a0716365041d3b02f0717007c"
+    }
+  ],
+  "method": "exact 1,382-column frontier-Gram shell MILP; theorem-forced size-six-orbit triples; soft rarity objectives; no raw-support no-goods; exact Gram/Bareiss/arena and H/HT/Gram classification",
+  "new_gram_classes": 0,
+  "new_h_classes": 0,
+  "new_ht_classes": 0,
+  "records": [
+    {
+      "arena_receipt": null,
+      "classification": null,
+      "factor_found": false,
+      "global_index": 0,
+      "process_elapsed_seconds": 1.468708667,
+      "returncode": 3,
+      "solver": "runs/direct-search/frontier-portal-harvest-20260729/smoke/trial-00000/solver.json",
+      "solver_sha256": "4294feba23b3bfa907793eb8504ec60fbb32407888a0bdd51dfdd35d95282259"
+    }
+  ],
+  "requested_time_limit_seconds_per_trial": 12.0,
+  "schema_version": 1,
+  "shard": {
+    "count": 1,
+    "index": 0,
+    "seed_base": 730000,
+    "trials_per_shard": 1
+  },
+  "shell": {
+    "path": "runs/direct-search/gram-shell-reference-columns-29760.json",
+    "sha256": "68d6f8db05b409b83124883db101a8025f42ee6fc7441e8358fcf72795288f2a",
+    "size": 1382,
+    "source": "references/orrick-et-al-2003/matrix.txt",
+    "source_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850"
+  },
+  "source": {
+    "path": "research/frontier_portal_harvest.py",
+    "sha256": "bc93a1d6879ebc2bd3e94e31c281ae1eabd21224181844049f38fe8d9ce46afb"
+  },
+  "trials_completed": 1,
+  "verified_frontier_ties": 0
+}

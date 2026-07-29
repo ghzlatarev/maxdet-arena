@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "preservation_method": "recursive byte-for-byte copy",
+  "source_directory": "/private/tmp/maxdet-polar-smoke2.LADsil",
+  "target_directory": "runs/direct-search/polar-dr-portals-smoke-20260729",
+  "copied_file_count_before_this_sidecar": 43,
+  "report_sha256": "20c88fdf2d664c5a5d3e50e3bbb55b476a271e805d4dc37b2249695cb3d6e30e",
+  "frontier_tie_audit_sha256": "832fe4a86f7146e8e48650bb2793197cb437a19dbe6975a7fab07f8f4f7071f3",
+  "new_frontier_tie": {
+    "absolute_determinant": "2779447296000000",
+    "matrix_path": "frontier-ties/8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208.matrix.txt",
+    "matrix_sha256": "8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208",
+    "receipt_sha256": "e46e5c2e3d97edfa3e50b1eda95e18b3a2e4f8c4d8898ff98a7c26f4880c4120",
+    "receipt_file_sha256": "3f26487f397d58210459ac90271d8caa8f9ee685c10d68824c0ecfeb7b632b85",
+    "h_certificate_sha256": "de7642266b6997198a6892fe26c1e080d0c673f095f9710b5003bbb8b5de2345",
+    "ht_certificate_sha256": "de7642266b6997198a6892fe26c1e080d0c673f095f9710b5003bbb8b5de2345"
+  },
+  "input_comparison": {
+    "input_ht_class_count": 8,
+    "smoke_ht_class_count": 9,
+    "new_certificate_absent_from_input_audit": true
+  },
+  "note": "Paths inside copied report/provenance bytes retain the original temporary directory by design. Their receipt_sha256 fields contain receipt-file hashes due to a metadata-label bug fixed in the substantive report; this sidecar records the trusted internal receipt hash separately and records the durable relocation."
+}

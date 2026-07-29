@@ -1,5 +1,5 @@
 {
-  "schema_version": 10,
+  "schema_version": 11,
   "updated": "2026-07-29",
   "status": "frontier-tie",
   "frontier": {
@@ -10,6 +10,40 @@
   "best_new_verified": {
     "absolute_determinant": "2779447296000000",
     "gap": "0"
+  },
+  "portal_campaign": {
+    "method": "Polar / Douglas–Rachford",
+    "local_h_ht_classes_before": 8,
+    "new_local_h_ht_classes": 2,
+    "local_h_ht_classes_after": 10,
+    "substantive_frontier_ties": 163,
+    "strict_wins": 0,
+    "exact_radius_3_audits": [
+      {
+        "id": "portal-a",
+        "label": "Portal A",
+        "assignments": "24673089",
+        "frontier_ties": 0,
+        "strict_wins": 0,
+        "status": "closed"
+      },
+      {
+        "id": "portal-b",
+        "label": "Portal B",
+        "assignments": "24673089",
+        "frontier_ties": 0,
+        "strict_wins": 0,
+        "status": "closed"
+      }
+    ],
+    "exact_connector_cubes": {
+      "count": 4,
+      "assignments": "17179869184",
+      "frontier_ties": 8,
+      "strict_wins": 0,
+      "result": "Endpoint ties only"
+    },
+    "claim_boundary": "Local novelty only: these two H/HT classes were absent from the frozen local frontier atlas; no literature-wide novelty is claimed."
   },
   "search_space_map": {
     "status": "active",

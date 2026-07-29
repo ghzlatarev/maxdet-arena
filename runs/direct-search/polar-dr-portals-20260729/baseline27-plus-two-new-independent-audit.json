@@ -1,0 +1,538 @@
+{
+  "duplicate_file_count": 0,
+  "duplicates": [],
+  "expected_absolute_determinant": 2779447296000000,
+  "gram_class_count": 1,
+  "gram_classes": [
+    {
+      "automorphism_group_order": 442368,
+      "certificate_sha256": "e641e83822fae412ec3e1e4d8aa355f015d204f10fa98adde97c5da508fbf554",
+      "count": 29,
+      "degree_multiset": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6
+      ],
+      "edge_count": 45,
+      "members": [
+        {
+          "matrix_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "path": "references/orrick-et-al-2003/matrix.txt"
+        },
+        {
+          "matrix_sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "path": "runs/direct-search/best-below/frontier-class14-late-28751.matrix.txt"
+        },
+        {
+          "matrix_sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "path": "runs/direct-search/best-below/frontier-class51-28752.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ad70e10f36bb2ebed8e4698fc43fb7c0ebc0e4748890ba89a151e48da2ba2438",
+          "path": "runs/direct-search/fast-principal-cube/lnps-beam-h012-20260728/frontier-ties/0b825f609e684787af8b8c247a7845acaa65d7bafb78c0953fe1c9519c4abf81.matrix.txt"
+        },
+        {
+          "matrix_sha256": "81cecfb79e9365e1dc9d10a4fe0f8d8b31c979430f36b4ebbba0853b6ce375e2",
+          "path": "runs/direct-search/fast-principal-cube/lnps-beam-h012-20260728/frontier-ties/262471ef186a50a8cbadf1cbff64a6da7ee181dccc732d9fb63ddb307fecb142.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ae8f1de84c43f03065f8eb29df38d9208033c1d75b272a9ce527009a85b6d815",
+          "path": "runs/direct-search/frontier-factor-class-expansion-20260728/seeds/h-df0b940533f84c9d61ec8df73000b4fe3a646f073a6fd32f3826d72331ebedc0.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5",
+          "path": "runs/direct-search/frontier-factor-class-expansion-20260728/seeds/h-eb138a06ec638735c34bdacf77bd1cdd869c5d2fbc3450be25d63af0cde1a134.matrix.txt"
+        },
+        {
+          "matrix_sha256": "00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1",
+          "path": "runs/direct-search/gram-shell-milp-reference-seed29762.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d7599504a3b21239f62c9b6c9678f2b33e2b676f5ea437e778550954f270a1ea",
+          "path": "runs/direct-search/gram-shell-milp-reference-seed29768.matrix.txt"
+        },
+        {
+          "matrix_sha256": "56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208.matrix.txt"
+        },
+        {
+          "matrix_sha256": "efea293d313742c5e0b72167d59bccb5f25384fd51c87dd65e2634e95a6b40f7",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-000-q662671875-n0-d0-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "96678d284cf5e824c173f1b4cfbc0df902f4f8473a843113ed78482e00ef3d68",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-001-q662671875-n0-d1-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9e941845741382785fcf3789005c0f3c60a6243ba6c781fd912e964fe77bd412",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-002-q662671875-n0-d2-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "dd951979cc115d8323f76232fa64973202094c3b9fbe3854a8e246487b50d4f3",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-003-q662671875-n0-d5-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9d95195451c5b39e28b38124e794bb3c01800bc23c9bc8c32de0b87ec3622deb",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-004-q662671875-n0-d9-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9b4fe5fc4d67fa19c9fe3bd4ecbdab3df087f6211e6526b45dc51521e94ff8e8",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-005-q662671875-n0-d10-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "82cd5a3d3384be6425d7ae995c8a38c6b482bc3f5abac837a6f4a68950de5b6a",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-006-q662671875-n0-d11-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "4d084ab200aea69f5c3ca9e791da7d8d7ae2dd9eb5cc70836910b880f8978c2b",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-007-q662671875-n0-d12-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6f6d5f23de43f9be7b489ace84847ce455cb214e396a35eaa010acdc25176091",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-008-q662671875-n1-d0-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1dec35ac64b529715dafc13384d302565d4ddc347eba294fc173857e2834863e",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-009-q662671875-n1-d1-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3ef1f70117cc6ece3fd39434d6535272f6044ef75b5c3db5c510963c1296f9ef",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-010-q662671875-n1-d2-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "da20880cd01f8e9d8b0d7f6c16911bf7c2c2dc2fdca691c28a61b12474a2a416",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-011-q662671875-n1-d10-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d10c8560d35d832a6c0d9a6aee7f105f55a8c357769b2d562929c66e74b32930",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-012-q662671875-n1-d11-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "e8cd87169219295f3e4bd5bb3eb3b9b9fa6f17e1144589fa4f46a48fd3b74e84",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-013-q662671875-n2-d0-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c0ea58d361945b20dad78bddb3fd93c0810b762e527e8781e87d6db5e86d993a",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-014-q662671875-n2-d3-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "262471ef186a50a8cbadf1cbff64a6da7ee181dccc732d9fb63ddb307fecb142",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-015-q662671875-n2-d6-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "cb4e4fb9f4c8f63f15b966a4d9600a3f6f310b694c398c08dc8df9e99beed815",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-016-q662671875-n2-d8-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "09aacc9b3819f551ddc63d9d3f1d476ec6b47b08cdaa26ed873cabc8cd744f74",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-017-q662671875-n2-d9-b8-g2.matrix.txt"
+        }
+      ]
+    }
+  ],
+  "h_class_count": 13,
+  "h_classes": [
+    {
+      "certificate_sha256": "133097154bd369ae928c5c712f50745afd75f1d4265e2137dc57475cdb0c6d99",
+      "count": 4,
+      "members": [
+        {
+          "matrix_sha256": "ad70e10f36bb2ebed8e4698fc43fb7c0ebc0e4748890ba89a151e48da2ba2438",
+          "path": "runs/direct-search/fast-principal-cube/lnps-beam-h012-20260728/frontier-ties/0b825f609e684787af8b8c247a7845acaa65d7bafb78c0953fe1c9519c4abf81.matrix.txt"
+        },
+        {
+          "matrix_sha256": "efea293d313742c5e0b72167d59bccb5f25384fd51c87dd65e2634e95a6b40f7",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-000-q662671875-n0-d0-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "96678d284cf5e824c173f1b4cfbc0df902f4f8473a843113ed78482e00ef3d68",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-001-q662671875-n0-d1-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3ef1f70117cc6ece3fd39434d6535272f6044ef75b5c3db5c510963c1296f9ef",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-010-q662671875-n1-d2-b8-g2.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "4072ead420f0688da998d030955fecc419fc96e0494c6771fe6a92f74615305f",
+      "count": 3,
+      "members": [
+        {
+          "matrix_sha256": "9d95195451c5b39e28b38124e794bb3c01800bc23c9bc8c32de0b87ec3622deb",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-004-q662671875-n0-d9-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "82cd5a3d3384be6425d7ae995c8a38c6b482bc3f5abac837a6f4a68950de5b6a",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-006-q662671875-n0-d11-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d10c8560d35d832a6c0d9a6aee7f105f55a8c357769b2d562929c66e74b32930",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-012-q662671875-n1-d11-b8-g2.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "411ffbb1f7635c339ca3de9d970062026e50b371571426515c98e867d29e4f3a",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "5f3d7a03b4434c9e4432b084175480465bcbd410d8fba2fc5d360dd94667a63f",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "d7599504a3b21239f62c9b6c9678f2b33e2b676f5ea437e778550954f270a1ea",
+          "path": "runs/direct-search/gram-shell-milp-reference-seed29768.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "6114b83b5af6eadbabe64c941e9c6706293aec09490c33d6407e78559d87e482",
+      "count": 4,
+      "members": [
+        {
+          "matrix_sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "path": "runs/direct-search/best-below/frontier-class14-late-28751.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9e941845741382785fcf3789005c0f3c60a6243ba6c781fd912e964fe77bd412",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-002-q662671875-n0-d2-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6f6d5f23de43f9be7b489ace84847ce455cb214e396a35eaa010acdc25176091",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-008-q662671875-n1-d0-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1dec35ac64b529715dafc13384d302565d4ddc347eba294fc173857e2834863e",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-009-q662671875-n1-d1-b8-g2.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "9035bdf2a85b8a2a600a76c6d55af36f627327694e904e7b483e88993716c91b",
+      "count": 2,
+      "members": [
+        {
+          "matrix_sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "path": "runs/direct-search/best-below/frontier-class51-28752.matrix.txt"
+        },
+        {
+          "matrix_sha256": "dd951979cc115d8323f76232fa64973202094c3b9fbe3854a8e246487b50d4f3",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-003-q662671875-n0-d5-b8-g2.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "b584c923ea12af6634bb5681f1eb903196e5a7cedadf5d1ea321bc63613c986e",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1",
+          "path": "runs/direct-search/gram-shell-milp-reference-seed29762.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "b64c33090c9aac4dc7386213917cec66ac28d2da9685319b585067e95d0d63f6",
+      "count": 4,
+      "members": [
+        {
+          "matrix_sha256": "81cecfb79e9365e1dc9d10a4fe0f8d8b31c979430f36b4ebbba0853b6ce375e2",
+          "path": "runs/direct-search/fast-principal-cube/lnps-beam-h012-20260728/frontier-ties/262471ef186a50a8cbadf1cbff64a6da7ee181dccc732d9fb63ddb307fecb142.matrix.txt"
+        },
+        {
+          "matrix_sha256": "e8cd87169219295f3e4bd5bb3eb3b9b9fa6f17e1144589fa4f46a48fd3b74e84",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-013-q662671875-n2-d0-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "262471ef186a50a8cbadf1cbff64a6da7ee181dccc732d9fb63ddb307fecb142",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-015-q662671875-n2-d6-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "09aacc9b3819f551ddc63d9d3f1d476ec6b47b08cdaa26ed873cabc8cd744f74",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-017-q662671875-n2-d9-b8-g2.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "db2cddf4b8f12da99a32b1563689ad693b89d0a9ae343a4aedde56361fdc5a81",
+      "count": 3,
+      "members": [
+        {
+          "matrix_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "path": "references/orrick-et-al-2003/matrix.txt"
+        },
+        {
+          "matrix_sha256": "c0ea58d361945b20dad78bddb3fd93c0810b762e527e8781e87d6db5e86d993a",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-014-q662671875-n2-d3-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "cb4e4fb9f4c8f63f15b966a4d9600a3f6f310b694c398c08dc8df9e99beed815",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-016-q662671875-n2-d8-b8-g2.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "de7642266b6997198a6892fe26c1e080d0c673f095f9710b5003bbb8b5de2345",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "df0b940533f84c9d61ec8df73000b4fe3a646f073a6fd32f3826d72331ebedc0",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "ae8f1de84c43f03065f8eb29df38d9208033c1d75b272a9ce527009a85b6d815",
+          "path": "runs/direct-search/frontier-factor-class-expansion-20260728/seeds/h-df0b940533f84c9d61ec8df73000b4fe3a646f073a6fd32f3826d72331ebedc0.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "eb138a06ec638735c34bdacf77bd1cdd869c5d2fbc3450be25d63af0cde1a134",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5",
+          "path": "runs/direct-search/frontier-factor-class-expansion-20260728/seeds/h-eb138a06ec638735c34bdacf77bd1cdd869c5d2fbc3450be25d63af0cde1a134.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "ff1b5d3735bd5735fd4648ba24627fa997045ce004d6ea08a9a5ff7567919490",
+      "count": 3,
+      "members": [
+        {
+          "matrix_sha256": "9b4fe5fc4d67fa19c9fe3bd4ecbdab3df087f6211e6526b45dc51521e94ff8e8",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-005-q662671875-n0-d10-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "4d084ab200aea69f5c3ca9e791da7d8d7ae2dd9eb5cc70836910b880f8978c2b",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-007-q662671875-n0-d12-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "da20880cd01f8e9d8b0d7f6c16911bf7c2c2dc2fdca691c28a61b12474a2a416",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-011-q662671875-n1-d10-b8-g2.matrix.txt"
+        }
+      ]
+    }
+  ],
+  "ht_class_count": 10,
+  "ht_classes": [
+    {
+      "certificate_sha256": "1e4b14334f15ec751275a8383b5b7e8aa8270c951e3ff5a3d342c8fe203d9efe",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "4072ead420f0688da998d030955fecc419fc96e0494c6771fe6a92f74615305f",
+      "count": 7,
+      "members": [
+        {
+          "matrix_sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "path": "runs/direct-search/best-below/frontier-class14-late-28751.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9e941845741382785fcf3789005c0f3c60a6243ba6c781fd912e964fe77bd412",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-002-q662671875-n0-d2-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9d95195451c5b39e28b38124e794bb3c01800bc23c9bc8c32de0b87ec3622deb",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-004-q662671875-n0-d9-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "82cd5a3d3384be6425d7ae995c8a38c6b482bc3f5abac837a6f4a68950de5b6a",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-006-q662671875-n0-d11-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6f6d5f23de43f9be7b489ace84847ce455cb214e396a35eaa010acdc25176091",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-008-q662671875-n1-d0-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1dec35ac64b529715dafc13384d302565d4ddc347eba294fc173857e2834863e",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-009-q662671875-n1-d1-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d10c8560d35d832a6c0d9a6aee7f105f55a8c357769b2d562929c66e74b32930",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-012-q662671875-n1-d11-b8-g2.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "9035bdf2a85b8a2a600a76c6d55af36f627327694e904e7b483e88993716c91b",
+      "count": 2,
+      "members": [
+        {
+          "matrix_sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "path": "runs/direct-search/best-below/frontier-class51-28752.matrix.txt"
+        },
+        {
+          "matrix_sha256": "dd951979cc115d8323f76232fa64973202094c3b9fbe3854a8e246487b50d4f3",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-003-q662671875-n0-d5-b8-g2.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "b584c923ea12af6634bb5681f1eb903196e5a7cedadf5d1ea321bc63613c986e",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1",
+          "path": "runs/direct-search/gram-shell-milp-reference-seed29762.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "b64c33090c9aac4dc7386213917cec66ac28d2da9685319b585067e95d0d63f6",
+      "count": 4,
+      "members": [
+        {
+          "matrix_sha256": "81cecfb79e9365e1dc9d10a4fe0f8d8b31c979430f36b4ebbba0853b6ce375e2",
+          "path": "runs/direct-search/fast-principal-cube/lnps-beam-h012-20260728/frontier-ties/262471ef186a50a8cbadf1cbff64a6da7ee181dccc732d9fb63ddb307fecb142.matrix.txt"
+        },
+        {
+          "matrix_sha256": "e8cd87169219295f3e4bd5bb3eb3b9b9fa6f17e1144589fa4f46a48fd3b74e84",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-013-q662671875-n2-d0-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "262471ef186a50a8cbadf1cbff64a6da7ee181dccc732d9fb63ddb307fecb142",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-015-q662671875-n2-d6-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "09aacc9b3819f551ddc63d9d3f1d476ec6b47b08cdaa26ed873cabc8cd744f74",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-017-q662671875-n2-d9-b8-g2.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "db2cddf4b8f12da99a32b1563689ad693b89d0a9ae343a4aedde56361fdc5a81",
+      "count": 3,
+      "members": [
+        {
+          "matrix_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "path": "references/orrick-et-al-2003/matrix.txt"
+        },
+        {
+          "matrix_sha256": "c0ea58d361945b20dad78bddb3fd93c0810b762e527e8781e87d6db5e86d993a",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-014-q662671875-n2-d3-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "cb4e4fb9f4c8f63f15b966a4d9600a3f6f310b694c398c08dc8df9e99beed815",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-016-q662671875-n2-d8-b8-g2.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "de7642266b6997198a6892fe26c1e080d0c673f095f9710b5003bbb8b5de2345",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "df0b940533f84c9d61ec8df73000b4fe3a646f073a6fd32f3826d72331ebedc0",
+      "count": 2,
+      "members": [
+        {
+          "matrix_sha256": "ae8f1de84c43f03065f8eb29df38d9208033c1d75b272a9ce527009a85b6d815",
+          "path": "runs/direct-search/frontier-factor-class-expansion-20260728/seeds/h-df0b940533f84c9d61ec8df73000b4fe3a646f073a6fd32f3826d72331ebedc0.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d7599504a3b21239f62c9b6c9678f2b33e2b676f5ea437e778550954f270a1ea",
+          "path": "runs/direct-search/gram-shell-milp-reference-seed29768.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "eb138a06ec638735c34bdacf77bd1cdd869c5d2fbc3450be25d63af0cde1a134",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5",
+          "path": "runs/direct-search/frontier-factor-class-expansion-20260728/seeds/h-eb138a06ec638735c34bdacf77bd1cdd869c5d2fbc3450be25d63af0cde1a134.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "ff1b5d3735bd5735fd4648ba24627fa997045ce004d6ea08a9a5ff7567919490",
+      "count": 7,
+      "members": [
+        {
+          "matrix_sha256": "ad70e10f36bb2ebed8e4698fc43fb7c0ebc0e4748890ba89a151e48da2ba2438",
+          "path": "runs/direct-search/fast-principal-cube/lnps-beam-h012-20260728/frontier-ties/0b825f609e684787af8b8c247a7845acaa65d7bafb78c0953fe1c9519c4abf81.matrix.txt"
+        },
+        {
+          "matrix_sha256": "efea293d313742c5e0b72167d59bccb5f25384fd51c87dd65e2634e95a6b40f7",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-000-q662671875-n0-d0-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "96678d284cf5e824c173f1b4cfbc0df902f4f8473a843113ed78482e00ef3d68",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-001-q662671875-n0-d1-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9b4fe5fc4d67fa19c9fe3bd4ecbdab3df087f6211e6526b45dc51521e94ff8e8",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-005-q662671875-n0-d10-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "4d084ab200aea69f5c3ca9e791da7d8d7ae2dd9eb5cc70836910b880f8978c2b",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-007-q662671875-n0-d12-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3ef1f70117cc6ece3fd39434d6535272f6044ef75b5c3db5c510963c1296f9ef",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-010-q662671875-n1-d2-b8-g2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "da20880cd01f8e9d8b0d7f6c16911bf7c2c2dc2fdca691c28a61b12474a2a416",
+          "path": "runs/map-elites-pilot-20260728-seed35011/archive/elite-011-q662671875-n1-d10-b8-g2.matrix.txt"
+        }
+      ]
+    }
+  ],
+  "input_file_count": 29,
+  "method": "minimum color-preserving nauty certificate over all 23^2 dephased pivots",
+  "pynauty_version": "2.8.8.1",
+  "schema_version": 1,
+  "unique_matrix_count": 29
+}

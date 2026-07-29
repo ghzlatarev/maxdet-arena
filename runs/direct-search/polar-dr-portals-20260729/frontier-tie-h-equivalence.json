@@ -1,0 +1,2134 @@
+{
+  "duplicate_file_count": 0,
+  "duplicates": [],
+  "expected_absolute_determinant": 2779447296000000,
+  "gram_class_count": 1,
+  "gram_classes": [
+    {
+      "automorphism_group_order": 442368,
+      "certificate_sha256": "e641e83822fae412ec3e1e4d8aa355f015d204f10fa98adde97c5da508fbf554",
+      "count": 163,
+      "degree_multiset": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6
+      ],
+      "edge_count": 45,
+      "members": [
+        {
+          "matrix_sha256": "00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1.matrix.txt"
+        },
+        {
+          "matrix_sha256": "0226eb35612f4fd6fb3cc837548c41cb731299640e64543ee8b2054f8eeef662",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0226eb35612f4fd6fb3cc837548c41cb731299640e64543ee8b2054f8eeef662.matrix.txt"
+        },
+        {
+          "matrix_sha256": "0284d8865f89bbda15f6dde2adc2b21e7e72561facb1ca6dd5f5bd8cb5c396a5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0284d8865f89bbda15f6dde2adc2b21e7e72561facb1ca6dd5f5bd8cb5c396a5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "02d9870748e92db2a7a1c5b18fa34af2c63d33dd738586459951ecbbdae4e8d7",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/02d9870748e92db2a7a1c5b18fa34af2c63d33dd738586459951ecbbdae4e8d7.matrix.txt"
+        },
+        {
+          "matrix_sha256": "0304122e2041a116b5cdfe8fe36e99117cdb92795dd2d2ae588494a2a7ee7017",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0304122e2041a116b5cdfe8fe36e99117cdb92795dd2d2ae588494a2a7ee7017.matrix.txt"
+        },
+        {
+          "matrix_sha256": "032b22404a5c08beb24db846f0e50af9573cb152bc2582b9a9ead6139593fbd8",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/032b22404a5c08beb24db846f0e50af9573cb152bc2582b9a9ead6139593fbd8.matrix.txt"
+        },
+        {
+          "matrix_sha256": "0560e0915a7f60082c15fb39dd9aa0ba6b021bfceb7c7fe90fab52e025cfe78b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0560e0915a7f60082c15fb39dd9aa0ba6b021bfceb7c7fe90fab52e025cfe78b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "056db91ebf0bcfdef4006a9e212934a12d637a33a6568f4f0afd4cfbd7454a57",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/056db91ebf0bcfdef4006a9e212934a12d637a33a6568f4f0afd4cfbd7454a57.matrix.txt"
+        },
+        {
+          "matrix_sha256": "056fb6c0dfac125d9a0507cfb4470d3664b977b7487a85f8840497383be34077",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/056fb6c0dfac125d9a0507cfb4470d3664b977b7487a85f8840497383be34077.matrix.txt"
+        },
+        {
+          "matrix_sha256": "07674064b3f0ee41ba46945afd44cc1274b81344495ce210fce167af7c15111a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/07674064b3f0ee41ba46945afd44cc1274b81344495ce210fce167af7c15111a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "0917925191d6e24aa65e6af92a87646fe4e2b7005c6c7ef3f3418262bc730cc2",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0917925191d6e24aa65e6af92a87646fe4e2b7005c6c7ef3f3418262bc730cc2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "0d40b5d2d8dba730fe404c0ba85cb6c647c7032155bb31ad864f2e1320c089d7",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0d40b5d2d8dba730fe404c0ba85cb6c647c7032155bb31ad864f2e1320c089d7.matrix.txt"
+        },
+        {
+          "matrix_sha256": "0f67a7ffa0dd83c04701c614e078779aaafe49147cf6c295bc69078be0ddb34e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0f67a7ffa0dd83c04701c614e078779aaafe49147cf6c295bc69078be0ddb34e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "10463ffb82aca72ea4b30b9d1062ba457175c2b353eca58c8a158abc9db7d17b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/10463ffb82aca72ea4b30b9d1062ba457175c2b353eca58c8a158abc9db7d17b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "10b3d2607c058ed2d703f56d7bafc13aa95afb635c0b426d5accd911f49bbb41",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/10b3d2607c058ed2d703f56d7bafc13aa95afb635c0b426d5accd911f49bbb41.matrix.txt"
+        },
+        {
+          "matrix_sha256": "11bafd556d05ce606eabb962f80a80f90c3f401a75f7fbb468819cbe4e6d57a8",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/11bafd556d05ce606eabb962f80a80f90c3f401a75f7fbb468819cbe4e6d57a8.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1356fef5236e5eb4cb713cad8b40e29588293b2c019189b82e6a91271c6fc879",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1356fef5236e5eb4cb713cad8b40e29588293b2c019189b82e6a91271c6fc879.matrix.txt"
+        },
+        {
+          "matrix_sha256": "13f8440df32d29694be2a10186abfedb95d2425301ceaeed52a1cab97b7691e9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/13f8440df32d29694be2a10186abfedb95d2425301ceaeed52a1cab97b7691e9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1554085c8de3b51e5710bff1ca9a28886eaa0558cbbc62cca11be6c6861b30cc",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1554085c8de3b51e5710bff1ca9a28886eaa0558cbbc62cca11be6c6861b30cc.matrix.txt"
+        },
+        {
+          "matrix_sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce.matrix.txt"
+        },
+        {
+          "matrix_sha256": "15fb477ea907c4238fbe70a1cd73930a2ef1830e4169d7b803c3fdb7e11cb22f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/15fb477ea907c4238fbe70a1cd73930a2ef1830e4169d7b803c3fdb7e11cb22f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "173eb9598b44d48dee07f899d1f0925f8dfce43cba6b9602e51ca33a444c5576",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/173eb9598b44d48dee07f899d1f0925f8dfce43cba6b9602e51ca33a444c5576.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1b043b1d45ed6de1ced71c16fa572394201fe8b9a8aa34a0332835543e483579",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1b043b1d45ed6de1ced71c16fa572394201fe8b9a8aa34a0332835543e483579.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1b467bb79dc56b23bd2d2472d240c8f865068b76d6660534073630bf3913ba77",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1b467bb79dc56b23bd2d2472d240c8f865068b76d6660534073630bf3913ba77.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1d676ccdb3984a6ae68bb89672c04c5a466d0efc7e6a98c320e082821d02add4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1d676ccdb3984a6ae68bb89672c04c5a466d0efc7e6a98c320e082821d02add4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1f3e443adde6ac198abb16ae074dd55563287b92ccf23874bb606a70ec9af2f6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1f3e443adde6ac198abb16ae074dd55563287b92ccf23874bb606a70ec9af2f6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "20f54b1b2a3ead7b43cf3e888dc6334458f0bca5c619b0acf6356222e6dd214a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/20f54b1b2a3ead7b43cf3e888dc6334458f0bca5c619b0acf6356222e6dd214a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "20ffa0ba06bb2bbc37a12b467118de67e94f6f2beda7642a93debaa18e51a348",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/20ffa0ba06bb2bbc37a12b467118de67e94f6f2beda7642a93debaa18e51a348.matrix.txt"
+        },
+        {
+          "matrix_sha256": "2c6a274c6de3bba837dfd538e2df624919c9636cb471eb31314c26f46a308ee6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/2c6a274c6de3bba837dfd538e2df624919c9636cb471eb31314c26f46a308ee6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "2ce2e8e710d9a77223890e9d437544d5d974c73d2e8de859e244ea6f33160cd9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/2ce2e8e710d9a77223890e9d437544d5d974c73d2e8de859e244ea6f33160cd9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "2df59efec70e484aa67492d5f13fd262f9af16f8259c3f975b152ac1faff5bc3",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/2df59efec70e484aa67492d5f13fd262f9af16f8259c3f975b152ac1faff5bc3.matrix.txt"
+        },
+        {
+          "matrix_sha256": "2f5f21a92bc8243b5aa106f1e58d9ad30e34507bc140770430fcee24e9e9c8a9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/2f5f21a92bc8243b5aa106f1e58d9ad30e34507bc140770430fcee24e9e9c8a9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "305124e73dbd4f2e681843504fd51402e1db871579e076994ba8c3f8cbe94b7a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/305124e73dbd4f2e681843504fd51402e1db871579e076994ba8c3f8cbe94b7a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "31d325b25c8d7830391f4fc06eeb875481435c858bf6e97a08db13171b9f47e9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/31d325b25c8d7830391f4fc06eeb875481435c858bf6e97a08db13171b9f47e9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "349e69794f40c3bfff3ec05a26c2355205a0fe1829d0ab291dd05ca254484109",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/349e69794f40c3bfff3ec05a26c2355205a0fe1829d0ab291dd05ca254484109.matrix.txt"
+        },
+        {
+          "matrix_sha256": "37a686b90a7bac81c6dec6766b7f55a509c9d6a66bca41d0780ba04b27054c28",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/37a686b90a7bac81c6dec6766b7f55a509c9d6a66bca41d0780ba04b27054c28.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3960838b7c154a518fa3d1261593db3b83975b5ae3cc2bb9bdfebf9ba418d11b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/3960838b7c154a518fa3d1261593db3b83975b5ae3cc2bb9bdfebf9ba418d11b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "39b47f520620e5f8f1db7108a396944198df604928702d0afed45df4590105b9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/39b47f520620e5f8f1db7108a396944198df604928702d0afed45df4590105b9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3b2573d6ca511b66a8025eeb8022f5d1907f3c167b3f92203e8d9ec97c55abe2",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/3b2573d6ca511b66a8025eeb8022f5d1907f3c167b3f92203e8d9ec97c55abe2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3f19bd2022d32a4a7772dde112dad20820c75052941c0f4eb33c526c143e9915",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/3f19bd2022d32a4a7772dde112dad20820c75052941c0f4eb33c526c143e9915.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3fa9fd308dc5634bc6d8ab02b90b995cfb60f7c2f84f1a26acb19fc5a0e77df1",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/3fa9fd308dc5634bc6d8ab02b90b995cfb60f7c2f84f1a26acb19fc5a0e77df1.matrix.txt"
+        },
+        {
+          "matrix_sha256": "40e225ffeef823c2191764006dbbe0f47b2268776e51be6bb5ed8ffd3721a15a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/40e225ffeef823c2191764006dbbe0f47b2268776e51be6bb5ed8ffd3721a15a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "418ed30f04827cf270e4b34e2943f44cfdcb99ef202d4e8ec48ba9a69d482df9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/418ed30f04827cf270e4b34e2943f44cfdcb99ef202d4e8ec48ba9a69d482df9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "4506657be36f9befb7b345dc01df25551cf999ebb9673177c8ea1aa2e4d62ad5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/4506657be36f9befb7b345dc01df25551cf999ebb9673177c8ea1aa2e4d62ad5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "4628665ef7cdc7e40e7b19faabcaebccd12a1749c6b301e68b447fc4a07a3dce",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/4628665ef7cdc7e40e7b19faabcaebccd12a1749c6b301e68b447fc4a07a3dce.matrix.txt"
+        },
+        {
+          "matrix_sha256": "47809956d36b86352ab4078a6dc562048b7a4904f0a1f7a6a603088160bb999c",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/47809956d36b86352ab4078a6dc562048b7a4904f0a1f7a6a603088160bb999c.matrix.txt"
+        },
+        {
+          "matrix_sha256": "47c2558d1dc9979f3fca4eef76b88a29f4c9bcd8f4003b641512e9090ec90e0e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/47c2558d1dc9979f3fca4eef76b88a29f4c9bcd8f4003b641512e9090ec90e0e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "492020d9183258bf65dfbbaffa60c42633debcb9e3f5c34a16c2432d1e8e61d5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/492020d9183258bf65dfbbaffa60c42633debcb9e3f5c34a16c2432d1e8e61d5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "4b3b4d45dde2dc9bb9b6ed0aabbb44368df2fd9d988ea5a030d2130927f23bcf",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/4b3b4d45dde2dc9bb9b6ed0aabbb44368df2fd9d988ea5a030d2130927f23bcf.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5108b6fd7902cf3b93fe1b2859025e2a5d0c3e57b288d4aa71a01fe6d642dcff",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5108b6fd7902cf3b93fe1b2859025e2a5d0c3e57b288d4aa71a01fe6d642dcff.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5135067d8f9543a18793d8d3930eefe1a670418d7d22a157da763989b6cf3dfc",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5135067d8f9543a18793d8d3930eefe1a670418d7d22a157da763989b6cf3dfc.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5180aa33c5598b970319d6e1be87ebc7967ea9cf7ad0f4e596afaff9d37af27b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5180aa33c5598b970319d6e1be87ebc7967ea9cf7ad0f4e596afaff9d37af27b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "546a839d43a606845a4503d60eb18ea58a6d620ffe54792d557cb16c747abbb2",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/546a839d43a606845a4503d60eb18ea58a6d620ffe54792d557cb16c747abbb2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "54770fd4806bf6fff699aa487de31c4bb7e8091e86ea68eaa548adc5b716748f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/54770fd4806bf6fff699aa487de31c4bb7e8091e86ea68eaa548adc5b716748f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5559e2fc33a228d8faa5c2c9f12ecfca78db6838cffd1dc5e8601cc52c5835c7",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5559e2fc33a228d8faa5c2c9f12ecfca78db6838cffd1dc5e8601cc52c5835c7.matrix.txt"
+        },
+        {
+          "matrix_sha256": "56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5a380616d1bc1b180fb22fb9f74f4f31d566c1ee5d6f73bae6d44cf879beb32b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5a380616d1bc1b180fb22fb9f74f4f31d566c1ee5d6f73bae6d44cf879beb32b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5d269dac418cc985f065b3a9269a751a0b4e92cab606e603d7aca3841eadc538",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5d269dac418cc985f065b3a9269a751a0b4e92cab606e603d7aca3841eadc538.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5e03f53beec575113f9fe2c2986cfcc2c5f1b69f79807ccf1ec23fbc7ee25823",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5e03f53beec575113f9fe2c2986cfcc2c5f1b69f79807ccf1ec23fbc7ee25823.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5e727f14c8f28124379f46d98fbc82f93283e25156186e42ef305fda58cc0bae",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5e727f14c8f28124379f46d98fbc82f93283e25156186e42ef305fda58cc0bae.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5ed9c1e251f6b370b5b5cb4e6a44bdd7cbca6fe7ef17ec6e82b026cde98388f6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5ed9c1e251f6b370b5b5cb4e6a44bdd7cbca6fe7ef17ec6e82b026cde98388f6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "640813c0b9fbd14e8a8694972edee25008d62126a69fd50c33e1946a4118a6dc",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/640813c0b9fbd14e8a8694972edee25008d62126a69fd50c33e1946a4118a6dc.matrix.txt"
+        },
+        {
+          "matrix_sha256": "68a56d9b1f26d3956a92e5bef1747aa691dd0fc49d634616a5e3aee9ad2102e5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/68a56d9b1f26d3956a92e5bef1747aa691dd0fc49d634616a5e3aee9ad2102e5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "68cd15a08c04eb64badfa7105732681db9cb9f112b05db6e79184b2ccb109716",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/68cd15a08c04eb64badfa7105732681db9cb9f112b05db6e79184b2ccb109716.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6989f48927be3e04dc416ccb1ba30aaead644d539792172690ed23b6c4980e39",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/6989f48927be3e04dc416ccb1ba30aaead644d539792172690ed23b6c4980e39.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6aa3b51a5450f550792b6b2367ef7643fec9f4c7f568506abf3a76a4c3bb611e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/6aa3b51a5450f550792b6b2367ef7643fec9f4c7f568506abf3a76a4c3bb611e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6c0b7b0ddbe34d8fab290b6c82c861a034e83128f3769759ebc7cdae8b1d55d6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/6c0b7b0ddbe34d8fab290b6c82c861a034e83128f3769759ebc7cdae8b1d55d6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6e5f51f4cc7055b9ea32f8987a26e1c8d70c0fb76c25743f324215b9f9d4a410",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/6e5f51f4cc7055b9ea32f8987a26e1c8d70c0fb76c25743f324215b9f9d4a410.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6f7fa4beddbbc74786b2398a481d0af41919c66066149eecd86cd5f3e232e9d6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/6f7fa4beddbbc74786b2398a481d0af41919c66066149eecd86cd5f3e232e9d6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "71226da04130532b861e33de4fc827288674ada1eb7cb40a3f13432ed0445318",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/71226da04130532b861e33de4fc827288674ada1eb7cb40a3f13432ed0445318.matrix.txt"
+        },
+        {
+          "matrix_sha256": "719de7921609d52c430c66ec123c55ea3b475248569a621417df695f76794d6a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/719de7921609d52c430c66ec123c55ea3b475248569a621417df695f76794d6a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "73e7d483866c988acadadebb44203cfca9ce1873760cbcdf53866bbb7f3d58ee",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/73e7d483866c988acadadebb44203cfca9ce1873760cbcdf53866bbb7f3d58ee.matrix.txt"
+        },
+        {
+          "matrix_sha256": "762c8910d0185fd00e687b227c33a7dc1d13824e596d0f3390a92f2d2d062814",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/762c8910d0185fd00e687b227c33a7dc1d13824e596d0f3390a92f2d2d062814.matrix.txt"
+        },
+        {
+          "matrix_sha256": "78401411e6398b2cf9d2ff16c935052fa471cedf0abbc6e588c77dae411a5629",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/78401411e6398b2cf9d2ff16c935052fa471cedf0abbc6e588c77dae411a5629.matrix.txt"
+        },
+        {
+          "matrix_sha256": "79f79d5d5db927a0e26ecee8070099f67a15da657a62d7be492df20838a5edb9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/79f79d5d5db927a0e26ecee8070099f67a15da657a62d7be492df20838a5edb9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "7ab114a1446179c060fb64fef3f87cf28cb9dbcd0cec0f49518b9dce459298fa",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/7ab114a1446179c060fb64fef3f87cf28cb9dbcd0cec0f49518b9dce459298fa.matrix.txt"
+        },
+        {
+          "matrix_sha256": "7c47ee0d65fbebd95137c95ee6b9445c4738d4ea4f429269bdbd959dba40a63c",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/7c47ee0d65fbebd95137c95ee6b9445c4738d4ea4f429269bdbd959dba40a63c.matrix.txt"
+        },
+        {
+          "matrix_sha256": "7e94222fea9aaa8f99a184e28fa68d101bf9758e36e7ba7611b364587c3ae142",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/7e94222fea9aaa8f99a184e28fa68d101bf9758e36e7ba7611b364587c3ae142.matrix.txt"
+        },
+        {
+          "matrix_sha256": "81cecfb79e9365e1dc9d10a4fe0f8d8b31c979430f36b4ebbba0853b6ce375e2",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/81cecfb79e9365e1dc9d10a4fe0f8d8b31c979430f36b4ebbba0853b6ce375e2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8261d23dda338d4a2c4edd9818cb1f0e68b4a2c2db2c9bb3b4acbe1861eb8c2c",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8261d23dda338d4a2c4edd9818cb1f0e68b4a2c2db2c9bb3b4acbe1861eb8c2c.matrix.txt"
+        },
+        {
+          "matrix_sha256": "840d8376ab333f736ecb946df4f2aeb190d7d7fb215d4bb60a1127df87f61e5c",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/840d8376ab333f736ecb946df4f2aeb190d7d7fb215d4bb60a1127df87f61e5c.matrix.txt"
+        },
+        {
+          "matrix_sha256": "845f8615ed29b0a316df73a9532b1c39a1716df8088e21b7152412e45addc622",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/845f8615ed29b0a316df73a9532b1c39a1716df8088e21b7152412e45addc622.matrix.txt"
+        },
+        {
+          "matrix_sha256": "84c4966078d5928b6d8842c056e38f231add4b6c7bfcb9aae36cb65fa27b52a4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/84c4966078d5928b6d8842c056e38f231add4b6c7bfcb9aae36cb65fa27b52a4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "85e5efc9c4b5bfa8df951ee344f32b212e83384f5f568560c9f0cbedcb235e03",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/85e5efc9c4b5bfa8df951ee344f32b212e83384f5f568560c9f0cbedcb235e03.matrix.txt"
+        },
+        {
+          "matrix_sha256": "860cfc7a1aa7be9c953309ec59eee14524223413ae8d323b1d47da52b996ea72",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/860cfc7a1aa7be9c953309ec59eee14524223413ae8d323b1d47da52b996ea72.matrix.txt"
+        },
+        {
+          "matrix_sha256": "88b8c902c1ebf915b7ca1144922f3a54a74bf2279d07df2e7a7d3d3137e820bf",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/88b8c902c1ebf915b7ca1144922f3a54a74bf2279d07df2e7a7d3d3137e820bf.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8b11172db994d7a5bebc68ab3ec98eae0e31392ed81f838e00c26c53e7008270",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8b11172db994d7a5bebc68ab3ec98eae0e31392ed81f838e00c26c53e7008270.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8fb44af6ec76fb9b4641cb893bc68330b18e0adfa52326c6fdecabefbcb0b9e9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8fb44af6ec76fb9b4641cb893bc68330b18e0adfa52326c6fdecabefbcb0b9e9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8fe2300a2761fc42d61b0b94d827a33c55b42e6b8fc021f029ac4de4856a6e43",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8fe2300a2761fc42d61b0b94d827a33c55b42e6b8fc021f029ac4de4856a6e43.matrix.txt"
+        },
+        {
+          "matrix_sha256": "900d7bf2b430c21d56adb47943053b11b578c012dd04ecdbb3aafd0f69eca35e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/900d7bf2b430c21d56adb47943053b11b578c012dd04ecdbb3aafd0f69eca35e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "90302e0a62b32ce8980e41f176489892fdf4a552dfc2519f59971f55135646ad",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/90302e0a62b32ce8980e41f176489892fdf4a552dfc2519f59971f55135646ad.matrix.txt"
+        },
+        {
+          "matrix_sha256": "90ff3e371f74f2a35214f757f1faa9987de8b47259cc36157d4ba082d349e32d",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/90ff3e371f74f2a35214f757f1faa9987de8b47259cc36157d4ba082d349e32d.matrix.txt"
+        },
+        {
+          "matrix_sha256": "92640873ed3cc268ea009107e360d0d2ff535485e37834af0b6d32c05026bd6f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/92640873ed3cc268ea009107e360d0d2ff535485e37834af0b6d32c05026bd6f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "95b44b73ab4100e21c17aee3fe55b4a663e0517f21d6c7f0cf9736ec70e195db",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/95b44b73ab4100e21c17aee3fe55b4a663e0517f21d6c7f0cf9736ec70e195db.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9ad63e86673095214eeaa8fa73f1db137d8599308538fc5642fb321342b8440b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9ad63e86673095214eeaa8fa73f1db137d8599308538fc5642fb321342b8440b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9b4198c0f76b6873d4c931c4dc0c0525b9dbb2ebafc77a7406f38dafd1c4c806",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9b4198c0f76b6873d4c931c4dc0c0525b9dbb2ebafc77a7406f38dafd1c4c806.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9bb9ef81e512b62d54a4e9bc6adaa6155a2a3f8739450f23736689370b9e2fc5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9bb9ef81e512b62d54a4e9bc6adaa6155a2a3f8739450f23736689370b9e2fc5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9c1deb65499d3efe7dac73d03aa70bd4fb954f5db845f665faeac7e584a85a80",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9c1deb65499d3efe7dac73d03aa70bd4fb954f5db845f665faeac7e584a85a80.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9cfa44228596823ec615ab12aa3f34b88b0532b43a906a5b515448f4b1fc4eee",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9cfa44228596823ec615ab12aa3f34b88b0532b43a906a5b515448f4b1fc4eee.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9e9b31a892c742d6d2e6a8030e1fe36998f59f36fc255d3886e41f1aa89a5a37",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9e9b31a892c742d6d2e6a8030e1fe36998f59f36fc255d3886e41f1aa89a5a37.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a165e77af2f41cf99a49d4bd8d7f7d499604dd845527a72145b26e3976d3bf8f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a165e77af2f41cf99a49d4bd8d7f7d499604dd845527a72145b26e3976d3bf8f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a6577daded577d6d9d12a8ca0a795cd49d9541208e5551b26d64a16506306384",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a6577daded577d6d9d12a8ca0a795cd49d9541208e5551b26d64a16506306384.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a6c60b7dd8be3cb6bd2118bcedbb10739957a02f5f9446f7536fdc33b8df9d50",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a6c60b7dd8be3cb6bd2118bcedbb10739957a02f5f9446f7536fdc33b8df9d50.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a72382333463df566f7d826740c6896b861680ca807b177e607369d799d31538",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a72382333463df566f7d826740c6896b861680ca807b177e607369d799d31538.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a759e5a7d0d3d545fe0629f646f4a71825a73e6f277e1a550cc845ae42c467f4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a759e5a7d0d3d545fe0629f646f4a71825a73e6f277e1a550cc845ae42c467f4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a83eeb84bc8951fcada962a64aa2033df8abf8162b6be58ced909cabccfc5eeb",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a83eeb84bc8951fcada962a64aa2033df8abf8162b6be58ced909cabccfc5eeb.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a89ab2f2213dc06cb24ba5711c2b8535db66bb369eb282394e1daf92eabe7534",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a89ab2f2213dc06cb24ba5711c2b8535db66bb369eb282394e1daf92eabe7534.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a89b3fb441492620d763074aeb77cc98c47c7d6580afe27efd16c2c7ef3b5607",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a89b3fb441492620d763074aeb77cc98c47c7d6580afe27efd16c2c7ef3b5607.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "aa50aa7a1b0b183f46d9a914aed7a221dea5585387e98a66d853d91b671cde21",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/aa50aa7a1b0b183f46d9a914aed7a221dea5585387e98a66d853d91b671cde21.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ab984eaa6f67b37e3f26caa338173ae58c73f5a6f86626b9800dbdb2f1d311c4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ab984eaa6f67b37e3f26caa338173ae58c73f5a6f86626b9800dbdb2f1d311c4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "acb896cc230c54533bf15aa7bae965cec8658fa561257c8383d49986af62d02f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/acb896cc230c54533bf15aa7bae965cec8658fa561257c8383d49986af62d02f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "acc70838bd4ac5b6a965e59028169c60fce3573ffb879c77d7abd7bba50ee828",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/acc70838bd4ac5b6a965e59028169c60fce3573ffb879c77d7abd7bba50ee828.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ad70e10f36bb2ebed8e4698fc43fb7c0ebc0e4748890ba89a151e48da2ba2438",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ad70e10f36bb2ebed8e4698fc43fb7c0ebc0e4748890ba89a151e48da2ba2438.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ae8f1de84c43f03065f8eb29df38d9208033c1d75b272a9ce527009a85b6d815",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ae8f1de84c43f03065f8eb29df38d9208033c1d75b272a9ce527009a85b6d815.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b094145c07472526a430a06e2d54c70652bee236b7846be31483120632ea3a3e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/b094145c07472526a430a06e2d54c70652bee236b7846be31483120632ea3a3e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b1773a2a189206031f9e4b4fd52eda92c341ddc095c273d3a7f779315c324133",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/b1773a2a189206031f9e4b4fd52eda92c341ddc095c273d3a7f779315c324133.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b19ab30d3435f82e9f83dd5cde7ae6266f5680366382456d65a7cf3b202698f9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/b19ab30d3435f82e9f83dd5cde7ae6266f5680366382456d65a7cf3b202698f9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b303e048e6ce473de5e5b923f1cda372837b3f94d54eacea724dd3871c3f7c2e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/b303e048e6ce473de5e5b923f1cda372837b3f94d54eacea724dd3871c3f7c2e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b386a8714a7bba8e2e88796f136e607ae56402f45695b31bc52f87b57ef0ca52",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/b386a8714a7bba8e2e88796f136e607ae56402f45695b31bc52f87b57ef0ca52.matrix.txt"
+        },
+        {
+          "matrix_sha256": "be282b3c49943bea95bb20a8d0276677e2a794c3f84fcbabd090c3d363cdd058",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/be282b3c49943bea95bb20a8d0276677e2a794c3f84fcbabd090c3d363cdd058.matrix.txt"
+        },
+        {
+          "matrix_sha256": "bfa63cb46100a301eedbe643a7ff801524973cba52c8938c710c8b8a9bc72de6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/bfa63cb46100a301eedbe643a7ff801524973cba52c8938c710c8b8a9bc72de6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c0942de77e14f6d48567f22a6499426bea8d2509742a767c88cf2dbe76d18d6a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c0942de77e14f6d48567f22a6499426bea8d2509742a767c88cf2dbe76d18d6a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c0ce440373669bf107f817192683b4e3a6b6e614e2175fdb1ff465c8e486f1d9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c0ce440373669bf107f817192683b4e3a6b6e614e2175fdb1ff465c8e486f1d9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c18b8a336b68952b940d483e836c9bf539c6518eed071c182a5f2cebf6498891",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c18b8a336b68952b940d483e836c9bf539c6518eed071c182a5f2cebf6498891.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c304f4599bb34059640eba96b3f81196d791b5d7ddcfd37ba77fb22309fb9795",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c304f4599bb34059640eba96b3f81196d791b5d7ddcfd37ba77fb22309fb9795.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c3f0b85d3a4c0c3a13bbdd70622e909f08e8563c445d3f4fdda8e910a8a03881",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c3f0b85d3a4c0c3a13bbdd70622e909f08e8563c445d3f4fdda8e910a8a03881.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c4422721dac761f09db1c36487545521ae53a0fbb32a28df882db928d73dcf9a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c4422721dac761f09db1c36487545521ae53a0fbb32a28df882db928d73dcf9a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c6333ec8dcf7bb9bfef70484510806dc18cfbabebcf16ffeff91952958048145",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c6333ec8dcf7bb9bfef70484510806dc18cfbabebcf16ffeff91952958048145.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c6d54521408ed04e68277ab82be34b65ad4e18fc4f9aabf07031ee85df197b94",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c6d54521408ed04e68277ab82be34b65ad4e18fc4f9aabf07031ee85df197b94.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c6ef0e55c0d4c8ea81406934b6d5bdb5194d55336bae8bded0e39db98276f56b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c6ef0e55c0d4c8ea81406934b6d5bdb5194d55336bae8bded0e39db98276f56b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ce531c0ce4c4658d6e9a7d0c5a57fc385e1c57777a416eb96139db1f9c46a254",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ce531c0ce4c4658d6e9a7d0c5a57fc385e1c57777a416eb96139db1f9c46a254.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d476880c7955414b9e16bfa0b9d34c38d0ef155c24c039204e1f3ce816dc5ef9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d476880c7955414b9e16bfa0b9d34c38d0ef155c24c039204e1f3ce816dc5ef9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d6de31bbab263f1b175d9f463fda450df8456242f048a9e2210613b8ea8aff1f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d6de31bbab263f1b175d9f463fda450df8456242f048a9e2210613b8ea8aff1f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d75188ffe82dfc0bbdcf027022b5f0f82d127f69753e036bbf6230bc87a8afe6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d75188ffe82dfc0bbdcf027022b5f0f82d127f69753e036bbf6230bc87a8afe6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d77dbed50056245582c169d20d4efe02b0de64a95f9899220cad13ce7ae76ed7",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d77dbed50056245582c169d20d4efe02b0de64a95f9899220cad13ce7ae76ed7.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d7db56dedb98ac0b23f10a642fb2cbf20cd3f81b4d3d29993285e159ce04a57e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d7db56dedb98ac0b23f10a642fb2cbf20cd3f81b4d3d29993285e159ce04a57e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d84ea425c1d197d1ca1c74ac9463df6b6e09236a28b5a38f132816eaf1a1b84c",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d84ea425c1d197d1ca1c74ac9463df6b6e09236a28b5a38f132816eaf1a1b84c.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d9cffa3a597ec95fe47bee2f5034e24e9949eabd5d3adb56289ba669e93bb13e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d9cffa3a597ec95fe47bee2f5034e24e9949eabd5d3adb56289ba669e93bb13e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "db00601f833698d5a6f9baf65f9c1d201b99b72791bdc70eec11ac9b5b207467",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/db00601f833698d5a6f9baf65f9c1d201b99b72791bdc70eec11ac9b5b207467.matrix.txt"
+        },
+        {
+          "matrix_sha256": "dbd63b5de9d67680efcc762b77c3bc573970255eb9eac046f00f7649c3f12aa9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/dbd63b5de9d67680efcc762b77c3bc573970255eb9eac046f00f7649c3f12aa9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "dcfabd7a1c7851130ae79e620125324d39c8820b79bc2013e5d4d3b4b16df5f0",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/dcfabd7a1c7851130ae79e620125324d39c8820b79bc2013e5d4d3b4b16df5f0.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ddb73f1e919d50f3c984ff84becf98cb7836262e6d2e4277ff00f9ace8f0b9a3",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ddb73f1e919d50f3c984ff84becf98cb7836262e6d2e4277ff00f9ace8f0b9a3.matrix.txt"
+        },
+        {
+          "matrix_sha256": "dff8a901614111f0180fce64e9d95004747173f592c43e05ebed8ebd0562a2ba",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/dff8a901614111f0180fce64e9d95004747173f592c43e05ebed8ebd0562a2ba.matrix.txt"
+        },
+        {
+          "matrix_sha256": "e6f872c5c502aee8e214fb6cf3b2cded1611bc0b3f3cdd9fc33ec0134d539547",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/e6f872c5c502aee8e214fb6cf3b2cded1611bc0b3f3cdd9fc33ec0134d539547.matrix.txt"
+        },
+        {
+          "matrix_sha256": "e91c67a488a6d28a4f10220510f44ebae102ea9c280a2fe95b84eb84fde0fc1b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/e91c67a488a6d28a4f10220510f44ebae102ea9c280a2fe95b84eb84fde0fc1b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ec614702a038fc04108404a38791f32ddf28ba60c5a6afdf234d41999a9a3c31",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ec614702a038fc04108404a38791f32ddf28ba60c5a6afdf234d41999a9a3c31.matrix.txt"
+        },
+        {
+          "matrix_sha256": "eccce452dd961a9689e746e78aed1ba45113afd04e1d0ef748295751a9c5bcc4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/eccce452dd961a9689e746e78aed1ba45113afd04e1d0ef748295751a9c5bcc4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "edbf3e96a40f666f00d4d3bfdd82a8d0316317d94ef134cf9ba5bc3fbf3ff90d",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/edbf3e96a40f666f00d4d3bfdd82a8d0316317d94ef134cf9ba5bc3fbf3ff90d.matrix.txt"
+        },
+        {
+          "matrix_sha256": "f5274b4fc17479b7dbc01422334a6dd72aa81ebb71d85e1f0056cad724fa69aa",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/f5274b4fc17479b7dbc01422334a6dd72aa81ebb71d85e1f0056cad724fa69aa.matrix.txt"
+        },
+        {
+          "matrix_sha256": "f70bf451409bb5c512ef7dbd6715dd1d90dc7fa110cff7474545d4d532c669c3",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/f70bf451409bb5c512ef7dbd6715dd1d90dc7fa110cff7474545d4d532c669c3.matrix.txt"
+        },
+        {
+          "matrix_sha256": "f84f7096365d43cb8370567cb7883d6555f9c20f4ad4d792bde3fd2a035eb49f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/f84f7096365d43cb8370567cb7883d6555f9c20f4ad4d792bde3fd2a035eb49f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "f8b210ca913ee2fac566866001bc7ecc38ac5f780ebaaca4ff58ba2fff18c497",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/f8b210ca913ee2fac566866001bc7ecc38ac5f780ebaaca4ff58ba2fff18c497.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fba7e8e6b31c93baf3a5189c9c7908c53f2358a5ac41fe4da0dbff8fedb2f6f4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/fba7e8e6b31c93baf3a5189c9c7908c53f2358a5ac41fe4da0dbff8fedb2f6f4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fbf8d2282e90a3f0ddb0189f9489391fbc45ddd81233f6d7af5bb8483b8042d8",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/fbf8d2282e90a3f0ddb0189f9489391fbc45ddd81233f6d7af5bb8483b8042d8.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fdde2534ef60e5da93a5840f10fde14cb1fd6920017d7571f4182e73576cf047",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/fdde2534ef60e5da93a5840f10fde14cb1fd6920017d7571f4182e73576cf047.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fe5530a93a679f6c4bc927107932181b24fdc9e2f4c29b5f33c97ffc36a3c079",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/fe5530a93a679f6c4bc927107932181b24fdc9e2f4c29b5f33c97ffc36a3c079.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fe89236888f0ad2e6d7225fa46a28a6603d787ec565f5982836589f0714b7fe6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/fe89236888f0ad2e6d7225fa46a28a6603d787ec565f5982836589f0714b7fe6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "feeba68aad8a1726403881e71f51f57d0124411e3a4ecbca6a66e40600ceb8f3",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/feeba68aad8a1726403881e71f51f57d0124411e3a4ecbca6a66e40600ceb8f3.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ffed581034de5c67354596acccaf582af6db96fd9fdfc91c6d339d6ec1bb2e51",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ffed581034de5c67354596acccaf582af6db96fd9fdfc91c6d339d6ec1bb2e51.matrix.txt"
+        }
+      ]
+    }
+  ],
+  "h_class_count": 11,
+  "h_classes": [
+    {
+      "certificate_sha256": "133097154bd369ae928c5c712f50745afd75f1d4265e2137dc57475cdb0c6d99",
+      "count": 19,
+      "members": [
+        {
+          "matrix_sha256": "032b22404a5c08beb24db846f0e50af9573cb152bc2582b9a9ead6139593fbd8",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/032b22404a5c08beb24db846f0e50af9573cb152bc2582b9a9ead6139593fbd8.matrix.txt"
+        },
+        {
+          "matrix_sha256": "0d40b5d2d8dba730fe404c0ba85cb6c647c7032155bb31ad864f2e1320c089d7",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0d40b5d2d8dba730fe404c0ba85cb6c647c7032155bb31ad864f2e1320c089d7.matrix.txt"
+        },
+        {
+          "matrix_sha256": "173eb9598b44d48dee07f899d1f0925f8dfce43cba6b9602e51ca33a444c5576",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/173eb9598b44d48dee07f899d1f0925f8dfce43cba6b9602e51ca33a444c5576.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1f3e443adde6ac198abb16ae074dd55563287b92ccf23874bb606a70ec9af2f6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1f3e443adde6ac198abb16ae074dd55563287b92ccf23874bb606a70ec9af2f6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3fa9fd308dc5634bc6d8ab02b90b995cfb60f7c2f84f1a26acb19fc5a0e77df1",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/3fa9fd308dc5634bc6d8ab02b90b995cfb60f7c2f84f1a26acb19fc5a0e77df1.matrix.txt"
+        },
+        {
+          "matrix_sha256": "4506657be36f9befb7b345dc01df25551cf999ebb9673177c8ea1aa2e4d62ad5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/4506657be36f9befb7b345dc01df25551cf999ebb9673177c8ea1aa2e4d62ad5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5180aa33c5598b970319d6e1be87ebc7967ea9cf7ad0f4e596afaff9d37af27b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5180aa33c5598b970319d6e1be87ebc7967ea9cf7ad0f4e596afaff9d37af27b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "640813c0b9fbd14e8a8694972edee25008d62126a69fd50c33e1946a4118a6dc",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/640813c0b9fbd14e8a8694972edee25008d62126a69fd50c33e1946a4118a6dc.matrix.txt"
+        },
+        {
+          "matrix_sha256": "7c47ee0d65fbebd95137c95ee6b9445c4738d4ea4f429269bdbd959dba40a63c",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/7c47ee0d65fbebd95137c95ee6b9445c4738d4ea4f429269bdbd959dba40a63c.matrix.txt"
+        },
+        {
+          "matrix_sha256": "860cfc7a1aa7be9c953309ec59eee14524223413ae8d323b1d47da52b996ea72",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/860cfc7a1aa7be9c953309ec59eee14524223413ae8d323b1d47da52b996ea72.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a165e77af2f41cf99a49d4bd8d7f7d499604dd845527a72145b26e3976d3bf8f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a165e77af2f41cf99a49d4bd8d7f7d499604dd845527a72145b26e3976d3bf8f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ad70e10f36bb2ebed8e4698fc43fb7c0ebc0e4748890ba89a151e48da2ba2438",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ad70e10f36bb2ebed8e4698fc43fb7c0ebc0e4748890ba89a151e48da2ba2438.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b1773a2a189206031f9e4b4fd52eda92c341ddc095c273d3a7f779315c324133",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/b1773a2a189206031f9e4b4fd52eda92c341ddc095c273d3a7f779315c324133.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b303e048e6ce473de5e5b923f1cda372837b3f94d54eacea724dd3871c3f7c2e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/b303e048e6ce473de5e5b923f1cda372837b3f94d54eacea724dd3871c3f7c2e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c6333ec8dcf7bb9bfef70484510806dc18cfbabebcf16ffeff91952958048145",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c6333ec8dcf7bb9bfef70484510806dc18cfbabebcf16ffeff91952958048145.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d75188ffe82dfc0bbdcf027022b5f0f82d127f69753e036bbf6230bc87a8afe6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d75188ffe82dfc0bbdcf027022b5f0f82d127f69753e036bbf6230bc87a8afe6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d9cffa3a597ec95fe47bee2f5034e24e9949eabd5d3adb56289ba669e93bb13e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d9cffa3a597ec95fe47bee2f5034e24e9949eabd5d3adb56289ba669e93bb13e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ddb73f1e919d50f3c984ff84becf98cb7836262e6d2e4277ff00f9ace8f0b9a3",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ddb73f1e919d50f3c984ff84becf98cb7836262e6d2e4277ff00f9ace8f0b9a3.matrix.txt"
+        },
+        {
+          "matrix_sha256": "eccce452dd961a9689e746e78aed1ba45113afd04e1d0ef748295751a9c5bcc4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/eccce452dd961a9689e746e78aed1ba45113afd04e1d0ef748295751a9c5bcc4.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "1e4b14334f15ec751275a8383b5b7e8aa8270c951e3ff5a3d342c8fe203d9efe",
+      "count": 1,
+      "members": [
+        {
+          "matrix_sha256": "85e5efc9c4b5bfa8df951ee344f32b212e83384f5f568560c9f0cbedcb235e03",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/85e5efc9c4b5bfa8df951ee344f32b212e83384f5f568560c9f0cbedcb235e03.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "411ffbb1f7635c339ca3de9d970062026e50b371571426515c98e867d29e4f3a",
+      "count": 7,
+      "members": [
+        {
+          "matrix_sha256": "56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5e03f53beec575113f9fe2c2986cfcc2c5f1b69f79807ccf1ec23fbc7ee25823",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5e03f53beec575113f9fe2c2986cfcc2c5f1b69f79807ccf1ec23fbc7ee25823.matrix.txt"
+        },
+        {
+          "matrix_sha256": "73e7d483866c988acadadebb44203cfca9ce1873760cbcdf53866bbb7f3d58ee",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/73e7d483866c988acadadebb44203cfca9ce1873760cbcdf53866bbb7f3d58ee.matrix.txt"
+        },
+        {
+          "matrix_sha256": "90302e0a62b32ce8980e41f176489892fdf4a552dfc2519f59971f55135646ad",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/90302e0a62b32ce8980e41f176489892fdf4a552dfc2519f59971f55135646ad.matrix.txt"
+        },
+        {
+          "matrix_sha256": "acb896cc230c54533bf15aa7bae965cec8658fa561257c8383d49986af62d02f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/acb896cc230c54533bf15aa7bae965cec8658fa561257c8383d49986af62d02f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "f5274b4fc17479b7dbc01422334a6dd72aa81ebb71d85e1f0056cad724fa69aa",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/f5274b4fc17479b7dbc01422334a6dd72aa81ebb71d85e1f0056cad724fa69aa.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fe89236888f0ad2e6d7225fa46a28a6603d787ec565f5982836589f0714b7fe6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/fe89236888f0ad2e6d7225fa46a28a6603d787ec565f5982836589f0714b7fe6.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "6114b83b5af6eadbabe64c941e9c6706293aec09490c33d6407e78559d87e482",
+      "count": 19,
+      "members": [
+        {
+          "matrix_sha256": "39b47f520620e5f8f1db7108a396944198df604928702d0afed45df4590105b9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/39b47f520620e5f8f1db7108a396944198df604928702d0afed45df4590105b9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6aa3b51a5450f550792b6b2367ef7643fec9f4c7f568506abf3a76a4c3bb611e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/6aa3b51a5450f550792b6b2367ef7643fec9f4c7f568506abf3a76a4c3bb611e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6e5f51f4cc7055b9ea32f8987a26e1c8d70c0fb76c25743f324215b9f9d4a410",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/6e5f51f4cc7055b9ea32f8987a26e1c8d70c0fb76c25743f324215b9f9d4a410.matrix.txt"
+        },
+        {
+          "matrix_sha256": "719de7921609d52c430c66ec123c55ea3b475248569a621417df695f76794d6a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/719de7921609d52c430c66ec123c55ea3b475248569a621417df695f76794d6a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "78401411e6398b2cf9d2ff16c935052fa471cedf0abbc6e588c77dae411a5629",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/78401411e6398b2cf9d2ff16c935052fa471cedf0abbc6e588c77dae411a5629.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9ad63e86673095214eeaa8fa73f1db137d8599308538fc5642fb321342b8440b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9ad63e86673095214eeaa8fa73f1db137d8599308538fc5642fb321342b8440b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9c1deb65499d3efe7dac73d03aa70bd4fb954f5db845f665faeac7e584a85a80",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9c1deb65499d3efe7dac73d03aa70bd4fb954f5db845f665faeac7e584a85a80.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9cfa44228596823ec615ab12aa3f34b88b0532b43a906a5b515448f4b1fc4eee",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9cfa44228596823ec615ab12aa3f34b88b0532b43a906a5b515448f4b1fc4eee.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9e9b31a892c742d6d2e6a8030e1fe36998f59f36fc255d3886e41f1aa89a5a37",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9e9b31a892c742d6d2e6a8030e1fe36998f59f36fc255d3886e41f1aa89a5a37.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b094145c07472526a430a06e2d54c70652bee236b7846be31483120632ea3a3e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/b094145c07472526a430a06e2d54c70652bee236b7846be31483120632ea3a3e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "bfa63cb46100a301eedbe643a7ff801524973cba52c8938c710c8b8a9bc72de6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/bfa63cb46100a301eedbe643a7ff801524973cba52c8938c710c8b8a9bc72de6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c0942de77e14f6d48567f22a6499426bea8d2509742a767c88cf2dbe76d18d6a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c0942de77e14f6d48567f22a6499426bea8d2509742a767c88cf2dbe76d18d6a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c18b8a336b68952b940d483e836c9bf539c6518eed071c182a5f2cebf6498891",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c18b8a336b68952b940d483e836c9bf539c6518eed071c182a5f2cebf6498891.matrix.txt"
+        },
+        {
+          "matrix_sha256": "db00601f833698d5a6f9baf65f9c1d201b99b72791bdc70eec11ac9b5b207467",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/db00601f833698d5a6f9baf65f9c1d201b99b72791bdc70eec11ac9b5b207467.matrix.txt"
+        },
+        {
+          "matrix_sha256": "edbf3e96a40f666f00d4d3bfdd82a8d0316317d94ef134cf9ba5bc3fbf3ff90d",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/edbf3e96a40f666f00d4d3bfdd82a8d0316317d94ef134cf9ba5bc3fbf3ff90d.matrix.txt"
+        },
+        {
+          "matrix_sha256": "f84f7096365d43cb8370567cb7883d6555f9c20f4ad4d792bde3fd2a035eb49f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/f84f7096365d43cb8370567cb7883d6555f9c20f4ad4d792bde3fd2a035eb49f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "f8b210ca913ee2fac566866001bc7ecc38ac5f780ebaaca4ff58ba2fff18c497",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/f8b210ca913ee2fac566866001bc7ecc38ac5f780ebaaca4ff58ba2fff18c497.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ffed581034de5c67354596acccaf582af6db96fd9fdfc91c6d339d6ec1bb2e51",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ffed581034de5c67354596acccaf582af6db96fd9fdfc91c6d339d6ec1bb2e51.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "9035bdf2a85b8a2a600a76c6d55af36f627327694e904e7b483e88993716c91b",
+      "count": 13,
+      "members": [
+        {
+          "matrix_sha256": "0560e0915a7f60082c15fb39dd9aa0ba6b021bfceb7c7fe90fab52e025cfe78b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0560e0915a7f60082c15fb39dd9aa0ba6b021bfceb7c7fe90fab52e025cfe78b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1356fef5236e5eb4cb713cad8b40e29588293b2c019189b82e6a91271c6fc879",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1356fef5236e5eb4cb713cad8b40e29588293b2c019189b82e6a91271c6fc879.matrix.txt"
+        },
+        {
+          "matrix_sha256": "13f8440df32d29694be2a10186abfedb95d2425301ceaeed52a1cab97b7691e9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/13f8440df32d29694be2a10186abfedb95d2425301ceaeed52a1cab97b7691e9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce.matrix.txt"
+        },
+        {
+          "matrix_sha256": "15fb477ea907c4238fbe70a1cd73930a2ef1830e4169d7b803c3fdb7e11cb22f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/15fb477ea907c4238fbe70a1cd73930a2ef1830e4169d7b803c3fdb7e11cb22f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5108b6fd7902cf3b93fe1b2859025e2a5d0c3e57b288d4aa71a01fe6d642dcff",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5108b6fd7902cf3b93fe1b2859025e2a5d0c3e57b288d4aa71a01fe6d642dcff.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5a380616d1bc1b180fb22fb9f74f4f31d566c1ee5d6f73bae6d44cf879beb32b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5a380616d1bc1b180fb22fb9f74f4f31d566c1ee5d6f73bae6d44cf879beb32b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5d269dac418cc985f065b3a9269a751a0b4e92cab606e603d7aca3841eadc538",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5d269dac418cc985f065b3a9269a751a0b4e92cab606e603d7aca3841eadc538.matrix.txt"
+        },
+        {
+          "matrix_sha256": "68a56d9b1f26d3956a92e5bef1747aa691dd0fc49d634616a5e3aee9ad2102e5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/68a56d9b1f26d3956a92e5bef1747aa691dd0fc49d634616a5e3aee9ad2102e5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "84c4966078d5928b6d8842c056e38f231add4b6c7bfcb9aae36cb65fa27b52a4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/84c4966078d5928b6d8842c056e38f231add4b6c7bfcb9aae36cb65fa27b52a4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9b4198c0f76b6873d4c931c4dc0c0525b9dbb2ebafc77a7406f38dafd1c4c806",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9b4198c0f76b6873d4c931c4dc0c0525b9dbb2ebafc77a7406f38dafd1c4c806.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d6de31bbab263f1b175d9f463fda450df8456242f048a9e2210613b8ea8aff1f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d6de31bbab263f1b175d9f463fda450df8456242f048a9e2210613b8ea8aff1f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fdde2534ef60e5da93a5840f10fde14cb1fd6920017d7571f4182e73576cf047",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/fdde2534ef60e5da93a5840f10fde14cb1fd6920017d7571f4182e73576cf047.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "b584c923ea12af6634bb5681f1eb903196e5a7cedadf5d1ea321bc63613c986e",
+      "count": 23,
+      "members": [
+        {
+          "matrix_sha256": "00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1.matrix.txt"
+        },
+        {
+          "matrix_sha256": "0304122e2041a116b5cdfe8fe36e99117cdb92795dd2d2ae588494a2a7ee7017",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0304122e2041a116b5cdfe8fe36e99117cdb92795dd2d2ae588494a2a7ee7017.matrix.txt"
+        },
+        {
+          "matrix_sha256": "07674064b3f0ee41ba46945afd44cc1274b81344495ce210fce167af7c15111a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/07674064b3f0ee41ba46945afd44cc1274b81344495ce210fce167af7c15111a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "0917925191d6e24aa65e6af92a87646fe4e2b7005c6c7ef3f3418262bc730cc2",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0917925191d6e24aa65e6af92a87646fe4e2b7005c6c7ef3f3418262bc730cc2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "10463ffb82aca72ea4b30b9d1062ba457175c2b353eca58c8a158abc9db7d17b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/10463ffb82aca72ea4b30b9d1062ba457175c2b353eca58c8a158abc9db7d17b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1d676ccdb3984a6ae68bb89672c04c5a466d0efc7e6a98c320e082821d02add4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1d676ccdb3984a6ae68bb89672c04c5a466d0efc7e6a98c320e082821d02add4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "20ffa0ba06bb2bbc37a12b467118de67e94f6f2beda7642a93debaa18e51a348",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/20ffa0ba06bb2bbc37a12b467118de67e94f6f2beda7642a93debaa18e51a348.matrix.txt"
+        },
+        {
+          "matrix_sha256": "2c6a274c6de3bba837dfd538e2df624919c9636cb471eb31314c26f46a308ee6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/2c6a274c6de3bba837dfd538e2df624919c9636cb471eb31314c26f46a308ee6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "2ce2e8e710d9a77223890e9d437544d5d974c73d2e8de859e244ea6f33160cd9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/2ce2e8e710d9a77223890e9d437544d5d974c73d2e8de859e244ea6f33160cd9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5559e2fc33a228d8faa5c2c9f12ecfca78db6838cffd1dc5e8601cc52c5835c7",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5559e2fc33a228d8faa5c2c9f12ecfca78db6838cffd1dc5e8601cc52c5835c7.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5e727f14c8f28124379f46d98fbc82f93283e25156186e42ef305fda58cc0bae",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5e727f14c8f28124379f46d98fbc82f93283e25156186e42ef305fda58cc0bae.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6f7fa4beddbbc74786b2398a481d0af41919c66066149eecd86cd5f3e232e9d6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/6f7fa4beddbbc74786b2398a481d0af41919c66066149eecd86cd5f3e232e9d6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "71226da04130532b861e33de4fc827288674ada1eb7cb40a3f13432ed0445318",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/71226da04130532b861e33de4fc827288674ada1eb7cb40a3f13432ed0445318.matrix.txt"
+        },
+        {
+          "matrix_sha256": "79f79d5d5db927a0e26ecee8070099f67a15da657a62d7be492df20838a5edb9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/79f79d5d5db927a0e26ecee8070099f67a15da657a62d7be492df20838a5edb9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "845f8615ed29b0a316df73a9532b1c39a1716df8088e21b7152412e45addc622",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/845f8615ed29b0a316df73a9532b1c39a1716df8088e21b7152412e45addc622.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8b11172db994d7a5bebc68ab3ec98eae0e31392ed81f838e00c26c53e7008270",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8b11172db994d7a5bebc68ab3ec98eae0e31392ed81f838e00c26c53e7008270.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a89ab2f2213dc06cb24ba5711c2b8535db66bb369eb282394e1daf92eabe7534",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a89ab2f2213dc06cb24ba5711c2b8535db66bb369eb282394e1daf92eabe7534.matrix.txt"
+        },
+        {
+          "matrix_sha256": "be282b3c49943bea95bb20a8d0276677e2a794c3f84fcbabd090c3d363cdd058",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/be282b3c49943bea95bb20a8d0276677e2a794c3f84fcbabd090c3d363cdd058.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c304f4599bb34059640eba96b3f81196d791b5d7ddcfd37ba77fb22309fb9795",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c304f4599bb34059640eba96b3f81196d791b5d7ddcfd37ba77fb22309fb9795.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c6d54521408ed04e68277ab82be34b65ad4e18fc4f9aabf07031ee85df197b94",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c6d54521408ed04e68277ab82be34b65ad4e18fc4f9aabf07031ee85df197b94.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d476880c7955414b9e16bfa0b9d34c38d0ef155c24c039204e1f3ce816dc5ef9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d476880c7955414b9e16bfa0b9d34c38d0ef155c24c039204e1f3ce816dc5ef9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d84ea425c1d197d1ca1c74ac9463df6b6e09236a28b5a38f132816eaf1a1b84c",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d84ea425c1d197d1ca1c74ac9463df6b6e09236a28b5a38f132816eaf1a1b84c.matrix.txt"
+        },
+        {
+          "matrix_sha256": "feeba68aad8a1726403881e71f51f57d0124411e3a4ecbca6a66e40600ceb8f3",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/feeba68aad8a1726403881e71f51f57d0124411e3a4ecbca6a66e40600ceb8f3.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "b64c33090c9aac4dc7386213917cec66ac28d2da9685319b585067e95d0d63f6",
+      "count": 14,
+      "members": [
+        {
+          "matrix_sha256": "0284d8865f89bbda15f6dde2adc2b21e7e72561facb1ca6dd5f5bd8cb5c396a5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0284d8865f89bbda15f6dde2adc2b21e7e72561facb1ca6dd5f5bd8cb5c396a5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "10b3d2607c058ed2d703f56d7bafc13aa95afb635c0b426d5accd911f49bbb41",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/10b3d2607c058ed2d703f56d7bafc13aa95afb635c0b426d5accd911f49bbb41.matrix.txt"
+        },
+        {
+          "matrix_sha256": "11bafd556d05ce606eabb962f80a80f90c3f401a75f7fbb468819cbe4e6d57a8",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/11bafd556d05ce606eabb962f80a80f90c3f401a75f7fbb468819cbe4e6d57a8.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1b043b1d45ed6de1ced71c16fa572394201fe8b9a8aa34a0332835543e483579",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1b043b1d45ed6de1ced71c16fa572394201fe8b9a8aa34a0332835543e483579.matrix.txt"
+        },
+        {
+          "matrix_sha256": "20f54b1b2a3ead7b43cf3e888dc6334458f0bca5c619b0acf6356222e6dd214a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/20f54b1b2a3ead7b43cf3e888dc6334458f0bca5c619b0acf6356222e6dd214a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "305124e73dbd4f2e681843504fd51402e1db871579e076994ba8c3f8cbe94b7a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/305124e73dbd4f2e681843504fd51402e1db871579e076994ba8c3f8cbe94b7a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5135067d8f9543a18793d8d3930eefe1a670418d7d22a157da763989b6cf3dfc",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5135067d8f9543a18793d8d3930eefe1a670418d7d22a157da763989b6cf3dfc.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6c0b7b0ddbe34d8fab290b6c82c861a034e83128f3769759ebc7cdae8b1d55d6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/6c0b7b0ddbe34d8fab290b6c82c861a034e83128f3769759ebc7cdae8b1d55d6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "81cecfb79e9365e1dc9d10a4fe0f8d8b31c979430f36b4ebbba0853b6ce375e2",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/81cecfb79e9365e1dc9d10a4fe0f8d8b31c979430f36b4ebbba0853b6ce375e2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8261d23dda338d4a2c4edd9818cb1f0e68b4a2c2db2c9bb3b4acbe1861eb8c2c",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8261d23dda338d4a2c4edd9818cb1f0e68b4a2c2db2c9bb3b4acbe1861eb8c2c.matrix.txt"
+        },
+        {
+          "matrix_sha256": "92640873ed3cc268ea009107e360d0d2ff535485e37834af0b6d32c05026bd6f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/92640873ed3cc268ea009107e360d0d2ff535485e37834af0b6d32c05026bd6f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "aa50aa7a1b0b183f46d9a914aed7a221dea5585387e98a66d853d91b671cde21",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/aa50aa7a1b0b183f46d9a914aed7a221dea5585387e98a66d853d91b671cde21.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b386a8714a7bba8e2e88796f136e607ae56402f45695b31bc52f87b57ef0ca52",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/b386a8714a7bba8e2e88796f136e607ae56402f45695b31bc52f87b57ef0ca52.matrix.txt"
+        },
+        {
+          "matrix_sha256": "dcfabd7a1c7851130ae79e620125324d39c8820b79bc2013e5d4d3b4b16df5f0",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/dcfabd7a1c7851130ae79e620125324d39c8820b79bc2013e5d4d3b4b16df5f0.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "db2cddf4b8f12da99a32b1563689ad693b89d0a9ae343a4aedde56361fdc5a81",
+      "count": 15,
+      "members": [
+        {
+          "matrix_sha256": "056db91ebf0bcfdef4006a9e212934a12d637a33a6568f4f0afd4cfbd7454a57",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/056db91ebf0bcfdef4006a9e212934a12d637a33a6568f4f0afd4cfbd7454a57.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1554085c8de3b51e5710bff1ca9a28886eaa0558cbbc62cca11be6c6861b30cc",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1554085c8de3b51e5710bff1ca9a28886eaa0558cbbc62cca11be6c6861b30cc.matrix.txt"
+        },
+        {
+          "matrix_sha256": "2f5f21a92bc8243b5aa106f1e58d9ad30e34507bc140770430fcee24e9e9c8a9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/2f5f21a92bc8243b5aa106f1e58d9ad30e34507bc140770430fcee24e9e9c8a9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "349e69794f40c3bfff3ec05a26c2355205a0fe1829d0ab291dd05ca254484109",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/349e69794f40c3bfff3ec05a26c2355205a0fe1829d0ab291dd05ca254484109.matrix.txt"
+        },
+        {
+          "matrix_sha256": "37a686b90a7bac81c6dec6766b7f55a509c9d6a66bca41d0780ba04b27054c28",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/37a686b90a7bac81c6dec6766b7f55a509c9d6a66bca41d0780ba04b27054c28.matrix.txt"
+        },
+        {
+          "matrix_sha256": "4b3b4d45dde2dc9bb9b6ed0aabbb44368df2fd9d988ea5a030d2130927f23bcf",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/4b3b4d45dde2dc9bb9b6ed0aabbb44368df2fd9d988ea5a030d2130927f23bcf.matrix.txt"
+        },
+        {
+          "matrix_sha256": "7ab114a1446179c060fb64fef3f87cf28cb9dbcd0cec0f49518b9dce459298fa",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/7ab114a1446179c060fb64fef3f87cf28cb9dbcd0cec0f49518b9dce459298fa.matrix.txt"
+        },
+        {
+          "matrix_sha256": "840d8376ab333f736ecb946df4f2aeb190d7d7fb215d4bb60a1127df87f61e5c",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/840d8376ab333f736ecb946df4f2aeb190d7d7fb215d4bb60a1127df87f61e5c.matrix.txt"
+        },
+        {
+          "matrix_sha256": "90ff3e371f74f2a35214f757f1faa9987de8b47259cc36157d4ba082d349e32d",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/90ff3e371f74f2a35214f757f1faa9987de8b47259cc36157d4ba082d349e32d.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9bb9ef81e512b62d54a4e9bc6adaa6155a2a3f8739450f23736689370b9e2fc5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9bb9ef81e512b62d54a4e9bc6adaa6155a2a3f8739450f23736689370b9e2fc5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a89b3fb441492620d763074aeb77cc98c47c7d6580afe27efd16c2c7ef3b5607",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a89b3fb441492620d763074aeb77cc98c47c7d6580afe27efd16c2c7ef3b5607.matrix.txt"
+        },
+        {
+          "matrix_sha256": "acc70838bd4ac5b6a965e59028169c60fce3573ffb879c77d7abd7bba50ee828",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/acc70838bd4ac5b6a965e59028169c60fce3573ffb879c77d7abd7bba50ee828.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d77dbed50056245582c169d20d4efe02b0de64a95f9899220cad13ce7ae76ed7",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d77dbed50056245582c169d20d4efe02b0de64a95f9899220cad13ce7ae76ed7.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fbf8d2282e90a3f0ddb0189f9489391fbc45ddd81233f6d7af5bb8483b8042d8",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/fbf8d2282e90a3f0ddb0189f9489391fbc45ddd81233f6d7af5bb8483b8042d8.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "de7642266b6997198a6892fe26c1e080d0c673f095f9710b5003bbb8b5de2345",
+      "count": 15,
+      "members": [
+        {
+          "matrix_sha256": "056fb6c0dfac125d9a0507cfb4470d3664b977b7487a85f8840497383be34077",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/056fb6c0dfac125d9a0507cfb4470d3664b977b7487a85f8840497383be34077.matrix.txt"
+        },
+        {
+          "matrix_sha256": "0f67a7ffa0dd83c04701c614e078779aaafe49147cf6c295bc69078be0ddb34e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0f67a7ffa0dd83c04701c614e078779aaafe49147cf6c295bc69078be0ddb34e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "2df59efec70e484aa67492d5f13fd262f9af16f8259c3f975b152ac1faff5bc3",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/2df59efec70e484aa67492d5f13fd262f9af16f8259c3f975b152ac1faff5bc3.matrix.txt"
+        },
+        {
+          "matrix_sha256": "31d325b25c8d7830391f4fc06eeb875481435c858bf6e97a08db13171b9f47e9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/31d325b25c8d7830391f4fc06eeb875481435c858bf6e97a08db13171b9f47e9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "40e225ffeef823c2191764006dbbe0f47b2268776e51be6bb5ed8ffd3721a15a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/40e225ffeef823c2191764006dbbe0f47b2268776e51be6bb5ed8ffd3721a15a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "418ed30f04827cf270e4b34e2943f44cfdcb99ef202d4e8ec48ba9a69d482df9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/418ed30f04827cf270e4b34e2943f44cfdcb99ef202d4e8ec48ba9a69d482df9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6989f48927be3e04dc416ccb1ba30aaead644d539792172690ed23b6c4980e39",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/6989f48927be3e04dc416ccb1ba30aaead644d539792172690ed23b6c4980e39.matrix.txt"
+        },
+        {
+          "matrix_sha256": "7e94222fea9aaa8f99a184e28fa68d101bf9758e36e7ba7611b364587c3ae142",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/7e94222fea9aaa8f99a184e28fa68d101bf9758e36e7ba7611b364587c3ae142.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a6c60b7dd8be3cb6bd2118bcedbb10739957a02f5f9446f7536fdc33b8df9d50",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a6c60b7dd8be3cb6bd2118bcedbb10739957a02f5f9446f7536fdc33b8df9d50.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ab984eaa6f67b37e3f26caa338173ae58c73f5a6f86626b9800dbdb2f1d311c4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ab984eaa6f67b37e3f26caa338173ae58c73f5a6f86626b9800dbdb2f1d311c4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c3f0b85d3a4c0c3a13bbdd70622e909f08e8563c445d3f4fdda8e910a8a03881",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c3f0b85d3a4c0c3a13bbdd70622e909f08e8563c445d3f4fdda8e910a8a03881.matrix.txt"
+        },
+        {
+          "matrix_sha256": "dbd63b5de9d67680efcc762b77c3bc573970255eb9eac046f00f7649c3f12aa9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/dbd63b5de9d67680efcc762b77c3bc573970255eb9eac046f00f7649c3f12aa9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "dff8a901614111f0180fce64e9d95004747173f592c43e05ebed8ebd0562a2ba",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/dff8a901614111f0180fce64e9d95004747173f592c43e05ebed8ebd0562a2ba.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ec614702a038fc04108404a38791f32ddf28ba60c5a6afdf234d41999a9a3c31",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ec614702a038fc04108404a38791f32ddf28ba60c5a6afdf234d41999a9a3c31.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "df0b940533f84c9d61ec8df73000b4fe3a646f073a6fd32f3826d72331ebedc0",
+      "count": 8,
+      "members": [
+        {
+          "matrix_sha256": "02d9870748e92db2a7a1c5b18fa34af2c63d33dd738586459951ecbbdae4e8d7",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/02d9870748e92db2a7a1c5b18fa34af2c63d33dd738586459951ecbbdae4e8d7.matrix.txt"
+        },
+        {
+          "matrix_sha256": "492020d9183258bf65dfbbaffa60c42633debcb9e3f5c34a16c2432d1e8e61d5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/492020d9183258bf65dfbbaffa60c42633debcb9e3f5c34a16c2432d1e8e61d5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a759e5a7d0d3d545fe0629f646f4a71825a73e6f277e1a550cc845ae42c467f4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a759e5a7d0d3d545fe0629f646f4a71825a73e6f277e1a550cc845ae42c467f4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ae8f1de84c43f03065f8eb29df38d9208033c1d75b272a9ce527009a85b6d815",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ae8f1de84c43f03065f8eb29df38d9208033c1d75b272a9ce527009a85b6d815.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b19ab30d3435f82e9f83dd5cde7ae6266f5680366382456d65a7cf3b202698f9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/b19ab30d3435f82e9f83dd5cde7ae6266f5680366382456d65a7cf3b202698f9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ce531c0ce4c4658d6e9a7d0c5a57fc385e1c57777a416eb96139db1f9c46a254",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ce531c0ce4c4658d6e9a7d0c5a57fc385e1c57777a416eb96139db1f9c46a254.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fba7e8e6b31c93baf3a5189c9c7908c53f2358a5ac41fe4da0dbff8fedb2f6f4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/fba7e8e6b31c93baf3a5189c9c7908c53f2358a5ac41fe4da0dbff8fedb2f6f4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fe5530a93a679f6c4bc927107932181b24fdc9e2f4c29b5f33c97ffc36a3c079",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/fe5530a93a679f6c4bc927107932181b24fdc9e2f4c29b5f33c97ffc36a3c079.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "eb138a06ec638735c34bdacf77bd1cdd869c5d2fbc3450be25d63af0cde1a134",
+      "count": 29,
+      "members": [
+        {
+          "matrix_sha256": "0226eb35612f4fd6fb3cc837548c41cb731299640e64543ee8b2054f8eeef662",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0226eb35612f4fd6fb3cc837548c41cb731299640e64543ee8b2054f8eeef662.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1b467bb79dc56b23bd2d2472d240c8f865068b76d6660534073630bf3913ba77",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1b467bb79dc56b23bd2d2472d240c8f865068b76d6660534073630bf3913ba77.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3960838b7c154a518fa3d1261593db3b83975b5ae3cc2bb9bdfebf9ba418d11b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/3960838b7c154a518fa3d1261593db3b83975b5ae3cc2bb9bdfebf9ba418d11b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3b2573d6ca511b66a8025eeb8022f5d1907f3c167b3f92203e8d9ec97c55abe2",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/3b2573d6ca511b66a8025eeb8022f5d1907f3c167b3f92203e8d9ec97c55abe2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3f19bd2022d32a4a7772dde112dad20820c75052941c0f4eb33c526c143e9915",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/3f19bd2022d32a4a7772dde112dad20820c75052941c0f4eb33c526c143e9915.matrix.txt"
+        },
+        {
+          "matrix_sha256": "4628665ef7cdc7e40e7b19faabcaebccd12a1749c6b301e68b447fc4a07a3dce",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/4628665ef7cdc7e40e7b19faabcaebccd12a1749c6b301e68b447fc4a07a3dce.matrix.txt"
+        },
+        {
+          "matrix_sha256": "47809956d36b86352ab4078a6dc562048b7a4904f0a1f7a6a603088160bb999c",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/47809956d36b86352ab4078a6dc562048b7a4904f0a1f7a6a603088160bb999c.matrix.txt"
+        },
+        {
+          "matrix_sha256": "47c2558d1dc9979f3fca4eef76b88a29f4c9bcd8f4003b641512e9090ec90e0e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/47c2558d1dc9979f3fca4eef76b88a29f4c9bcd8f4003b641512e9090ec90e0e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "546a839d43a606845a4503d60eb18ea58a6d620ffe54792d557cb16c747abbb2",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/546a839d43a606845a4503d60eb18ea58a6d620ffe54792d557cb16c747abbb2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "54770fd4806bf6fff699aa487de31c4bb7e8091e86ea68eaa548adc5b716748f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/54770fd4806bf6fff699aa487de31c4bb7e8091e86ea68eaa548adc5b716748f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5ed9c1e251f6b370b5b5cb4e6a44bdd7cbca6fe7ef17ec6e82b026cde98388f6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5ed9c1e251f6b370b5b5cb4e6a44bdd7cbca6fe7ef17ec6e82b026cde98388f6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "68cd15a08c04eb64badfa7105732681db9cb9f112b05db6e79184b2ccb109716",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/68cd15a08c04eb64badfa7105732681db9cb9f112b05db6e79184b2ccb109716.matrix.txt"
+        },
+        {
+          "matrix_sha256": "762c8910d0185fd00e687b227c33a7dc1d13824e596d0f3390a92f2d2d062814",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/762c8910d0185fd00e687b227c33a7dc1d13824e596d0f3390a92f2d2d062814.matrix.txt"
+        },
+        {
+          "matrix_sha256": "88b8c902c1ebf915b7ca1144922f3a54a74bf2279d07df2e7a7d3d3137e820bf",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/88b8c902c1ebf915b7ca1144922f3a54a74bf2279d07df2e7a7d3d3137e820bf.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8fb44af6ec76fb9b4641cb893bc68330b18e0adfa52326c6fdecabefbcb0b9e9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8fb44af6ec76fb9b4641cb893bc68330b18e0adfa52326c6fdecabefbcb0b9e9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8fe2300a2761fc42d61b0b94d827a33c55b42e6b8fc021f029ac4de4856a6e43",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8fe2300a2761fc42d61b0b94d827a33c55b42e6b8fc021f029ac4de4856a6e43.matrix.txt"
+        },
+        {
+          "matrix_sha256": "900d7bf2b430c21d56adb47943053b11b578c012dd04ecdbb3aafd0f69eca35e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/900d7bf2b430c21d56adb47943053b11b578c012dd04ecdbb3aafd0f69eca35e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "95b44b73ab4100e21c17aee3fe55b4a663e0517f21d6c7f0cf9736ec70e195db",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/95b44b73ab4100e21c17aee3fe55b4a663e0517f21d6c7f0cf9736ec70e195db.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a6577daded577d6d9d12a8ca0a795cd49d9541208e5551b26d64a16506306384",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a6577daded577d6d9d12a8ca0a795cd49d9541208e5551b26d64a16506306384.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a72382333463df566f7d826740c6896b861680ca807b177e607369d799d31538",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a72382333463df566f7d826740c6896b861680ca807b177e607369d799d31538.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a83eeb84bc8951fcada962a64aa2033df8abf8162b6be58ced909cabccfc5eeb",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a83eeb84bc8951fcada962a64aa2033df8abf8162b6be58ced909cabccfc5eeb.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c0ce440373669bf107f817192683b4e3a6b6e614e2175fdb1ff465c8e486f1d9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c0ce440373669bf107f817192683b4e3a6b6e614e2175fdb1ff465c8e486f1d9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c4422721dac761f09db1c36487545521ae53a0fbb32a28df882db928d73dcf9a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c4422721dac761f09db1c36487545521ae53a0fbb32a28df882db928d73dcf9a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c6ef0e55c0d4c8ea81406934b6d5bdb5194d55336bae8bded0e39db98276f56b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c6ef0e55c0d4c8ea81406934b6d5bdb5194d55336bae8bded0e39db98276f56b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d7db56dedb98ac0b23f10a642fb2cbf20cd3f81b4d3d29993285e159ce04a57e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d7db56dedb98ac0b23f10a642fb2cbf20cd3f81b4d3d29993285e159ce04a57e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "e6f872c5c502aee8e214fb6cf3b2cded1611bc0b3f3cdd9fc33ec0134d539547",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/e6f872c5c502aee8e214fb6cf3b2cded1611bc0b3f3cdd9fc33ec0134d539547.matrix.txt"
+        },
+        {
+          "matrix_sha256": "e91c67a488a6d28a4f10220510f44ebae102ea9c280a2fe95b84eb84fde0fc1b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/e91c67a488a6d28a4f10220510f44ebae102ea9c280a2fe95b84eb84fde0fc1b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "f70bf451409bb5c512ef7dbd6715dd1d90dc7fa110cff7474545d4d532c669c3",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/f70bf451409bb5c512ef7dbd6715dd1d90dc7fa110cff7474545d4d532c669c3.matrix.txt"
+        }
+      ]
+    }
+  ],
+  "ht_class_count": 10,
+  "ht_classes": [
+    {
+      "certificate_sha256": "1e4b14334f15ec751275a8383b5b7e8aa8270c951e3ff5a3d342c8fe203d9efe",
+      "count": 8,
+      "members": [
+        {
+          "matrix_sha256": "56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/56d91cb5163bce3bbe8c3c9ea947e5c36cdbb36cb970e8f34a599d8cd75b3ac6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5e03f53beec575113f9fe2c2986cfcc2c5f1b69f79807ccf1ec23fbc7ee25823",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5e03f53beec575113f9fe2c2986cfcc2c5f1b69f79807ccf1ec23fbc7ee25823.matrix.txt"
+        },
+        {
+          "matrix_sha256": "73e7d483866c988acadadebb44203cfca9ce1873760cbcdf53866bbb7f3d58ee",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/73e7d483866c988acadadebb44203cfca9ce1873760cbcdf53866bbb7f3d58ee.matrix.txt"
+        },
+        {
+          "matrix_sha256": "85e5efc9c4b5bfa8df951ee344f32b212e83384f5f568560c9f0cbedcb235e03",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/85e5efc9c4b5bfa8df951ee344f32b212e83384f5f568560c9f0cbedcb235e03.matrix.txt"
+        },
+        {
+          "matrix_sha256": "90302e0a62b32ce8980e41f176489892fdf4a552dfc2519f59971f55135646ad",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/90302e0a62b32ce8980e41f176489892fdf4a552dfc2519f59971f55135646ad.matrix.txt"
+        },
+        {
+          "matrix_sha256": "acb896cc230c54533bf15aa7bae965cec8658fa561257c8383d49986af62d02f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/acb896cc230c54533bf15aa7bae965cec8658fa561257c8383d49986af62d02f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "f5274b4fc17479b7dbc01422334a6dd72aa81ebb71d85e1f0056cad724fa69aa",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/f5274b4fc17479b7dbc01422334a6dd72aa81ebb71d85e1f0056cad724fa69aa.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fe89236888f0ad2e6d7225fa46a28a6603d787ec565f5982836589f0714b7fe6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/fe89236888f0ad2e6d7225fa46a28a6603d787ec565f5982836589f0714b7fe6.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "4072ead420f0688da998d030955fecc419fc96e0494c6771fe6a92f74615305f",
+      "count": 19,
+      "members": [
+        {
+          "matrix_sha256": "39b47f520620e5f8f1db7108a396944198df604928702d0afed45df4590105b9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/39b47f520620e5f8f1db7108a396944198df604928702d0afed45df4590105b9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6aa3b51a5450f550792b6b2367ef7643fec9f4c7f568506abf3a76a4c3bb611e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/6aa3b51a5450f550792b6b2367ef7643fec9f4c7f568506abf3a76a4c3bb611e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6e5f51f4cc7055b9ea32f8987a26e1c8d70c0fb76c25743f324215b9f9d4a410",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/6e5f51f4cc7055b9ea32f8987a26e1c8d70c0fb76c25743f324215b9f9d4a410.matrix.txt"
+        },
+        {
+          "matrix_sha256": "719de7921609d52c430c66ec123c55ea3b475248569a621417df695f76794d6a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/719de7921609d52c430c66ec123c55ea3b475248569a621417df695f76794d6a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "78401411e6398b2cf9d2ff16c935052fa471cedf0abbc6e588c77dae411a5629",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/78401411e6398b2cf9d2ff16c935052fa471cedf0abbc6e588c77dae411a5629.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9ad63e86673095214eeaa8fa73f1db137d8599308538fc5642fb321342b8440b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9ad63e86673095214eeaa8fa73f1db137d8599308538fc5642fb321342b8440b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9c1deb65499d3efe7dac73d03aa70bd4fb954f5db845f665faeac7e584a85a80",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9c1deb65499d3efe7dac73d03aa70bd4fb954f5db845f665faeac7e584a85a80.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9cfa44228596823ec615ab12aa3f34b88b0532b43a906a5b515448f4b1fc4eee",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9cfa44228596823ec615ab12aa3f34b88b0532b43a906a5b515448f4b1fc4eee.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9e9b31a892c742d6d2e6a8030e1fe36998f59f36fc255d3886e41f1aa89a5a37",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9e9b31a892c742d6d2e6a8030e1fe36998f59f36fc255d3886e41f1aa89a5a37.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a0eb1e054d38cb6328d1a8397f84bb11d6e0345c84703cfc8b820d529673d4d0.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b094145c07472526a430a06e2d54c70652bee236b7846be31483120632ea3a3e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/b094145c07472526a430a06e2d54c70652bee236b7846be31483120632ea3a3e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "bfa63cb46100a301eedbe643a7ff801524973cba52c8938c710c8b8a9bc72de6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/bfa63cb46100a301eedbe643a7ff801524973cba52c8938c710c8b8a9bc72de6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c0942de77e14f6d48567f22a6499426bea8d2509742a767c88cf2dbe76d18d6a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c0942de77e14f6d48567f22a6499426bea8d2509742a767c88cf2dbe76d18d6a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c18b8a336b68952b940d483e836c9bf539c6518eed071c182a5f2cebf6498891",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c18b8a336b68952b940d483e836c9bf539c6518eed071c182a5f2cebf6498891.matrix.txt"
+        },
+        {
+          "matrix_sha256": "db00601f833698d5a6f9baf65f9c1d201b99b72791bdc70eec11ac9b5b207467",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/db00601f833698d5a6f9baf65f9c1d201b99b72791bdc70eec11ac9b5b207467.matrix.txt"
+        },
+        {
+          "matrix_sha256": "edbf3e96a40f666f00d4d3bfdd82a8d0316317d94ef134cf9ba5bc3fbf3ff90d",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/edbf3e96a40f666f00d4d3bfdd82a8d0316317d94ef134cf9ba5bc3fbf3ff90d.matrix.txt"
+        },
+        {
+          "matrix_sha256": "f84f7096365d43cb8370567cb7883d6555f9c20f4ad4d792bde3fd2a035eb49f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/f84f7096365d43cb8370567cb7883d6555f9c20f4ad4d792bde3fd2a035eb49f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "f8b210ca913ee2fac566866001bc7ecc38ac5f780ebaaca4ff58ba2fff18c497",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/f8b210ca913ee2fac566866001bc7ecc38ac5f780ebaaca4ff58ba2fff18c497.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ffed581034de5c67354596acccaf582af6db96fd9fdfc91c6d339d6ec1bb2e51",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ffed581034de5c67354596acccaf582af6db96fd9fdfc91c6d339d6ec1bb2e51.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "9035bdf2a85b8a2a600a76c6d55af36f627327694e904e7b483e88993716c91b",
+      "count": 13,
+      "members": [
+        {
+          "matrix_sha256": "0560e0915a7f60082c15fb39dd9aa0ba6b021bfceb7c7fe90fab52e025cfe78b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0560e0915a7f60082c15fb39dd9aa0ba6b021bfceb7c7fe90fab52e025cfe78b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1356fef5236e5eb4cb713cad8b40e29588293b2c019189b82e6a91271c6fc879",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1356fef5236e5eb4cb713cad8b40e29588293b2c019189b82e6a91271c6fc879.matrix.txt"
+        },
+        {
+          "matrix_sha256": "13f8440df32d29694be2a10186abfedb95d2425301ceaeed52a1cab97b7691e9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/13f8440df32d29694be2a10186abfedb95d2425301ceaeed52a1cab97b7691e9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/156cda73278b372dd1a2da332d82631a0cad47ed7a92e18e4966c4196eb1e9ce.matrix.txt"
+        },
+        {
+          "matrix_sha256": "15fb477ea907c4238fbe70a1cd73930a2ef1830e4169d7b803c3fdb7e11cb22f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/15fb477ea907c4238fbe70a1cd73930a2ef1830e4169d7b803c3fdb7e11cb22f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5108b6fd7902cf3b93fe1b2859025e2a5d0c3e57b288d4aa71a01fe6d642dcff",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5108b6fd7902cf3b93fe1b2859025e2a5d0c3e57b288d4aa71a01fe6d642dcff.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5a380616d1bc1b180fb22fb9f74f4f31d566c1ee5d6f73bae6d44cf879beb32b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5a380616d1bc1b180fb22fb9f74f4f31d566c1ee5d6f73bae6d44cf879beb32b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5d269dac418cc985f065b3a9269a751a0b4e92cab606e603d7aca3841eadc538",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5d269dac418cc985f065b3a9269a751a0b4e92cab606e603d7aca3841eadc538.matrix.txt"
+        },
+        {
+          "matrix_sha256": "68a56d9b1f26d3956a92e5bef1747aa691dd0fc49d634616a5e3aee9ad2102e5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/68a56d9b1f26d3956a92e5bef1747aa691dd0fc49d634616a5e3aee9ad2102e5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "84c4966078d5928b6d8842c056e38f231add4b6c7bfcb9aae36cb65fa27b52a4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/84c4966078d5928b6d8842c056e38f231add4b6c7bfcb9aae36cb65fa27b52a4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9b4198c0f76b6873d4c931c4dc0c0525b9dbb2ebafc77a7406f38dafd1c4c806",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9b4198c0f76b6873d4c931c4dc0c0525b9dbb2ebafc77a7406f38dafd1c4c806.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d6de31bbab263f1b175d9f463fda450df8456242f048a9e2210613b8ea8aff1f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d6de31bbab263f1b175d9f463fda450df8456242f048a9e2210613b8ea8aff1f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fdde2534ef60e5da93a5840f10fde14cb1fd6920017d7571f4182e73576cf047",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/fdde2534ef60e5da93a5840f10fde14cb1fd6920017d7571f4182e73576cf047.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "b584c923ea12af6634bb5681f1eb903196e5a7cedadf5d1ea321bc63613c986e",
+      "count": 23,
+      "members": [
+        {
+          "matrix_sha256": "00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/00433daf0bbbd2e0413c1c3951d80729fbb5fd71dddf46847549a04732d579e1.matrix.txt"
+        },
+        {
+          "matrix_sha256": "0304122e2041a116b5cdfe8fe36e99117cdb92795dd2d2ae588494a2a7ee7017",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0304122e2041a116b5cdfe8fe36e99117cdb92795dd2d2ae588494a2a7ee7017.matrix.txt"
+        },
+        {
+          "matrix_sha256": "07674064b3f0ee41ba46945afd44cc1274b81344495ce210fce167af7c15111a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/07674064b3f0ee41ba46945afd44cc1274b81344495ce210fce167af7c15111a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "0917925191d6e24aa65e6af92a87646fe4e2b7005c6c7ef3f3418262bc730cc2",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0917925191d6e24aa65e6af92a87646fe4e2b7005c6c7ef3f3418262bc730cc2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "10463ffb82aca72ea4b30b9d1062ba457175c2b353eca58c8a158abc9db7d17b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/10463ffb82aca72ea4b30b9d1062ba457175c2b353eca58c8a158abc9db7d17b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1d676ccdb3984a6ae68bb89672c04c5a466d0efc7e6a98c320e082821d02add4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1d676ccdb3984a6ae68bb89672c04c5a466d0efc7e6a98c320e082821d02add4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "20ffa0ba06bb2bbc37a12b467118de67e94f6f2beda7642a93debaa18e51a348",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/20ffa0ba06bb2bbc37a12b467118de67e94f6f2beda7642a93debaa18e51a348.matrix.txt"
+        },
+        {
+          "matrix_sha256": "2c6a274c6de3bba837dfd538e2df624919c9636cb471eb31314c26f46a308ee6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/2c6a274c6de3bba837dfd538e2df624919c9636cb471eb31314c26f46a308ee6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "2ce2e8e710d9a77223890e9d437544d5d974c73d2e8de859e244ea6f33160cd9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/2ce2e8e710d9a77223890e9d437544d5d974c73d2e8de859e244ea6f33160cd9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5559e2fc33a228d8faa5c2c9f12ecfca78db6838cffd1dc5e8601cc52c5835c7",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5559e2fc33a228d8faa5c2c9f12ecfca78db6838cffd1dc5e8601cc52c5835c7.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5e727f14c8f28124379f46d98fbc82f93283e25156186e42ef305fda58cc0bae",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5e727f14c8f28124379f46d98fbc82f93283e25156186e42ef305fda58cc0bae.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6f7fa4beddbbc74786b2398a481d0af41919c66066149eecd86cd5f3e232e9d6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/6f7fa4beddbbc74786b2398a481d0af41919c66066149eecd86cd5f3e232e9d6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "71226da04130532b861e33de4fc827288674ada1eb7cb40a3f13432ed0445318",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/71226da04130532b861e33de4fc827288674ada1eb7cb40a3f13432ed0445318.matrix.txt"
+        },
+        {
+          "matrix_sha256": "79f79d5d5db927a0e26ecee8070099f67a15da657a62d7be492df20838a5edb9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/79f79d5d5db927a0e26ecee8070099f67a15da657a62d7be492df20838a5edb9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "845f8615ed29b0a316df73a9532b1c39a1716df8088e21b7152412e45addc622",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/845f8615ed29b0a316df73a9532b1c39a1716df8088e21b7152412e45addc622.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8b11172db994d7a5bebc68ab3ec98eae0e31392ed81f838e00c26c53e7008270",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8b11172db994d7a5bebc68ab3ec98eae0e31392ed81f838e00c26c53e7008270.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a89ab2f2213dc06cb24ba5711c2b8535db66bb369eb282394e1daf92eabe7534",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a89ab2f2213dc06cb24ba5711c2b8535db66bb369eb282394e1daf92eabe7534.matrix.txt"
+        },
+        {
+          "matrix_sha256": "be282b3c49943bea95bb20a8d0276677e2a794c3f84fcbabd090c3d363cdd058",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/be282b3c49943bea95bb20a8d0276677e2a794c3f84fcbabd090c3d363cdd058.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c304f4599bb34059640eba96b3f81196d791b5d7ddcfd37ba77fb22309fb9795",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c304f4599bb34059640eba96b3f81196d791b5d7ddcfd37ba77fb22309fb9795.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c6d54521408ed04e68277ab82be34b65ad4e18fc4f9aabf07031ee85df197b94",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c6d54521408ed04e68277ab82be34b65ad4e18fc4f9aabf07031ee85df197b94.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d476880c7955414b9e16bfa0b9d34c38d0ef155c24c039204e1f3ce816dc5ef9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d476880c7955414b9e16bfa0b9d34c38d0ef155c24c039204e1f3ce816dc5ef9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d84ea425c1d197d1ca1c74ac9463df6b6e09236a28b5a38f132816eaf1a1b84c",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d84ea425c1d197d1ca1c74ac9463df6b6e09236a28b5a38f132816eaf1a1b84c.matrix.txt"
+        },
+        {
+          "matrix_sha256": "feeba68aad8a1726403881e71f51f57d0124411e3a4ecbca6a66e40600ceb8f3",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/feeba68aad8a1726403881e71f51f57d0124411e3a4ecbca6a66e40600ceb8f3.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "b64c33090c9aac4dc7386213917cec66ac28d2da9685319b585067e95d0d63f6",
+      "count": 14,
+      "members": [
+        {
+          "matrix_sha256": "0284d8865f89bbda15f6dde2adc2b21e7e72561facb1ca6dd5f5bd8cb5c396a5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0284d8865f89bbda15f6dde2adc2b21e7e72561facb1ca6dd5f5bd8cb5c396a5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "10b3d2607c058ed2d703f56d7bafc13aa95afb635c0b426d5accd911f49bbb41",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/10b3d2607c058ed2d703f56d7bafc13aa95afb635c0b426d5accd911f49bbb41.matrix.txt"
+        },
+        {
+          "matrix_sha256": "11bafd556d05ce606eabb962f80a80f90c3f401a75f7fbb468819cbe4e6d57a8",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/11bafd556d05ce606eabb962f80a80f90c3f401a75f7fbb468819cbe4e6d57a8.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1b043b1d45ed6de1ced71c16fa572394201fe8b9a8aa34a0332835543e483579",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1b043b1d45ed6de1ced71c16fa572394201fe8b9a8aa34a0332835543e483579.matrix.txt"
+        },
+        {
+          "matrix_sha256": "20f54b1b2a3ead7b43cf3e888dc6334458f0bca5c619b0acf6356222e6dd214a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/20f54b1b2a3ead7b43cf3e888dc6334458f0bca5c619b0acf6356222e6dd214a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "305124e73dbd4f2e681843504fd51402e1db871579e076994ba8c3f8cbe94b7a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/305124e73dbd4f2e681843504fd51402e1db871579e076994ba8c3f8cbe94b7a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5135067d8f9543a18793d8d3930eefe1a670418d7d22a157da763989b6cf3dfc",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5135067d8f9543a18793d8d3930eefe1a670418d7d22a157da763989b6cf3dfc.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6c0b7b0ddbe34d8fab290b6c82c861a034e83128f3769759ebc7cdae8b1d55d6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/6c0b7b0ddbe34d8fab290b6c82c861a034e83128f3769759ebc7cdae8b1d55d6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "81cecfb79e9365e1dc9d10a4fe0f8d8b31c979430f36b4ebbba0853b6ce375e2",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/81cecfb79e9365e1dc9d10a4fe0f8d8b31c979430f36b4ebbba0853b6ce375e2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8261d23dda338d4a2c4edd9818cb1f0e68b4a2c2db2c9bb3b4acbe1861eb8c2c",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8261d23dda338d4a2c4edd9818cb1f0e68b4a2c2db2c9bb3b4acbe1861eb8c2c.matrix.txt"
+        },
+        {
+          "matrix_sha256": "92640873ed3cc268ea009107e360d0d2ff535485e37834af0b6d32c05026bd6f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/92640873ed3cc268ea009107e360d0d2ff535485e37834af0b6d32c05026bd6f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "aa50aa7a1b0b183f46d9a914aed7a221dea5585387e98a66d853d91b671cde21",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/aa50aa7a1b0b183f46d9a914aed7a221dea5585387e98a66d853d91b671cde21.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b386a8714a7bba8e2e88796f136e607ae56402f45695b31bc52f87b57ef0ca52",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/b386a8714a7bba8e2e88796f136e607ae56402f45695b31bc52f87b57ef0ca52.matrix.txt"
+        },
+        {
+          "matrix_sha256": "dcfabd7a1c7851130ae79e620125324d39c8820b79bc2013e5d4d3b4b16df5f0",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/dcfabd7a1c7851130ae79e620125324d39c8820b79bc2013e5d4d3b4b16df5f0.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "db2cddf4b8f12da99a32b1563689ad693b89d0a9ae343a4aedde56361fdc5a81",
+      "count": 15,
+      "members": [
+        {
+          "matrix_sha256": "056db91ebf0bcfdef4006a9e212934a12d637a33a6568f4f0afd4cfbd7454a57",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/056db91ebf0bcfdef4006a9e212934a12d637a33a6568f4f0afd4cfbd7454a57.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1554085c8de3b51e5710bff1ca9a28886eaa0558cbbc62cca11be6c6861b30cc",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1554085c8de3b51e5710bff1ca9a28886eaa0558cbbc62cca11be6c6861b30cc.matrix.txt"
+        },
+        {
+          "matrix_sha256": "2f5f21a92bc8243b5aa106f1e58d9ad30e34507bc140770430fcee24e9e9c8a9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/2f5f21a92bc8243b5aa106f1e58d9ad30e34507bc140770430fcee24e9e9c8a9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "349e69794f40c3bfff3ec05a26c2355205a0fe1829d0ab291dd05ca254484109",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/349e69794f40c3bfff3ec05a26c2355205a0fe1829d0ab291dd05ca254484109.matrix.txt"
+        },
+        {
+          "matrix_sha256": "37a686b90a7bac81c6dec6766b7f55a509c9d6a66bca41d0780ba04b27054c28",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/37a686b90a7bac81c6dec6766b7f55a509c9d6a66bca41d0780ba04b27054c28.matrix.txt"
+        },
+        {
+          "matrix_sha256": "4b3b4d45dde2dc9bb9b6ed0aabbb44368df2fd9d988ea5a030d2130927f23bcf",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/4b3b4d45dde2dc9bb9b6ed0aabbb44368df2fd9d988ea5a030d2130927f23bcf.matrix.txt"
+        },
+        {
+          "matrix_sha256": "7ab114a1446179c060fb64fef3f87cf28cb9dbcd0cec0f49518b9dce459298fa",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/7ab114a1446179c060fb64fef3f87cf28cb9dbcd0cec0f49518b9dce459298fa.matrix.txt"
+        },
+        {
+          "matrix_sha256": "840d8376ab333f736ecb946df4f2aeb190d7d7fb215d4bb60a1127df87f61e5c",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/840d8376ab333f736ecb946df4f2aeb190d7d7fb215d4bb60a1127df87f61e5c.matrix.txt"
+        },
+        {
+          "matrix_sha256": "90ff3e371f74f2a35214f757f1faa9987de8b47259cc36157d4ba082d349e32d",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/90ff3e371f74f2a35214f757f1faa9987de8b47259cc36157d4ba082d349e32d.matrix.txt"
+        },
+        {
+          "matrix_sha256": "9bb9ef81e512b62d54a4e9bc6adaa6155a2a3f8739450f23736689370b9e2fc5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/9bb9ef81e512b62d54a4e9bc6adaa6155a2a3f8739450f23736689370b9e2fc5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a89b3fb441492620d763074aeb77cc98c47c7d6580afe27efd16c2c7ef3b5607",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a89b3fb441492620d763074aeb77cc98c47c7d6580afe27efd16c2c7ef3b5607.matrix.txt"
+        },
+        {
+          "matrix_sha256": "acc70838bd4ac5b6a965e59028169c60fce3573ffb879c77d7abd7bba50ee828",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/acc70838bd4ac5b6a965e59028169c60fce3573ffb879c77d7abd7bba50ee828.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d134c240811076c9f807b98974ca68fda1e7756d1cf7e7ae72cdc044d8743850.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d77dbed50056245582c169d20d4efe02b0de64a95f9899220cad13ce7ae76ed7",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d77dbed50056245582c169d20d4efe02b0de64a95f9899220cad13ce7ae76ed7.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fbf8d2282e90a3f0ddb0189f9489391fbc45ddd81233f6d7af5bb8483b8042d8",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/fbf8d2282e90a3f0ddb0189f9489391fbc45ddd81233f6d7af5bb8483b8042d8.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "de7642266b6997198a6892fe26c1e080d0c673f095f9710b5003bbb8b5de2345",
+      "count": 15,
+      "members": [
+        {
+          "matrix_sha256": "056fb6c0dfac125d9a0507cfb4470d3664b977b7487a85f8840497383be34077",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/056fb6c0dfac125d9a0507cfb4470d3664b977b7487a85f8840497383be34077.matrix.txt"
+        },
+        {
+          "matrix_sha256": "0f67a7ffa0dd83c04701c614e078779aaafe49147cf6c295bc69078be0ddb34e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0f67a7ffa0dd83c04701c614e078779aaafe49147cf6c295bc69078be0ddb34e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "2df59efec70e484aa67492d5f13fd262f9af16f8259c3f975b152ac1faff5bc3",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/2df59efec70e484aa67492d5f13fd262f9af16f8259c3f975b152ac1faff5bc3.matrix.txt"
+        },
+        {
+          "matrix_sha256": "31d325b25c8d7830391f4fc06eeb875481435c858bf6e97a08db13171b9f47e9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/31d325b25c8d7830391f4fc06eeb875481435c858bf6e97a08db13171b9f47e9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "40e225ffeef823c2191764006dbbe0f47b2268776e51be6bb5ed8ffd3721a15a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/40e225ffeef823c2191764006dbbe0f47b2268776e51be6bb5ed8ffd3721a15a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "418ed30f04827cf270e4b34e2943f44cfdcb99ef202d4e8ec48ba9a69d482df9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/418ed30f04827cf270e4b34e2943f44cfdcb99ef202d4e8ec48ba9a69d482df9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "6989f48927be3e04dc416ccb1ba30aaead644d539792172690ed23b6c4980e39",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/6989f48927be3e04dc416ccb1ba30aaead644d539792172690ed23b6c4980e39.matrix.txt"
+        },
+        {
+          "matrix_sha256": "7e94222fea9aaa8f99a184e28fa68d101bf9758e36e7ba7611b364587c3ae142",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/7e94222fea9aaa8f99a184e28fa68d101bf9758e36e7ba7611b364587c3ae142.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8241af155359ed39fc39ea8c53533ba63f974c4b179aa890628fc5e27b211208.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a6c60b7dd8be3cb6bd2118bcedbb10739957a02f5f9446f7536fdc33b8df9d50",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a6c60b7dd8be3cb6bd2118bcedbb10739957a02f5f9446f7536fdc33b8df9d50.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ab984eaa6f67b37e3f26caa338173ae58c73f5a6f86626b9800dbdb2f1d311c4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ab984eaa6f67b37e3f26caa338173ae58c73f5a6f86626b9800dbdb2f1d311c4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c3f0b85d3a4c0c3a13bbdd70622e909f08e8563c445d3f4fdda8e910a8a03881",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c3f0b85d3a4c0c3a13bbdd70622e909f08e8563c445d3f4fdda8e910a8a03881.matrix.txt"
+        },
+        {
+          "matrix_sha256": "dbd63b5de9d67680efcc762b77c3bc573970255eb9eac046f00f7649c3f12aa9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/dbd63b5de9d67680efcc762b77c3bc573970255eb9eac046f00f7649c3f12aa9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "dff8a901614111f0180fce64e9d95004747173f592c43e05ebed8ebd0562a2ba",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/dff8a901614111f0180fce64e9d95004747173f592c43e05ebed8ebd0562a2ba.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ec614702a038fc04108404a38791f32ddf28ba60c5a6afdf234d41999a9a3c31",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ec614702a038fc04108404a38791f32ddf28ba60c5a6afdf234d41999a9a3c31.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "df0b940533f84c9d61ec8df73000b4fe3a646f073a6fd32f3826d72331ebedc0",
+      "count": 8,
+      "members": [
+        {
+          "matrix_sha256": "02d9870748e92db2a7a1c5b18fa34af2c63d33dd738586459951ecbbdae4e8d7",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/02d9870748e92db2a7a1c5b18fa34af2c63d33dd738586459951ecbbdae4e8d7.matrix.txt"
+        },
+        {
+          "matrix_sha256": "492020d9183258bf65dfbbaffa60c42633debcb9e3f5c34a16c2432d1e8e61d5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/492020d9183258bf65dfbbaffa60c42633debcb9e3f5c34a16c2432d1e8e61d5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a759e5a7d0d3d545fe0629f646f4a71825a73e6f277e1a550cc845ae42c467f4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a759e5a7d0d3d545fe0629f646f4a71825a73e6f277e1a550cc845ae42c467f4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ae8f1de84c43f03065f8eb29df38d9208033c1d75b272a9ce527009a85b6d815",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ae8f1de84c43f03065f8eb29df38d9208033c1d75b272a9ce527009a85b6d815.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b19ab30d3435f82e9f83dd5cde7ae6266f5680366382456d65a7cf3b202698f9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/b19ab30d3435f82e9f83dd5cde7ae6266f5680366382456d65a7cf3b202698f9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ce531c0ce4c4658d6e9a7d0c5a57fc385e1c57777a416eb96139db1f9c46a254",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ce531c0ce4c4658d6e9a7d0c5a57fc385e1c57777a416eb96139db1f9c46a254.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fba7e8e6b31c93baf3a5189c9c7908c53f2358a5ac41fe4da0dbff8fedb2f6f4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/fba7e8e6b31c93baf3a5189c9c7908c53f2358a5ac41fe4da0dbff8fedb2f6f4.matrix.txt"
+        },
+        {
+          "matrix_sha256": "fe5530a93a679f6c4bc927107932181b24fdc9e2f4c29b5f33c97ffc36a3c079",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/fe5530a93a679f6c4bc927107932181b24fdc9e2f4c29b5f33c97ffc36a3c079.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "eb138a06ec638735c34bdacf77bd1cdd869c5d2fbc3450be25d63af0cde1a134",
+      "count": 29,
+      "members": [
+        {
+          "matrix_sha256": "0226eb35612f4fd6fb3cc837548c41cb731299640e64543ee8b2054f8eeef662",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0226eb35612f4fd6fb3cc837548c41cb731299640e64543ee8b2054f8eeef662.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1b467bb79dc56b23bd2d2472d240c8f865068b76d6660534073630bf3913ba77",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1b467bb79dc56b23bd2d2472d240c8f865068b76d6660534073630bf3913ba77.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3960838b7c154a518fa3d1261593db3b83975b5ae3cc2bb9bdfebf9ba418d11b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/3960838b7c154a518fa3d1261593db3b83975b5ae3cc2bb9bdfebf9ba418d11b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3b2573d6ca511b66a8025eeb8022f5d1907f3c167b3f92203e8d9ec97c55abe2",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/3b2573d6ca511b66a8025eeb8022f5d1907f3c167b3f92203e8d9ec97c55abe2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3f19bd2022d32a4a7772dde112dad20820c75052941c0f4eb33c526c143e9915",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/3f19bd2022d32a4a7772dde112dad20820c75052941c0f4eb33c526c143e9915.matrix.txt"
+        },
+        {
+          "matrix_sha256": "4628665ef7cdc7e40e7b19faabcaebccd12a1749c6b301e68b447fc4a07a3dce",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/4628665ef7cdc7e40e7b19faabcaebccd12a1749c6b301e68b447fc4a07a3dce.matrix.txt"
+        },
+        {
+          "matrix_sha256": "47809956d36b86352ab4078a6dc562048b7a4904f0a1f7a6a603088160bb999c",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/47809956d36b86352ab4078a6dc562048b7a4904f0a1f7a6a603088160bb999c.matrix.txt"
+        },
+        {
+          "matrix_sha256": "47c2558d1dc9979f3fca4eef76b88a29f4c9bcd8f4003b641512e9090ec90e0e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/47c2558d1dc9979f3fca4eef76b88a29f4c9bcd8f4003b641512e9090ec90e0e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "546a839d43a606845a4503d60eb18ea58a6d620ffe54792d557cb16c747abbb2",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/546a839d43a606845a4503d60eb18ea58a6d620ffe54792d557cb16c747abbb2.matrix.txt"
+        },
+        {
+          "matrix_sha256": "54770fd4806bf6fff699aa487de31c4bb7e8091e86ea68eaa548adc5b716748f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/54770fd4806bf6fff699aa487de31c4bb7e8091e86ea68eaa548adc5b716748f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5ed9c1e251f6b370b5b5cb4e6a44bdd7cbca6fe7ef17ec6e82b026cde98388f6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5ed9c1e251f6b370b5b5cb4e6a44bdd7cbca6fe7ef17ec6e82b026cde98388f6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "68cd15a08c04eb64badfa7105732681db9cb9f112b05db6e79184b2ccb109716",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/68cd15a08c04eb64badfa7105732681db9cb9f112b05db6e79184b2ccb109716.matrix.txt"
+        },
+        {
+          "matrix_sha256": "762c8910d0185fd00e687b227c33a7dc1d13824e596d0f3390a92f2d2d062814",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/762c8910d0185fd00e687b227c33a7dc1d13824e596d0f3390a92f2d2d062814.matrix.txt"
+        },
+        {
+          "matrix_sha256": "88b8c902c1ebf915b7ca1144922f3a54a74bf2279d07df2e7a7d3d3137e820bf",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/88b8c902c1ebf915b7ca1144922f3a54a74bf2279d07df2e7a7d3d3137e820bf.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8fb44af6ec76fb9b4641cb893bc68330b18e0adfa52326c6fdecabefbcb0b9e9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8fb44af6ec76fb9b4641cb893bc68330b18e0adfa52326c6fdecabefbcb0b9e9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "8fe2300a2761fc42d61b0b94d827a33c55b42e6b8fc021f029ac4de4856a6e43",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/8fe2300a2761fc42d61b0b94d827a33c55b42e6b8fc021f029ac4de4856a6e43.matrix.txt"
+        },
+        {
+          "matrix_sha256": "900d7bf2b430c21d56adb47943053b11b578c012dd04ecdbb3aafd0f69eca35e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/900d7bf2b430c21d56adb47943053b11b578c012dd04ecdbb3aafd0f69eca35e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "95b44b73ab4100e21c17aee3fe55b4a663e0517f21d6c7f0cf9736ec70e195db",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/95b44b73ab4100e21c17aee3fe55b4a663e0517f21d6c7f0cf9736ec70e195db.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a6577daded577d6d9d12a8ca0a795cd49d9541208e5551b26d64a16506306384",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a6577daded577d6d9d12a8ca0a795cd49d9541208e5551b26d64a16506306384.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a72382333463df566f7d826740c6896b861680ca807b177e607369d799d31538",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a72382333463df566f7d826740c6896b861680ca807b177e607369d799d31538.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a83eeb84bc8951fcada962a64aa2033df8abf8162b6be58ced909cabccfc5eeb",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a83eeb84bc8951fcada962a64aa2033df8abf8162b6be58ced909cabccfc5eeb.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a969d0216de861db46790cf62614a0d759c08877dd592d2171d5bb63716a53b5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c0ce440373669bf107f817192683b4e3a6b6e614e2175fdb1ff465c8e486f1d9",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c0ce440373669bf107f817192683b4e3a6b6e614e2175fdb1ff465c8e486f1d9.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c4422721dac761f09db1c36487545521ae53a0fbb32a28df882db928d73dcf9a",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c4422721dac761f09db1c36487545521ae53a0fbb32a28df882db928d73dcf9a.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c6ef0e55c0d4c8ea81406934b6d5bdb5194d55336bae8bded0e39db98276f56b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c6ef0e55c0d4c8ea81406934b6d5bdb5194d55336bae8bded0e39db98276f56b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d7db56dedb98ac0b23f10a642fb2cbf20cd3f81b4d3d29993285e159ce04a57e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d7db56dedb98ac0b23f10a642fb2cbf20cd3f81b4d3d29993285e159ce04a57e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "e6f872c5c502aee8e214fb6cf3b2cded1611bc0b3f3cdd9fc33ec0134d539547",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/e6f872c5c502aee8e214fb6cf3b2cded1611bc0b3f3cdd9fc33ec0134d539547.matrix.txt"
+        },
+        {
+          "matrix_sha256": "e91c67a488a6d28a4f10220510f44ebae102ea9c280a2fe95b84eb84fde0fc1b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/e91c67a488a6d28a4f10220510f44ebae102ea9c280a2fe95b84eb84fde0fc1b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "f70bf451409bb5c512ef7dbd6715dd1d90dc7fa110cff7474545d4d532c669c3",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/f70bf451409bb5c512ef7dbd6715dd1d90dc7fa110cff7474545d4d532c669c3.matrix.txt"
+        }
+      ]
+    },
+    {
+      "certificate_sha256": "ff1b5d3735bd5735fd4648ba24627fa997045ce004d6ea08a9a5ff7567919490",
+      "count": 19,
+      "members": [
+        {
+          "matrix_sha256": "032b22404a5c08beb24db846f0e50af9573cb152bc2582b9a9ead6139593fbd8",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/032b22404a5c08beb24db846f0e50af9573cb152bc2582b9a9ead6139593fbd8.matrix.txt"
+        },
+        {
+          "matrix_sha256": "0d40b5d2d8dba730fe404c0ba85cb6c647c7032155bb31ad864f2e1320c089d7",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/0d40b5d2d8dba730fe404c0ba85cb6c647c7032155bb31ad864f2e1320c089d7.matrix.txt"
+        },
+        {
+          "matrix_sha256": "173eb9598b44d48dee07f899d1f0925f8dfce43cba6b9602e51ca33a444c5576",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/173eb9598b44d48dee07f899d1f0925f8dfce43cba6b9602e51ca33a444c5576.matrix.txt"
+        },
+        {
+          "matrix_sha256": "1f3e443adde6ac198abb16ae074dd55563287b92ccf23874bb606a70ec9af2f6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/1f3e443adde6ac198abb16ae074dd55563287b92ccf23874bb606a70ec9af2f6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "3fa9fd308dc5634bc6d8ab02b90b995cfb60f7c2f84f1a26acb19fc5a0e77df1",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/3fa9fd308dc5634bc6d8ab02b90b995cfb60f7c2f84f1a26acb19fc5a0e77df1.matrix.txt"
+        },
+        {
+          "matrix_sha256": "4506657be36f9befb7b345dc01df25551cf999ebb9673177c8ea1aa2e4d62ad5",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/4506657be36f9befb7b345dc01df25551cf999ebb9673177c8ea1aa2e4d62ad5.matrix.txt"
+        },
+        {
+          "matrix_sha256": "5180aa33c5598b970319d6e1be87ebc7967ea9cf7ad0f4e596afaff9d37af27b",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/5180aa33c5598b970319d6e1be87ebc7967ea9cf7ad0f4e596afaff9d37af27b.matrix.txt"
+        },
+        {
+          "matrix_sha256": "640813c0b9fbd14e8a8694972edee25008d62126a69fd50c33e1946a4118a6dc",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/640813c0b9fbd14e8a8694972edee25008d62126a69fd50c33e1946a4118a6dc.matrix.txt"
+        },
+        {
+          "matrix_sha256": "7c47ee0d65fbebd95137c95ee6b9445c4738d4ea4f429269bdbd959dba40a63c",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/7c47ee0d65fbebd95137c95ee6b9445c4738d4ea4f429269bdbd959dba40a63c.matrix.txt"
+        },
+        {
+          "matrix_sha256": "860cfc7a1aa7be9c953309ec59eee14524223413ae8d323b1d47da52b996ea72",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/860cfc7a1aa7be9c953309ec59eee14524223413ae8d323b1d47da52b996ea72.matrix.txt"
+        },
+        {
+          "matrix_sha256": "a165e77af2f41cf99a49d4bd8d7f7d499604dd845527a72145b26e3976d3bf8f",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/a165e77af2f41cf99a49d4bd8d7f7d499604dd845527a72145b26e3976d3bf8f.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ad70e10f36bb2ebed8e4698fc43fb7c0ebc0e4748890ba89a151e48da2ba2438",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ad70e10f36bb2ebed8e4698fc43fb7c0ebc0e4748890ba89a151e48da2ba2438.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b1773a2a189206031f9e4b4fd52eda92c341ddc095c273d3a7f779315c324133",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/b1773a2a189206031f9e4b4fd52eda92c341ddc095c273d3a7f779315c324133.matrix.txt"
+        },
+        {
+          "matrix_sha256": "b303e048e6ce473de5e5b923f1cda372837b3f94d54eacea724dd3871c3f7c2e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/b303e048e6ce473de5e5b923f1cda372837b3f94d54eacea724dd3871c3f7c2e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "c6333ec8dcf7bb9bfef70484510806dc18cfbabebcf16ffeff91952958048145",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/c6333ec8dcf7bb9bfef70484510806dc18cfbabebcf16ffeff91952958048145.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d75188ffe82dfc0bbdcf027022b5f0f82d127f69753e036bbf6230bc87a8afe6",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d75188ffe82dfc0bbdcf027022b5f0f82d127f69753e036bbf6230bc87a8afe6.matrix.txt"
+        },
+        {
+          "matrix_sha256": "d9cffa3a597ec95fe47bee2f5034e24e9949eabd5d3adb56289ba669e93bb13e",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/d9cffa3a597ec95fe47bee2f5034e24e9949eabd5d3adb56289ba669e93bb13e.matrix.txt"
+        },
+        {
+          "matrix_sha256": "ddb73f1e919d50f3c984ff84becf98cb7836262e6d2e4277ff00f9ace8f0b9a3",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/ddb73f1e919d50f3c984ff84becf98cb7836262e6d2e4277ff00f9ace8f0b9a3.matrix.txt"
+        },
+        {
+          "matrix_sha256": "eccce452dd961a9689e746e78aed1ba45113afd04e1d0ef748295751a9c5bcc4",
+          "path": "runs/direct-search/polar-dr-portals-20260729/frontier-ties/eccce452dd961a9689e746e78aed1ba45113afd04e1d0ef748295751a9c5bcc4.matrix.txt"
+        }
+      ]
+    }
+  ],
+  "input_file_count": 163,
+  "method": "minimum color-preserving nauty certificate over all 23^2 dephased pivots",
+  "pynauty_version": "2.8.8.1",
+  "schema_version": 1,
+  "unique_matrix_count": 163
+}
