@@ -2756,8 +2756,10 @@ button.mf-new-problem {
 }
 
 .mf-home-stage {
+  display: flex;
   min-height: 100svh;
   min-height: 100dvh;
+  flex-direction: column;
 }
 
 .mf-home-site .mf-nav {
@@ -2816,10 +2818,11 @@ button.mf-new-problem {
 }
 
 .mf-home-content {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   align-items: start;
-  gap: 14px;
+  gap: 0;
   margin-top: clamp(22px, 3.5vh, 34px);
 }
 
@@ -3025,7 +3028,7 @@ button.mf-new-problem {
   grid-template-columns: 52px minmax(0, 1fr) auto;
   align-items: center;
   gap: clamp(18px, 2.5vw, 34px);
-  margin-top: auto;
+  margin-top: 0;
   padding: 18px clamp(18px, 2.3vw, 28px);
   border: 0;
   border-top: 1px solid var(--white-line);
@@ -3147,15 +3150,27 @@ button.mf-new-problem {
 }
 
 .mf-home-apes {
-  display: grid;
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 14px);
+  display: block;
   width: 210px;
-  grid-template-rows: auto auto;
   justify-self: end;
   margin: 0;
   border-radius: 20px;
   background: var(--ink);
   box-shadow: 0 24px 64px rgba(23, 24, 17, 0.1);
   overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .mf-home-content {
+    gap: 10px;
+  }
+
+  .mf-home-apes {
+    position: static;
+  }
 }
 
 .mf-home-apes img {
@@ -3172,12 +3187,33 @@ button.mf-new-problem {
   line-height: 0;
 }
 
-.mf-home-apes figcaption {
-  padding: 10px 12px;
-  border-top: 1px solid var(--white-line);
-  color: var(--acid);
-  font-size: 10px;
-  font-weight: 850;
+.mf-home-footer {
+  display: grid;
+  min-height: 64px;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mf-home-footer > a:nth-child(2) {
+  color: var(--muted);
+}
+
+.mf-home-footer nav {
+  display: flex;
+  justify-self: end;
+  gap: 18px;
+}
+
+.mf-home-footer a:hover {
+  color: var(--coral-text);
 }
 
 /* One-field GitHub issue composer */
@@ -3546,28 +3582,35 @@ button.mf-new-problem {
   }
 
   .mf-home-apes {
-    width: 190px;
-    grid-template-columns: 82px minmax(0, 1fr);
-    grid-template-rows: 1fr;
+    width: 120px;
     border-radius: 15px;
   }
 
   .mf-home-apes img {
-    height: 100%;
-    aspect-ratio: auto;
+    height: auto;
+    aspect-ratio: 220 / 126;
   }
 
-  .mf-home-apes picture {
-    height: 100%;
+  .mf-home-footer {
+    min-height: 70px;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 4px 10px;
+    padding-block: 9px;
   }
 
-  .mf-home-apes figcaption {
-    display: flex;
-    align-items: center;
-    padding: 12px;
-    border-top: 0;
-    border-left: 1px solid var(--white-line);
-    font-size: 10px;
+  .mf-home-footer > a:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 7px;
+  }
+
+  .mf-home-footer nav {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
   }
 
   .mf-proposal-dialog {

@@ -6,6 +6,7 @@ import apesPoster from "./apes-together-strong.png";
 
 const apesGif =
   "https://media.tenor.com/j4CbS_5qRLIAAAAM/apes-together-strong-0p1sf.gif";
+const githubUrl = "https://github.com/ghzlatarev/maxdet-arena";
 
 export default function Home() {
   const problems = loadProblems();
@@ -52,12 +53,24 @@ export default function Home() {
                   width="220"
                 />
               </picture>
-              <figcaption>Apes together strong.</figcaption>
             </figure>
 
             <ProblemQueue problems={problems} />
           </div>
         </div>
+
+        <footer className="mf-home-footer mf-wrap">
+          <a className="mf-brand" href="#top" aria-label="math.fast home">
+            math<span>.</span>fast
+          </a>
+          <a href="https://www.ecdsa.fail/">Inspired by EigenLabs ↗</a>
+          <nav aria-label="Project links">
+            <a href={`${githubUrl}/blob/main/data/problems/README.md`}>
+              Problem ledger ↗
+            </a>
+            <a href={githubUrl}>GitHub ↗</a>
+          </nav>
+        </footer>
       </section>
     </main>
   );
