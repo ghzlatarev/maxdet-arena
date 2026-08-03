@@ -35,7 +35,13 @@ function ProblemLink({ problem }: { problem: Problem }) {
   );
 }
 
-export function ProblemDashboard({ problems }: { problems: Problem[] }) {
+export function ProblemDashboard({
+  problems,
+  showFilters = true,
+}: {
+  problems: Problem[];
+  showFilters?: boolean;
+}) {
   const [filter, setFilter] = useState<Filter>("all");
   const visible = useMemo(
     () =>
@@ -48,19 +54,23 @@ export function ProblemDashboard({ problems }: { problems: Problem[] }) {
   return (
     <div className="mf-dashboard">
       <div className="mf-dashboard-bar">
-        <div className="mf-filters" aria-label="Filter problems">
-          {filters.map((item) => (
-            <button
-              aria-pressed={filter === item.value}
-              className={filter === item.value ? "is-active" : undefined}
-              key={item.value}
-              onClick={() => setFilter(item.value)}
-              type="button"
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
+        {showFilters ? (
+          <div className="mf-filters" aria-label="Filter problems">
+            {filters.map((item) => (
+              <button
+                aria-pressed={filter === item.value}
+                className={filter === item.value ? "is-active" : undefined}
+                key={item.value}
+                onClick={() => setFilter(item.value)}
+                type="button"
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        ) : (
+          <strong className="mf-dashboard-label">Verified record</strong>
+        )}
         <span>{visible.length} records</span>
       </div>
 

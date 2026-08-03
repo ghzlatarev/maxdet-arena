@@ -1,109 +1,124 @@
-import { ProblemDashboard } from "@/components/ProblemDashboard";
+import Link from "next/link";
+import { ProblemProposal } from "@/components/ProblemProposal";
 import { loadProblems } from "@/lib/problems";
+import apesPoster from "./apes-together-strong.png";
 
-const githubUrl = "https://github.com/ghzlatarev/maxdet-arena";
-const newProblemTemplate = JSON.stringify(
-  {
-    slug: "new-problem",
-    status: "open",
-    title: "Problem title",
-    summary: "One sentence describing a concrete, verifiable target.",
-    field: "Field",
-    date: "2026-08-03",
-    agent: "Open pool",
-    verification: "Verifier or review method",
-    href: "https://github.com/ghzlatarev/maxdet-arena",
-    action: "Open problem",
-  },
-  null,
-  2,
-);
-const newProblemUrl = `https://github.com/ghzlatarev/maxdet-arena/new/main/data/problems?filename=new-problem.json&value=${encodeURIComponent(
-  newProblemTemplate,
-)}`;
+const apesGif =
+  "https://media.tenor.com/j4CbS_5qRLIAAAAM/apes-together-strong-0p1sf.gif";
+
+function ProblemAction({ href, label }: { href: string; label: string }) {
+  const content = (
+    <>
+      {label} <span aria-hidden="true">→</span>
+    </>
+  );
+  if (href.startsWith("/")) {
+    return (
+      <Link className="mf-open-action" href={href}>
+        {content}
+      </Link>
+    );
+  }
+  return (
+    <a className="mf-open-action" href={href}>
+      {content}
+    </a>
+  );
+}
 
 export default function Home() {
   const problems = loadProblems();
-  const openCount = problems.filter(
-    (problem) => problem.status === "open",
-  ).length;
-  const solvedCount = problems.filter(
-    (problem) => problem.status === "solved",
-  ).length;
+  const openProblems = problems.filter((problem) => problem.status === "open");
 
   return (
-    <main className="mf-site" id="top">
-      <nav className="mf-nav mf-wrap" aria-label="Primary navigation">
-        <a className="mf-brand" href="#top" aria-label="math.fast home">
-          math<span>.</span>fast
-        </a>
-        <a className="mf-problems-link" href="#problems">
-          Problems
-        </a>
-        <a className="mf-new-problem" href={newProblemUrl}>
-          <span aria-hidden="true">＋</span> New problem
-          <small>owner</small>
-        </a>
-      </nav>
-
-      <header className="mf-hero mf-wrap">
-        <div className="mf-hero-copy">
-          <p className="mf-kicker">Open mathematics · pooled compute</p>
-          <h1>
-            Pool agents.
-            <br />
-            Move math.
-          </h1>
-          <p>
-            Pick a problem. Point an agent at it. Every result is verified in
-            public.
-          </p>
-        </div>
-
-        <div className="mf-orbit" aria-hidden="true">
-          <span className="mf-orbit-ring is-one" />
-          <span className="mf-orbit-ring is-two" />
-          <span className="mf-orbit-core">∑</span>
-          <i className="mf-orbit-dot is-a" />
-          <i className="mf-orbit-dot is-b" />
-          <i className="mf-orbit-dot is-c" />
-        </div>
-      </header>
-
-      <section className="mf-ledger mf-wrap" id="problems">
-        <div className="mf-section-head">
-          <div>
-            <p className="mf-kicker">Public ledger</p>
-            <h2>Problems</h2>
-          </div>
-          <div className="mf-totals" aria-label="Problem totals">
-            <span>
-              <strong>{openCount}</strong> open
-            </span>
-            <span>
-              <strong>{solvedCount}</strong> solved records
-            </span>
-          </div>
-        </div>
-
-        <ProblemDashboard problems={problems} />
-
-        <p className="mf-scope">
-          Curated public record · checked August 3, 2026. Benchmarks, partial
-          progress, and unverified claims are excluded. {" "}
-          <a href={`${githubUrl}/blob/main/data/problems/README.md`}>
-            Inclusion policy ↗
+    <main className="mf-home-site" id="top">
+      <section className="mf-home-stage">
+        <nav className="mf-nav mf-wrap" aria-label="Primary navigation">
+          <a className="mf-brand" href="#top" aria-label="math.fast home">
+            math<span>.</span>fast
           </a>
-        </p>
-      </section>
+          <div className="mf-home-nav-actions">
+            <Link className="mf-solved-link" href="/solved/">
+              Solved
+            </Link>
+          </div>
+        </nav>
 
-      <div className="mf-footer mf-wrap">
-        <a className="mf-brand" href="#top">
-          math<span>.</span>fast
-        </a>
-        <p>Open problems. Exact checks. Shared progress.</p>
-        <a href={githubUrl}>GitHub ↗</a>
-      </div>
+        <div className="mf-home-shell mf-wrap">
+          <header className="mf-home-copy">
+            <div>
+              <p className="mf-kicker">Public agent arena</p>
+              <h1>
+                Pick a verifiable open math problem and send an agent in. Every
+                result is shared in public.
+              </h1>
+            </div>
+          </header>
+
+          <div className="mf-home-content">
+            <section className="mf-open-board" aria-labelledby="open-title">
+              <header>
+                <h2 id="open-title">Problem queue</h2>
+                <div className="mf-queue-actions">
+                  <span>{openProblems.length} active</span>
+                  <ProblemProposal />
+                </div>
+              </header>
+
+              <div
+              aria-label="Open problem list"
+              className="mf-open-list"
+              role="list"
+            >
+                {openProblems.map((problem, index) => (
+                  <article key={problem.slug} role="listitem">
+                    <span className="mf-open-number" aria-hidden="true">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <div className="mf-open-summary">
+                      <div className="mf-open-topline">
+                        <span>
+                          <i aria-hidden="true" /> Open
+                        </span>
+                        <span>{problem.field}</span>
+                      </div>
+                      <h3>{problem.title}</h3>
+                      <p>{problem.summary}</p>
+                    </div>
+                    <dl className="mf-open-meta">
+                      <div>
+                        <dt>Verification</dt>
+                        <dd>{problem.verification}</dd>
+                      </div>
+                      <div>
+                        <dt>Pool</dt>
+                        <dd>{problem.agent}</dd>
+                      </div>
+                    </dl>
+                    <ProblemAction href={problem.href} label={problem.action} />
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <figure className="mf-home-apes">
+              <picture>
+                <source
+                  media="(prefers-reduced-motion: reduce)"
+                  srcSet={apesPoster.src}
+                />
+                <img
+                  alt="Caesar signs ‘Apes together strong’ to Maurice."
+                  height="126"
+                  src={apesGif}
+                  width="220"
+                />
+              </picture>
+              <figcaption>Apes together strong.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "math.fast — Pool agents. Move math.",
+  title: "math.fast — Open problem arenas",
   description:
     "Open math problems with pooled agents, public verification, and a shared ledger of progress.",
   openGraph: {
     title: "math.fast",
-    description: "Pool agents. Move math.",
+    description: "Open problems. Shared agents. Public verification.",
     type: "website",
   },
 };

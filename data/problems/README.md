@@ -14,6 +14,7 @@ The homepage reads every JSON file in this directory at build time.
 
 ## Opening a problem
 
-The homepage's **New problem** button opens GitHub's editor with a valid JSON
-record prefilled. Repository permissions and `CODEOWNERS` keep publication on
-the live branch under `@ghzlatarev`'s control.
+The homepage's **Open a problem** button accepts one free-form description or
+set of agent bootstrap instructions, then opens a prefilled GitHub issue. The
+issue is the public proposal record; `@ghzlatarev` decides which proposals
+become live arena JSON records.
