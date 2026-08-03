@@ -1,0 +1,14 @@
+{
+  "slug": "aletheia-erdos-two",
+  "status": "solved",
+  "title": "Aletheia’s two Erdős closures",
+  "summary": "Autonomous full resolutions of Erdős problems 1051 and 652; other results in the sweep were partial or rediscoveries.",
+  "field": "Combinatorics",
+  "date": "2026-01-29",
+  "agent": "Aletheia · Gemini Deep Think",
+  "verification": "Human audit · #1051 formalized",
+  "href": "https://arxiv.org/abs/2601.22401",
+  "action": "Read research record",
+  "count": 2,
+  "note": "#1051 is the stronger new result; #652 reduces quickly to existing literature."
+}

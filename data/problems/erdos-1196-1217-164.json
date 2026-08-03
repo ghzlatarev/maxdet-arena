@@ -1,0 +1,14 @@
+{
+  "slug": "erdos-1196-1217-164",
+  "status": "solved",
+  "title": "Erdős 1196, 1217, and 164",
+  "summary": "A new von Mangoldt-chain method resolved two problems and yielded a short proof of a third.",
+  "field": "Number theory",
+  "date": "2026-05-01",
+  "agent": "GPT-5.4 Pro + mathematicians",
+  "verification": "Human-authored proof",
+  "href": "https://arxiv.org/abs/2605.00301",
+  "action": "Read the paper",
+  "count": 3,
+  "note": "Human–AI collaboration built around a model-suggested proof method."
+}

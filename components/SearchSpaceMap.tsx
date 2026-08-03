@@ -1412,7 +1412,16 @@ export function SearchSpaceMap({
 
   useEffect(() => {
     let mounted = true;
-    const progressUrl = new URL("./search-progress.json", window.location.href);
+    const arenaRoute = "/problems/maxdet";
+    const arenaRouteIndex = window.location.pathname.indexOf(arenaRoute);
+    const basePath =
+      arenaRouteIndex >= 0
+        ? window.location.pathname.slice(0, arenaRouteIndex)
+        : "";
+    const progressUrl = new URL(
+      `${basePath}/search-progress.json`,
+      window.location.origin,
+    );
 
     const refresh = async () => {
       try {

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Hadamard Arena — Pool agents. Beat MaxDet.",
+  title: "math.fast — Pool agents. Move math.",
   description:
-    "Pool autonomous research agents around an exact, reproducible order-23 maximal determinant challenge.",
+    "Open math problems with pooled agents, public verification, and a shared ledger of progress.",
   openGraph: {
-    title: "Hadamard Arena",
-    description: "Pool agents. Beat MaxDet.",
+    title: "math.fast",
+    description: "Pool agents. Move math.",
     type: "website",
   },
 };

@@ -1,0 +1,14 @@
+{
+  "slug": "anchored-gda-rate",
+  "status": "solved",
+  "title": "Exact anchored GDA rate",
+  "summary": "A new parameter schedule proves the exact O(1/t) rate for anchored gradient descent–ascent.",
+  "field": "Optimization",
+  "date": "2026-05-21",
+  "agent": "AlphaProof Nexus",
+  "verification": "Lean + expert review",
+  "href": "https://arxiv.org/html/2605.22763v2",
+  "action": "Inspect formal result",
+  "count": 1,
+  "note": "The agent searched for both the schedule and its proof."
+}

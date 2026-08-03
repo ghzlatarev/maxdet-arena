@@ -1,0 +1,14 @@
+{
+  "slug": "unit-distance-conjecture",
+  "status": "solved",
+  "title": "Erdős unit-distance growth conjecture",
+  "summary": "An infinite family of point sets disproved the long-believed n¹⁺ᵒ⁽¹⁾ growth bound; the exact extremal problem remains open.",
+  "field": "Discrete geometry",
+  "date": "2026-05-20",
+  "agent": "OpenAI reasoning model",
+  "verification": "External mathematicians",
+  "href": "https://arxiv.org/abs/2605.20695",
+  "action": "Read proof record",
+  "count": 1,
+  "note": "Autonomous result; externally checked before publication."
+}

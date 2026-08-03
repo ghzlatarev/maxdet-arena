@@ -1,0 +1,14 @@
+{
+  "slug": "anderson-question",
+  "status": "solved",
+  "title": "Anderson’s algebra question",
+  "summary": "A commutative-algebra question was resolved end to end with a machine-checked proof.",
+  "field": "Commutative algebra",
+  "date": "2026-04-04",
+  "agent": "Rethlas + Archon",
+  "verification": "Lean verified",
+  "href": "https://arxiv.org/abs/2604.03789",
+  "action": "Inspect formal result",
+  "count": 1,
+  "note": "Public formalization exists; outside peer review was not identified."
+}

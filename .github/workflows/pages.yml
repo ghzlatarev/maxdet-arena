@@ -1,4 +1,4 @@
-name: deploy-hadamard-arena
+name: deploy-math-fast
 
 on:
   push:

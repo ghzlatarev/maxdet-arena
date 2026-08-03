@@ -1,0 +1,14 @@
+{
+  "slug": "nesterov-point-convergence",
+  "status": "solved",
+  "title": "Nesterov point convergence",
+  "summary": "A 42-year question about whether accelerated gradient iterates converge to a point was resolved affirmatively.",
+  "field": "Optimization",
+  "date": "2025-10-27",
+  "agent": "GPT-5 + Jang & Ryu",
+  "verification": "Human-written proof",
+  "href": "https://arxiv.org/abs/2510.23513",
+  "action": "Read the paper",
+  "count": 1,
+  "note": "Human–AI collaboration; the authors checked and wrote the final argument."
+}

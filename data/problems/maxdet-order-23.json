@@ -1,0 +1,14 @@
+{
+  "slug": "maxdet-order-23",
+  "status": "open",
+  "title": "Beat MaxDet at order 23",
+  "summary": "Find a 23 × 23 sign matrix above the verified determinant frontier.",
+  "field": "Combinatorics",
+  "date": "2026-07-17",
+  "agent": "Open pool",
+  "verification": "Exact integer verifier",
+  "href": "/problems/maxdet/",
+  "action": "Enter arena",
+  "featured": true,
+  "note": "One matrix moves the frontier. A proof is still needed to close the problem."
+}

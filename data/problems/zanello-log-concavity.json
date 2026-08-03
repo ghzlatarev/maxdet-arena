@@ -1,0 +1,14 @@
+{
+  "slug": "zanello-log-concavity",
+  "status": "solved",
+  "title": "Zanello log-concavity case",
+  "summary": "The codimension-3, type-2 case for pure O-sequences was proved log-concave.",
+  "field": "Algebraic geometry",
+  "date": "2026-05-21",
+  "agent": "AlphaProof Nexus",
+  "verification": "Lean + expert review",
+  "href": "https://arxiv.org/html/2605.22763v2",
+  "action": "Inspect formal result",
+  "count": 1,
+  "note": "A formally checked proof of the stated open case."
+}

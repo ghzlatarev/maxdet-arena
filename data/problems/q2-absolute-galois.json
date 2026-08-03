@@ -1,0 +1,14 @@
+{
+  "slug": "q2-absolute-galois",
+  "status": "solved",
+  "title": "Absolute Galois group of ℚ₂",
+  "summary": "An explicit profinite presentation was found and developed into a complete manuscript.",
+  "field": "Number theory",
+  "date": "2026-07-31",
+  "agent": "GPT-5.5 Pro harness",
+  "verification": "2 Lean efforts · 5,402 finite checks",
+  "href": "https://roed314.github.io/gq2/",
+  "action": "Read canonical write-up",
+  "count": 1,
+  "note": "Exact computational checks and separate formalizations exist; external peer review is pending."
+}

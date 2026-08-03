@@ -1,0 +1,14 @@
+{
+  "slug": "erdos-848-tree-inequality",
+  "status": "solved",
+  "title": "Erdős 848 + tree inequality",
+  "summary": "Complete proofs settled Erdős 848 and the remaining C = 2 tree-subgraph inequality.",
+  "field": "Graph theory",
+  "date": "2025-11-20",
+  "agent": "GPT-5 + mathematicians",
+  "verification": "Checked by authors",
+  "href": "https://arxiv.org/abs/2511.16072",
+  "action": "Read the report",
+  "count": 2,
+  "note": "Agent-generated arguments reviewed and completed by the human authors."
+}

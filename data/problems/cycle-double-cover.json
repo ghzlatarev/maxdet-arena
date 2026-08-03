@@ -1,0 +1,14 @@
+{
+  "slug": "cycle-double-cover",
+  "status": "solved",
+  "title": "Cycle Double Cover Conjecture",
+  "summary": "A proof of the longstanding graph-theory conjecture received two independently written expert expositions.",
+  "field": "Graph theory",
+  "date": "2026-07-24",
+  "agent": "GPT-5.6 Sol Ultra",
+  "verification": "Two expert expositions",
+  "href": "https://arxiv.org/abs/2607.15399",
+  "action": "Read an exposition",
+  "count": 1,
+  "note": "Independently explicated and checked; recent preprint, not yet journal-reviewed."
+}

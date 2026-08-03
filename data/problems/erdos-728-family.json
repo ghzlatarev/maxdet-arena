@@ -1,0 +1,14 @@
+{
+  "slug": "erdos-728-family",
+  "status": "solved",
+  "title": "Erdős 728, 729, and 401",
+  "summary": "A general theorem closed three related Erdős problems with a formal proof.",
+  "field": "Combinatorics",
+  "date": "2026-01-12",
+  "agent": "GPT-5.2 Pro + Aristotle",
+  "verification": "Lean + human write-up",
+  "href": "https://arxiv.org/abs/2601.07421",
+  "action": "Read the paper",
+  "count": 3,
+  "note": "The natural-language argument and machine-checked proof are both public."
+}

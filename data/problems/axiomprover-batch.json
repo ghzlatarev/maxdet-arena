@@ -1,0 +1,14 @@
+{
+  "slug": "axiomprover-batch",
+  "status": "solved",
+  "title": "AxiomProver research batch",
+  "summary": "Formal closures covering Fel, Chen–Gendron, Andrews–Dhar, three Thakur hypotheses, and alternating-permutation records.",
+  "field": "Number theory",
+  "date": "2026-07-16",
+  "agent": "AxiomProver",
+  "verification": "Lean / Mathlib",
+  "href": "https://axiommath.ai/",
+  "action": "Browse publications",
+  "count": 7,
+  "note": "Grouped from five public manuscripts with machine-checked proofs."
+}

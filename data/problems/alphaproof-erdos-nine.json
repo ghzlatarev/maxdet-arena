@@ -1,0 +1,14 @@
+{
+  "slug": "alphaproof-erdos-nine",
+  "status": "solved",
+  "title": "Nine formal Erdős statements",
+  "summary": "Four clear catalog closures, two parts of problem 12, and three separately qualified parts or variants.",
+  "field": "Combinatorics",
+  "date": "2026-05-21",
+  "agent": "AlphaProof Nexus",
+  "verification": "Lean + expert review",
+  "href": "https://arxiv.org/html/2605.22763v2",
+  "action": "Inspect formal results",
+  "count": 9,
+  "note": "Includes #125, #152, both parts of #741, #846, both parts of #12, and variants #138 and #26."
+}

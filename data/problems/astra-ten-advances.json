@@ -1,0 +1,14 @@
+{
+  "slug": "astra-ten-advances",
+  "status": "solved",
+  "title": "Astra’s certified closures",
+  "summary": "Eight closure records spanning geometry, groups, quantum information, polytopes, and three Erdős problems.",
+  "field": "Multiple fields",
+  "date": "2026-08-01",
+  "agent": "OpenAI Astra",
+  "verification": "Lean certificates",
+  "href": "https://openai.com/index/ten-advances-in-mathematics/",
+  "action": "Review all ten advances",
+  "count": 8,
+  "note": "Formally certified; independent external review is still pending. Two other advances are progress, not closures."
+}

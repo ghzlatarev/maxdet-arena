@@ -1,0 +1,14 @@
+{
+  "slug": "alphaproof-oeis-44",
+  "status": "solved",
+  "title": "44 OEIS conjectures",
+  "summary": "Forty-four previously unproved claims about integer sequences received machine-checked proofs.",
+  "field": "Number theory",
+  "date": "2026-05-21",
+  "agent": "AlphaProof Nexus",
+  "verification": "Lean + manual review",
+  "href": "https://arxiv.org/html/2605.22763v2",
+  "action": "Inspect formal results",
+  "count": 44,
+  "note": "Each autoformalization was reviewed; public Lean artifacts are linked by the paper."
+}

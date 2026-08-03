@@ -1,0 +1,14 @@
+{
+  "slug": "green-problem-57",
+  "status": "solved",
+  "title": "Green problem 57",
+  "summary": "A formal counterexample separates two quadratically structured function spaces in the intended complex-valued case.",
+  "field": "Additive combinatorics",
+  "date": "2026-05-21",
+  "agent": "AlphaProof Nexus",
+  "verification": "Lean + expert review",
+  "href": "https://arxiv.org/html/2605.22763v2",
+  "action": "Inspect formal result",
+  "count": 1,
+  "note": "The agent verified a numerically suggested counterexample."
+}
