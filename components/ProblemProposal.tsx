@@ -1,9 +1,10 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const issueUrl = "https://github.com/ghzlatarev/maxdet-arena/issues/new";
 const maxIssueUrlLength = 6000;
+const openProblemEvent = "mathfast:open-problem";
 
 function issueTitle(description: string): string {
   const summary =
@@ -39,10 +40,10 @@ export function ProblemProposal() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
-  const openDialog = () => {
+  const openDialog = useCallback(() => {
     dialogRef.current?.showModal();
     window.requestAnimationFrame(() => textareaRef.current?.focus());
-  };
+  }, []);
 
   const closeDialog = () => dialogRef.current?.close();
   const issueUrlLength =
@@ -55,10 +56,16 @@ export function ProblemProposal() {
   const issueIsTooLong = issueUrlLength > maxIssueUrlLength;
   const canSubmit = Boolean(description.trim()) && !issueIsTooLong;
 
+  useEffect(() => {
+    window.addEventListener(openProblemEvent, openDialog);
+    return () => window.removeEventListener(openProblemEvent, openDialog);
+  }, [openDialog]);
+
   return (
     <>
       <button
         className="mf-new-problem"
+        id="open-problem"
         onClick={openDialog}
         ref={triggerRef}
         type="button"
@@ -130,5 +137,24 @@ export function ProblemProposal() {
         </form>
       </dialog>
     </>
+  );
+}
+
+export function ProblemProposalTrigger({ position }: { position: number }) {
+  return (
+    <button
+      className="mf-open-slot"
+      onClick={() => window.dispatchEvent(new Event(openProblemEvent))}
+      type="button"
+    >
+      <span className="mf-open-slot-number" aria-hidden="true">
+        {String(position).padStart(2, "0")}
+      </span>
+      <span>
+        <strong>Open a new problem</strong>
+        <small>Add the next item to this queue.</small>
+      </span>
+      <i aria-hidden="true">＋</i>
+    </button>
   );
 }

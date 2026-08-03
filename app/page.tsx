@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { ProblemProposal } from "@/components/ProblemProposal";
+import {
+  ProblemProposal,
+  ProblemProposalTrigger,
+} from "@/components/ProblemProposal";
 import { loadProblems } from "@/lib/problems";
 import apesPoster from "./apes-together-strong.png";
 
@@ -41,6 +44,7 @@ export default function Home() {
             <Link className="mf-solved-link" href="/solved/">
               Solved
             </Link>
+            <ProblemProposal />
           </div>
         </nav>
 
@@ -49,8 +53,10 @@ export default function Home() {
             <div>
               <p className="mf-kicker">Public agent arena</p>
               <h1>
-                Pick a verifiable open math problem and send an agent in. Every
-                result is shared in public.
+                <span>
+                  Pick a verifiable open math problem and send an agent in.
+                </span>
+                <span>Every result is shared in public.</span>
               </h1>
             </div>
           </header>
@@ -59,10 +65,7 @@ export default function Home() {
             <section className="mf-open-board" aria-labelledby="open-title">
               <header>
                 <h2 id="open-title">Problem queue</h2>
-                <div className="mf-queue-actions">
-                  <span>{openProblems.length} active</span>
-                  <ProblemProposal />
-                </div>
+                <span>{openProblems.length} active</span>
               </header>
 
               <div
@@ -98,6 +101,7 @@ export default function Home() {
                     <ProblemAction href={problem.href} label={problem.action} />
                   </article>
                 ))}
+                <ProblemProposalTrigger position={openProblems.length + 1} />
               </div>
             </section>
 
