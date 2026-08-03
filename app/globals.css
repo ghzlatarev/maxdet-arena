@@ -2860,6 +2860,32 @@ button.mf-new-problem {
   font-size: 8px;
 }
 
+.mf-queue-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mf-queue-tabs button {
+  padding: 8px 11px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mf-queue-tabs button:hover,
+.mf-queue-tabs button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
 .mf-open-list {
   display: flex;
   min-height: 375px;
@@ -3046,6 +3072,78 @@ button.mf-new-problem {
   font-size: 16px;
   font-style: normal;
   font-weight: 850;
+}
+
+.mf-solved-queue {
+  height: 375px;
+  background: var(--ink);
+  color: var(--paper);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: rgba(243, 240, 230, 0.24) transparent;
+  scrollbar-width: thin;
+}
+
+.mf-solved-queue article {
+  display: grid;
+  min-height: 88px;
+  grid-template-columns: 52px minmax(250px, 1fr) minmax(130px, 190px) auto;
+  align-items: center;
+  gap: clamp(18px, 2.5vw, 34px);
+  padding: 15px clamp(18px, 2.3vw, 28px);
+  border-bottom: 1px solid var(--white-line);
+}
+
+.mf-solved-number {
+  color: rgba(243, 240, 230, 0.2);
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: -0.07em;
+}
+
+.mf-solved-summary {
+  min-width: 0;
+}
+
+.mf-solved-summary > div {
+  display: flex;
+  gap: 11px;
+  margin-bottom: 4px;
+  color: #85857b;
+  font-family: var(--mono);
+  font-size: 7px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mf-solved-summary > div span:first-child {
+  color: var(--acid);
+  font-weight: 800;
+}
+
+.mf-solved-summary h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.mf-solved-check {
+  color: #aaa99e;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.mf-solved-queue .mf-open-action {
+  max-width: 105px;
+  justify-content: flex-end;
+  padding: 7px 0;
+  background: transparent;
+  color: var(--acid);
+  font-size: 9px;
+  text-align: right;
+  white-space: normal;
 }
 
 .mf-home-apes {
@@ -3279,6 +3377,20 @@ button.mf-new-problem {
     grid-column: 3;
     grid-row: 1 / span 2;
   }
+
+  .mf-solved-queue article {
+    grid-template-columns: 42px minmax(0, 1fr) auto;
+  }
+
+  .mf-solved-check {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .mf-solved-queue .mf-open-action {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
 }
 
 @media (max-width: 620px) {
@@ -3343,6 +3455,10 @@ button.mf-new-problem {
     min-height: 345px;
   }
 
+  .mf-solved-queue {
+    height: 345px;
+  }
+
   .mf-open-number {
     grid-row: 1 / span 3;
     padding-top: 7px;
@@ -3398,6 +3514,35 @@ button.mf-new-problem {
   .mf-open-slot > i {
     width: 30px;
     height: 30px;
+  }
+
+  .mf-queue-tabs button {
+    padding: 7px 9px;
+    font-size: 8px;
+  }
+
+  .mf-solved-queue article {
+    min-height: 82px;
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+    gap: 13px;
+    padding: 13px 15px;
+  }
+
+  .mf-solved-number {
+    font-size: 16px;
+  }
+
+  .mf-solved-summary h3 {
+    font-size: 14px;
+  }
+
+  .mf-solved-check {
+    font-size: 8px;
+  }
+
+  .mf-solved-queue .mf-open-action {
+    max-width: 64px;
+    font-size: 8px;
   }
 
   .mf-home-apes {

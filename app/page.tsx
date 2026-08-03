@@ -1,37 +1,14 @@
 import Link from "next/link";
-import {
-  ProblemProposal,
-  ProblemProposalTrigger,
-} from "@/components/ProblemProposal";
+import { ProblemProposal } from "@/components/ProblemProposal";
+import { ProblemQueue } from "@/components/ProblemQueue";
 import { loadProblems } from "@/lib/problems";
 import apesPoster from "./apes-together-strong.png";
 
 const apesGif =
   "https://media.tenor.com/j4CbS_5qRLIAAAAM/apes-together-strong-0p1sf.gif";
 
-function ProblemAction({ href, label }: { href: string; label: string }) {
-  const content = (
-    <>
-      {label} <span aria-hidden="true">→</span>
-    </>
-  );
-  if (href.startsWith("/")) {
-    return (
-      <Link className="mf-open-action" href={href}>
-        {content}
-      </Link>
-    );
-  }
-  return (
-    <a className="mf-open-action" href={href}>
-      {content}
-    </a>
-  );
-}
-
 export default function Home() {
   const problems = loadProblems();
-  const openProblems = problems.filter((problem) => problem.status === "open");
 
   return (
     <main className="mf-home-site" id="top">
@@ -62,49 +39,6 @@ export default function Home() {
           </header>
 
           <div className="mf-home-content">
-            <section className="mf-open-board" aria-labelledby="open-title">
-              <header>
-                <h2 id="open-title">Problem queue</h2>
-                <span>{openProblems.length} active</span>
-              </header>
-
-              <div
-              aria-label="Open problem list"
-              className="mf-open-list"
-              role="list"
-            >
-                {openProblems.map((problem, index) => (
-                  <article key={problem.slug} role="listitem">
-                    <span className="mf-open-number" aria-hidden="true">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <div className="mf-open-summary">
-                      <div className="mf-open-topline">
-                        <span>
-                          <i aria-hidden="true" /> Open
-                        </span>
-                        <span>{problem.field}</span>
-                      </div>
-                      <h3>{problem.title}</h3>
-                      <p>{problem.summary}</p>
-                    </div>
-                    <dl className="mf-open-meta">
-                      <div>
-                        <dt>Verification</dt>
-                        <dd>{problem.verification}</dd>
-                      </div>
-                      <div>
-                        <dt>Pool</dt>
-                        <dd>{problem.agent}</dd>
-                      </div>
-                    </dl>
-                    <ProblemAction href={problem.href} label={problem.action} />
-                  </article>
-                ))}
-                <ProblemProposalTrigger position={openProblems.length + 1} />
-              </div>
-            </section>
-
             <figure className="mf-home-apes">
               <picture>
                 <source
@@ -120,6 +54,8 @@ export default function Home() {
               </picture>
               <figcaption>Apes together strong.</figcaption>
             </figure>
+
+            <ProblemQueue problems={problems} />
           </div>
         </div>
       </section>
