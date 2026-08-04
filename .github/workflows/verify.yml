@@ -3,19 +3,52 @@ name: exact-verification
 on:
   push:
     branches: [main]
+  pull_request:
+    paths-ignore:
+      - "submissions/**"
   pull_request_target:
     types: [opened, synchronize, reopened]
 
 permissions:
   contents: read
+  pull-requests: read
 
 concurrency:
-  group: exact-verification-${{ github.event.pull_request.number || github.ref }}
+  group: exact-verification-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
+  classify-pr:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    outputs:
+      touches-submissions: ${{ steps.paths.outputs.touches-submissions }}
+    steps:
+      - name: Classify changed paths without checking out head code
+        id: paths
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          if [[ "${EVENT_NAME}" == "push" ]]; then
+            echo 'touches-submissions=false' >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+          gh api --paginate \
+            "/repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}/files?per_page=100" \
+            --jq '.[].filename' > "${RUNNER_TEMP}/changed-paths.txt"
+          if rg -q '^submissions/' "${RUNNER_TEMP}/changed-paths.txt"; then
+            echo 'touches-submissions=true' >> "${GITHUB_OUTPUT}"
+          else
+            echo 'touches-submissions=false' >> "${GITHUB_OUTPUT}"
+          fi
+
   trusted-repository:
-    if: github.event_name == 'push'
+    needs: classify-pr
+    if: >-
+      (github.event_name == 'push' || github.event_name == 'pull_request') &&
+      needs.classify-pr.outputs.touches-submissions == 'false'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -49,7 +82,10 @@ jobs:
           ./arena verify runs/ci/pair.matrix.txt --quiet
 
   website:
-    if: github.event_name == 'push'
+    needs: classify-pr
+    if: >-
+      (github.event_name == 'push' || github.event_name == 'pull_request') &&
+      needs.classify-pr.outputs.touches-submissions == 'false'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -66,9 +102,14 @@ jobs:
         run: npm run typecheck
       - name: Build website
         run: npm run build
+      - name: Build GitHub Pages export
+        run: npm run build:pages
 
   untrusted-submission:
-    if: github.event_name == 'pull_request_target'
+    needs: classify-pr
+    if: >-
+      github.event_name == 'pull_request_target' &&
+      needs.classify-pr.outputs.touches-submissions == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
