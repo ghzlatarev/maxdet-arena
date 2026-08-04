@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "network": "Sepolia",
+  "chain_id": 11155111,
+  "status": "live",
+  "contract_address": "0x07b746af81Ef6177b3Bb088b8eF6F0867ED7a8f0",
+  "deployment_transaction": "0x69844d061e6a9e733a7f5fbf98d03a71ecf5751ccacdca5c3e46c1740cdc2b05",
+  "deployment_block": 11414658,
+  "asset": "Sepolia ETH",
+  "minimum_winning_determinant": "2779447300194304",
+  "contract_name": "MaxDetBounty23",
+  "source": "contracts/src/MaxDetBounty23.sol",
+  "source_sha256": "455e0b617c7eefc5cac064645100c95faa26c41d3122bfe16e760b34cbf3b6f2",
+  "expected_runtime_codehash": "0xa19fffc8ae909a831820b5409140e3e124214493f21374726497e6a5878bbed9",
+  "compiler": {
+    "version": "0.8.36",
+    "evm_version": "osaka",
+    "optimizer": true,
+    "optimizer_runs": 200,
+    "via_ir": true
+  },
+  "explorer_url": "https://sepolia.etherscan.io",
+  "rpc_url": "https://ethereum-sepolia-rpc.publicnode.com"
+}

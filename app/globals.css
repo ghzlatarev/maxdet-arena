@@ -427,6 +427,216 @@ a:focus-visible {
   white-space: nowrap;
 }
 
+.maxdet-bounty {
+  margin-top: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(216, 255, 72, 0.3);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 92% 0, rgba(216, 255, 72, 0.1), transparent 34%),
+    #14150f;
+}
+
+.maxdet-bounty > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 20px;
+  border-bottom: 1px solid var(--white-line);
+}
+
+.maxdet-bounty-network {
+  color: #858479;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.maxdet-bounty h3 {
+  margin: 2px 0 0;
+  font-size: 18px;
+  letter-spacing: -0.035em;
+}
+
+.maxdet-bounty-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--acid);
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.maxdet-bounty-status i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--acid);
+  box-shadow: 0 0 0 4px rgba(216, 255, 72, 0.11);
+}
+
+.maxdet-bounty-status.is-solved {
+  color: #aaa99e;
+}
+
+.maxdet-bounty-status.is-solved i {
+  background: #77766d;
+  box-shadow: none;
+}
+
+.maxdet-bounty-balance {
+  padding: 21px 20px 19px;
+}
+
+.maxdet-bounty-balance > span,
+.maxdet-bounty-facts dt {
+  display: block;
+  color: #77766d;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.maxdet-bounty-balance strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--acid);
+  font-size: clamp(21px, 2.6vw, 32px);
+  letter-spacing: -0.045em;
+}
+
+.maxdet-bounty-balance p {
+  max-width: 540px;
+  margin: 9px 0 0;
+  color: #aaa99e;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.maxdet-bounty-facts {
+  display: grid;
+  grid-template-columns: 1.35fr 0.8fr 1fr;
+  margin: 0;
+  border-top: 1px solid var(--white-line);
+  border-bottom: 1px solid var(--white-line);
+}
+
+.maxdet-bounty-facts > div {
+  min-width: 0;
+  padding: 14px 18px 15px;
+  border-right: 1px solid var(--white-line);
+}
+
+.maxdet-bounty-facts > div:last-child {
+  border-right: 0;
+}
+
+.maxdet-bounty-facts dd {
+  overflow: hidden;
+  margin: 5px 0 0;
+  font-family: var(--mono);
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.maxdet-bounty-actions {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.55fr) 1fr;
+  gap: 9px;
+  padding: 15px 18px;
+}
+
+.maxdet-donation-input {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  border: 1px solid var(--white-line);
+  border-radius: 9px;
+  background: #0f100c;
+}
+
+.maxdet-donation-input input {
+  min-width: 0;
+  padding: 10px 4px 10px 11px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.maxdet-donation-input span {
+  padding-right: 10px;
+  color: #858479;
+  font-family: var(--mono);
+  font-size: 8px;
+}
+
+.maxdet-bounty-actions button {
+  border: 0;
+  border-radius: 9px;
+  background: var(--acid);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.maxdet-bounty-actions button:hover:not(:disabled) {
+  background: #e4ff79;
+}
+
+.maxdet-bounty-actions button:disabled,
+.maxdet-donation-input input:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.maxdet-bounty-footer {
+  display: flex;
+  min-height: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px 15px;
+  border-top: 0;
+  color: #77766d;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.maxdet-bounty-footer nav {
+  display: flex;
+  gap: 12px;
+  color: #aaa99e;
+}
+
+.maxdet-bounty-footer a:hover,
+.maxdet-bounty-transaction:hover {
+  color: var(--acid);
+}
+
+.maxdet-bounty-message,
+.maxdet-bounty-transaction {
+  display: block;
+  margin: 0;
+  padding: 0 18px 12px;
+  color: #aaa99e;
+  font-family: var(--mono);
+  font-size: 8px;
+}
+
+.maxdet-bounty-transaction {
+  color: var(--acid);
+}
+
 .campaign-best-row {
   display: grid;
   grid-template-columns: 1.25fr 0.72fr auto auto;
@@ -1902,6 +2112,34 @@ footer a:hover,
   .frontier-meta div:last-child {
     grid-column: 1 / -1;
     border-top: 1px solid var(--white-line);
+  }
+
+  .maxdet-bounty-facts {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .maxdet-bounty-facts > div:first-child {
+    grid-column: 1 / -1;
+    border-right: 0;
+    border-bottom: 1px solid var(--white-line);
+  }
+
+  .maxdet-bounty-facts > div:nth-child(2) {
+    border-right: 1px solid var(--white-line);
+  }
+
+  .maxdet-bounty-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .maxdet-bounty-actions button {
+    min-height: 40px;
+  }
+
+  .maxdet-bounty-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
   }
 
   .campaign-best-row {

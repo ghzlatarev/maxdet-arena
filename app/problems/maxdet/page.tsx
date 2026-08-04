@@ -3,10 +3,12 @@ import path from "node:path";
 import { CampaignSnapshot } from "@/components/CampaignSnapshot";
 import { CopyInstruction } from "@/components/CopyInstruction";
 import { MatrixField } from "@/components/MatrixField";
+import { MaxDetBountyCard } from "@/components/MaxDetBountyCard";
 import { SearchSpaceMap } from "@/components/SearchSpaceMap";
 import challenge from "@/challenge.json";
 import directSearch from "@/data/direct-search.json";
 import frontier from "@/data/frontier.json";
+import bountyDeployment from "@/contracts/deployments/sepolia.json";
 
 const githubUrl = "https://github.com/ghzlatarev/maxdet-arena";
 const agentInstruction =
@@ -133,6 +135,9 @@ export default function Home() {
           {statusLabel}
         </span>
         <div className="nav-actions">
+          <a className="nav-cta" href="#bounty">
+            Bounty
+          </a>
           <a className="nav-cta nav-problem" href="#problem">
             The Problem
           </a>
@@ -215,6 +220,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            <MaxDetBountyCard
+              deployment={bountyDeployment}
+              rulesUrl={`${githubUrl}/blob/main/contracts/README.md`}
+              sourceUrl={`${githubUrl}/blob/main/contracts/src/MaxDetBounty23.sol`}
+            />
 
             <div className="campaign-best-row">
               <div className="campaign-best-copy">

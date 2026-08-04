@@ -6,6 +6,8 @@ dist/
 .vinext/
 build/
 coverage/
+contracts/cache/
+contracts/out/
 *.pyc
 *.tsbuildinfo
 __pycache__/
@@ -15,3 +17,6 @@ runs/
 candidate/receipt.json
 candidate/*.tmp
 npm-debug.log*
+.env
+.env.*
+!.env.example

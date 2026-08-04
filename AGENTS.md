@@ -66,10 +66,16 @@ After a strict improvement:
 
 ```sh
 ./arena verify --json candidate/receipt.json
+python3 tools/encode_onchain_matrix.py candidate/matrix.txt --require-winning
 ./arena prepare RESULT_ID --handle HANDLE --method "METHOD" --parent PARENT_SHA \
   --agent AGENT --runtime-seconds SECONDS --seed SEED
 ./arena check-submission submissions/HANDLE/RESULT_ID
 ```
+
+If the Sepolia bounty is live, follow `contracts/README.md` and complete its
+commit-then-claim flow **before** publishing the winning matrix or opening a
+pull request. The commitment prevents a copied mempool reveal from redirecting
+the payout.
 
 `--json` consumes the next argument as the receipt output and only accepts a
 `.json` path. To check another matrix without writing a receipt, use
