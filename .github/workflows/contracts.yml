@@ -1,0 +1,93 @@
+name: maxdet-bounty-contract
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "contracts/**"
+      - "foundry.toml"
+      - "challenge.json"
+      - "maxdet/**"
+      - "references/orrick-et-al-2003/matrix.txt"
+      - "tools/encode_onchain_matrix.py"
+      - "tests/test_bounty_deployment.py"
+      - "tests/test_onchain_encoding.py"
+      - ".github/workflows/contracts.yml"
+  pull_request:
+    paths:
+      - "contracts/**"
+      - "foundry.toml"
+      - "challenge.json"
+      - "maxdet/**"
+      - "references/orrick-et-al-2003/matrix.txt"
+      - "tools/encode_onchain_matrix.py"
+      - "tests/test_bounty_deployment.py"
+      - "tests/test_onchain_encoding.py"
+      - ".github/workflows/contracts.yml"
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: maxdet-bounty-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  classify-pr:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    outputs:
+      touches-submissions: ${{ steps.paths.outputs.touches-submissions }}
+    steps:
+      - name: Reject mixed code and submission pull requests
+        id: paths
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          if [[ "${EVENT_NAME}" == "push" ]]; then
+            echo 'touches-submissions=false' >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+          gh api --paginate \
+            "/repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}/files?per_page=100" \
+            --jq '.[].filename' > "${RUNNER_TEMP}/changed-paths.txt"
+          if rg -q '^submissions/' "${RUNNER_TEMP}/changed-paths.txt"; then
+            echo 'touches-submissions=true' >> "${GITHUB_OUTPUT}"
+          else
+            echo 'touches-submissions=false' >> "${GITHUB_OUTPUT}"
+          fi
+
+  test:
+    needs: classify-pr
+    if: needs.classify-pr.outputs.touches-submissions == 'false'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install pinned Foundry release
+        uses: foundry-rs/foundry-toolchain@908c540300062bd5a7e473851cdb4282204cee09 # v1
+        with:
+          version: v1.7.1
+      - name: Check Solidity formatting
+        run: forge fmt --check
+      - name: Run Solidity tests and gas report
+        run: forge test --gas-report
+      - name: Enforce compiler warnings and bytecode limits
+        run: forge build --sizes
+      - name: Match compiled runtime to deployment registry
+        run: |
+          expected_runtime=$(python3 -c 'import json; print(json.load(open("contracts/deployments/sepolia.json"))["expected_runtime_codehash"])')
+          actual_runtime=$(forge inspect contracts/src/MaxDetBounty23.sol:MaxDetBounty23 deployedBytecode | cast keccak)
+          if [[ "${actual_runtime}" != "${expected_runtime}" ]]; then
+            echo "runtime codehash mismatch: ${actual_runtime}"
+            exit 1
+          fi
+      - name: Cross-check encoding and deployment registry
+        run: >-
+          python3 -m unittest
+          tests.test_onchain_encoding
+          tests.test_bounty_deployment

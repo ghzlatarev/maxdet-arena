@@ -40,6 +40,17 @@ It checks:
 Ranking uses the exact integer `|det(A)|`. Floating-point efficiency is display
 information only.
 
+## Sepolia bounty pilot
+
+The repository now includes an ownerless, donation-funded testnet bounty. Its
+Solidity contract recomputes the order-23 determinant fully on-chain; the first
+successful prior-block committer at or above `2,779,447,300,194,304` earns the
+entire Sepolia ETH balance. A rejected delivery becomes a winner-only credit,
+so it cannot reopen the solved problem. There is no admin verifier, multisig,
+token, yield, refund, or upgrade path. See
+[contracts/README.md](contracts/README.md) for the exact rule, tests,
+deployment registry, and claim flow.
+
 ## The honest starting line
 
 The repository includes the order-23 matrix reported by Orrick, Solomon,
